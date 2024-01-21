@@ -1,0 +1,29 @@
+{
+  "name": "tree-sitter-faust",
+  "version": "0.0.1",
+  "description": "Faust grammar for tree-sitter",
+  "main": "grammar.js",
+  "scripts": {
+    "test": "tree-sitter test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khiner/tree-sitter-faust.git"
+  },
+  "keywords": [
+    "faust",
+    "tree-sitter"
+  ],
+  "author": "Karl Hiner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khiner/tree-sitter-faust/issues"
+  },
+  "homepage": "https://github.com/khiner/tree-sitter-faust#readme",
+  "dependencies": {
+    "nan": "^2.18.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.8"
+  }
+}
