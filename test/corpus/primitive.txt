@@ -1,0 +1,56 @@
+====
+1.0
+====
+process = 1.0;
+---
+(source_file
+  (definition
+    (simple_definition
+      name: (variable
+        (identifier ))
+      value: (expression
+        (object
+          (primitive
+            (float )))))))
+====
+.5
+====
+process = .5;
+---
+(source_file
+  (definition
+    (simple_definition
+      name: (variable
+        (identifier ))
+      value: (expression
+        (object
+          (primitive
+            (float )))))))
+====
+5.
+====
+process = 5.;
+---
+(source_file
+  (definition
+    (simple_definition
+      name: (variable
+        (identifier ))
+      value: (expression
+        (object
+          (primitive
+            (float )))))))
+====
+5.5e4
+====
+process = 5.5e4;
+---
+(source_file
+  (definition
+    (simple_definition
+      name: (variable
+        (identifier ))
+      value: (expression
+        (object
+          (primitive
+            (float )))))))

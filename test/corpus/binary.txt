@@ -1,0 +1,120 @@
+=====
+Recursive
+=====
+process = _~+(1);
+---
+(source_file
+  (definition
+    (simple_definition
+      name: (variable (identifier))
+      value: (expression
+        (binary_composition
+          (recursive_composition
+            left: (expression
+              (identity_function))
+            right: (expression
+              (binary_operation
+                (partial
+                  (binary_operator )
+                  (object
+                    (primitive
+                      (integer))))))))))))
+=====
+Sequential
+=====
+a=_:_;
+---
+(source_file
+  (definition
+    (simple_definition
+      name: (variable (identifier))
+      value: (expression
+        (binary_composition
+          (sequential_composition
+            left: (expression
+              (identity_function))
+            right: (expression
+              (identity_function))))))))
+
+=====
+Split two
+=====
+a=_<:_,_;
+---
+(source_file
+  (definition
+    (simple_definition
+      name: (variable (identifier))
+      value: (expression
+        (binary_composition
+          (split_composition
+            left: (expression
+              (identity_function ))
+            right: (expression
+              (identity_function ))
+            right: (expression
+              (identity_function ))))))))
+=====
+Split three
+=====
+a=_<:_,_,_;
+---
+(source_file
+  (definition
+    (simple_definition
+      name: (variable (identifier))
+      value: (expression
+        (binary_composition
+          (split_composition
+            left: (expression
+              (identity_function ))
+            right: (expression
+              (identity_function ))
+            right: (expression
+              (binary_composition
+                (parallel_composition
+                  (expression
+                    (identity_function ))
+                  (expression
+                    (identity_function )))))))))))
+=====
+Merge two
+=====
+a=_,_:>_;
+---
+(source_file
+  (definition
+    (simple_definition
+      name: (variable (identifier))
+      value: (expression
+        (binary_composition
+          (merge_composition
+            left: (expression
+              (identity_function ))
+            left: (expression
+              (identity_function ))
+            right: (expression
+              (identity_function ))))))))
+=====
+Merge three
+=====
+a=_,_,_:>_;
+---
+(source_file
+  (definition
+    (simple_definition
+      name: (variable (identifier))
+      value: (expression
+        (binary_composition
+          (parallel_composition
+            (expression
+              (identity_function ))
+            (expression
+              (binary_composition
+                (merge_composition
+                  left: (expression
+                    (identity_function ))
+                  left: (expression
+                    (identity_function ))
+                  right: (expression
+                    (identity_function )))))))))))
