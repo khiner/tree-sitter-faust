@@ -1,4 +1,7 @@
 # tree-sitter-faust
+
+WIP - not much here yet.
+
 Faust grammar for tree-sitter
 
 ## Resources
