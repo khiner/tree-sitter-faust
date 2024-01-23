@@ -4,7 +4,9 @@
   "description": "Faust grammar for tree-sitter",
   "main": "grammar.js",
   "scripts": {
-    "test": "tree-sitter test"
+    "generate": "tree-sitter generate",
+    "test": "tree-sitter test",
+    "parse": "tree-sitter parse"
   },
   "repository": {
     "type": "git",

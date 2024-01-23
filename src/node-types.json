@@ -27,23 +27,23 @@
       "required": true,
       "types": [
         {
-          "type": "merge_composition",
+          "type": "merge",
           "named": true
         },
         {
-          "type": "parallel_composition",
+          "type": "parallel",
           "named": true
         },
         {
-          "type": "recursive_composition",
+          "type": "recursive",
           "named": true
         },
         {
-          "type": "sequential_composition",
+          "type": "sequential",
           "named": true
         },
         {
-          "type": "split_composition",
+          "type": "split",
           "named": true
         }
       ]
@@ -172,11 +172,6 @@
         }
       ]
     }
-  },
-  {
-    "type": "float",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "function_call",
@@ -345,7 +340,7 @@
     }
   },
   {
-    "type": "merge_composition",
+    "type": "merge",
     "named": true,
     "fields": {
       "left": {
@@ -394,6 +389,25 @@
     }
   },
   {
+    "type": "number",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "int",
+          "named": true
+        },
+        {
+          "type": "real",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "numiter",
     "named": true,
     "fields": {},
@@ -402,7 +416,7 @@
       "required": true,
       "types": [
         {
-          "type": "primitive",
+          "type": "number",
           "named": true
         },
         {
@@ -425,7 +439,7 @@
       "required": true,
       "types": [
         {
-          "type": "primitive",
+          "type": "number",
           "named": true
         },
         {
@@ -459,7 +473,7 @@
     }
   },
   {
-    "type": "parallel_composition",
+    "type": "parallel",
     "named": true,
     "fields": {},
     "children": {
@@ -512,30 +526,7 @@
     }
   },
   {
-    "type": "primitive",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "exponent",
-          "named": true
-        },
-        {
-          "type": "float",
-          "named": true
-        },
-        {
-          "type": "integer",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "recursive_composition",
+    "type": "recursive",
     "named": true,
     "fields": {
       "left": {
@@ -561,7 +552,7 @@
     }
   },
   {
-    "type": "sequential_composition",
+    "type": "sequential",
     "named": true,
     "fields": {
       "left": {
@@ -640,7 +631,7 @@
     }
   },
   {
-    "type": "split_composition",
+    "type": "split",
     "named": true,
     "fields": {
       "left": {
@@ -832,10 +823,6 @@
     "named": true
   },
   {
-    "type": "exponent",
-    "named": true
-  },
-  {
     "type": "fixedpointprecision",
     "named": false
   },
@@ -856,7 +843,7 @@
     "named": false
   },
   {
-    "type": "integer",
+    "type": "int",
     "named": true
   },
   {
@@ -886,6 +873,10 @@
   {
     "type": "quadprecision",
     "named": false
+  },
+  {
+    "type": "real",
+    "named": true
   },
   {
     "type": "seq",

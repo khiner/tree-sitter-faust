@@ -9,16 +9,16 @@ process = _~+(1);
       name: (variable (identifier))
       value: (expression
         (binary_composition
-          (recursive_composition
+          (recursive
             left: (expression
               (identity_function))
             right: (expression
               (binary_operation
                 (partial
-                  (binary_operator )
+                  (binary_operator)
                   (object
-                    (primitive
-                      (integer))))))))))))
+                    (number
+                      (int))))))))))))
 =====
 Sequential
 =====
@@ -30,7 +30,7 @@ a=_:_;
       name: (variable (identifier))
       value: (expression
         (binary_composition
-          (sequential_composition
+          (sequential
             left: (expression
               (identity_function))
             right: (expression
@@ -47,7 +47,7 @@ a=_<:_,_;
       name: (variable (identifier))
       value: (expression
         (binary_composition
-          (split_composition
+          (split
             left: (expression
               (identity_function ))
             right: (expression
@@ -65,14 +65,14 @@ a=_<:_,_,_;
       name: (variable (identifier))
       value: (expression
         (binary_composition
-          (split_composition
+          (split
             left: (expression
               (identity_function ))
             right: (expression
               (identity_function ))
             right: (expression
               (binary_composition
-                (parallel_composition
+                (parallel
                   (expression
                     (identity_function ))
                   (expression
@@ -88,7 +88,7 @@ a=_,_:>_;
       name: (variable (identifier))
       value: (expression
         (binary_composition
-          (merge_composition
+          (merge
             left: (expression
               (identity_function ))
             left: (expression
@@ -106,12 +106,12 @@ a=_,_,_:>_;
       name: (variable (identifier))
       value: (expression
         (binary_composition
-          (parallel_composition
+          (parallel
             (expression
               (identity_function ))
             (expression
               (binary_composition
-                (merge_composition
+                (merge
                   left: (expression
                     (identity_function ))
                   left: (expression

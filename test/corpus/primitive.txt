@@ -10,8 +10,8 @@ process = 1.0;
         (identifier ))
       value: (expression
         (object
-          (primitive
-            (float )))))))
+          (number
+            (real)))))))
 ====
 .5
 ====
@@ -24,8 +24,8 @@ process = .5;
         (identifier ))
       value: (expression
         (object
-          (primitive
-            (float )))))))
+          (number
+            (real)))))))
 ====
 5.
 ====
@@ -38,8 +38,8 @@ process = 5.;
         (identifier ))
       value: (expression
         (object
-          (primitive
-            (float )))))))
+          (number
+            (real)))))))
 ====
 5.5e4
 ====
@@ -52,5 +52,5 @@ process = 5.5e4;
         (identifier ))
       value: (expression
         (object
-          (primitive
-            (float )))))))
+          (number
+            (real)))))))
