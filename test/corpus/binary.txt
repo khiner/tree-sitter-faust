@@ -5,15 +5,14 @@ process = _~+(1);
 ---
 (source_file
   (definition
-    (simple_definition
-      name: (variable (identifier))
-      value: (recursive
-        left: (identity_function)
-        right: (binary_operation
-          (partial
-            (binary_operator)
-            (object
-              (int))))))))
+    name: (variable (identifier))
+    value: (recursive
+      left: (identity_function)
+      right: (binary_operation
+        (partial
+          (binary_operator)
+          (object
+            (int)))))))
 =====
 Sequential
 =====
@@ -21,11 +20,10 @@ a=_:_;
 ---
 (source_file
   (definition
-    (simple_definition
-      name: (variable (identifier))
-      value: (sequential
-        left: (identity_function)
-        right: (identity_function)))))
+    name: (variable (identifier))
+    value: (sequential
+      left: (identity_function)
+      right: (identity_function))))
 =====
 Split two
 =====
@@ -33,12 +31,11 @@ a=_<:_,_;
 ---
 (source_file
   (definition
-    (simple_definition
-      name: (variable (identifier))
-      value: (split
-        left: (identity_function)
-        right: (identity_function)
-        right: (identity_function)))))
+    name: (variable (identifier))
+    value: (split
+      left: (identity_function)
+      right: (identity_function)
+      right: (identity_function))))
 =====
 Split three
 =====
@@ -46,14 +43,13 @@ a=_<:_,_,_;
 ---
 (source_file
   (definition
-    (simple_definition
-      name: (variable (identifier))
-      value: (split
-        left: (identity_function)
-        right: (identity_function)
-        right: (parallel
-          (identity_function)
-          (identity_function))))))
+    name: (variable (identifier))
+    value: (split
+      left: (identity_function)
+      right: (identity_function)
+      right: (parallel
+        (identity_function)
+        (identity_function)))))
 =====
 Merge two
 =====
@@ -61,12 +57,11 @@ a=_,_:>_;
 ---
 (source_file
   (definition
-    (simple_definition
-      name: (variable (identifier))
-      value: (merge
-        left: (identity_function)
-        left: (identity_function)
-        right: (identity_function)))))
+    name: (variable (identifier))
+    value: (merge
+      left: (identity_function)
+      left: (identity_function)
+      right: (identity_function))))
 =====
 Merge three
 =====
@@ -74,11 +69,10 @@ a=_,_,_:>_;
 ---
 (source_file
   (definition
-    (simple_definition
-      name: (variable (identifier))
-      value: (parallel
-        (identity_function)
-        (merge
-          left: (identity_function)
-          left: (identity_function)
-          right: (identity_function))))))
+    name: (variable (identifier))
+    value: (parallel
+      (identity_function)
+      (merge
+        left: (identity_function)
+        left: (identity_function)
+        right: (identity_function)))))

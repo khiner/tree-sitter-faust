@@ -72,21 +72,96 @@
   {
     "type": "definition",
     "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "variable",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "binary_operation",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "identity_function",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "merge",
+            "named": true
+          },
+          {
+            "type": "object",
+            "named": true
+          },
+          {
+            "type": "one_sample_delay",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "split",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "definition_metadata",
+    "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "function_definition",
+          "type": "function_name",
           "named": true
         },
         {
-          "type": "simple_definition",
+          "type": "metadata_key",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         }
       ]
     }
+  },
+  {
+    "type": "documentation",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "file_import",
@@ -121,109 +196,6 @@
         },
         {
           "type": "module_name",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "function_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "variable",
-            "named": true
-          }
-        ]
-      },
-      "value": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "binary_operation",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "identity_function",
-            "named": true
-          },
-          {
-            "type": "iteration",
-            "named": true
-          },
-          {
-            "type": "lambda_abstraction",
-            "named": true
-          },
-          {
-            "type": "merge",
-            "named": true
-          },
-          {
-            "type": "object",
-            "named": true
-          },
-          {
-            "type": "one_sample_delay",
-            "named": true
-          },
-          {
-            "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "recursive",
-            "named": true
-          },
-          {
-            "type": "sequential",
-            "named": true
-          },
-          {
-            "type": "split",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "parameter",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "function_metadata",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "function_name",
-          "named": true
-        },
-        {
-          "type": "metadata_key",
-          "named": true
-        },
-        {
-          "type": "string",
           "named": true
         }
       ]
@@ -313,65 +285,6 @@
         },
         {
           "type": "parallel",
-          "named": true
-        },
-        {
-          "type": "recursive",
-          "named": true
-        },
-        {
-          "type": "sequential",
-          "named": true
-        },
-        {
-          "type": "split",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "lambda_abstraction",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "binary_operation",
-          "named": true
-        },
-        {
-          "type": "function_call",
-          "named": true
-        },
-        {
-          "type": "identity_function",
-          "named": true
-        },
-        {
-          "type": "iteration",
-          "named": true
-        },
-        {
-          "type": "merge",
-          "named": true
-        },
-        {
-          "type": "object",
-          "named": true
-        },
-        {
-          "type": "one_sample_delay",
-          "named": true
-        },
-        {
-          "type": "parallel",
-          "named": true
-        },
-        {
-          "type": "parameter",
           "named": true
         },
         {
@@ -497,25 +410,6 @@
           }
         ]
       }
-    }
-  },
-  {
-    "type": "metadata_declaration",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "function_metadata",
-          "named": true
-        },
-        {
-          "type": "global_metadata",
-          "named": true
-        }
-      ]
     }
   },
   {
@@ -897,72 +791,6 @@
     }
   },
   {
-    "type": "simple_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "variable",
-            "named": true
-          }
-        ]
-      },
-      "value": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "binary_operation",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "identity_function",
-            "named": true
-          },
-          {
-            "type": "iteration",
-            "named": true
-          },
-          {
-            "type": "merge",
-            "named": true
-          },
-          {
-            "type": "object",
-            "named": true
-          },
-          {
-            "type": "one_sample_delay",
-            "named": true
-          },
-          {
-            "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "recursive",
-            "named": true
-          },
-          {
-            "type": "sequential",
-            "named": true
-          },
-          {
-            "type": "split",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
     "type": "source_file",
     "named": true,
     "fields": {},
@@ -979,11 +807,19 @@
           "named": true
         },
         {
+          "type": "definition_metadata",
+          "named": true
+        },
+        {
+          "type": "documentation",
+          "named": true
+        },
+        {
           "type": "file_import",
           "named": true
         },
         {
-          "type": "metadata_declaration",
+          "type": "global_metadata",
           "named": true
         }
       ]
@@ -1198,6 +1034,22 @@
     "named": false
   },
   {
+    "type": "</diagram>",
+    "named": false
+  },
+  {
+    "type": "</equation>",
+    "named": false
+  },
+  {
+    "type": "</mdoc>",
+    "named": false
+  },
+  {
+    "type": "</metadata>",
+    "named": false
+  },
+  {
     "type": "<:",
     "named": false
   },
@@ -1207,6 +1059,34 @@
   },
   {
     "type": "<=",
+    "named": false
+  },
+  {
+    "type": "<diagram>",
+    "named": false
+  },
+  {
+    "type": "<equation>",
+    "named": false
+  },
+  {
+    "type": "<listing",
+    "named": false
+  },
+  {
+    "type": "<mdoc>",
+    "named": false
+  },
+  {
+    "type": "<metadata>",
+    "named": false
+  },
+  {
+    "type": "<notice />",
+    "named": false
+  },
+  {
+    "type": "<notice/>",
     "named": false
   },
   {

@@ -5,11 +5,10 @@ process = 1;
 ---
 (source_file
   (definition
-    (simple_definition
-      name: (variable
-        (identifier ))
-      value: (object
-        (int)))))
+    name: (variable
+      (identifier ))
+    value: (object
+      (int))))
 ====
 Reals
 ====
@@ -17,17 +16,16 @@ process = 0.5,.5,5.,5.5e4;
 ---
 (source_file
   (definition
-    (simple_definition
-      name: (variable
-        (identifier ))
-          value: (parallel
+    name: (variable
+      (identifier ))
+        value: (parallel
+          (object
+            (real))
+          (parallel
             (object
               (real))
             (parallel
               (object
                 (real))
-              (parallel
-                (object
-                  (real))
-                (object
-                  (real))))))))
+              (object
+                (real)))))))

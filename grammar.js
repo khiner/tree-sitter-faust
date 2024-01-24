@@ -24,28 +24,9 @@ module.exports = grammar({
   rules: {
     source_file: ($) => repeat(choice($.comment, $._statement)),
 
-    _statement: ($) =>
-      choice(
-        seq(choice($.metadata_declaration, $.file_import, $.definition), ';')
-        // $.documentation
-      ),
+    _statement: ($) => choice(seq(choice($.global_metadata, $.definition_metadata, $.file_import, $.definition), ';'), $.documentation),
 
-    definition: ($) =>
-      choice(
-        $.simple_definition,
-        $.function_definition
-        // $.pattern_match_definition
-      ),
-
-    simple_definition: ($) => seq(field('name', $.variable), '=', field('value', $._expression)),
-
-    function_definition: ($) =>
-      choice(
-        // "Normal" function definition
-        seq(field('name', $.variable), '(', sepBy(',', alias($.identifier, $.parameter)), ')', '=', field('value', $._expression)),
-        // Lambda abstraction
-        seq(field('name', $.variable), '=', field('value', $.lambda_abstraction))
-      ),
+    definition: ($) => seq(field('name', $.variable), '=', field('value', $._expression)),
 
     function_call: ($) =>
       prec(
@@ -56,10 +37,6 @@ module.exports = grammar({
     argument: ($) => choice($.object, $.function_call),
 
     lambda_abstraction: ($) => seq(seq('\\', '(', sepBy(',', alias($.identifier, $.parameter)), ')', '.', '(', $._expression, ')')),
-
-    // TODO
-    // https://faustdoc.grame.fr/manual/syntax/#standard-metadata
-    // pattern_match_definition: $ => seq(),
 
     _expression: ($) =>
       prec(
@@ -121,6 +98,7 @@ module.exports = grammar({
 
     // @TODO This should be in expression
     object: ($) => choice($._number, $.variable, $.string),
+
     _number: ($) => choice($.int, $.real),
     int: ($) => {
       const decimal = /[0-9]/;
@@ -149,25 +127,17 @@ module.exports = grammar({
       return token(seq(sign, float_literal));
     },
 
-    // TODO
-    // https://faustdoc.grame.fr/manual/mathdoc/
-    // documentation: $ => seq(),
+    documentation: ($) => seq('<mdoc>', repeat($._doc_content), '</mdoc>'),
+    _doc_content: ($) => choice($._doc_char, $._special_doc_tag),
+    _doc_char: ($) => /[^<]+/,
+
+    _special_doc_tag: ($) =>
+      choice('<notice/>', '<notice />', '<equation>', '</equation>', '<diagram>', '</diagram>', '<metadata>', '</metadata>', '<listing'),
 
     file_import: ($) => seq('import(', $.string, ')'),
 
-    metadata_declaration: ($) =>
-      choice(
-        $.global_metadata,
-        $.function_metadata
-        // $.standard_metadata
-      ),
-
-    // TODO
-    // https://faustdoc.grame.fr/manual/syntax/#standard-metadata
-    // standard_metadata: $=> seq(),
-
     global_metadata: ($) => seq('declare', alias($.identifier, $.metadata_key), $.string),
-    function_metadata: ($) => seq('declare', alias($.identifier, $.function_name), alias($.identifier, $.metadata_key), $.string),
+    definition_metadata: ($) => seq('declare', alias($.identifier, $.function_name), alias($.identifier, $.metadata_key), $.string),
 
     // TODO: Not used
     // May precede imports or definitions
