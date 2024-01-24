@@ -387,7 +387,7 @@
           },
           {
             "type": "SYMBOL",
-            "name": "binary_composition"
+            "name": "_binary_composition"
           },
           {
             "type": "SYMBOL",
@@ -729,7 +729,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "number"
+          "name": "_number"
         },
         {
           "type": "SYMBOL",
@@ -741,7 +741,7 @@
         }
       ]
     },
-    "number": {
+    "_number": {
       "type": "CHOICE",
       "members": [
         {
@@ -1264,7 +1264,7 @@
         }
       ]
     },
-    "binary_composition": {
+    "_binary_composition": {
       "type": "CHOICE",
       "members": [
         {
@@ -1678,7 +1678,7 @@
   ],
   "conflicts": [
     [
-      "binary_composition",
+      "_binary_composition",
       "binary_operation"
     ],
     [

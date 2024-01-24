@@ -18,7 +18,7 @@ const sepBy = (sep, rule) => optional(sepBy1(sep, rule));
 module.exports = grammar({
   name: 'faust',
   conflicts: ($) => [
-    [$.binary_composition, $.binary_operation],
+    [$._binary_composition, $.binary_operation],
     [$.function_call, $.merge, $.split, $.parallel, $.sequential, $.recursive],
   ],
   rules: {
@@ -64,7 +64,7 @@ module.exports = grammar({
     _expression: ($) =>
       prec(
         PRECEDENCE.EXPRESSION,
-        choice($.one_sample_delay, $.object, $.binary_composition, $.binary_operation, $.identity_function, $.iteration, $.function_call)
+        choice($.one_sample_delay, $.object, $._binary_composition, $.binary_operation, $.identity_function, $.iteration, $.function_call)
       ),
 
     iteration: ($) =>
@@ -120,8 +120,8 @@ module.exports = grammar({
       ),
 
     // @TODO This should be in expression
-    object: ($) => choice($.number, $.variable, $.string),
-    number: ($) => choice($.int, $.real),
+    object: ($) => choice($._number, $.variable, $.string),
+    _number: ($) => choice($.int, $.real),
     int: ($) => {
       const decimal = /[0-9]/;
       const sign = optional(/[+-]/);
@@ -173,7 +173,7 @@ module.exports = grammar({
     // May precede imports or definitions
     variant: ($) => choice('singleprecision', 'doubleprecision', 'quadprecision', 'fixedpointprecision'),
 
-    binary_composition: ($) => choice($.recursive, $.sequential, $.split, $.merge, $.parallel),
+    _binary_composition: ($) => choice($.recursive, $.sequential, $.split, $.merge, $.parallel),
     recursive: ($) => prec.left(PRECEDENCE.RECURSIVE, seq(field('left', $._expression), '~', field('right', $._expression))),
     sequential: ($) => prec.right(PRECEDENCE.SEQ, seq(field('left', $._expression), ':', field('right', $._expression))),
     split: ($) => prec.right(PRECEDENCE.SPLIT, seq(field('left', $._expression), '<:', field('right', sepBy2(',', $._expression)))),

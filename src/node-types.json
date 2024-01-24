@@ -19,37 +19,6 @@
     }
   },
   {
-    "type": "binary_composition",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "merge",
-          "named": true
-        },
-        {
-          "type": "parallel",
-          "named": true
-        },
-        {
-          "type": "recursive",
-          "named": true
-        },
-        {
-          "type": "sequential",
-          "named": true
-        },
-        {
-          "type": "split",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "binary_operation",
     "named": true,
     "fields": {},
@@ -176,10 +145,6 @@
         "required": true,
         "types": [
           {
-            "type": "binary_composition",
-            "named": true
-          },
-          {
             "type": "binary_operation",
             "named": true
           },
@@ -200,11 +165,31 @@
             "named": true
           },
           {
+            "type": "merge",
+            "named": true
+          },
+          {
             "type": "object",
             "named": true
           },
           {
             "type": "one_sample_delay",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "split",
             "named": true
           }
         ]
@@ -291,10 +276,6 @@
       "required": true,
       "types": [
         {
-          "type": "binary_composition",
-          "named": true
-        },
-        {
           "type": "binary_operation",
           "named": true
         },
@@ -315,6 +296,10 @@
           "named": true
         },
         {
+          "type": "merge",
+          "named": true
+        },
+        {
           "type": "numiter",
           "named": true
         },
@@ -324,6 +309,22 @@
         },
         {
           "type": "one_sample_delay",
+          "named": true
+        },
+        {
+          "type": "parallel",
+          "named": true
+        },
+        {
+          "type": "recursive",
+          "named": true
+        },
+        {
+          "type": "sequential",
+          "named": true
+        },
+        {
+          "type": "split",
           "named": true
         }
       ]
@@ -337,10 +338,6 @@
       "multiple": true,
       "required": true,
       "types": [
-        {
-          "type": "binary_composition",
-          "named": true
-        },
         {
           "type": "binary_operation",
           "named": true
@@ -358,6 +355,10 @@
           "named": true
         },
         {
+          "type": "merge",
+          "named": true
+        },
+        {
           "type": "object",
           "named": true
         },
@@ -366,7 +367,23 @@
           "named": true
         },
         {
+          "type": "parallel",
+          "named": true
+        },
+        {
           "type": "parameter",
+          "named": true
+        },
+        {
+          "type": "recursive",
+          "named": true
+        },
+        {
+          "type": "sequential",
+          "named": true
+        },
+        {
+          "type": "split",
           "named": true
         }
       ]
@@ -385,10 +402,6 @@
             "named": false
           },
           {
-            "type": "binary_composition",
-            "named": true
-          },
-          {
             "type": "binary_operation",
             "named": true
           },
@@ -405,11 +418,31 @@
             "named": true
           },
           {
+            "type": "merge",
+            "named": true
+          },
+          {
             "type": "object",
             "named": true
           },
           {
             "type": "one_sample_delay",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "split",
             "named": true
           }
         ]
@@ -419,10 +452,6 @@
         "required": true,
         "types": [
           {
-            "type": "binary_composition",
-            "named": true
-          },
-          {
             "type": "binary_operation",
             "named": true
           },
@@ -439,11 +468,31 @@
             "named": true
           },
           {
+            "type": "merge",
+            "named": true
+          },
+          {
             "type": "object",
             "named": true
           },
           {
             "type": "one_sample_delay",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "split",
             "named": true
           }
         ]
@@ -470,7 +519,7 @@
     }
   },
   {
-    "type": "number",
+    "type": "numiter",
     "named": true,
     "fields": {},
     "children": {
@@ -483,21 +532,6 @@
         },
         {
           "type": "real",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "numiter",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "number",
           "named": true
         },
         {
@@ -520,7 +554,11 @@
       "required": true,
       "types": [
         {
-          "type": "number",
+          "type": "int",
+          "named": true
+        },
+        {
+          "type": "real",
           "named": true
         },
         {
@@ -562,10 +600,6 @@
       "required": true,
       "types": [
         {
-          "type": "binary_composition",
-          "named": true
-        },
-        {
           "type": "binary_operation",
           "named": true
         },
@@ -582,11 +616,31 @@
           "named": true
         },
         {
+          "type": "merge",
+          "named": true
+        },
+        {
           "type": "object",
           "named": true
         },
         {
           "type": "one_sample_delay",
+          "named": true
+        },
+        {
+          "type": "parallel",
+          "named": true
+        },
+        {
+          "type": "recursive",
+          "named": true
+        },
+        {
+          "type": "sequential",
+          "named": true
+        },
+        {
+          "type": "split",
           "named": true
         }
       ]
@@ -639,10 +693,6 @@
         "required": true,
         "types": [
           {
-            "type": "binary_composition",
-            "named": true
-          },
-          {
             "type": "binary_operation",
             "named": true
           },
@@ -659,11 +709,31 @@
             "named": true
           },
           {
+            "type": "merge",
+            "named": true
+          },
+          {
             "type": "object",
             "named": true
           },
           {
             "type": "one_sample_delay",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "split",
             "named": true
           }
         ]
@@ -673,10 +743,6 @@
         "required": true,
         "types": [
           {
-            "type": "binary_composition",
-            "named": true
-          },
-          {
             "type": "binary_operation",
             "named": true
           },
@@ -693,11 +759,31 @@
             "named": true
           },
           {
+            "type": "merge",
+            "named": true
+          },
+          {
             "type": "object",
             "named": true
           },
           {
             "type": "one_sample_delay",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "split",
             "named": true
           }
         ]
@@ -713,10 +799,6 @@
         "required": true,
         "types": [
           {
-            "type": "binary_composition",
-            "named": true
-          },
-          {
             "type": "binary_operation",
             "named": true
           },
@@ -733,11 +815,31 @@
             "named": true
           },
           {
+            "type": "merge",
+            "named": true
+          },
+          {
             "type": "object",
             "named": true
           },
           {
             "type": "one_sample_delay",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "split",
             "named": true
           }
         ]
@@ -747,10 +849,6 @@
         "required": true,
         "types": [
           {
-            "type": "binary_composition",
-            "named": true
-          },
-          {
             "type": "binary_operation",
             "named": true
           },
@@ -767,11 +865,31 @@
             "named": true
           },
           {
+            "type": "merge",
+            "named": true
+          },
+          {
             "type": "object",
             "named": true
           },
           {
             "type": "one_sample_delay",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "split",
             "named": true
           }
         ]
@@ -797,10 +915,6 @@
         "required": true,
         "types": [
           {
-            "type": "binary_composition",
-            "named": true
-          },
-          {
             "type": "binary_operation",
             "named": true
           },
@@ -817,11 +931,31 @@
             "named": true
           },
           {
+            "type": "merge",
+            "named": true
+          },
+          {
             "type": "object",
             "named": true
           },
           {
             "type": "one_sample_delay",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "split",
             "named": true
           }
         ]
@@ -864,10 +998,6 @@
         "required": true,
         "types": [
           {
-            "type": "binary_composition",
-            "named": true
-          },
-          {
             "type": "binary_operation",
             "named": true
           },
@@ -884,11 +1014,31 @@
             "named": true
           },
           {
+            "type": "merge",
+            "named": true
+          },
+          {
             "type": "object",
             "named": true
           },
           {
             "type": "one_sample_delay",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "split",
             "named": true
           }
         ]
@@ -902,10 +1052,6 @@
             "named": false
           },
           {
-            "type": "binary_composition",
-            "named": true
-          },
-          {
             "type": "binary_operation",
             "named": true
           },
@@ -922,11 +1068,31 @@
             "named": true
           },
           {
+            "type": "merge",
+            "named": true
+          },
+          {
             "type": "object",
             "named": true
           },
           {
             "type": "one_sample_delay",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "split",
             "named": true
           }
         ]
