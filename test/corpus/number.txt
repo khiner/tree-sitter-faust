@@ -1,0 +1,49 @@
+====
+Ints
+====
+process = 1;
+---
+(source_file
+  (definition
+    (simple_definition
+      name: (variable
+        (identifier ))
+      value: (expression
+        (object
+          (number
+            (int)))))))
+====
+Reals
+====
+process = 0.5,.5,5.,5.5e4;
+---
+(source_file
+  (definition
+    (simple_definition
+      name: (variable
+        (identifier ))
+      value: (expression
+        (binary_composition
+          (parallel
+            (expression
+              (object
+                (number
+                  (real))))
+            (expression
+              (binary_composition
+                (parallel
+                  (expression
+                    (object
+                      (number
+                        (real))))
+                  (expression
+                    (binary_composition
+                      (parallel
+                        (expression
+                          (object
+                            (number
+                              (real))))
+                        (expression
+                          (object
+                            (number
+                              (real))))))))))))))))
