@@ -37,12 +37,12 @@ module.exports = grammar({
         // $.pattern_match_definition
       ),
 
-    simple_definition: ($) => seq(field('name', $.variable), '=', field('value', $.expression)),
+    simple_definition: ($) => seq(field('name', $.variable), '=', field('value', $._expression)),
 
     function_definition: ($) =>
       choice(
         // "Normal" function definition
-        seq(field('name', $.variable), '(', sepBy(',', alias($.identifier, $.parameter)), ')', '=', field('value', $.expression)),
+        seq(field('name', $.variable), '(', sepBy(',', alias($.identifier, $.parameter)), ')', '=', field('value', $._expression)),
         // Lambda abstraction
         seq(field('name', $.variable), '=', field('value', $.lambda_abstraction))
       ),
@@ -55,13 +55,13 @@ module.exports = grammar({
 
     argument: ($) => choice($.object, $.function_call),
 
-    lambda_abstraction: ($) => seq(seq('\\', '(', sepBy(',', alias($.identifier, $.parameter)), ')', '.', '(', $.expression, ')')),
+    lambda_abstraction: ($) => seq(seq('\\', '(', sepBy(',', alias($.identifier, $.parameter)), ')', '.', '(', $._expression, ')')),
 
     // TODO
     // https://faustdoc.grame.fr/manual/syntax/#standard-metadata
     // pattern_match_definition: $ => seq(),
 
-    expression: ($) =>
+    _expression: ($) =>
       prec(
         PRECEDENCE.EXPRESSION,
         choice($.one_sample_delay, $.object, $.binary_composition, $.binary_operation, $.identity_function, $.iteration, $.function_call)
@@ -74,7 +74,7 @@ module.exports = grammar({
         ',',
         alias($.object, $.numiter),
         ',',
-        $.expression
+        $._expression
       ),
     identity_function: ($) => '_',
 
@@ -174,11 +174,11 @@ module.exports = grammar({
     variant: ($) => choice('singleprecision', 'doubleprecision', 'quadprecision', 'fixedpointprecision'),
 
     binary_composition: ($) => choice($.recursive, $.sequential, $.split, $.merge, $.parallel),
-    recursive: ($) => prec.left(PRECEDENCE.RECURSIVE, seq(field('left', $.expression), '~', field('right', $.expression))),
-    sequential: ($) => prec.right(PRECEDENCE.SEQ, seq(field('left', $.expression), ':', field('right', $.expression))),
-    split: ($) => prec.right(PRECEDENCE.SPLIT, seq(field('left', $.expression), '<:', field('right', sepBy2(',', $.expression)))),
-    merge: ($) => prec.right(PRECEDENCE.MERGE, seq(field('left', sepBy2(',', $.expression)), ':>', field('right', $.expression))),
-    parallel: ($) => prec.right(PRECEDENCE.PAR, choice(sepBy2(',', $.expression), seq('(', sepBy2(',', $.expression), ')'))),
+    recursive: ($) => prec.left(PRECEDENCE.RECURSIVE, seq(field('left', $._expression), '~', field('right', $._expression))),
+    sequential: ($) => prec.right(PRECEDENCE.SEQ, seq(field('left', $._expression), ':', field('right', $._expression))),
+    split: ($) => prec.right(PRECEDENCE.SPLIT, seq(field('left', $._expression), '<:', field('right', sepBy2(',', $._expression)))),
+    merge: ($) => prec.right(PRECEDENCE.MERGE, seq(field('left', sepBy2(',', $._expression)), ':>', field('right', $._expression))),
+    parallel: ($) => prec.right(PRECEDENCE.PAR, choice(sepBy2(',', $._expression), seq('(', sepBy2(',', $._expression), ')'))),
 
     string: ($) => seq('"', repeat(choice(token.immediate(prec(PRECEDENCE.STRING, /[^"\\\n]+|\\\r?\n/)), $.escape_sequence)), '"'),
 

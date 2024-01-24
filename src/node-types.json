@@ -120,45 +120,6 @@
     }
   },
   {
-    "type": "expression",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "binary_composition",
-          "named": true
-        },
-        {
-          "type": "binary_operation",
-          "named": true
-        },
-        {
-          "type": "function_call",
-          "named": true
-        },
-        {
-          "type": "identity_function",
-          "named": true
-        },
-        {
-          "type": "iteration",
-          "named": true
-        },
-        {
-          "type": "object",
-          "named": true
-        },
-        {
-          "type": "one_sample_delay",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "file_import",
     "named": true,
     "fields": {},
@@ -215,11 +176,35 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "binary_composition",
+            "named": true
+          },
+          {
+            "type": "binary_operation",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "identity_function",
+            "named": true
+          },
+          {
+            "type": "iteration",
             "named": true
           },
           {
             "type": "lambda_abstraction",
+            "named": true
+          },
+          {
+            "type": "object",
+            "named": true
+          },
+          {
+            "type": "one_sample_delay",
             "named": true
           }
         ]
@@ -306,15 +291,39 @@
       "required": true,
       "types": [
         {
+          "type": "binary_composition",
+          "named": true
+        },
+        {
+          "type": "binary_operation",
+          "named": true
+        },
+        {
           "type": "current_iteration",
           "named": true
         },
         {
-          "type": "expression",
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "identity_function",
+          "named": true
+        },
+        {
+          "type": "iteration",
           "named": true
         },
         {
           "type": "numiter",
+          "named": true
+        },
+        {
+          "type": "object",
+          "named": true
+        },
+        {
+          "type": "one_sample_delay",
           "named": true
         }
       ]
@@ -329,7 +338,31 @@
       "required": true,
       "types": [
         {
-          "type": "expression",
+          "type": "binary_composition",
+          "named": true
+        },
+        {
+          "type": "binary_operation",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "identity_function",
+          "named": true
+        },
+        {
+          "type": "iteration",
+          "named": true
+        },
+        {
+          "type": "object",
+          "named": true
+        },
+        {
+          "type": "one_sample_delay",
           "named": true
         },
         {
@@ -352,7 +385,31 @@
             "named": false
           },
           {
-            "type": "expression",
+            "type": "binary_composition",
+            "named": true
+          },
+          {
+            "type": "binary_operation",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "identity_function",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "object",
+            "named": true
+          },
+          {
+            "type": "one_sample_delay",
             "named": true
           }
         ]
@@ -362,7 +419,31 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "binary_composition",
+            "named": true
+          },
+          {
+            "type": "binary_operation",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "identity_function",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "object",
+            "named": true
+          },
+          {
+            "type": "one_sample_delay",
             "named": true
           }
         ]
@@ -481,7 +562,31 @@
       "required": true,
       "types": [
         {
-          "type": "expression",
+          "type": "binary_composition",
+          "named": true
+        },
+        {
+          "type": "binary_operation",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "identity_function",
+          "named": true
+        },
+        {
+          "type": "iteration",
+          "named": true
+        },
+        {
+          "type": "object",
+          "named": true
+        },
+        {
+          "type": "one_sample_delay",
           "named": true
         }
       ]
@@ -534,7 +639,31 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "binary_composition",
+            "named": true
+          },
+          {
+            "type": "binary_operation",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "identity_function",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "object",
+            "named": true
+          },
+          {
+            "type": "one_sample_delay",
             "named": true
           }
         ]
@@ -544,7 +673,31 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "binary_composition",
+            "named": true
+          },
+          {
+            "type": "binary_operation",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "identity_function",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "object",
+            "named": true
+          },
+          {
+            "type": "one_sample_delay",
             "named": true
           }
         ]
@@ -560,7 +713,31 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "binary_composition",
+            "named": true
+          },
+          {
+            "type": "binary_operation",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "identity_function",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "object",
+            "named": true
+          },
+          {
+            "type": "one_sample_delay",
             "named": true
           }
         ]
@@ -570,7 +747,31 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "binary_composition",
+            "named": true
+          },
+          {
+            "type": "binary_operation",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "identity_function",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "object",
+            "named": true
+          },
+          {
+            "type": "one_sample_delay",
             "named": true
           }
         ]
@@ -596,7 +797,31 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "binary_composition",
+            "named": true
+          },
+          {
+            "type": "binary_operation",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "identity_function",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "object",
+            "named": true
+          },
+          {
+            "type": "one_sample_delay",
             "named": true
           }
         ]
@@ -639,7 +864,31 @@
         "required": true,
         "types": [
           {
-            "type": "expression",
+            "type": "binary_composition",
+            "named": true
+          },
+          {
+            "type": "binary_operation",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "identity_function",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "object",
+            "named": true
+          },
+          {
+            "type": "one_sample_delay",
             "named": true
           }
         ]
@@ -653,7 +902,31 @@
             "named": false
           },
           {
-            "type": "expression",
+            "type": "binary_composition",
+            "named": true
+          },
+          {
+            "type": "binary_operation",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "identity_function",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "object",
+            "named": true
+          },
+          {
+            "type": "one_sample_delay",
             "named": true
           }
         ]

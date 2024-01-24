@@ -8,10 +8,9 @@ process = 1;
     (simple_definition
       name: (variable
         (identifier ))
-      value: (expression
-        (object
-          (number
-            (int)))))))
+      value: (object
+        (number
+          (int))))))
 ====
 Reals
 ====
@@ -22,28 +21,21 @@ process = 0.5,.5,5.,5.5e4;
     (simple_definition
       name: (variable
         (identifier ))
-      value: (expression
-        (binary_composition
-          (parallel
-            (expression
+          value: (binary_composition
+            (parallel
               (object
                 (number
-                  (real))))
-            (expression
+                  (real)))
               (binary_composition
                 (parallel
-                  (expression
-                    (object
-                      (number
-                        (real))))
-                  (expression
-                    (binary_composition
-                      (parallel
-                        (expression
-                          (object
-                            (number
-                              (real))))
-                        (expression
-                          (object
-                            (number
-                              (real))))))))))))))))
+                  (object
+                    (number
+                      (real)))
+                  (binary_composition
+                    (parallel
+                      (object
+                        (number
+                          (real)))
+                      (object
+                        (number
+                          (real))))))))))))

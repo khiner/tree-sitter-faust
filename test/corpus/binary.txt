@@ -7,18 +7,15 @@ process = _~+(1);
   (definition
     (simple_definition
       name: (variable (identifier))
-      value: (expression
-        (binary_composition
-          (recursive
-            left: (expression
-              (identity_function))
-            right: (expression
-              (binary_operation
-                (partial
-                  (binary_operator)
-                  (object
-                    (number
-                      (int))))))))))))
+      value: (binary_composition
+        (recursive
+          left: (identity_function)
+          right: (binary_operation
+            (partial
+              (binary_operator)
+              (object
+                (number
+                  (int))))))))))
 =====
 Sequential
 =====
@@ -28,14 +25,10 @@ a=_:_;
   (definition
     (simple_definition
       name: (variable (identifier))
-      value: (expression
-        (binary_composition
-          (sequential
-            left: (expression
-              (identity_function))
-            right: (expression
-              (identity_function))))))))
-
+      value: (binary_composition
+        (sequential
+          left: (identity_function)
+          right: (identity_function))))))
 =====
 Split two
 =====
@@ -45,15 +38,11 @@ a=_<:_,_;
   (definition
     (simple_definition
       name: (variable (identifier))
-      value: (expression
-        (binary_composition
-          (split
-            left: (expression
-              (identity_function ))
-            right: (expression
-              (identity_function ))
-            right: (expression
-              (identity_function ))))))))
+      value: (binary_composition
+        (split
+          left: (identity_function)
+          right: (identity_function)
+          right: (identity_function))))))
 =====
 Split three
 =====
@@ -63,20 +52,14 @@ a=_<:_,_,_;
   (definition
     (simple_definition
       name: (variable (identifier))
-      value: (expression
-        (binary_composition
-          (split
-            left: (expression
-              (identity_function ))
-            right: (expression
-              (identity_function ))
-            right: (expression
-              (binary_composition
-                (parallel
-                  (expression
-                    (identity_function ))
-                  (expression
-                    (identity_function )))))))))))
+      value: (binary_composition
+        (split
+          left: (identity_function)
+          right: (identity_function)
+          right: (binary_composition
+            (parallel
+              (identity_function)
+              (identity_function))))))))
 =====
 Merge two
 =====
@@ -86,15 +69,11 @@ a=_,_:>_;
   (definition
     (simple_definition
       name: (variable (identifier))
-      value: (expression
-        (binary_composition
-          (merge
-            left: (expression
-              (identity_function ))
-            left: (expression
-              (identity_function ))
-            right: (expression
-              (identity_function ))))))))
+      value: (binary_composition
+        (merge
+          left: (identity_function)
+          left: (identity_function)
+          right: (identity_function))))))
 =====
 Merge three
 =====
@@ -104,17 +83,11 @@ a=_,_,_:>_;
   (definition
     (simple_definition
       name: (variable (identifier))
-      value: (expression
-        (binary_composition
-          (parallel
-            (expression
-              (identity_function ))
-            (expression
-              (binary_composition
-                (merge
-                  left: (expression
-                    (identity_function ))
-                  left: (expression
-                    (identity_function ))
-                  right: (expression
-                    (identity_function )))))))))))
+      value: (binary_composition
+        (parallel
+          (identity_function)
+          (binary_composition
+            (merge
+              left: (identity_function)
+              left: (identity_function)
+              right: (identity_function))))))))
