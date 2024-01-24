@@ -92,11 +92,11 @@
             "named": true
           },
           {
-            "type": "function_call",
+            "type": "cut",
             "named": true
           },
           {
-            "type": "identity_function",
+            "type": "function_call",
             "named": true
           },
           {
@@ -130,9 +130,23 @@
           {
             "type": "split",
             "named": true
+          },
+          {
+            "type": "wire",
+            "named": true
           }
         ]
       }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "parameter",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -256,11 +270,11 @@
           "named": true
         },
         {
-          "type": "function_call",
+          "type": "cut",
           "named": true
         },
         {
-          "type": "identity_function",
+          "type": "function_call",
           "named": true
         },
         {
@@ -298,6 +312,10 @@
         {
           "type": "split",
           "named": true
+        },
+        {
+          "type": "wire",
+          "named": true
         }
       ]
     }
@@ -319,11 +337,11 @@
             "named": true
           },
           {
-            "type": "function_call",
+            "type": "cut",
             "named": true
           },
           {
-            "type": "identity_function",
+            "type": "function_call",
             "named": true
           },
           {
@@ -356,6 +374,10 @@
           },
           {
             "type": "split",
+            "named": true
+          },
+          {
+            "type": "wire",
             "named": true
           }
         ]
@@ -369,11 +391,11 @@
             "named": true
           },
           {
-            "type": "function_call",
+            "type": "cut",
             "named": true
           },
           {
-            "type": "identity_function",
+            "type": "function_call",
             "named": true
           },
           {
@@ -406,6 +428,10 @@
           },
           {
             "type": "split",
+            "named": true
+          },
+          {
+            "type": "wire",
             "named": true
           }
         ]
@@ -498,11 +524,11 @@
           "named": true
         },
         {
-          "type": "function_call",
+          "type": "cut",
           "named": true
         },
         {
-          "type": "identity_function",
+          "type": "function_call",
           "named": true
         },
         {
@@ -535,6 +561,10 @@
         },
         {
           "type": "split",
+          "named": true
+        },
+        {
+          "type": "wire",
           "named": true
         }
       ]
@@ -591,11 +621,11 @@
             "named": true
           },
           {
-            "type": "function_call",
+            "type": "cut",
             "named": true
           },
           {
-            "type": "identity_function",
+            "type": "function_call",
             "named": true
           },
           {
@@ -628,6 +658,10 @@
           },
           {
             "type": "split",
+            "named": true
+          },
+          {
+            "type": "wire",
             "named": true
           }
         ]
@@ -641,11 +675,11 @@
             "named": true
           },
           {
-            "type": "function_call",
+            "type": "cut",
             "named": true
           },
           {
-            "type": "identity_function",
+            "type": "function_call",
             "named": true
           },
           {
@@ -678,6 +712,10 @@
           },
           {
             "type": "split",
+            "named": true
+          },
+          {
+            "type": "wire",
             "named": true
           }
         ]
@@ -697,11 +735,11 @@
             "named": true
           },
           {
-            "type": "function_call",
+            "type": "cut",
             "named": true
           },
           {
-            "type": "identity_function",
+            "type": "function_call",
             "named": true
           },
           {
@@ -734,6 +772,10 @@
           },
           {
             "type": "split",
+            "named": true
+          },
+          {
+            "type": "wire",
             "named": true
           }
         ]
@@ -747,11 +789,11 @@
             "named": true
           },
           {
-            "type": "function_call",
+            "type": "cut",
             "named": true
           },
           {
-            "type": "identity_function",
+            "type": "function_call",
             "named": true
           },
           {
@@ -784,6 +826,10 @@
           },
           {
             "type": "split",
+            "named": true
+          },
+          {
+            "type": "wire",
             "named": true
           }
         ]
@@ -821,6 +867,10 @@
         {
           "type": "global_metadata",
           "named": true
+        },
+        {
+          "type": "variant",
+          "named": true
         }
       ]
     }
@@ -838,11 +888,11 @@
             "named": true
           },
           {
-            "type": "function_call",
+            "type": "cut",
             "named": true
           },
           {
-            "type": "identity_function",
+            "type": "function_call",
             "named": true
           },
           {
@@ -875,6 +925,10 @@
           },
           {
             "type": "split",
+            "named": true
+          },
+          {
+            "type": "wire",
             "named": true
           }
         ]
@@ -892,11 +946,11 @@
             "named": true
           },
           {
-            "type": "function_call",
+            "type": "cut",
             "named": true
           },
           {
-            "type": "identity_function",
+            "type": "function_call",
             "named": true
           },
           {
@@ -929,6 +983,10 @@
           },
           {
             "type": "split",
+            "named": true
+          },
+          {
+            "type": "wire",
             "named": true
           }
         ]
@@ -968,6 +1026,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "variant",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "!=",
@@ -1130,6 +1193,10 @@
     "named": true
   },
   {
+    "type": "cut",
+    "named": true
+  },
+  {
     "type": "declare",
     "named": false
   },
@@ -1151,10 +1218,6 @@
   },
   {
     "type": "identifier",
-    "named": true
-  },
-  {
-    "type": "identity_function",
     "named": true
   },
   {
@@ -1208,6 +1271,10 @@
   {
     "type": "sum",
     "named": false
+  },
+  {
+    "type": "wire",
+    "named": true
   },
   {
     "type": "xor",

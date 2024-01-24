@@ -7,7 +7,7 @@ process = _~+(1);
   (definition
     name: (variable (identifier))
     value: (recursive
-      left: (identity_function)
+      left: (wire)
       right: (binary_operation
         (partial
           (binary_operator)
@@ -22,8 +22,8 @@ a=_:_;
   (definition
     name: (variable (identifier))
     value: (sequential
-      left: (identity_function)
-      right: (identity_function))))
+      left: (wire)
+      right: (wire))))
 =====
 Split two
 =====
@@ -33,9 +33,9 @@ a=_<:_,_;
   (definition
     name: (variable (identifier))
     value: (split
-      left: (identity_function)
-      right: (identity_function)
-      right: (identity_function))))
+      left: (wire)
+      right: (wire)
+      right: (wire))))
 =====
 Split three
 =====
@@ -45,11 +45,11 @@ a=_<:_,_,_;
   (definition
     name: (variable (identifier))
     value: (split
-      left: (identity_function)
-      right: (identity_function)
+      left: (wire)
+      right: (wire)
       right: (parallel
-        (identity_function)
-        (identity_function)))))
+        (wire)
+        (wire)))))
 =====
 Merge two
 =====
@@ -59,9 +59,9 @@ a=_,_:>_;
   (definition
     name: (variable (identifier))
     value: (merge
-      left: (identity_function)
-      left: (identity_function)
-      right: (identity_function))))
+      left: (wire)
+      left: (wire)
+      right: (wire))))
 =====
 Merge three
 =====
@@ -71,8 +71,8 @@ a=_,_,_:>_;
   (definition
     name: (variable (identifier))
     value: (parallel
-      (identity_function)
+      (wire)
       (merge
-        left: (identity_function)
-        left: (identity_function)
-        right: (identity_function)))))
+        left: (wire)
+        left: (wire)
+        right: (wire)))))

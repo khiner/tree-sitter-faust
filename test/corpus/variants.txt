@@ -1,0 +1,36 @@
+====
+Single variant
+====
+singleprecision int_part(idv) = idv : _,!;
+---
+(source_file
+  (variant)
+  (definition
+    (variable
+      (identifier))
+    (parameter)
+    (parallel
+      (sequential
+        (object
+          (variable
+            (identifier)))
+        (wire))
+      (cut))))
+====
+Two variants
+====
+doubleprecision quadprecision int_part(idv) = int(idv);
+---
+(source_file
+  (variant)
+  (variant)
+  (definition
+    (variable
+      (identifier))
+    (parameter)
+    (function_call
+      (function_name)
+      (argument
+        (object
+          (variable
+            (identifier)))))))

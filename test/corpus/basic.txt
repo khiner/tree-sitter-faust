@@ -1,0 +1,19 @@
+====
+Empty
+====
+
+---
+(source_file)
+====
+Function definition
+====
+identity(var) = var;
+---
+(source_file
+  (definition
+    (variable
+      (identifier))
+    (parameter)
+    (object
+      (variable
+        (identifier)))))
