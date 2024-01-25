@@ -70,6 +70,11 @@
     }
   },
   {
+    "type": "current_iteration",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "definition",
     "named": true,
     "fields": {
@@ -216,6 +221,11 @@
     }
   },
   {
+    "type": "function_name",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "global_metadata",
     "named": true,
     "fields": {},
@@ -233,6 +243,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "identifier",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "infix",
@@ -439,6 +454,16 @@
     }
   },
   {
+    "type": "metadata_key",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "module_name",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "numiter",
     "named": true,
     "fields": {},
@@ -569,6 +594,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "parameter",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "partial",
@@ -1085,6 +1115,10 @@
     "named": false
   },
   {
+    "type": "::",
+    "named": false
+  },
+  {
     "type": ":>",
     "named": false
   },
@@ -1189,10 +1223,6 @@
     "named": true
   },
   {
-    "type": "current_iteration",
-    "named": true
-  },
-  {
     "type": "cut",
     "named": true
   },
@@ -1213,27 +1243,11 @@
     "named": false
   },
   {
-    "type": "function_name",
-    "named": true
-  },
-  {
-    "type": "identifier",
-    "named": true
-  },
-  {
     "type": "import(",
     "named": false
   },
   {
     "type": "int",
-    "named": true
-  },
-  {
-    "type": "metadata_key",
-    "named": true
-  },
-  {
-    "type": "module_name",
     "named": true
   },
   {
@@ -1243,10 +1257,6 @@
   {
     "type": "par",
     "named": false
-  },
-  {
-    "type": "parameter",
-    "named": true
   },
   {
     "type": "prod",

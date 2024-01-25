@@ -163,7 +163,9 @@ module.exports = grammar({
       token.immediate(seq('\\', choice(/[^xu0-7]/, /[0-7]{1,3}/, /x[0-9a-fA-F]{2}/, /u[0-9a-fA-F]{4}/, /u{[0-9a-fA-F]+}/))),
 
     variable: ($) => seq(optional(seq(alias($.identifier, $.module_name), '.')), $.identifier),
-    identifier: (_) => /(r#)?[a-zA-Zα-ωΑ-Ωµ_][a-zA-Zα-ωΑ-Ωµ\d_]*/,
+
+    identifier: ($) => prec.right(seq(optional('::'), seq($._id, repeat(seq('::', $._id))))),
+    _id: (_) => /_*[a-zA-Z][_a-zA-Z0-9]*/,
 
     comment: (_) => token(choice(seq('//', /(\\(.|\r?\n)|[^\\\n])*/), seq('/*', /[^*]*\*+([^/*][^*]*\*+)*/, '/'))),
   },
