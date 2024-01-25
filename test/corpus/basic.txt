@@ -6,6 +6,37 @@ Empty
 (source_file)
 
 ====
+Comment
+====
+
+// Parse as a comment: `process = +(1);`
+/**
+Everything in here should parse as a comment:
+```
+    declare complex_string "a\"\n\r!@#$%^&*(),<.>?/~`{}\|\';:";
+    process = +(1);
+```
+*/
+
+var = 1; // Comment at the end of a line.
+process = var; /* Comment at the end of a line. */
+
+// Bye! /*still in line comment...*/ // still in line comment...
+---
+(source_file
+  (comment)
+  (comment)
+  (definition
+    (identifier)
+    (int))
+  (comment)
+  (definition
+    (identifier)
+    (identifier))
+  (comment)
+  (comment))
+
+====
 Namespaced variable assignment
 ====
 
