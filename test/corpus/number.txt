@@ -2,35 +2,39 @@
 Ints
 ====
 
-process = 1;
+process = 1,+10,-100;
 
 ---
 (source_file
   (definition
-    name: (variable
-      (identifier ))
-    value: (object
-      (int))))
+    (variable
+      (identifier))
+    (parallel
+      (int)
+      (parallel
+        (int)
+        (int)))))
+
 
 ====
 Reals
 ====
 
-process = 0.5,.5,5.,5.5e4;
+process = 0.5,.5,5.,5.5e4,+1.,-1.f;
 
 ---
 (source_file
   (definition
-    name: (variable
-      (identifier ))
-        value: (parallel
-          (object
-            (real))
+    (variable
+      (identifier))
+    (parallel
+      (real)
+      (parallel
+        (real)
+        (parallel
+          (real)
           (parallel
-            (object
-              (real))
+            (real)
             (parallel
-              (object
-                (real))
-              (object
-                (real)))))))
+              (real)
+              (real))))))))

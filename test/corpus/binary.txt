@@ -13,8 +13,7 @@ process = _~+(1);
       right: (binary_operation
         (partial
           (binary_operator)
-          (object
-            (int)))))))
+          (int))))))
 
 =====
 Sequential

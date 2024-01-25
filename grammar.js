@@ -44,14 +44,14 @@ module.exports = grammar({
         seq(optional(seq(alias($.identifier, $.module_name), '.')), alias($.identifier, $.function_name), '(', sepBy(',', $.argument), ')')
       ),
 
-    argument: ($) => choice($.object, $.function_call),
+    argument: ($) => choice($._object, $.function_call),
 
     lambda_abstraction: ($) => seq(seq('\\', '(', sepBy(',', alias($.identifier, $.parameter)), ')', '.', '(', $._expression, ')')),
 
     _expression: ($) =>
       prec(
         PRECEDENCE.EXPRESSION,
-        choice($.one_sample_delay, $.object, $._binary_composition, $.binary_operation, $.wire, $.cut, $.iteration, $.function_call)
+        choice($.one_sample_delay, $._object, $._binary_composition, $.binary_operation, $.wire, $.cut, $.iteration, $.function_call)
       ),
 
     iteration: ($) =>
@@ -59,7 +59,7 @@ module.exports = grammar({
         choice('par', 'seq', 'sum', 'prod'),
         alias($.identifier, $.current_iteration),
         ',',
-        alias($.object, $.numiter),
+        alias($._object, $.numiter),
         ',',
         $._expression
       ),
@@ -71,14 +71,14 @@ module.exports = grammar({
     core: ($) =>
       prec(
         PRECEDENCE.CORE,
-        choice(seq($.object, ',', $.object, ':', $.binary_operator), seq('(', $.object, ',', $.object, ')', ':', $.binary_operator))
+        choice(seq($._object, ',', $._object, ':', $.binary_operator), seq('(', $._object, ',', $._object, ')', ':', $.binary_operator))
       ),
 
-    infix: ($) => seq($.object, $.binary_operator, $.object),
-    prefix: ($) => seq($.binary_operator, '(', $.object, ',', $.object, ')'),
-    partial: ($) => seq($.binary_operator, '(', $.object, ')'),
+    infix: ($) => seq($._object, $.binary_operator, $._object),
+    prefix: ($) => seq($.binary_operator, '(', $._object, ',', $._object, ')'),
+    partial: ($) => seq($.binary_operator, '(', $._object, ')'),
 
-    one_sample_delay: ($) => seq($.object, repeat1($.one_sample_delay_operator)),
+    one_sample_delay: ($) => seq($._object, repeat1($.one_sample_delay_operator)),
     one_sample_delay_operator: (_) => "'",
 
     binary_operator: (_) =>
@@ -108,7 +108,7 @@ module.exports = grammar({
       ),
 
     // @TODO This should be in expression
-    object: ($) => choice($._number, $.variable, $.string),
+    _object: ($) => choice($._number, $.variable, $.string),
 
     _number: ($) => choice($.int, $.real),
     int: (_) => {
@@ -122,16 +122,10 @@ module.exports = grammar({
       const decimal = /[0-9]/;
       const float_literal = choice(
         seq(repeat1(decimal), 'f'),
-        seq(repeat1(decimal), '.', repeat(decimal)),
-        seq(repeat1(decimal), '.', repeat(decimal), 'f'),
-        seq(repeat1(decimal), '.', repeat(decimal), 'e', optional(/[+-]/), repeat1(decimal)),
-        seq(repeat1(decimal), '.', repeat(decimal), 'e', optional(/[+-]/), repeat1(decimal), 'f'),
-        seq(repeat1(decimal), 'e', optional(/[+-]/), repeat1(decimal)),
-        seq(repeat1(decimal), 'e', optional(/[+-]/), repeat1(decimal), 'f'),
-        seq('.', repeat1(decimal)),
-        seq('.', repeat1(decimal), 'f'),
-        seq('.', repeat1(decimal), 'e', optional(/[+-]/), repeat1(decimal)),
-        seq('.', repeat1(decimal), 'e', optional(/[+-]/), repeat1(decimal), 'f')
+        seq(repeat(decimal), '.', repeat(decimal)),
+        seq(repeat(decimal), '.', repeat(decimal), 'f'),
+        seq(repeat(decimal), optional('.'), repeat(decimal), 'e', optional(/[+-]/), repeat1(decimal)),
+        seq(repeat(decimal), optional('.'), repeat(decimal), 'e', optional(/[+-]/), repeat1(decimal), 'f')
       );
       const sign = optional(/[+-]/);
 

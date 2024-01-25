@@ -13,9 +13,8 @@ singleprecision int_part(idv) = idv : _,!;
     (parameter)
     (parallel
       (sequential
-        (object
-          (variable
-            (identifier)))
+        (variable
+          (identifier))
         (wire))
       (cut))))
 
@@ -36,6 +35,5 @@ doubleprecision quadprecision int_part(idv) = int(idv);
     (function_call
       (function_name)
       (argument
-        (object
-          (variable
-            (identifier)))))))
+        (variable
+          (identifier))))))

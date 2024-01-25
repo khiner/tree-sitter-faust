@@ -29,9 +29,8 @@ process = ::foo::bar::baz;
   (definition
     (variable
       (identifier))
-    (object
-      (variable
-        (identifier)))))
+    (variable
+      (identifier))))
 
 ====
 Function definition
@@ -46,16 +45,14 @@ identity ( var ) = var ;
     (variable
       (identifier))
     (parameter)
-    (object
-      (variable
-        (identifier))))
+    (variable
+      (identifier)))
   (definition
     (variable
       (identifier))
     (parameter)
-    (object
-      (variable
-        (identifier)))))
+    (variable
+      (identifier))))
 
 ====
 Import
