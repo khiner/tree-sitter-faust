@@ -55,6 +55,18 @@ identity ( var ) = var ;
       (identifier))))
 
 ====
+String
+====
+
+process = "a\"\n\r!@#$%^&*(),<.>?/~`{}\|\';:";
+---
+(source_file
+  (definition
+    (variable
+      (identifier))
+    (string)))
+
+====
 Import
 ====
 

@@ -1,7 +1,6 @@
 const PRECEDENCE = {
   FUNCTION_CALL: 1,
   EXPRESSION: 10,
-  STRING: 2,
   BINARY_OP: 6,
   RECURSIVE: 1,
   PAR: 2,
@@ -135,7 +134,6 @@ module.exports = grammar({
     documentation: ($) => seq('<mdoc>', repeat($._doc_content), '</mdoc>'),
     _doc_content: ($) => choice($._doc_char, $._special_doc_tag),
     _doc_char: (_) => /[^<]+/,
-
     _special_doc_tag: ($) =>
       choice('<notice/>', '<notice />', '<equation>', '</equation>', '<diagram>', '</diagram>', '<metadata>', '</metadata>', '<listing'),
 
@@ -151,10 +149,7 @@ module.exports = grammar({
     merge: ($) => prec.right(PRECEDENCE.MERGE, seq(field('left', sepBy2(',', $._expression)), ':>', field('right', $._expression))),
     parallel: ($) => prec.right(PRECEDENCE.PAR, choice(sepBy2(',', $._expression), seq('(', sepBy2(',', $._expression), ')'))),
 
-    string: ($) => seq('"', repeat(choice(token.immediate(prec(PRECEDENCE.STRING, /[^"\\\n]+|\\\r?\n/)), $.escape_sequence)), '"'),
-
-    escape_sequence: (_) =>
-      token.immediate(seq('\\', choice(/[^xu0-7]/, /[0-7]{1,3}/, /x[0-9a-fA-F]{2}/, /u[0-9a-fA-F]{4}/, /u{[0-9a-fA-F]+}/))),
+    string: (_) => /"([^"\\]|\\.)*"/,
 
     variable: ($) => seq(optional(seq(alias($.identifier, $.module_name), '.')), $.identifier),
 

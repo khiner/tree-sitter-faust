@@ -1201,21 +1201,6 @@
     }
   },
   {
-    "type": "string",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "escape_sequence",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "variable",
     "named": true,
     "fields": {},
@@ -1241,10 +1226,6 @@
   },
   {
     "type": "!=",
-    "named": false
-  },
-  {
-    "type": "\"",
     "named": false
   },
   {
@@ -1412,10 +1393,6 @@
     "named": false
   },
   {
-    "type": "escape_sequence",
-    "named": true
-  },
-  {
     "type": "fixedpointprecision",
     "named": false
   },
@@ -1454,6 +1431,10 @@
   {
     "type": "singleprecision",
     "named": false
+  },
+  {
+    "type": "string",
+    "named": true
   },
   {
     "type": "sum",
