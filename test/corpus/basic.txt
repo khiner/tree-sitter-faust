@@ -4,10 +4,42 @@ Empty
 
 ---
 (source_file)
+
+====
+Variable definition
+====
+
+process = _;
+
+---
+(source_file
+  (definition
+    (variable
+      (identifier))
+    (wire)))
+
+====
+Namespaced variable
+====
+
+process = ::foo::bar::baz;
+
+---
+(source_file
+  (definition
+    (variable
+      (identifier))
+    (object
+      (variable
+        (identifier)))))
+
 ====
 Function definition
 ====
+
 identity(var) = var;
+identity ( var ) = var ;
+
 ---
 (source_file
   (definition
@@ -16,4 +48,24 @@ identity(var) = var;
     (parameter)
     (object
       (variable
+        (identifier))))
+  (definition
+    (variable
+      (identifier))
+    (parameter)
+    (object
+      (variable
         (identifier)))))
+
+====
+Import
+====
+
+import("stdfaust.lib");
+import ( "stdfaust.lib" ) ;
+---
+(source_file
+  (file_import
+    (string))
+  (file_import
+    (string)))

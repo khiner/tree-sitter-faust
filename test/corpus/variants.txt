@@ -1,7 +1,9 @@
 ====
 Single variant
 ====
+
 singleprecision int_part(idv) = idv : _,!;
+
 ---
 (source_file
   (variant)
@@ -16,10 +18,13 @@ singleprecision int_part(idv) = idv : _,!;
             (identifier)))
         (wire))
       (cut))))
+
 ====
 Two variants
 ====
+
 doubleprecision quadprecision int_part(idv) = int(idv);
+
 ---
 (source_file
   (variant)

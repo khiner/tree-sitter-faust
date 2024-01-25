@@ -1257,7 +1257,11 @@
       "members": [
         {
           "type": "STRING",
-          "value": "import("
+          "value": "import"
+        },
+        {
+          "type": "STRING",
+          "value": "("
         },
         {
           "type": "SYMBOL",

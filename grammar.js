@@ -145,7 +145,7 @@ module.exports = grammar({
     _special_doc_tag: ($) =>
       choice('<notice/>', '<notice />', '<equation>', '</equation>', '<diagram>', '</diagram>', '<metadata>', '</metadata>', '<listing'),
 
-    file_import: ($) => seq('import(', $.string, ')'),
+    file_import: ($) => seq('import', '(', $.string, ')'),
 
     global_metadata: ($) => seq('declare', alias($.identifier, $.metadata_key), $.string),
     definition_metadata: ($) => seq('declare', alias($.identifier, $.function_name), alias($.identifier, $.metadata_key), $.string),

@@ -1,7 +1,9 @@
 =====
 Recursive
 =====
+
 process = _~+(1);
+
 ---
 (source_file
   (definition
@@ -13,10 +15,13 @@ process = _~+(1);
           (binary_operator)
           (object
             (int)))))))
+
 =====
 Sequential
 =====
+
 a=_:_;
+
 ---
 (source_file
   (definition
@@ -24,10 +29,13 @@ a=_:_;
     value: (sequential
       left: (wire)
       right: (wire))))
+
 =====
 Split two
 =====
+
 a=_<:_,_;
+
 ---
 (source_file
   (definition
@@ -36,10 +44,13 @@ a=_<:_,_;
       left: (wire)
       right: (wire)
       right: (wire))))
+
 =====
 Split three
 =====
+
 a=_<:_,_,_;
+
 ---
 (source_file
   (definition
@@ -50,10 +61,13 @@ a=_<:_,_,_;
       right: (parallel
         (wire)
         (wire)))))
+
 =====
 Merge two
 =====
+
 a=_,_:>_;
+
 ---
 (source_file
   (definition
@@ -62,10 +76,13 @@ a=_,_:>_;
       left: (wire)
       left: (wire)
       right: (wire))))
+
 =====
 Merge three
 =====
+
 a=_,_,_:>_;
+
 ---
 (source_file
   (definition
