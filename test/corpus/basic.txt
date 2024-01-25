@@ -17,6 +17,36 @@ process = ::foo::bar::baz;
     (identifier)
     (identifier)))
 
+====
+Unary operator
+====
+
+process = +(1);
+
+---
+(source_file
+  (definition
+    (identifier)
+    (function_call
+      (operator)
+      (args
+        (argument
+          (int))))))
+
+====
+Binary operator
+====
+
+process = 1 + 1;
+
+---
+(source_file
+  (definition
+    (identifier)
+    (binary_op
+      (int)
+      (operator)
+      (int))))
 
 ====
 Function definition
@@ -29,23 +59,37 @@ identity ( var ) = var ;
 (source_file
   (definition
     (identifier)
-    (parameter)
+    (params
+      (parameter))
     (identifier))
   (definition
     (identifier)
-    (parameter)
+    (params
+      (parameter))
     (identifier)))
 
 ====
-String
+Global metadata
 ====
 
-process = "a\"\n\r!@#$%^&*(),<.>?/~`{}\|\';:";
+declare name "Noise";
 
 ---
 (source_file
-  (definition
-    (identifier)
+  (global_metadata
+    (metadata_key)
+    (string)))
+
+====
+Complex string
+====
+
+declare complex_string "a\"\n\r!@#$%^&*(),<.>?/~`{}\|\';:";
+
+---
+(source_file
+  (global_metadata
+    (metadata_key)
     (string)))
 
 ====

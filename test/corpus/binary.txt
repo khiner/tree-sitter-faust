@@ -1,5 +1,5 @@
 =====
-Recursive
+Recursion
 =====
 
 process = _~+(1);
@@ -7,13 +7,14 @@ process = _~+(1);
 ---
 (source_file
   (definition
-    name: (identifier)
-    value: (recursive
-      left: (wire)
-      right: (binary_operation
-        (partial
-          (binary_operator)
-          (int))))))
+    (identifier)
+    (recursive
+      (wire)
+      (function_call
+        (operator)
+        (args
+          (argument
+            (int)))))))
 
 =====
 Sequential
@@ -38,11 +39,12 @@ a=_<:_,_;
 ---
 (source_file
   (definition
-    name: (identifier)
-    value: (split
-      left: (wire)
-      right: (wire)
-      right: (wire))))
+    (identifier)
+    (split
+      (wire)
+      (parallel
+        (wire)
+        (wire)))))
 
 =====
 Split three
@@ -53,13 +55,14 @@ a=_<:_,_,_;
 ---
 (source_file
   (definition
-    name: (identifier)
-    value: (split
-      left: (wire)
-      right: (wire)
-      right: (parallel
+    (identifier)
+    (split
+      (wire)
+      (parallel
         (wire)
-        (wire)))))
+        (parallel
+          (wire)
+          (wire))))))
 
 =====
 Merge two
@@ -70,11 +73,12 @@ a=_,_:>_;
 ---
 (source_file
   (definition
-    name: (identifier)
-    value: (merge
-      left: (wire)
-      left: (wire)
-      right: (wire))))
+    (identifier)
+    (merge
+      (parallel
+        (wire)
+        (wire))
+      (wire))))
 
 =====
 Merge three
@@ -85,10 +89,11 @@ a=_,_,_:>_;
 ---
 (source_file
   (definition
-    name: (identifier)
-    value: (parallel
-      (wire)
-      (merge
-        left: (wire)
-        left: (wire)
-        right: (wire)))))
+    (identifier)
+    (merge
+      (parallel
+        (wire)
+        (parallel
+          (wire)
+          (wire)))
+      (wire))))

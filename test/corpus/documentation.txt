@@ -30,11 +30,7 @@ This process is illustrated on figure 1.
 <notice/>
 <notice />
 </mdoc>
-one = 1;
 
 ---
 (source_file
-(documentation)
-(definition
-    (identifier)
-    (int)))
+  (documentation))

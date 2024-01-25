@@ -1,25 +1,23 @@
 const PRECEDENCE = {
-  FUNCTION_CALL: 1,
-  EXPRESSION: 10,
-  BINARY_OP: 6,
-  RECURSIVE: 1,
-  PAR: 2,
-  SEQ: 4,
-  SPLIT: 4,
-  MERGE: 4,
-  CORE: 5,
+  RECURSIVE: 13,
+  PAR: 12,
+  SEQ: 11,
+  SPLIT: 10,
+  MERGE: 10,
+  BINARY_OP: 3,
+  FUNCTION_CALL: 3,
+  ACCESS: 2,
+  EXPRESSION: 1,
 };
 
-const sepBy1 = (sep, rule) => seq(rule, repeat(seq(sep, rule)));
-const sepBy2 = (sep, rule) => seq(rule, repeat1(seq(sep, rule)));
-const sepBy = (sep, rule) => optional(sepBy1(sep, rule));
+const sepBy = (sep, rule) => seq(rule, repeat(seq(sep, rule)));
+
+// If we didn't need to restrict binary compositions in arguments to the `argument` rule, we could avoid the `field_rule` callback.
+const binaryComposition = (operator, precedence, assoc, field_rule) => ($) =>
+  prec[assoc](precedence, seq(field('left', field_rule($)), operator, field('right', field_rule($))));
 
 module.exports = grammar({
   name: 'faust',
-  conflicts: ($) => [
-    [$._binary_composition, $.binary_operation],
-    [$.function_call, $.merge, $.split, $.parallel, $.sequential, $.recursive],
-  ],
   rules: {
     source_file: ($) => repeat(choice($.comment, $._statement)),
 
@@ -33,54 +31,63 @@ module.exports = grammar({
 
     definition: ($) =>
       choice(
-        seq(field('name', $._variable), '(', sepBy(',', alias($.identifier, $.parameter)), ')', '=', field('value', $._expression)),
-        seq(field('name', $._variable), '=', field('value', $._expression))
+        seq(field('name', $.identifier), '(', $.params, ')', '=', field('value', $._expression)),
+        seq(field('name', $.identifier), '=', field('value', $._expression))
       ),
 
-    function_call: ($) =>
-      prec(
-        PRECEDENCE.FUNCTION_CALL,
-        seq(optional(seq(alias($.identifier, $.module_name), '.')), alias($.identifier, $.function_name), '(', sepBy(',', $.argument), ')')
+    _expression: ($) => prec(PRECEDENCE.EXPRESSION, choice($._binary_composition, $._infix)),
+    _infix: ($) =>
+      prec(PRECEDENCE.EXPRESSION, choice($.binary_op, seq($._infix, $.one_sample_delay_operator), $.access, $.function_call, $._primitive)),
+    binary_op: ($) => prec.left(PRECEDENCE.BINARY_OP, seq($._infix, $.operator, $._infix)),
+    // | infixexp LPAR arglist RPAR       { $$ = buildBoxAppl($1,$3); }
+    function_call: ($) => prec(PRECEDENCE.FUNCTION_CALL, seq($._infix, '(', $.args, ')')),
+    access: ($) => prec(PRECEDENCE.ACCESS, seq($._infix, '.', $.identifier)),
+    // [$._infix, $.operator, $._expression, '.', $.identifier],
+    // function_call: ($) =>
+    // prec(
+    //   PRECEDENCE.FUNCTION_CALL,
+    //   seq(optional(seq(alias($.identifier, $.module_name), '.')), alias($.identifier, $.function_name), '(', sepBy(',', $.argument), ')')
+    // ),
+
+    _primitive: ($) =>
+      choice(
+        $._number,
+        $.wire,
+        $.cut,
+        'mem',
+        'prefix',
+        'int',
+        'float',
+        $.operator,
+        seq(optional('-'), $.identifier),
+        seq('(', $._expression, ')'),
+        seq('\\', '(', $.params, ')', '.', '(', $._expression, ')'),
+        $.iteration
       ),
 
-    argument: ($) => choice($._object, $.function_call),
+    args: ($) => sepBy(',', $.argument),
+    params: ($) => sepBy(',', alias($.identifier, $.parameter)),
 
-    lambda_abstraction: ($) => seq(seq('\\', '(', sepBy(',', alias($.identifier, $.parameter)), ')', '.', '(', $._expression, ')')),
+    argument: ($) => choice($.sequential_arg, $.split_arg, $.merge_arg, $.recursive_arg, $._infix),
+    recursive_arg: binaryComposition('~', PRECEDENCE.RECURSIVE, 'left', ($) => $.argument),
+    sequential_arg: binaryComposition(':', PRECEDENCE.SEQ, 'right', ($) => $.argument),
+    split_arg: binaryComposition('<:', PRECEDENCE.SPLIT, 'right', ($) => $.argument),
+    merge_arg: binaryComposition(':>', PRECEDENCE.MERGE, 'right', ($) => $.argument),
 
-    _expression: ($) =>
-      prec(
-        PRECEDENCE.EXPRESSION,
-        choice($.one_sample_delay, $._object, $._binary_composition, $.binary_operation, $.wire, $.cut, $.iteration, $.function_call)
-      ),
-
+    // todo test
     iteration: ($) =>
       seq(
         choice('par', 'seq', 'sum', 'prod'),
+        '(',
         alias($.identifier, $.current_iteration),
         ',',
-        alias($._object, $.numiter),
+        alias($.argument, $.numiter),
         ',',
-        $._expression
-      ),
-    wire: () => '_',
-    cut: () => '!',
-
-    binary_operation: ($) => prec(PRECEDENCE.BINARY_OP, choice($.infix, $.core, $.prefix, $.partial)),
-
-    core: ($) =>
-      prec(
-        PRECEDENCE.CORE,
-        choice(seq($._object, ',', $._object, ':', $.binary_operator), seq('(', $._object, ',', $._object, ')', ':', $.binary_operator))
+        $._expression,
+        ')'
       ),
 
-    infix: ($) => seq($._object, $.binary_operator, $._object),
-    prefix: ($) => seq($.binary_operator, '(', $._object, ',', $._object, ')'),
-    partial: ($) => seq($.binary_operator, '(', $._object, ')'),
-
-    one_sample_delay: ($) => seq($._object, repeat1($.one_sample_delay_operator)),
-    one_sample_delay_operator: (_) => "'",
-
-    binary_operator: (_) =>
+    operator: (_) =>
       choice(
         // Math
         '+',
@@ -106,9 +113,9 @@ module.exports = grammar({
         '@'
       ),
 
-    // @TODO This should be in expression
-    _object: ($) => choice($._number, $._variable, $.string),
-    _variable: ($) => seq(optional(seq(alias($.identifier, $.module_name), '.')), $.identifier),
+    wire: () => '_',
+    cut: () => '!',
+    one_sample_delay_operator: (_) => "'",
 
     _number: ($) => choice($.int, $.real),
     int: (_) => {
@@ -144,11 +151,11 @@ module.exports = grammar({
     definition_metadata: ($) => seq('declare', alias($.identifier, $.function_name), alias($.identifier, $.metadata_key), $.string),
 
     _binary_composition: ($) => choice($.recursive, $.sequential, $.split, $.merge, $.parallel),
-    recursive: ($) => prec.left(PRECEDENCE.RECURSIVE, seq(field('left', $._expression), '~', field('right', $._expression))),
-    sequential: ($) => prec.right(PRECEDENCE.SEQ, seq(field('left', $._expression), ':', field('right', $._expression))),
-    split: ($) => prec.right(PRECEDENCE.SPLIT, seq(field('left', $._expression), '<:', field('right', sepBy2(',', $._expression)))),
-    merge: ($) => prec.right(PRECEDENCE.MERGE, seq(field('left', sepBy2(',', $._expression)), ':>', field('right', $._expression))),
-    parallel: ($) => prec.right(PRECEDENCE.PAR, choice(sepBy2(',', $._expression), seq('(', sepBy2(',', $._expression), ')'))),
+    recursive: binaryComposition('~', PRECEDENCE.RECURSIVE, 'left', ($) => $._expression),
+    sequential: binaryComposition(':', PRECEDENCE.SEQ, 'right', ($) => $._expression),
+    split: binaryComposition('<:', PRECEDENCE.SPLIT, 'right', ($) => $._expression),
+    merge: binaryComposition(':>', PRECEDENCE.MERGE, 'right', ($) => $._expression),
+    parallel: binaryComposition(',', PRECEDENCE.PAR, 'right', ($) => $._expression),
 
     string: (_) => /"([^"\\]|\\.)*"/,
 
