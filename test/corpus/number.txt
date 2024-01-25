@@ -7,14 +7,12 @@ process = 1,+10,-100;
 ---
 (source_file
   (definition
-    (variable
-      (identifier))
+    (identifier)
     (parallel
       (int)
       (parallel
         (int)
         (int)))))
-
 
 ====
 Reals
@@ -25,8 +23,7 @@ process = 0.5,.5,5.,5.5e4,+1.,-1.f;
 ---
 (source_file
   (definition
-    (variable
-      (identifier))
+    (identifier)
     (parallel
       (real)
       (parallel

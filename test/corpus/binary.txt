@@ -7,7 +7,7 @@ process = _~+(1);
 ---
 (source_file
   (definition
-    name: (variable (identifier))
+    name: (identifier)
     value: (recursive
       left: (wire)
       right: (binary_operation
@@ -24,7 +24,7 @@ a=_:_;
 ---
 (source_file
   (definition
-    name: (variable (identifier))
+    name: (identifier)
     value: (sequential
       left: (wire)
       right: (wire))))
@@ -38,7 +38,7 @@ a=_<:_,_;
 ---
 (source_file
   (definition
-    name: (variable (identifier))
+    name: (identifier)
     value: (split
       left: (wire)
       right: (wire)
@@ -53,7 +53,7 @@ a=_<:_,_,_;
 ---
 (source_file
   (definition
-    name: (variable (identifier))
+    name: (identifier)
     value: (split
       left: (wire)
       right: (wire)
@@ -70,7 +70,7 @@ a=_,_:>_;
 ---
 (source_file
   (definition
-    name: (variable (identifier))
+    name: (identifier)
     value: (merge
       left: (wire)
       left: (wire)
@@ -85,7 +85,7 @@ a=_,_,_:>_;
 ---
 (source_file
   (definition
-    name: (variable (identifier))
+    name: (identifier)
     value: (parallel
       (wire)
       (merge

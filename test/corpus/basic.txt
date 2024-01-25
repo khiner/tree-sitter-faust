@@ -6,20 +6,7 @@ Empty
 (source_file)
 
 ====
-Variable definition
-====
-
-process = _;
-
----
-(source_file
-  (definition
-    (variable
-      (identifier))
-    (wire)))
-
-====
-Namespaced variable
+Namespaced variable assignment
 ====
 
 process = ::foo::bar::baz;
@@ -27,10 +14,9 @@ process = ::foo::bar::baz;
 ---
 (source_file
   (definition
-    (variable
-      (identifier))
-    (variable
-      (identifier))))
+    (identifier)
+    (identifier)))
+
 
 ====
 Function definition
@@ -42,28 +28,24 @@ identity ( var ) = var ;
 ---
 (source_file
   (definition
-    (variable
-      (identifier))
+    (identifier)
     (parameter)
-    (variable
-      (identifier)))
+    (identifier))
   (definition
-    (variable
-      (identifier))
+    (identifier)
     (parameter)
-    (variable
-      (identifier))))
+    (identifier)))
 
 ====
 String
 ====
 
 process = "a\"\n\r!@#$%^&*(),<.>?/~`{}\|\';:";
+
 ---
 (source_file
   (definition
-    (variable
-      (identifier))
+    (identifier)
     (string)))
 
 ====

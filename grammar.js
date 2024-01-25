@@ -33,8 +33,8 @@ module.exports = grammar({
 
     definition: ($) =>
       choice(
-        seq(field('name', $.variable), '(', sepBy(',', alias($.identifier, $.parameter)), ')', '=', field('value', $._expression)),
-        seq(field('name', $.variable), '=', field('value', $._expression))
+        seq(field('name', $._variable), '(', sepBy(',', alias($.identifier, $.parameter)), ')', '=', field('value', $._expression)),
+        seq(field('name', $._variable), '=', field('value', $._expression))
       ),
 
     function_call: ($) =>
@@ -107,7 +107,8 @@ module.exports = grammar({
       ),
 
     // @TODO This should be in expression
-    _object: ($) => choice($._number, $.variable, $.string),
+    _object: ($) => choice($._number, $._variable, $.string),
+    _variable: ($) => seq(optional(seq(alias($.identifier, $.module_name), '.')), $.identifier),
 
     _number: ($) => choice($.int, $.real),
     int: (_) => {
@@ -151,8 +152,9 @@ module.exports = grammar({
 
     string: (_) => /"([^"\\]|\\.)*"/,
 
-    variable: ($) => seq(optional(seq(alias($.identifier, $.module_name), '.')), $.identifier),
-
+    // todo Improve qualified identifiers, using a visible rule for 'qualified_identifier'
+    //   See 'qualified_identifier' in https://github.com/tree-sitter/tree-sitter-cpp/blob/master/grammar.js,
+    //   and the test: https://github.com/tree-sitter/tree-sitter-cpp/blob/master/test/corpus/statements.txt#L409-L425
     identifier: ($) => prec.right(seq(optional('::'), seq($._id, repeat(seq('::', $._id))))),
     _id: (_) => /_*[a-zA-Z][_a-zA-Z0-9]*/,
 

@@ -34,8 +34,7 @@ one = 1;
 
 ---
 (source_file
-  (documentation)
-  (definition
-    (variable
-      (identifier))
+(documentation)
+(definition
+    (identifier)
     (int)))

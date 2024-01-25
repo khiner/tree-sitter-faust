@@ -4,7 +4,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
@@ -12,7 +12,15 @@
           "named": true
         },
         {
+          "type": "identifier",
+          "named": true
+        },
+        {
           "type": "int",
+          "named": true
+        },
+        {
+          "type": "module_name",
           "named": true
         },
         {
@@ -21,10 +29,6 @@
         },
         {
           "type": "string",
-          "named": true
-        },
-        {
-          "type": "variable",
           "named": true
         }
       ]
@@ -75,7 +79,15 @@
           "named": true
         },
         {
+          "type": "identifier",
+          "named": true
+        },
+        {
           "type": "int",
+          "named": true
+        },
+        {
+          "type": "module_name",
           "named": true
         },
         {
@@ -84,10 +96,6 @@
         },
         {
           "type": "string",
-          "named": true
-        },
-        {
-          "type": "variable",
           "named": true
         }
       ]
@@ -103,19 +111,31 @@
     "named": true,
     "fields": {
       "name": {
-        "multiple": false,
+        "multiple": true,
         "required": true,
         "types": [
           {
-            "type": "variable",
+            "type": ".",
+            "named": false
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "module_name",
             "named": true
           }
         ]
       },
       "value": {
-        "multiple": false,
+        "multiple": true,
         "required": true,
         "types": [
+          {
+            "type": ".",
+            "named": false
+          },
           {
             "type": "binary_operation",
             "named": true
@@ -129,6 +149,10 @@
             "named": true
           },
           {
+            "type": "identifier",
+            "named": true
+          },
+          {
             "type": "int",
             "named": true
           },
@@ -138,6 +162,10 @@
           },
           {
             "type": "merge",
+            "named": true
+          },
+          {
+            "type": "module_name",
             "named": true
           },
           {
@@ -166,10 +194,6 @@
           },
           {
             "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable",
             "named": true
           },
           {
@@ -298,7 +322,15 @@
           "named": true
         },
         {
+          "type": "identifier",
+          "named": true
+        },
+        {
           "type": "int",
+          "named": true
+        },
+        {
+          "type": "module_name",
           "named": true
         },
         {
@@ -307,10 +339,6 @@
         },
         {
           "type": "string",
-          "named": true
-        },
-        {
-          "type": "variable",
           "named": true
         }
       ]
@@ -341,6 +369,10 @@
           "named": true
         },
         {
+          "type": "identifier",
+          "named": true
+        },
+        {
           "type": "int",
           "named": true
         },
@@ -350,6 +382,10 @@
         },
         {
           "type": "merge",
+          "named": true
+        },
+        {
+          "type": "module_name",
           "named": true
         },
         {
@@ -385,10 +421,6 @@
           "named": true
         },
         {
-          "type": "variable",
-          "named": true
-        },
-        {
           "type": "wire",
           "named": true
         }
@@ -408,6 +440,10 @@
             "named": false
           },
           {
+            "type": ".",
+            "named": false
+          },
+          {
             "type": "binary_operation",
             "named": true
           },
@@ -420,6 +456,10 @@
             "named": true
           },
           {
+            "type": "identifier",
+            "named": true
+          },
+          {
             "type": "int",
             "named": true
           },
@@ -429,6 +469,10 @@
           },
           {
             "type": "merge",
+            "named": true
+          },
+          {
+            "type": "module_name",
             "named": true
           },
           {
@@ -457,10 +501,6 @@
           },
           {
             "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable",
             "named": true
           },
           {
@@ -470,9 +510,13 @@
         ]
       },
       "right": {
-        "multiple": false,
+        "multiple": true,
         "required": true,
         "types": [
+          {
+            "type": ".",
+            "named": false
+          },
           {
             "type": "binary_operation",
             "named": true
@@ -486,6 +530,10 @@
             "named": true
           },
           {
+            "type": "identifier",
+            "named": true
+          },
+          {
             "type": "int",
             "named": true
           },
@@ -495,6 +543,10 @@
           },
           {
             "type": "merge",
+            "named": true
+          },
+          {
+            "type": "module_name",
             "named": true
           },
           {
@@ -523,10 +575,6 @@
           },
           {
             "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable",
             "named": true
           },
           {
@@ -552,11 +600,19 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
+          "type": "identifier",
+          "named": true
+        },
+        {
           "type": "int",
+          "named": true
+        },
+        {
+          "type": "module_name",
           "named": true
         },
         {
@@ -565,10 +621,6 @@
         },
         {
           "type": "string",
-          "named": true
-        },
-        {
-          "type": "variable",
           "named": true
         }
       ]
@@ -583,7 +635,15 @@
       "required": true,
       "types": [
         {
+          "type": "identifier",
+          "named": true
+        },
+        {
           "type": "int",
+          "named": true
+        },
+        {
+          "type": "module_name",
           "named": true
         },
         {
@@ -596,10 +656,6 @@
         },
         {
           "type": "string",
-          "named": true
-        },
-        {
-          "type": "variable",
           "named": true
         }
       ]
@@ -626,6 +682,10 @@
           "named": true
         },
         {
+          "type": "identifier",
+          "named": true
+        },
+        {
           "type": "int",
           "named": true
         },
@@ -635,6 +695,10 @@
         },
         {
           "type": "merge",
+          "named": true
+        },
+        {
+          "type": "module_name",
           "named": true
         },
         {
@@ -666,10 +730,6 @@
           "named": true
         },
         {
-          "type": "variable",
-          "named": true
-        },
-        {
           "type": "wire",
           "named": true
         }
@@ -694,7 +754,15 @@
           "named": true
         },
         {
+          "type": "identifier",
+          "named": true
+        },
+        {
           "type": "int",
+          "named": true
+        },
+        {
+          "type": "module_name",
           "named": true
         },
         {
@@ -703,10 +771,6 @@
         },
         {
           "type": "string",
-          "named": true
-        },
-        {
-          "type": "variable",
           "named": true
         }
       ]
@@ -725,7 +789,15 @@
           "named": true
         },
         {
+          "type": "identifier",
+          "named": true
+        },
+        {
           "type": "int",
+          "named": true
+        },
+        {
+          "type": "module_name",
           "named": true
         },
         {
@@ -734,10 +806,6 @@
         },
         {
           "type": "string",
-          "named": true
-        },
-        {
-          "type": "variable",
           "named": true
         }
       ]
@@ -748,9 +816,13 @@
     "named": true,
     "fields": {
       "left": {
-        "multiple": false,
+        "multiple": true,
         "required": true,
         "types": [
+          {
+            "type": ".",
+            "named": false
+          },
           {
             "type": "binary_operation",
             "named": true
@@ -764,6 +836,10 @@
             "named": true
           },
           {
+            "type": "identifier",
+            "named": true
+          },
+          {
             "type": "int",
             "named": true
           },
@@ -773,6 +849,10 @@
           },
           {
             "type": "merge",
+            "named": true
+          },
+          {
+            "type": "module_name",
             "named": true
           },
           {
@@ -801,10 +881,6 @@
           },
           {
             "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable",
             "named": true
           },
           {
@@ -814,9 +890,13 @@
         ]
       },
       "right": {
-        "multiple": false,
+        "multiple": true,
         "required": true,
         "types": [
+          {
+            "type": ".",
+            "named": false
+          },
           {
             "type": "binary_operation",
             "named": true
@@ -830,6 +910,10 @@
             "named": true
           },
           {
+            "type": "identifier",
+            "named": true
+          },
+          {
             "type": "int",
             "named": true
           },
@@ -839,6 +923,10 @@
           },
           {
             "type": "merge",
+            "named": true
+          },
+          {
+            "type": "module_name",
             "named": true
           },
           {
@@ -867,10 +955,6 @@
           },
           {
             "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable",
             "named": true
           },
           {
@@ -886,9 +970,13 @@
     "named": true,
     "fields": {
       "left": {
-        "multiple": false,
+        "multiple": true,
         "required": true,
         "types": [
+          {
+            "type": ".",
+            "named": false
+          },
           {
             "type": "binary_operation",
             "named": true
@@ -902,6 +990,10 @@
             "named": true
           },
           {
+            "type": "identifier",
+            "named": true
+          },
+          {
             "type": "int",
             "named": true
           },
@@ -911,6 +1003,10 @@
           },
           {
             "type": "merge",
+            "named": true
+          },
+          {
+            "type": "module_name",
             "named": true
           },
           {
@@ -939,10 +1035,6 @@
           },
           {
             "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable",
             "named": true
           },
           {
@@ -952,9 +1044,13 @@
         ]
       },
       "right": {
-        "multiple": false,
+        "multiple": true,
         "required": true,
         "types": [
+          {
+            "type": ".",
+            "named": false
+          },
           {
             "type": "binary_operation",
             "named": true
@@ -968,6 +1064,10 @@
             "named": true
           },
           {
+            "type": "identifier",
+            "named": true
+          },
+          {
             "type": "int",
             "named": true
           },
@@ -977,6 +1077,10 @@
           },
           {
             "type": "merge",
+            "named": true
+          },
+          {
+            "type": "module_name",
             "named": true
           },
           {
@@ -1005,10 +1109,6 @@
           },
           {
             "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable",
             "named": true
           },
           {
@@ -1063,9 +1163,13 @@
     "named": true,
     "fields": {
       "left": {
-        "multiple": false,
+        "multiple": true,
         "required": true,
         "types": [
+          {
+            "type": ".",
+            "named": false
+          },
           {
             "type": "binary_operation",
             "named": true
@@ -1079,6 +1183,10 @@
             "named": true
           },
           {
+            "type": "identifier",
+            "named": true
+          },
+          {
             "type": "int",
             "named": true
           },
@@ -1088,6 +1196,10 @@
           },
           {
             "type": "merge",
+            "named": true
+          },
+          {
+            "type": "module_name",
             "named": true
           },
           {
@@ -1116,10 +1228,6 @@
           },
           {
             "type": "string",
-            "named": true
-          },
-          {
-            "type": "variable",
             "named": true
           },
           {
@@ -1137,6 +1245,10 @@
             "named": false
           },
           {
+            "type": ".",
+            "named": false
+          },
+          {
             "type": "binary_operation",
             "named": true
           },
@@ -1149,6 +1261,10 @@
             "named": true
           },
           {
+            "type": "identifier",
+            "named": true
+          },
+          {
             "type": "int",
             "named": true
           },
@@ -1158,6 +1274,10 @@
           },
           {
             "type": "merge",
+            "named": true
+          },
+          {
+            "type": "module_name",
             "named": true
           },
           {
@@ -1189,34 +1309,11 @@
             "named": true
           },
           {
-            "type": "variable",
-            "named": true
-          },
-          {
             "type": "wire",
             "named": true
           }
         ]
       }
-    }
-  },
-  {
-    "type": "variable",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "module_name",
-          "named": true
-        }
-      ]
     }
   },
   {

@@ -8,13 +8,11 @@ singleprecision int_part(idv) = idv : _,!;
 (source_file
   (variant)
   (definition
-    (variable
-      (identifier))
+    (identifier)
     (parameter)
     (parallel
       (sequential
-        (variable
-          (identifier))
+        (identifier)
         (wire))
       (cut))))
 
@@ -29,11 +27,9 @@ doubleprecision quadprecision int_part(idv) = int(idv);
   (variant)
   (variant)
   (definition
-    (variable
-      (identifier))
+    (identifier)
     (parameter)
     (function_call
       (function_name)
       (argument
-        (variable
-          (identifier))))))
+        (identifier)))))
