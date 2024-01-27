@@ -205,25 +205,276 @@
       }
     },
     "infix_op": {
-      "type": "PREC_LEFT",
-      "value": 3,
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "SYMBOL",
-            "name": "_infix"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "op"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "_infix"
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "PREC_LEFT",
+          "value": 24,
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "FIELD",
+                "name": "left",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_infix"
+                }
+              },
+              {
+                "type": "SYMBOL",
+                "name": "delay_op"
+              },
+              {
+                "type": "FIELD",
+                "name": "right",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_infix"
+                }
+              }
+            ]
           }
-        ]
-      }
+        },
+        {
+          "type": "PREC_LEFT",
+          "value": 23,
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "FIELD",
+                "name": "left",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_infix"
+                }
+              },
+              {
+                "type": "SYMBOL",
+                "name": "exp_op"
+              },
+              {
+                "type": "FIELD",
+                "name": "right",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_infix"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "PREC_LEFT",
+          "value": 22,
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "FIELD",
+                "name": "left",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_infix"
+                }
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "mult_op"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "div_op"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "mod_op"
+                  }
+                ]
+              },
+              {
+                "type": "FIELD",
+                "name": "right",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_infix"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "PREC_LEFT",
+          "value": 21,
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "FIELD",
+                "name": "left",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_infix"
+                }
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "add_op"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "sub_op"
+                  }
+                ]
+              },
+              {
+                "type": "FIELD",
+                "name": "right",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_infix"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "PREC_LEFT",
+          "value": 22,
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "FIELD",
+                "name": "left",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_infix"
+                }
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "and_op"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "xor_op"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "lshift_op"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "rshift_op"
+                  }
+                ]
+              },
+              {
+                "type": "FIELD",
+                "name": "right",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_infix"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "PREC_LEFT",
+          "value": 21,
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "FIELD",
+                "name": "left",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_infix"
+                }
+              },
+              {
+                "type": "SYMBOL",
+                "name": "or_op"
+              },
+              {
+                "type": "FIELD",
+                "name": "right",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_infix"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "PREC_LEFT",
+          "value": 20,
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "FIELD",
+                "name": "left",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_infix"
+                }
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "lt_op"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "le_op"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "gt_op"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "ge_op"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "eq_op"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "neq_op"
+                  }
+                ]
+              },
+              {
+                "type": "FIELD",
+                "name": "right",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_infix"
+                }
+              }
+            ]
+          }
+        }
+      ]
     },
     "prefix_op": {
       "type": "PREC",
@@ -305,15 +556,15 @@
         },
         {
           "type": "SYMBOL",
-          "name": "mem"
+          "name": "mem_op"
         },
         {
           "type": "SYMBOL",
-          "name": "prefix_primitive"
+          "name": "prefix_primitive_op"
         },
         {
           "type": "SYMBOL",
-          "name": "op"
+          "name": "_op"
         },
         {
           "type": "SEQ",
@@ -661,80 +912,80 @@
         }
       ]
     },
-    "op": {
+    "_op": {
       "type": "CHOICE",
       "members": [
         {
           "type": "SYMBOL",
-          "name": "add"
+          "name": "add_op"
         },
         {
           "type": "SYMBOL",
-          "name": "sub"
+          "name": "sub_op"
         },
         {
           "type": "SYMBOL",
-          "name": "mult"
+          "name": "mult_op"
         },
         {
           "type": "SYMBOL",
-          "name": "div"
+          "name": "div_op"
         },
         {
           "type": "SYMBOL",
-          "name": "mod"
+          "name": "mod_op"
         },
         {
           "type": "SYMBOL",
-          "name": "exp"
+          "name": "exp_op"
         },
         {
           "type": "SYMBOL",
-          "name": "or"
+          "name": "or_op"
         },
         {
           "type": "SYMBOL",
-          "name": "and"
+          "name": "and_op"
         },
         {
           "type": "SYMBOL",
-          "name": "xor"
+          "name": "xor_op"
         },
         {
           "type": "SYMBOL",
-          "name": "lshift"
+          "name": "lshift_op"
         },
         {
           "type": "SYMBOL",
-          "name": "rshift"
+          "name": "rshift_op"
         },
         {
           "type": "SYMBOL",
-          "name": "lt"
+          "name": "lt_op"
         },
         {
           "type": "SYMBOL",
-          "name": "le"
+          "name": "le_op"
         },
         {
           "type": "SYMBOL",
-          "name": "gt"
+          "name": "gt_op"
         },
         {
           "type": "SYMBOL",
-          "name": "ge"
+          "name": "ge_op"
         },
         {
           "type": "SYMBOL",
-          "name": "eq"
+          "name": "eq_op"
         },
         {
           "type": "SYMBOL",
-          "name": "neq"
+          "name": "neq_op"
         },
         {
           "type": "SYMBOL",
-          "name": "delay"
+          "name": "delay_op"
         },
         {
           "type": "SYMBOL",
@@ -755,77 +1006,17 @@
         }
       ]
     },
-    "add": {
+    "wire": {
       "type": "STRING",
-      "value": "+"
+      "value": "_"
     },
-    "sub": {
+    "cut": {
       "type": "STRING",
-      "value": "-"
+      "value": "!"
     },
-    "mult": {
+    "mem_op": {
       "type": "STRING",
-      "value": "*"
-    },
-    "div": {
-      "type": "STRING",
-      "value": "/"
-    },
-    "mod": {
-      "type": "STRING",
-      "value": "%"
-    },
-    "exp": {
-      "type": "STRING",
-      "value": "^"
-    },
-    "or": {
-      "type": "STRING",
-      "value": "|"
-    },
-    "and": {
-      "type": "STRING",
-      "value": "&"
-    },
-    "xor": {
-      "type": "STRING",
-      "value": "xor"
-    },
-    "lshift": {
-      "type": "STRING",
-      "value": "<<"
-    },
-    "rshift": {
-      "type": "STRING",
-      "value": ">>"
-    },
-    "lt": {
-      "type": "STRING",
-      "value": "<"
-    },
-    "le": {
-      "type": "STRING",
-      "value": "<="
-    },
-    "gt": {
-      "type": "STRING",
-      "value": ">"
-    },
-    "ge": {
-      "type": "STRING",
-      "value": ">="
-    },
-    "eq": {
-      "type": "STRING",
-      "value": "=="
-    },
-    "neq": {
-      "type": "STRING",
-      "value": "!="
-    },
-    "delay": {
-      "type": "STRING",
-      "value": "@"
+      "value": "mem"
     },
     "int_cast": {
       "type": "STRING",
@@ -835,25 +1026,89 @@
       "type": "STRING",
       "value": "float"
     },
-    "wire": {
+    "add_op": {
       "type": "STRING",
-      "value": "_"
+      "value": "+"
     },
-    "cut": {
+    "sub_op": {
       "type": "STRING",
-      "value": "!"
+      "value": "-"
     },
-    "one_sample_delay": {
+    "mult_op": {
       "type": "STRING",
-      "value": "'"
+      "value": "*"
     },
-    "mem": {
+    "div_op": {
       "type": "STRING",
-      "value": "mem"
+      "value": "/"
     },
-    "prefix_primitive": {
+    "mod_op": {
+      "type": "STRING",
+      "value": "%"
+    },
+    "exp_op": {
+      "type": "STRING",
+      "value": "^"
+    },
+    "or_op": {
+      "type": "STRING",
+      "value": "|"
+    },
+    "and_op": {
+      "type": "STRING",
+      "value": "&"
+    },
+    "xor_op": {
+      "type": "STRING",
+      "value": "xor"
+    },
+    "lshift_op": {
+      "type": "STRING",
+      "value": "<<"
+    },
+    "rshift_op": {
+      "type": "STRING",
+      "value": ">>"
+    },
+    "lt_op": {
+      "type": "STRING",
+      "value": "<"
+    },
+    "le_op": {
+      "type": "STRING",
+      "value": "<="
+    },
+    "gt_op": {
+      "type": "STRING",
+      "value": ">"
+    },
+    "ge_op": {
+      "type": "STRING",
+      "value": ">="
+    },
+    "eq_op": {
+      "type": "STRING",
+      "value": "=="
+    },
+    "neq_op": {
+      "type": "STRING",
+      "value": "!="
+    },
+    "delay_op": {
+      "type": "STRING",
+      "value": "@"
+    },
+    "prefix_primitive_op": {
       "type": "STRING",
       "value": "prefix"
+    },
+    "one_sample_delay": {
+      "type": "PREC",
+      "value": 25,
+      "content": {
+        "type": "STRING",
+        "value": "'"
+      }
     },
     "_number": {
       "type": "CHOICE",

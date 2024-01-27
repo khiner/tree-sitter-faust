@@ -1,0 +1,58 @@
+====
+Prefix op
+====
+
+nested_unary = mem(int(float(1)));
+process = |(*(2,3), @(nested_unary', 2));
+
+---
+(source_file
+  (definition
+    (identifier)
+    (prefix_op
+      (mem_op)
+      (prefix_op
+        (int_cast)
+        (prefix_op
+          (float_cast)
+          (int)))))
+  (definition
+    (identifier)
+    (prefix_op
+      (or_op)
+      (prefix_op
+        (mult_op)
+        (int)
+        (int))
+      (prefix_op
+        (delay_op)
+        (modifier_op
+          (identifier)
+          (one_sample_delay))
+        (int)))))
+
+====
+Infix op
+====
+
+process = 1 + 1 * 2 << 4 | 6 >= _ @ 7 ^ 2;
+
+---
+(source_file
+  (definition
+    (identifier)
+    (infix_op
+      (infix_op
+        (infix_op
+          (int)
+          (add_op)
+          (infix_op
+            (infix_op (int) (mult_op) (int))
+            (lshift_op)
+            (int)))
+        (or_op)
+        (int))
+      (ge_op)
+      (infix_op
+        (infix_op (wire) (delay_op) (int))
+        (exp_op) (int)))))

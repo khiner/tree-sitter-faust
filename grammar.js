@@ -1,9 +1,21 @@
 const PREC = {
+  // Operators
+  ONE_SAMPLE_DELAY: 25,
+  DELAY: 24,
+  EXPONENTIATION: 23,
+  MULTIPLICATION: 22,
+  BITWISE: 22,
+  BITWISE_OR: 21,
+  ADDITION: 21,
+  COMPARISON: 20,
+
+  // Binary compositions
   RECURSIVE: 13,
   PAR: 12,
   SEQ: 11,
   SPLIT: 10,
   MERGE: 10,
+  // Expressions
   INFIX_OP: 3,
   PREFIX_OP: 3,
   ACCESS: 2,
@@ -15,6 +27,9 @@ const sepBy = (sep, rule) => seq(rule, repeat(seq(sep, rule)));
 const binaryComposition = (op, precedence, assoc, field_rule) => $ =>
   prec[assoc](precedence, seq(field('left', field_rule($)), op, field('right', field_rule($))));
 
+const binaryOp = (symbol, precedence, operand_rule, assoc = 'left') =>
+  prec[assoc](precedence, seq(field('left', operand_rule), symbol, field('right', operand_rule)));
+
 const decimal = /[0-9]/;
 const sign = optional(/[+-]/);
 
@@ -25,7 +40,11 @@ module.exports = grammar({
 
     _statement: $ =>
       choice(
-        seq(optional(repeat1($.variant)), choice($.global_metadata, $.definition_metadata, $.file_import, $.function_definition, $.definition), ';'),
+        seq(
+          optional(repeat1($.variant)),
+          choice($.global_metadata, $.definition_metadata, $.file_import, $.function_definition, $.definition),
+          ';'
+        ),
         $.documentation
       ),
 
@@ -36,7 +55,16 @@ module.exports = grammar({
 
     _expression: $ => prec(PREC.EXPRESSION, choice($._binary_composition, $._infix)),
     _infix: $ => prec(PREC.EXPRESSION, choice($.infix_op, $.modifier_op, $.access, $.prefix_op, $._primitive)),
-    infix_op: $ => prec.left(PREC.INFIX_OP, seq($._infix, $.op, $._infix)),
+    infix_op: $ =>
+      choice(
+        binaryOp($.delay_op, PREC.DELAY, $._infix),
+        binaryOp($.exp_op, PREC.EXPONENTIATION, $._infix),
+        binaryOp(choice($.mult_op, $.div_op, $.mod_op), PREC.MULTIPLICATION, $._infix),
+        binaryOp(choice($.add_op, $.sub_op), PREC.ADDITION, $._infix),
+        binaryOp(choice($.and_op, $.xor_op, $.lshift_op, $.rshift_op), PREC.BITWISE, $._infix),
+        binaryOp($.or_op, PREC.BITWISE_OR, $._infix),
+        binaryOp(choice($.lt_op, $.le_op, $.gt_op, $.ge_op, $.eq_op, $.neq_op), PREC.COMPARISON, $._infix)
+      ),
     prefix_op: $ => prec(PREC.PREFIX_OP, seq($._infix, '(', $._args, ')')),
     modifier_op: $ => prec(PREC.PREFIX_OP, seq($._infix, $._modifier)),
 
@@ -47,9 +75,9 @@ module.exports = grammar({
         $._number,
         $.wire,
         $.cut,
-        $.mem,
-        $.prefix_primitive,
-        $.op,
+        $.mem_op,
+        $.prefix_primitive_op,
+        $._op,
         seq(optional('-'), $.identifier),
         seq('(', $._expression, ')'),
         seq('\\', '(', $.parameters, ')', '.', '(', $._expression, ')'),
@@ -81,62 +109,67 @@ module.exports = grammar({
         ')'
       ),
 
-    op: $ =>
+    _op: $ =>
       choice(
-        $.add,
-        $.sub,
-        $.mult,
-        $.div,
-        $.mod,
-        $.exp,
-        $.or,
-        $.and,
-        $.xor,
-        $.lshift,
-        $.rshift,
-        $.lt,
-        $.le,
-        $.gt,
-        $.ge,
-        $.eq,
-        $.neq,
-        $.delay,
+        $.add_op,
+        $.sub_op,
+        $.mult_op,
+        $.div_op,
+        $.mod_op,
+        $.exp_op,
+        $.or_op,
+        $.and_op,
+        $.xor_op,
+        $.lshift_op,
+        $.rshift_op,
+        $.lt_op,
+        $.le_op,
+        $.gt_op,
+        $.ge_op,
+        $.eq_op,
+        $.neq_op,
+        $.delay_op,
         $.int_cast,
         $.float_cast
       ),
     _modifier: $ => choice($.one_sample_delay),
 
-    // Math
-    add: _ => '+',
-    sub: _ => '-',
-    mult: _ => '*',
-    div: _ => '/',
-    mod: _ => '%',
-    exp: _ => '^',
-    // Bitwise
-    or: _ => '|',
-    and: _ => '&',
-    xor: _ => 'xor',
-    lshift: _ => '<<',
-    rshift: _ => '>>',
-    // Comparison
-    lt: _ => '<',
-    le: _ => '<=',
-    gt: _ => '>',
-    ge: _ => '>=',
-    eq: _ => '==',
-    neq: _ => '!=',
-    // Delay
-    delay: _ => '@',
-    // Cast
+    wire: _ => '_',
+    cut: _ => '!',
+
+    /* Unary */
+    mem_op: _ => 'mem',
     int_cast: _ => 'int',
     float_cast: _ => 'float',
 
-    wire: _ => '_',
-    cut: _ => '!',
-    one_sample_delay: _ => "'",
-    mem: _ => 'mem',
-    prefix_primitive: _ => 'prefix',
+    /* Binary */
+    // Math
+    add_op: _ => '+',
+    sub_op: _ => '-',
+    mult_op: _ => '*',
+    div_op: _ => '/',
+    mod_op: _ => '%',
+    exp_op: _ => '^',
+    // Bitwise
+    or_op: _ => '|',
+    and_op: _ => '&',
+    xor_op: _ => 'xor',
+    lshift_op: _ => '<<',
+    rshift_op: _ => '>>',
+    // Comparison
+    lt_op: _ => '<',
+    le_op: _ => '<=',
+    gt_op: _ => '>',
+    ge_op: _ => '>=',
+    eq_op: _ => '==',
+    neq_op: _ => '!=',
+    // Delay
+    delay_op: _ => '@',
+    // Other
+    prefix_primitive_op: _ => 'prefix',
+
+    /* Modifiers */
+    one_sample_delay: _ => prec(PREC.ONE_SAMPLE_DELAY, "'"),
 
     _number: $ => choice($.int, $.real),
     int: _ => token(seq(sign, repeat1(decimal))),

@@ -11,7 +11,7 @@ process = _~+(1);
     (recursive
       (wire)
       (prefix_op
-        (op (add))
+        (add_op)
         (int)))))
 
 =====

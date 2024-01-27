@@ -43,35 +43,6 @@ process = ::foo::bar::baz;
   (definition (identifier) (identifier)))
 
 ====
-Prefix op
-====
-
-process = +(1);
-
----
-(source_file
-  (definition
-    (identifier)
-    (prefix_op
-      (op (add))
-      (int))))
-
-====
-Infix op
-====
-
-process = 1 + 1;
-
----
-(source_file
-  (definition
-    (identifier)
-    (infix_op
-      (int)
-      (op (add))
-      (int))))
-
-====
 Function definition
 ====
 
@@ -137,11 +108,11 @@ process = var2';
 (source_file
   (comment)
   (definition
-    (identifier) (mem))
+    (identifier) (mem_op))
   (definition
     (identifier)
     (prefix_op
-      (op (delay))
+      (delay_op)
       (identifier)))
   (definition
     (identifier)
