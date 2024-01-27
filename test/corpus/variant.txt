@@ -5,7 +5,7 @@ Single variant
 singleprecision int_part(idv) = idv : _,!;
 
 ---
-(source_file
+(program
   (variant)
   (function_definition
     (identifier)
@@ -22,7 +22,7 @@ Two variants
 doubleprecision quadprecision int_part(idv) = int(idv);
 
 ---
-(source_file
+(program
   (variant)
   (variant)
   (function_definition

@@ -1,7 +1,7 @@
 {
   "name": "faust",
   "rules": {
-    "source_file": {
+    "program": {
       "type": "REPEAT",
       "content": {
         "type": "CHOICE",

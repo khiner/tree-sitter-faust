@@ -5,7 +5,7 @@ Int
 process = 1,+10,-100;
 
 ---
-(source_file
+(program
   (definition
     (identifier)
     (parallel
@@ -19,7 +19,7 @@ Real
 process = 0.5,.5,5.,+1.,-1.f,500.5e4,-500e40f;
 
 ---
-(source_file
+(program
   (definition
     (identifier)
     (parallel

@@ -6,7 +6,7 @@ nested_unary = mem(int(float(1)));
 process = |(*(2,3), @(nested_unary', 2));
 
 ---
-(source_file
+(program
   (definition
     (identifier)
     (prefix_op
@@ -38,7 +38,7 @@ Infix op
 process = 1 + 1 * 2 << 4 | 6 >= _ @ 7 ^ 2;
 
 ---
-(source_file
+(program
   (definition
     (identifier)
     (infix_op

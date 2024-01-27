@@ -32,5 +32,5 @@ This process is illustrated on figure 1.
 </mdoc>
 
 ---
-(source_file
+(program
   (documentation))

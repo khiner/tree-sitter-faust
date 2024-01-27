@@ -3,7 +3,7 @@ Empty
 ====
 
 ---
-(source_file)
+(program)
 
 ====
 Comment
@@ -23,7 +23,7 @@ process = var; /* Comment at the end of a line. */
 
 // Bye! /*still in line comment...*/ // still in line comment...
 ---
-(source_file
+(program
   (comment)
   (comment)
   (definition (identifier) (int))
@@ -39,7 +39,7 @@ Namespaced variable assignment
 process = ::foo::bar::baz;
 
 ---
-(source_file
+(program
   (definition (identifier) (identifier)))
 
 ====
@@ -50,7 +50,7 @@ identity(var) = var;
 identity ( var ) = var ;
 
 ---
-(source_file
+(program
   (function_definition
     (identifier)
     (parameters (parameter))
@@ -67,7 +67,7 @@ Global metadata
 declare name "Noise";
 
 ---
-(source_file
+(program
   (global_metadata
     (metadata_key)
     (string)))
@@ -79,7 +79,7 @@ Complex string
 declare complex_string "a\"\n\r!@#$%^&*(),<.>?/~`{}\|\';:";
 
 ---
-(source_file
+(program
   (global_metadata
     (metadata_key)
     (string)))
@@ -91,7 +91,7 @@ Import
 import("stdfaust.lib");
 import ( "stdfaust.lib" ) ;
 ---
-(source_file
+(program
   (file_import (string))
   (file_import (string)))
 
@@ -105,7 +105,7 @@ var2 = @(var1);
 process = var2';
 
 ---
-(source_file
+(program
   (comment)
   (definition
     (identifier) (mem_op))

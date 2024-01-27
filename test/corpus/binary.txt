@@ -5,7 +5,7 @@ Recursion
 process = _~+(1);
 
 ---
-(source_file
+(program
   (definition
     (identifier)
     (recursive
@@ -21,7 +21,7 @@ Sequential
 a=_:_;
 
 ---
-(source_file
+(program
   (definition
     (identifier)
     (sequential (wire) (wire))))
@@ -33,7 +33,7 @@ Split two
 a=_<:_,_;
 
 ---
-(source_file
+(program
   (definition
     (identifier)
     (split
@@ -47,7 +47,7 @@ Split three
 a=_<:_,_,_;
 
 ---
-(source_file
+(program
   (definition
     (identifier)
     (split
@@ -63,7 +63,7 @@ Merge two
 a=_,_:>_;
 
 ---
-(source_file
+(program
   (definition
     (identifier)
     (merge
@@ -77,7 +77,7 @@ Merge three
 a=_,_,_:>_;
 
 ---
-(source_file
+(program
   (definition
     (identifier)
     (merge
