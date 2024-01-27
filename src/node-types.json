@@ -52,7 +52,7 @@
           "named": true
         },
         {
-          "type": "params",
+          "type": "parameters",
           "named": true
         },
         {
@@ -174,7 +174,7 @@
             "named": true
           },
           {
-            "type": "params",
+            "type": "parameters",
             "named": true
           },
           {
@@ -207,16 +207,6 @@
           }
         ]
       }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "params",
-          "named": true
-        }
-      ]
     }
   },
   {
@@ -257,6 +247,134 @@
       "types": [
         {
           "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "function_definition",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": ".",
+            "named": false
+          },
+          {
+            "type": "\\",
+            "named": false
+          },
+          {
+            "type": "access",
+            "named": true
+          },
+          {
+            "type": "cut",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "infix_op",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "mem",
+            "named": true
+          },
+          {
+            "type": "merge",
+            "named": true
+          },
+          {
+            "type": "modifier_op",
+            "named": true
+          },
+          {
+            "type": "op",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "parameters",
+            "named": true
+          },
+          {
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prefix_primitive",
+            "named": true
+          },
+          {
+            "type": "real",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "split",
+            "named": true
+          },
+          {
+            "type": "wire",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "parameters",
           "named": true
         }
       ]
@@ -344,7 +462,7 @@
           "named": true
         },
         {
-          "type": "params",
+          "type": "parameters",
           "named": true
         },
         {
@@ -439,7 +557,7 @@
           "named": true
         },
         {
-          "type": "params",
+          "type": "parameters",
           "named": true
         },
         {
@@ -546,7 +664,7 @@
             "named": true
           },
           {
-            "type": "params",
+            "type": "parameters",
             "named": true
           },
           {
@@ -648,7 +766,7 @@
             "named": true
           },
           {
-            "type": "params",
+            "type": "parameters",
             "named": true
           },
           {
@@ -760,7 +878,7 @@
             "named": true
           },
           {
-            "type": "params",
+            "type": "parameters",
             "named": true
           },
           {
@@ -878,7 +996,7 @@
             "named": true
           },
           {
-            "type": "params",
+            "type": "parameters",
             "named": true
           },
           {
@@ -987,7 +1105,7 @@
           "named": true
         },
         {
-          "type": "params",
+          "type": "parameters",
           "named": true
         },
         {
@@ -1078,7 +1196,7 @@
           "named": true
         },
         {
-          "type": "params",
+          "type": "parameters",
           "named": true
         },
         {
@@ -1288,7 +1406,7 @@
             "named": true
           },
           {
-            "type": "params",
+            "type": "parameters",
             "named": true
           },
           {
@@ -1390,7 +1508,7 @@
             "named": true
           },
           {
-            "type": "params",
+            "type": "parameters",
             "named": true
           },
           {
@@ -1431,7 +1549,7 @@
     "fields": {}
   },
   {
-    "type": "params",
+    "type": "parameters",
     "named": true,
     "fields": {},
     "children": {
@@ -1502,7 +1620,7 @@
           "named": true
         },
         {
-          "type": "params",
+          "type": "parameters",
           "named": true
         },
         {
@@ -1621,7 +1739,7 @@
             "named": true
           },
           {
-            "type": "params",
+            "type": "parameters",
             "named": true
           },
           {
@@ -1723,7 +1841,7 @@
             "named": true
           },
           {
-            "type": "params",
+            "type": "parameters",
             "named": true
           },
           {
@@ -1835,7 +1953,7 @@
             "named": true
           },
           {
-            "type": "params",
+            "type": "parameters",
             "named": true
           },
           {
@@ -1953,7 +2071,7 @@
             "named": true
           },
           {
-            "type": "params",
+            "type": "parameters",
             "named": true
           },
           {
@@ -2073,7 +2191,7 @@
             "named": true
           },
           {
-            "type": "params",
+            "type": "parameters",
             "named": true
           },
           {
@@ -2175,7 +2293,7 @@
             "named": true
           },
           {
-            "type": "params",
+            "type": "parameters",
             "named": true
           },
           {
@@ -2287,7 +2405,7 @@
             "named": true
           },
           {
-            "type": "params",
+            "type": "parameters",
             "named": true
           },
           {
@@ -2405,7 +2523,7 @@
             "named": true
           },
           {
-            "type": "params",
+            "type": "parameters",
             "named": true
           },
           {
@@ -2478,6 +2596,10 @@
         },
         {
           "type": "file_import",
+          "named": true
+        },
+        {
+          "type": "function_definition",
           "named": true
         },
         {
@@ -2564,7 +2686,7 @@
             "named": true
           },
           {
-            "type": "params",
+            "type": "parameters",
             "named": true
           },
           {
@@ -2666,7 +2788,7 @@
             "named": true
           },
           {
-            "type": "params",
+            "type": "parameters",
             "named": true
           },
           {
@@ -2778,7 +2900,7 @@
             "named": true
           },
           {
-            "type": "params",
+            "type": "parameters",
             "named": true
           },
           {
@@ -2896,7 +3018,7 @@
             "named": true
           },
           {
-            "type": "params",
+            "type": "parameters",
             "named": true
           },
           {

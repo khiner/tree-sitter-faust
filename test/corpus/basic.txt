@@ -26,13 +26,9 @@ process = var; /* Comment at the end of a line. */
 (source_file
   (comment)
   (comment)
-  (definition
-    (identifier)
-    (int))
+  (definition (identifier) (int))
   (comment)
-  (definition
-    (identifier)
-    (identifier))
+  (definition (identifier) (identifier))
   (comment)
   (comment))
 
@@ -44,9 +40,7 @@ process = ::foo::bar::baz;
 
 ---
 (source_file
-  (definition
-    (identifier)
-    (identifier)))
+  (definition (identifier) (identifier)))
 
 ====
 Prefix op
@@ -59,8 +53,7 @@ process = +(1);
   (definition
     (identifier)
     (prefix_op
-      (op
-        (add))
+      (op (add))
       (int))))
 
 ====
@@ -75,8 +68,7 @@ process = 1 + 1;
     (identifier)
     (infix_op
       (int)
-      (op
-        (add))
+      (op (add))
       (int))))
 
 ====
@@ -88,15 +80,13 @@ identity ( var ) = var ;
 
 ---
 (source_file
-  (definition
+  (function_definition
     (identifier)
-    (params
-      (parameter))
+    (parameters (parameter))
     (identifier))
-  (definition
+  (function_definition
     (identifier)
-    (params
-      (parameter))
+    (parameters (parameter))
     (identifier)))
 
 ====
@@ -131,10 +121,8 @@ import("stdfaust.lib");
 import ( "stdfaust.lib" ) ;
 ---
 (source_file
-  (file_import
-    (string))
-  (file_import
-    (string)))
+  (file_import (string))
+  (file_import (string)))
 
 ====
 Memory
@@ -149,16 +137,13 @@ process = var2';
 (source_file
   (comment)
   (definition
-    (identifier)
-      (mem))
+    (identifier) (mem))
   (definition
     (identifier)
     (prefix_op
-      (op
-        (delay))
+      (op (delay))
       (identifier)))
   (definition
     (identifier)
     (modifier_op
-      (identifier)
-      (one_sample_delay))))
+      (identifier) (one_sample_delay))))

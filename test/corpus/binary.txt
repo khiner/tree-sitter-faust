@@ -11,8 +11,7 @@ process = _~+(1);
     (recursive
       (wire)
       (prefix_op
-        (op
-          (add))
+        (op (add))
         (int)))))
 
 =====
@@ -25,9 +24,7 @@ a=_:_;
 (source_file
   (definition
     (identifier)
-    (sequential
-      (wire)
-      (wire))))
+    (sequential (wire) (wire))))
 
 =====
 Split two
@@ -41,9 +38,7 @@ a=_<:_,_;
     (identifier)
     (split
       (wire)
-      (parallel
-        (wire)
-        (wire)))))
+      (parallel (wire) (wire)))))
 
 =====
 Split three
@@ -59,9 +54,7 @@ a=_<:_,_,_;
       (wire)
       (parallel
         (wire)
-        (parallel
-          (wire)
-          (wire))))))
+        (parallel (wire) (wire))))))
 
 =====
 Merge two
@@ -74,9 +67,7 @@ a=_,_:>_;
   (definition
     (identifier)
     (merge
-      (parallel
-        (wire)
-        (wire))
+      (parallel (wire) (wire))
       (wire))))
 
 =====
@@ -92,7 +83,5 @@ a=_,_,_:>_;
     (merge
       (parallel
         (wire)
-        (parallel
-          (wire)
-          (wire)))
+        (parallel (wire) (wire)))
       (wire))))

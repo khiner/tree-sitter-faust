@@ -25,17 +25,14 @@ module.exports = grammar({
 
     _statement: $ =>
       choice(
-        seq(optional(repeat1($.variant)), choice($.global_metadata, $.definition_metadata, $.file_import, $.definition), ';'),
+        seq(optional(repeat1($.variant)), choice($.global_metadata, $.definition_metadata, $.file_import, $.function_definition, $.definition), ';'),
         $.documentation
       ),
 
     variant: _ => choice('singleprecision', 'doubleprecision', 'quadprecision', 'fixedpointprecision'),
 
-    definition: $ =>
-      choice(
-        seq(field('name', $.identifier), '(', $.params, ')', '=', field('value', $._expression)),
-        seq(field('name', $.identifier), '=', field('value', $._expression))
-      ),
+    definition: $ => seq(field('name', $.identifier), '=', field('value', $._expression)),
+    function_definition: $ => seq(field('name', $.identifier), '(', $.parameters, ')', '=', field('value', $._expression)),
 
     _expression: $ => prec(PREC.EXPRESSION, choice($._binary_composition, $._infix)),
     _infix: $ => prec(PREC.EXPRESSION, choice($.infix_op, $.modifier_op, $.access, $.prefix_op, $._primitive)),
@@ -55,11 +52,11 @@ module.exports = grammar({
         $.op,
         seq(optional('-'), $.identifier),
         seq('(', $._expression, ')'),
-        seq('\\', '(', $.params, ')', '.', '(', $._expression, ')'),
+        seq('\\', '(', $.parameters, ')', '.', '(', $._expression, ')'),
         $.iteration
       ),
 
-    params: $ => sepBy(',', alias($.identifier, $.parameter)),
+    parameters: $ => sepBy(',', alias($.identifier, $.parameter)),
 
     _args: $ => sepBy(',', $._argument),
     _argument: $ => choice($.sequential_arg, $.split_arg, $.merge_arg, $.recursive_arg, $._infix),
