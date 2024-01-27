@@ -1,4 +1,4 @@
-const PRECEDENCE = {
+const PREC = {
   RECURSIVE: 13,
   PAR: 12,
   SEQ: 11,
@@ -37,19 +37,12 @@ module.exports = grammar({
         seq(field('name', $.identifier), '=', field('value', $._expression))
       ),
 
-    _expression: $ => prec(PRECEDENCE.EXPRESSION, choice($._binary_composition, $._infix)),
+    _expression: $ => prec(PREC.EXPRESSION, choice($._binary_composition, $._infix)),
     _infix: $ =>
-      prec(PRECEDENCE.EXPRESSION, choice($.binary_op, seq($._infix, $.one_sample_delay_operator), $.access, $.function_call, $._primitive)),
-    binary_op: $ => prec.left(PRECEDENCE.BINARY_OP, seq($._infix, $.operator, $._infix)),
-    // | infixexp LPAR arglist RPAR       { $$ = buildBoxAppl($1,$3); }
-    function_call: $ => prec(PRECEDENCE.FUNCTION_CALL, seq($._infix, '(', $.args, ')')),
-    access: $ => prec(PRECEDENCE.ACCESS, seq($._infix, '.', $.identifier)),
-    // [$._infix, $.operator, $._expression, '.', $.identifier],
-    // function_call: ($) =>
-    // prec(
-    //   PRECEDENCE.FUNCTION_CALL,
-    //   seq(optional(seq(alias($.identifier, $.module_name), '.')), alias($.identifier, $.function_name), '(', sepBy(',', $._argument), ')')
-    // ),
+      prec(PREC.EXPRESSION, choice($.binary_op, seq($._infix, $.one_sample_delay_operator), $.access, $.function_call, $._primitive)),
+    binary_op: $ => prec.left(PREC.BINARY_OP, seq($._infix, $.operator, $._infix)),
+    function_call: $ => prec(PREC.FUNCTION_CALL, seq($._infix, '(', $.args, ')')),
+    access: $ => prec(PREC.ACCESS, seq($._infix, '.', $.identifier)),
 
     _primitive: $ =>
       choice(
@@ -72,13 +65,13 @@ module.exports = grammar({
 
     // All arguments are direct children of `args`, so we make this rule hidden.
     _argument: $ => choice($.sequential_arg, $.split_arg, $.merge_arg, $.recursive_arg, $._infix),
-    // Binary compositions are restricted to non-parallel compositions to avoid ambiguity with commas.
+    // Binary compositions as arguments are restricted to non-parallel compositions to avoid ambiguity with commas.
     // Note: Can we allow parallel compositions in arguments when surrounded by parentheses?
     // This could be contributed to Faust.
-    recursive_arg: binaryComposition('~', PRECEDENCE.RECURSIVE, 'left', $ => $._argument),
-    sequential_arg: binaryComposition(':', PRECEDENCE.SEQ, 'right', $ => $._argument),
-    split_arg: binaryComposition('<:', PRECEDENCE.SPLIT, 'right', $ => $._argument),
-    merge_arg: binaryComposition(':>', PRECEDENCE.MERGE, 'right', $ => $._argument),
+    recursive_arg: binaryComposition('~', PREC.RECURSIVE, 'left', $ => $._argument),
+    sequential_arg: binaryComposition(':', PREC.SEQ, 'right', $ => $._argument),
+    split_arg: binaryComposition('<:', PREC.SPLIT, 'right', $ => $._argument),
+    merge_arg: binaryComposition(':>', PREC.MERGE, 'right', $ => $._argument),
 
     // todo test
     iteration: $ =>
@@ -150,11 +143,11 @@ module.exports = grammar({
     definition_metadata: $ => seq('declare', alias($.identifier, $.function_name), alias($.identifier, $.metadata_key), $.string),
 
     _binary_composition: $ => choice($.recursive, $.sequential, $.split, $.merge, $.parallel),
-    recursive: binaryComposition('~', PRECEDENCE.RECURSIVE, 'left', $ => $._expression),
-    sequential: binaryComposition(':', PRECEDENCE.SEQ, 'right', $ => $._expression),
-    split: binaryComposition('<:', PRECEDENCE.SPLIT, 'right', $ => $._expression),
-    merge: binaryComposition(':>', PRECEDENCE.MERGE, 'right', $ => $._expression),
-    parallel: binaryComposition(',', PRECEDENCE.PAR, 'right', $ => $._expression),
+    recursive: binaryComposition('~', PREC.RECURSIVE, 'left', $ => $._expression),
+    sequential: binaryComposition(':', PREC.SEQ, 'right', $ => $._expression),
+    split: binaryComposition('<:', PREC.SPLIT, 'right', $ => $._expression),
+    merge: binaryComposition(':>', PREC.MERGE, 'right', $ => $._expression),
+    parallel: binaryComposition(',', PREC.PAR, 'right', $ => $._expression),
 
     string: _ => /"([^"\\]|\\.)*"/,
 
