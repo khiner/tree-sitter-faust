@@ -15,6 +15,9 @@ const sepBy = (sep, rule) => seq(rule, repeat(seq(sep, rule)));
 const binaryComposition = (operator, precedence, assoc, field_rule) => $ =>
   prec[assoc](precedence, seq(field('left', field_rule($)), operator, field('right', field_rule($))));
 
+const decimal = /[0-9]/;
+const sign = optional(/[+-]/);
+
 module.exports = grammar({
   name: 'faust',
   rules: {
@@ -121,25 +124,18 @@ module.exports = grammar({
     one_sample_delay_operator: _ => "'",
 
     _number: $ => choice($.int, $.real),
-    int: _ => {
-      const decimal = /[0-9]/;
-      const sign = optional(/[+-]/);
-      const int_literal = repeat1(decimal);
-
-      return token(seq(sign, int_literal));
-    },
+    int: _ => token(seq(sign, repeat1(decimal))),
     real: _ => {
-      const decimal = /[0-9]/;
-      const float_literal = choice(
-        seq(repeat1(decimal), 'f'),
-        seq(repeat(decimal), '.', repeat(decimal)),
-        seq(repeat(decimal), '.', repeat(decimal), 'f'),
-        seq(repeat(decimal), optional('.'), repeat(decimal), 'e', optional(/[+-]/), repeat1(decimal)),
-        seq(repeat(decimal), optional('.'), repeat(decimal), 'e', optional(/[+-]/), repeat1(decimal), 'f')
+      const real_literal = choice(seq(repeat1(decimal), '.', repeat(decimal)), seq(repeat(decimal), '.', repeat1(decimal)));
+      return token(
+        seq(
+          sign,
+          choice(
+            seq(real_literal, optional('f')), //
+            seq(choice(repeat1(decimal), real_literal), 'e', sign, repeat1(decimal), optional('f'))
+          )
+        )
       );
-      const sign = optional(/[+-]/);
-
-      return token(seq(sign, float_literal));
     },
 
     documentation: $ => seq('<mdoc>', repeat($._doc_content), '</mdoc>'),
