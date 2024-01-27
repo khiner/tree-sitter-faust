@@ -12,7 +12,6 @@ const PRECEDENCE = {
 
 const sepBy = (sep, rule) => seq(rule, repeat(seq(sep, rule)));
 
-// If we didn't need to restrict binary compositions in arguments to the `argument` rule, we could avoid the `field_rule` callback.
 const binaryComposition = (operator, precedence, assoc, field_rule) => ($) =>
   prec[assoc](precedence, seq(field('left', field_rule($)), operator, field('right', field_rule($))));
 
@@ -46,7 +45,7 @@ module.exports = grammar({
     // function_call: ($) =>
     // prec(
     //   PRECEDENCE.FUNCTION_CALL,
-    //   seq(optional(seq(alias($.identifier, $.module_name), '.')), alias($.identifier, $.function_name), '(', sepBy(',', $.argument), ')')
+    //   seq(optional(seq(alias($.identifier, $.module_name), '.')), alias($.identifier, $.function_name), '(', sepBy(',', $._argument), ')')
     // ),
 
     _primitive: ($) =>
@@ -65,14 +64,18 @@ module.exports = grammar({
         $.iteration
       ),
 
-    args: ($) => sepBy(',', $.argument),
+    args: ($) => sepBy(',', $._argument),
     params: ($) => sepBy(',', alias($.identifier, $.parameter)),
 
-    argument: ($) => choice($.sequential_arg, $.split_arg, $.merge_arg, $.recursive_arg, $._infix),
-    recursive_arg: binaryComposition('~', PRECEDENCE.RECURSIVE, 'left', ($) => $.argument),
-    sequential_arg: binaryComposition(':', PRECEDENCE.SEQ, 'right', ($) => $.argument),
-    split_arg: binaryComposition('<:', PRECEDENCE.SPLIT, 'right', ($) => $.argument),
-    merge_arg: binaryComposition(':>', PRECEDENCE.MERGE, 'right', ($) => $.argument),
+    // All arguments are direct children of `args`, so we make this rule hidden.
+    _argument: ($) => choice($.sequential_arg, $.split_arg, $.merge_arg, $.recursive_arg, $._infix),
+    // Binary compositions are restricted to non-parallel compositions to avoid ambiguity with commas.
+    // Note: Can we allow parallel compositions in arguments when surrounded by parentheses?
+    // This could be contributed to Faust.
+    recursive_arg: binaryComposition('~', PRECEDENCE.RECURSIVE, 'left', ($) => $._argument),
+    sequential_arg: binaryComposition(':', PRECEDENCE.SEQ, 'right', ($) => $._argument),
+    split_arg: binaryComposition('<:', PRECEDENCE.SPLIT, 'right', ($) => $._argument),
+    merge_arg: binaryComposition(':>', PRECEDENCE.MERGE, 'right', ($) => $._argument),
 
     // todo test
     iteration: ($) =>
@@ -81,7 +84,7 @@ module.exports = grammar({
         '(',
         alias($.identifier, $.current_iteration),
         ',',
-        alias($.argument, $.numiter),
+        alias($._argument, $.numiter),
         ',',
         $._expression,
         ')'

@@ -33,5 +33,4 @@ doubleprecision quadprecision int_part(idv) = int(idv);
       (parameter))
     (function_call
       (args
-        (argument
-          (identifier))))))
+        (identifier)))))

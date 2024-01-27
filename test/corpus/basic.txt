@@ -61,8 +61,7 @@ process = +(1);
     (function_call
       (operator)
       (args
-        (argument
-          (int))))))
+       (int)))))
 
 ====
 Binary operator

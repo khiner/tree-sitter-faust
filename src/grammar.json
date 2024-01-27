@@ -402,7 +402,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "argument"
+          "name": "_argument"
         },
         {
           "type": "REPEAT",
@@ -415,7 +415,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "argument"
+                "name": "_argument"
               }
             ]
           }
@@ -457,7 +457,7 @@
         }
       ]
     },
-    "argument": {
+    "_argument": {
       "type": "CHOICE",
       "members": [
         {
@@ -493,7 +493,7 @@
             "name": "left",
             "content": {
               "type": "SYMBOL",
-              "name": "argument"
+              "name": "_argument"
             }
           },
           {
@@ -505,7 +505,7 @@
             "name": "right",
             "content": {
               "type": "SYMBOL",
-              "name": "argument"
+              "name": "_argument"
             }
           }
         ]
@@ -522,7 +522,7 @@
             "name": "left",
             "content": {
               "type": "SYMBOL",
-              "name": "argument"
+              "name": "_argument"
             }
           },
           {
@@ -534,7 +534,7 @@
             "name": "right",
             "content": {
               "type": "SYMBOL",
-              "name": "argument"
+              "name": "_argument"
             }
           }
         ]
@@ -551,7 +551,7 @@
             "name": "left",
             "content": {
               "type": "SYMBOL",
-              "name": "argument"
+              "name": "_argument"
             }
           },
           {
@@ -563,7 +563,7 @@
             "name": "right",
             "content": {
               "type": "SYMBOL",
-              "name": "argument"
+              "name": "_argument"
             }
           }
         ]
@@ -580,7 +580,7 @@
             "name": "left",
             "content": {
               "type": "SYMBOL",
-              "name": "argument"
+              "name": "_argument"
             }
           },
           {
@@ -592,7 +592,7 @@
             "name": "right",
             "content": {
               "type": "SYMBOL",
-              "name": "argument"
+              "name": "_argument"
             }
           }
         ]
@@ -643,7 +643,7 @@
           "type": "ALIAS",
           "content": {
             "type": "SYMBOL",
-            "name": "argument"
+            "name": "_argument"
           },
           "named": true,
           "value": "numiter"

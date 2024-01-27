@@ -13,8 +13,7 @@ process = _~+(1);
       (function_call
         (operator)
         (args
-          (argument
-            (int)))))))
+          (int))))))
 
 =====
 Sequential
