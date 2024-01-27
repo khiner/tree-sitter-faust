@@ -10,10 +10,10 @@ process = _~+(1);
     (identifier)
     (recursive
       (wire)
-      (function_call
-        (operator)
-        (args
-          (int))))))
+      (prefix_op
+        (op
+          (add))
+        (int)))))
 
 =====
 Sequential
@@ -24,10 +24,10 @@ a=_:_;
 ---
 (source_file
   (definition
-    name: (identifier)
-    value: (sequential
-      left: (wire)
-      right: (wire))))
+    (identifier)
+    (sequential
+      (wire)
+      (wire))))
 
 =====
 Split two

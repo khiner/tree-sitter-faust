@@ -4,16 +4,16 @@ const PREC = {
   SEQ: 11,
   SPLIT: 10,
   MERGE: 10,
-  BINARY_OP: 3,
-  FUNCTION_CALL: 3,
+  INFIX_OP: 3,
+  PREFIX_OP: 3,
   ACCESS: 2,
   EXPRESSION: 1,
 };
 
 const sepBy = (sep, rule) => seq(rule, repeat(seq(sep, rule)));
 
-const binaryComposition = (operator, precedence, assoc, field_rule) => $ =>
-  prec[assoc](precedence, seq(field('left', field_rule($)), operator, field('right', field_rule($))));
+const binaryComposition = (op, precedence, assoc, field_rule) => $ =>
+  prec[assoc](precedence, seq(field('left', field_rule($)), op, field('right', field_rule($))));
 
 const decimal = /[0-9]/;
 const sign = optional(/[+-]/);
@@ -38,10 +38,11 @@ module.exports = grammar({
       ),
 
     _expression: $ => prec(PREC.EXPRESSION, choice($._binary_composition, $._infix)),
-    _infix: $ =>
-      prec(PREC.EXPRESSION, choice($.binary_op, seq($._infix, $.one_sample_delay_operator), $.access, $.function_call, $._primitive)),
-    binary_op: $ => prec.left(PREC.BINARY_OP, seq($._infix, $.operator, $._infix)),
-    function_call: $ => prec(PREC.FUNCTION_CALL, seq($._infix, '(', $.args, ')')),
+    _infix: $ => prec(PREC.EXPRESSION, choice($.infix_op, $.modifier_op, $.access, $.prefix_op, $._primitive)),
+    infix_op: $ => prec.left(PREC.INFIX_OP, seq($._infix, $.op, $._infix)),
+    prefix_op: $ => prec(PREC.PREFIX_OP, seq($._infix, '(', $._args, ')')),
+    modifier_op: $ => prec(PREC.PREFIX_OP, seq($._infix, $._modifier)),
+
     access: $ => prec(PREC.ACCESS, seq($._infix, '.', $.identifier)),
 
     _primitive: $ =>
@@ -49,21 +50,18 @@ module.exports = grammar({
         $._number,
         $.wire,
         $.cut,
-        'mem',
-        'prefix',
-        'int',
-        'float',
-        $.operator,
+        $.mem,
+        $.prefix_primitive,
+        $.op,
         seq(optional('-'), $.identifier),
         seq('(', $._expression, ')'),
         seq('\\', '(', $.params, ')', '.', '(', $._expression, ')'),
         $.iteration
       ),
 
-    args: $ => sepBy(',', $._argument),
     params: $ => sepBy(',', alias($.identifier, $.parameter)),
 
-    // All arguments are direct children of `args`, so we make this rule hidden.
+    _args: $ => sepBy(',', $._argument),
     _argument: $ => choice($.sequential_arg, $.split_arg, $.merge_arg, $.recursive_arg, $._infix),
     // Binary compositions as arguments are restricted to non-parallel compositions to avoid ambiguity with commas.
     // Note: Can we allow parallel compositions in arguments when surrounded by parentheses?
@@ -86,35 +84,62 @@ module.exports = grammar({
         ')'
       ),
 
-    operator: _ =>
+    op: $ =>
       choice(
-        // Math
-        '+',
-        '-',
-        '*',
-        '/',
-        '%',
-        '^',
-        // Bitwise
-        '|',
-        '&',
-        'xor',
-        '<<',
-        '>>',
-        // Comparison
-        '<',
-        '<=',
-        '>',
-        '>=',
-        '==',
-        '!=',
-        // Delay
-        '@'
+        $.add,
+        $.sub,
+        $.mult,
+        $.div,
+        $.mod,
+        $.exp,
+        $.or,
+        $.and,
+        $.xor,
+        $.lshift,
+        $.rshift,
+        $.lt,
+        $.le,
+        $.gt,
+        $.ge,
+        $.eq,
+        $.neq,
+        $.delay,
+        $.int_cast,
+        $.float_cast
       ),
+    _modifier: $ => choice($.one_sample_delay),
 
-    wire: () => '_',
-    cut: () => '!',
-    one_sample_delay_operator: _ => "'",
+    // Math
+    add: _ => '+',
+    sub: _ => '-',
+    mult: _ => '*',
+    div: _ => '/',
+    mod: _ => '%',
+    exp: _ => '^',
+    // Bitwise
+    or: _ => '|',
+    and: _ => '&',
+    xor: _ => 'xor',
+    lshift: _ => '<<',
+    rshift: _ => '>>',
+    // Comparison
+    lt: _ => '<',
+    le: _ => '<=',
+    gt: _ => '>',
+    ge: _ => '>=',
+    eq: _ => '==',
+    neq: _ => '!=',
+    // Delay
+    delay: _ => '@',
+    // Cast
+    int_cast: _ => 'int',
+    float_cast: _ => 'float',
+
+    wire: _ => '_',
+    cut: _ => '!',
+    one_sample_delay: _ => "'",
+    mem: _ => 'mem',
+    prefix_primitive: _ => 'prefix',
 
     _number: $ => choice($.int, $.real),
     int: _ => token(seq(sign, repeat1(decimal))),

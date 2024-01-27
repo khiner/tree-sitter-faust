@@ -184,20 +184,11 @@
         "members": [
           {
             "type": "SYMBOL",
-            "name": "binary_op"
+            "name": "infix_op"
           },
           {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "_infix"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "one_sample_delay_operator"
-              }
-            ]
+            "type": "SYMBOL",
+            "name": "modifier_op"
           },
           {
             "type": "SYMBOL",
@@ -205,7 +196,7 @@
           },
           {
             "type": "SYMBOL",
-            "name": "function_call"
+            "name": "prefix_op"
           },
           {
             "type": "SYMBOL",
@@ -214,7 +205,7 @@
         ]
       }
     },
-    "binary_op": {
+    "infix_op": {
       "type": "PREC_LEFT",
       "value": 3,
       "content": {
@@ -226,7 +217,7 @@
           },
           {
             "type": "SYMBOL",
-            "name": "operator"
+            "name": "op"
           },
           {
             "type": "SYMBOL",
@@ -235,7 +226,7 @@
         ]
       }
     },
-    "function_call": {
+    "prefix_op": {
       "type": "PREC",
       "value": 3,
       "content": {
@@ -251,11 +242,28 @@
           },
           {
             "type": "SYMBOL",
-            "name": "args"
+            "name": "_args"
           },
           {
             "type": "STRING",
             "value": ")"
+          }
+        ]
+      }
+    },
+    "modifier_op": {
+      "type": "PREC",
+      "value": 3,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "_infix"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_modifier"
           }
         ]
       }
@@ -297,24 +305,16 @@
           "name": "cut"
         },
         {
-          "type": "STRING",
-          "value": "mem"
-        },
-        {
-          "type": "STRING",
-          "value": "prefix"
-        },
-        {
-          "type": "STRING",
-          "value": "int"
-        },
-        {
-          "type": "STRING",
-          "value": "float"
+          "type": "SYMBOL",
+          "name": "mem"
         },
         {
           "type": "SYMBOL",
-          "name": "operator"
+          "name": "prefix_primitive"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "op"
         },
         {
           "type": "SEQ",
@@ -397,31 +397,6 @@
         }
       ]
     },
-    "args": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "_argument"
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "STRING",
-                "value": ","
-              },
-              {
-                "type": "SYMBOL",
-                "name": "_argument"
-              }
-            ]
-          }
-        }
-      ]
-    },
     "params": {
       "type": "SEQ",
       "members": [
@@ -451,6 +426,31 @@
                 },
                 "named": true,
                 "value": "parameter"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "_args": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_argument"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": ","
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_argument"
               }
             ]
           }
@@ -662,82 +662,179 @@
         }
       ]
     },
-    "operator": {
+    "op": {
       "type": "CHOICE",
       "members": [
         {
-          "type": "STRING",
-          "value": "+"
+          "type": "SYMBOL",
+          "name": "add"
         },
         {
-          "type": "STRING",
-          "value": "-"
+          "type": "SYMBOL",
+          "name": "sub"
         },
         {
-          "type": "STRING",
-          "value": "*"
+          "type": "SYMBOL",
+          "name": "mult"
         },
         {
-          "type": "STRING",
-          "value": "/"
+          "type": "SYMBOL",
+          "name": "div"
         },
         {
-          "type": "STRING",
-          "value": "%"
+          "type": "SYMBOL",
+          "name": "mod"
         },
         {
-          "type": "STRING",
-          "value": "^"
+          "type": "SYMBOL",
+          "name": "exp"
         },
         {
-          "type": "STRING",
-          "value": "|"
+          "type": "SYMBOL",
+          "name": "or"
         },
         {
-          "type": "STRING",
-          "value": "&"
+          "type": "SYMBOL",
+          "name": "and"
         },
         {
-          "type": "STRING",
-          "value": "xor"
+          "type": "SYMBOL",
+          "name": "xor"
         },
         {
-          "type": "STRING",
-          "value": "<<"
+          "type": "SYMBOL",
+          "name": "lshift"
         },
         {
-          "type": "STRING",
-          "value": ">>"
+          "type": "SYMBOL",
+          "name": "rshift"
         },
         {
-          "type": "STRING",
-          "value": "<"
+          "type": "SYMBOL",
+          "name": "lt"
         },
         {
-          "type": "STRING",
-          "value": "<="
+          "type": "SYMBOL",
+          "name": "le"
         },
         {
-          "type": "STRING",
-          "value": ">"
+          "type": "SYMBOL",
+          "name": "gt"
         },
         {
-          "type": "STRING",
-          "value": ">="
+          "type": "SYMBOL",
+          "name": "ge"
         },
         {
-          "type": "STRING",
-          "value": "=="
+          "type": "SYMBOL",
+          "name": "eq"
         },
         {
-          "type": "STRING",
-          "value": "!="
+          "type": "SYMBOL",
+          "name": "neq"
         },
         {
-          "type": "STRING",
-          "value": "@"
+          "type": "SYMBOL",
+          "name": "delay"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "int_cast"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "float_cast"
         }
       ]
+    },
+    "_modifier": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "one_sample_delay"
+        }
+      ]
+    },
+    "add": {
+      "type": "STRING",
+      "value": "+"
+    },
+    "sub": {
+      "type": "STRING",
+      "value": "-"
+    },
+    "mult": {
+      "type": "STRING",
+      "value": "*"
+    },
+    "div": {
+      "type": "STRING",
+      "value": "/"
+    },
+    "mod": {
+      "type": "STRING",
+      "value": "%"
+    },
+    "exp": {
+      "type": "STRING",
+      "value": "^"
+    },
+    "or": {
+      "type": "STRING",
+      "value": "|"
+    },
+    "and": {
+      "type": "STRING",
+      "value": "&"
+    },
+    "xor": {
+      "type": "STRING",
+      "value": "xor"
+    },
+    "lshift": {
+      "type": "STRING",
+      "value": "<<"
+    },
+    "rshift": {
+      "type": "STRING",
+      "value": ">>"
+    },
+    "lt": {
+      "type": "STRING",
+      "value": "<"
+    },
+    "le": {
+      "type": "STRING",
+      "value": "<="
+    },
+    "gt": {
+      "type": "STRING",
+      "value": ">"
+    },
+    "ge": {
+      "type": "STRING",
+      "value": ">="
+    },
+    "eq": {
+      "type": "STRING",
+      "value": "=="
+    },
+    "neq": {
+      "type": "STRING",
+      "value": "!="
+    },
+    "delay": {
+      "type": "STRING",
+      "value": "@"
+    },
+    "int_cast": {
+      "type": "STRING",
+      "value": "int"
+    },
+    "float_cast": {
+      "type": "STRING",
+      "value": "float"
     },
     "wire": {
       "type": "STRING",
@@ -747,9 +844,17 @@
       "type": "STRING",
       "value": "!"
     },
-    "one_sample_delay_operator": {
+    "one_sample_delay": {
       "type": "STRING",
       "value": "'"
+    },
+    "mem": {
+      "type": "STRING",
+      "value": "mem"
+    },
+    "prefix_primitive": {
+      "type": "STRING",
+      "value": "prefix"
     },
     "_number": {
       "type": "CHOICE",

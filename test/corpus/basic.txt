@@ -49,7 +49,7 @@ process = ::foo::bar::baz;
     (identifier)))
 
 ====
-Unary operator
+Prefix op
 ====
 
 process = +(1);
@@ -58,13 +58,13 @@ process = +(1);
 (source_file
   (definition
     (identifier)
-    (function_call
-      (operator)
-      (args
-       (int)))))
+    (prefix_op
+      (op
+        (add))
+      (int))))
 
 ====
-Binary operator
+Infix op
 ====
 
 process = 1 + 1;
@@ -73,9 +73,10 @@ process = 1 + 1;
 (source_file
   (definition
     (identifier)
-    (binary_op
+    (infix_op
       (int)
-      (operator)
+      (op
+        (add))
       (int))))
 
 ====
@@ -134,3 +135,30 @@ import ( "stdfaust.lib" ) ;
     (string))
   (file_import
     (string)))
+
+====
+Memory
+====
+
+// These are semantically equivalent.
+var1 = mem;
+var2 = @(var1);
+process = var2';
+
+---
+(source_file
+  (comment)
+  (definition
+    (identifier)
+      (mem))
+  (definition
+    (identifier)
+    (prefix_op
+      (op
+        (delay))
+      (identifier)))
+  (definition
+    (identifier)
+    (modifier_op
+      (identifier)
+      (one_sample_delay))))

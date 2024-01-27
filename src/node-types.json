@@ -12,19 +12,15 @@
           "named": true
         },
         {
-          "type": "binary_op",
-          "named": true
-        },
-        {
           "type": "cut",
           "named": true
         },
         {
-          "type": "function_call",
+          "type": "identifier",
           "named": true
         },
         {
-          "type": "identifier",
+          "type": "infix_op",
           "named": true
         },
         {
@@ -36,15 +32,19 @@
           "named": true
         },
         {
+          "type": "mem",
+          "named": true
+        },
+        {
           "type": "merge",
           "named": true
         },
         {
-          "type": "one_sample_delay_operator",
+          "type": "modifier_op",
           "named": true
         },
         {
-          "type": "operator",
+          "type": "op",
           "named": true
         },
         {
@@ -56,177 +56,11 @@
           "named": true
         },
         {
-          "type": "real",
+          "type": "prefix_op",
           "named": true
         },
         {
-          "type": "recursive",
-          "named": true
-        },
-        {
-          "type": "sequential",
-          "named": true
-        },
-        {
-          "type": "split",
-          "named": true
-        },
-        {
-          "type": "wire",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "args",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "access",
-          "named": true
-        },
-        {
-          "type": "binary_op",
-          "named": true
-        },
-        {
-          "type": "cut",
-          "named": true
-        },
-        {
-          "type": "function_call",
-          "named": true
-        },
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "int",
-          "named": true
-        },
-        {
-          "type": "iteration",
-          "named": true
-        },
-        {
-          "type": "merge",
-          "named": true
-        },
-        {
-          "type": "merge_arg",
-          "named": true
-        },
-        {
-          "type": "one_sample_delay_operator",
-          "named": true
-        },
-        {
-          "type": "operator",
-          "named": true
-        },
-        {
-          "type": "parallel",
-          "named": true
-        },
-        {
-          "type": "params",
-          "named": true
-        },
-        {
-          "type": "real",
-          "named": true
-        },
-        {
-          "type": "recursive",
-          "named": true
-        },
-        {
-          "type": "recursive_arg",
-          "named": true
-        },
-        {
-          "type": "sequential",
-          "named": true
-        },
-        {
-          "type": "sequential_arg",
-          "named": true
-        },
-        {
-          "type": "split",
-          "named": true
-        },
-        {
-          "type": "split_arg",
-          "named": true
-        },
-        {
-          "type": "wire",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "binary_op",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "access",
-          "named": true
-        },
-        {
-          "type": "binary_op",
-          "named": true
-        },
-        {
-          "type": "cut",
-          "named": true
-        },
-        {
-          "type": "function_call",
-          "named": true
-        },
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "int",
-          "named": true
-        },
-        {
-          "type": "iteration",
-          "named": true
-        },
-        {
-          "type": "merge",
-          "named": true
-        },
-        {
-          "type": "one_sample_delay_operator",
-          "named": true
-        },
-        {
-          "type": "operator",
-          "named": true
-        },
-        {
-          "type": "parallel",
-          "named": true
-        },
-        {
-          "type": "params",
+          "type": "prefix_primitive",
           "named": true
         },
         {
@@ -300,19 +134,7 @@
             "named": true
           },
           {
-            "type": "binary_op",
-            "named": true
-          },
-          {
             "type": "cut",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": false
-          },
-          {
-            "type": "function_call",
             "named": true
           },
           {
@@ -320,8 +142,8 @@
             "named": true
           },
           {
-            "type": "int",
-            "named": false
+            "type": "infix_op",
+            "named": true
           },
           {
             "type": "int",
@@ -333,18 +155,18 @@
           },
           {
             "type": "mem",
-            "named": false
+            "named": true
           },
           {
             "type": "merge",
             "named": true
           },
           {
-            "type": "one_sample_delay_operator",
+            "type": "modifier_op",
             "named": true
           },
           {
-            "type": "operator",
+            "type": "op",
             "named": true
           },
           {
@@ -356,8 +178,12 @@
             "named": true
           },
           {
-            "type": "prefix",
-            "named": false
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prefix_primitive",
+            "named": true
           },
           {
             "type": "real",
@@ -437,89 +263,6 @@
     }
   },
   {
-    "type": "function_call",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "access",
-          "named": true
-        },
-        {
-          "type": "args",
-          "named": true
-        },
-        {
-          "type": "binary_op",
-          "named": true
-        },
-        {
-          "type": "cut",
-          "named": true
-        },
-        {
-          "type": "function_call",
-          "named": true
-        },
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "int",
-          "named": true
-        },
-        {
-          "type": "iteration",
-          "named": true
-        },
-        {
-          "type": "merge",
-          "named": true
-        },
-        {
-          "type": "one_sample_delay_operator",
-          "named": true
-        },
-        {
-          "type": "operator",
-          "named": true
-        },
-        {
-          "type": "parallel",
-          "named": true
-        },
-        {
-          "type": "params",
-          "named": true
-        },
-        {
-          "type": "real",
-          "named": true
-        },
-        {
-          "type": "recursive",
-          "named": true
-        },
-        {
-          "type": "sequential",
-          "named": true
-        },
-        {
-          "type": "split",
-          "named": true
-        },
-        {
-          "type": "wire",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "function_name",
     "named": true,
     "fields": {}
@@ -549,6 +292,93 @@
     "fields": {}
   },
   {
+    "type": "infix_op",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "access",
+          "named": true
+        },
+        {
+          "type": "cut",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "infix_op",
+          "named": true
+        },
+        {
+          "type": "int",
+          "named": true
+        },
+        {
+          "type": "iteration",
+          "named": true
+        },
+        {
+          "type": "mem",
+          "named": true
+        },
+        {
+          "type": "merge",
+          "named": true
+        },
+        {
+          "type": "modifier_op",
+          "named": true
+        },
+        {
+          "type": "op",
+          "named": true
+        },
+        {
+          "type": "parallel",
+          "named": true
+        },
+        {
+          "type": "params",
+          "named": true
+        },
+        {
+          "type": "prefix_op",
+          "named": true
+        },
+        {
+          "type": "prefix_primitive",
+          "named": true
+        },
+        {
+          "type": "real",
+          "named": true
+        },
+        {
+          "type": "recursive",
+          "named": true
+        },
+        {
+          "type": "sequential",
+          "named": true
+        },
+        {
+          "type": "split",
+          "named": true
+        },
+        {
+          "type": "wire",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "iteration",
     "named": true,
     "fields": {},
@@ -561,10 +391,6 @@
           "named": true
         },
         {
-          "type": "binary_op",
-          "named": true
-        },
-        {
           "type": "current_iteration",
           "named": true
         },
@@ -573,11 +399,11 @@
           "named": true
         },
         {
-          "type": "function_call",
+          "type": "identifier",
           "named": true
         },
         {
-          "type": "identifier",
+          "type": "infix_op",
           "named": true
         },
         {
@@ -589,7 +415,15 @@
           "named": true
         },
         {
+          "type": "mem",
+          "named": true
+        },
+        {
           "type": "merge",
+          "named": true
+        },
+        {
+          "type": "modifier_op",
           "named": true
         },
         {
@@ -597,11 +431,7 @@
           "named": true
         },
         {
-          "type": "one_sample_delay_operator",
-          "named": true
-        },
-        {
-          "type": "operator",
+          "type": "op",
           "named": true
         },
         {
@@ -610,6 +440,14 @@
         },
         {
           "type": "params",
+          "named": true
+        },
+        {
+          "type": "prefix_op",
+          "named": true
+        },
+        {
+          "type": "prefix_primitive",
           "named": true
         },
         {
@@ -668,19 +506,7 @@
             "named": true
           },
           {
-            "type": "binary_op",
-            "named": true
-          },
-          {
             "type": "cut",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": false
-          },
-          {
-            "type": "function_call",
             "named": true
           },
           {
@@ -688,8 +514,8 @@
             "named": true
           },
           {
-            "type": "int",
-            "named": false
+            "type": "infix_op",
+            "named": true
           },
           {
             "type": "int",
@@ -701,18 +527,18 @@
           },
           {
             "type": "mem",
-            "named": false
+            "named": true
           },
           {
             "type": "merge",
             "named": true
           },
           {
-            "type": "one_sample_delay_operator",
+            "type": "modifier_op",
             "named": true
           },
           {
-            "type": "operator",
+            "type": "op",
             "named": true
           },
           {
@@ -724,8 +550,12 @@
             "named": true
           },
           {
-            "type": "prefix",
-            "named": false
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prefix_primitive",
+            "named": true
           },
           {
             "type": "real",
@@ -778,19 +608,7 @@
             "named": true
           },
           {
-            "type": "binary_op",
-            "named": true
-          },
-          {
             "type": "cut",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": false
-          },
-          {
-            "type": "function_call",
             "named": true
           },
           {
@@ -798,8 +616,8 @@
             "named": true
           },
           {
-            "type": "int",
-            "named": false
+            "type": "infix_op",
+            "named": true
           },
           {
             "type": "int",
@@ -811,18 +629,18 @@
           },
           {
             "type": "mem",
-            "named": false
+            "named": true
           },
           {
             "type": "merge",
             "named": true
           },
           {
-            "type": "one_sample_delay_operator",
+            "type": "modifier_op",
             "named": true
           },
           {
-            "type": "operator",
+            "type": "op",
             "named": true
           },
           {
@@ -834,8 +652,12 @@
             "named": true
           },
           {
-            "type": "prefix",
-            "named": false
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prefix_primitive",
+            "named": true
           },
           {
             "type": "real",
@@ -894,19 +716,7 @@
             "named": true
           },
           {
-            "type": "binary_op",
-            "named": true
-          },
-          {
             "type": "cut",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": false
-          },
-          {
-            "type": "function_call",
             "named": true
           },
           {
@@ -914,8 +724,8 @@
             "named": true
           },
           {
-            "type": "int",
-            "named": false
+            "type": "infix_op",
+            "named": true
           },
           {
             "type": "int",
@@ -927,7 +737,7 @@
           },
           {
             "type": "mem",
-            "named": false
+            "named": true
           },
           {
             "type": "merge",
@@ -938,11 +748,11 @@
             "named": true
           },
           {
-            "type": "one_sample_delay_operator",
+            "type": "modifier_op",
             "named": true
           },
           {
-            "type": "operator",
+            "type": "op",
             "named": true
           },
           {
@@ -954,8 +764,12 @@
             "named": true
           },
           {
-            "type": "prefix",
-            "named": false
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prefix_primitive",
+            "named": true
           },
           {
             "type": "real",
@@ -1020,19 +834,7 @@
             "named": true
           },
           {
-            "type": "binary_op",
-            "named": true
-          },
-          {
             "type": "cut",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": false
-          },
-          {
-            "type": "function_call",
             "named": true
           },
           {
@@ -1040,8 +842,8 @@
             "named": true
           },
           {
-            "type": "int",
-            "named": false
+            "type": "infix_op",
+            "named": true
           },
           {
             "type": "int",
@@ -1053,7 +855,7 @@
           },
           {
             "type": "mem",
-            "named": false
+            "named": true
           },
           {
             "type": "merge",
@@ -1064,11 +866,11 @@
             "named": true
           },
           {
-            "type": "one_sample_delay_operator",
+            "type": "modifier_op",
             "named": true
           },
           {
-            "type": "operator",
+            "type": "op",
             "named": true
           },
           {
@@ -1080,8 +882,12 @@
             "named": true
           },
           {
-            "type": "prefix",
-            "named": false
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prefix_primitive",
+            "named": true
           },
           {
             "type": "real",
@@ -1125,6 +931,97 @@
     "fields": {}
   },
   {
+    "type": "modifier_op",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "access",
+          "named": true
+        },
+        {
+          "type": "cut",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "infix_op",
+          "named": true
+        },
+        {
+          "type": "int",
+          "named": true
+        },
+        {
+          "type": "iteration",
+          "named": true
+        },
+        {
+          "type": "mem",
+          "named": true
+        },
+        {
+          "type": "merge",
+          "named": true
+        },
+        {
+          "type": "modifier_op",
+          "named": true
+        },
+        {
+          "type": "one_sample_delay",
+          "named": true
+        },
+        {
+          "type": "op",
+          "named": true
+        },
+        {
+          "type": "parallel",
+          "named": true
+        },
+        {
+          "type": "params",
+          "named": true
+        },
+        {
+          "type": "prefix_op",
+          "named": true
+        },
+        {
+          "type": "prefix_primitive",
+          "named": true
+        },
+        {
+          "type": "real",
+          "named": true
+        },
+        {
+          "type": "recursive",
+          "named": true
+        },
+        {
+          "type": "sequential",
+          "named": true
+        },
+        {
+          "type": "split",
+          "named": true
+        },
+        {
+          "type": "wire",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "numiter",
     "named": true,
     "fields": {},
@@ -1137,19 +1034,15 @@
           "named": true
         },
         {
-          "type": "binary_op",
-          "named": true
-        },
-        {
           "type": "cut",
           "named": true
         },
         {
-          "type": "function_call",
+          "type": "identifier",
           "named": true
         },
         {
-          "type": "identifier",
+          "type": "infix_op",
           "named": true
         },
         {
@@ -1161,6 +1054,10 @@
           "named": true
         },
         {
+          "type": "mem",
+          "named": true
+        },
+        {
           "type": "merge",
           "named": true
         },
@@ -1169,11 +1066,11 @@
           "named": true
         },
         {
-          "type": "one_sample_delay_operator",
+          "type": "modifier_op",
           "named": true
         },
         {
-          "type": "operator",
+          "type": "op",
           "named": true
         },
         {
@@ -1182,6 +1079,14 @@
         },
         {
           "type": "params",
+          "named": true
+        },
+        {
+          "type": "prefix_op",
+          "named": true
+        },
+        {
+          "type": "prefix_primitive",
           "named": true
         },
         {
@@ -1220,9 +1125,95 @@
     }
   },
   {
-    "type": "operator",
+    "type": "op",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "add",
+          "named": true
+        },
+        {
+          "type": "and",
+          "named": true
+        },
+        {
+          "type": "delay",
+          "named": true
+        },
+        {
+          "type": "div",
+          "named": true
+        },
+        {
+          "type": "eq",
+          "named": true
+        },
+        {
+          "type": "exp",
+          "named": true
+        },
+        {
+          "type": "float_cast",
+          "named": true
+        },
+        {
+          "type": "ge",
+          "named": true
+        },
+        {
+          "type": "gt",
+          "named": true
+        },
+        {
+          "type": "int_cast",
+          "named": true
+        },
+        {
+          "type": "le",
+          "named": true
+        },
+        {
+          "type": "lshift",
+          "named": true
+        },
+        {
+          "type": "lt",
+          "named": true
+        },
+        {
+          "type": "mod",
+          "named": true
+        },
+        {
+          "type": "mult",
+          "named": true
+        },
+        {
+          "type": "neq",
+          "named": true
+        },
+        {
+          "type": "or",
+          "named": true
+        },
+        {
+          "type": "rshift",
+          "named": true
+        },
+        {
+          "type": "sub",
+          "named": true
+        },
+        {
+          "type": "xor",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "parallel",
@@ -1257,19 +1248,7 @@
             "named": true
           },
           {
-            "type": "binary_op",
-            "named": true
-          },
-          {
             "type": "cut",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": false
-          },
-          {
-            "type": "function_call",
             "named": true
           },
           {
@@ -1277,8 +1256,8 @@
             "named": true
           },
           {
-            "type": "int",
-            "named": false
+            "type": "infix_op",
+            "named": true
           },
           {
             "type": "int",
@@ -1290,18 +1269,18 @@
           },
           {
             "type": "mem",
-            "named": false
+            "named": true
           },
           {
             "type": "merge",
             "named": true
           },
           {
-            "type": "one_sample_delay_operator",
+            "type": "modifier_op",
             "named": true
           },
           {
-            "type": "operator",
+            "type": "op",
             "named": true
           },
           {
@@ -1313,8 +1292,12 @@
             "named": true
           },
           {
-            "type": "prefix",
-            "named": false
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prefix_primitive",
+            "named": true
           },
           {
             "type": "real",
@@ -1367,19 +1350,7 @@
             "named": true
           },
           {
-            "type": "binary_op",
-            "named": true
-          },
-          {
             "type": "cut",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": false
-          },
-          {
-            "type": "function_call",
             "named": true
           },
           {
@@ -1387,8 +1358,8 @@
             "named": true
           },
           {
-            "type": "int",
-            "named": false
+            "type": "infix_op",
+            "named": true
           },
           {
             "type": "int",
@@ -1400,18 +1371,18 @@
           },
           {
             "type": "mem",
-            "named": false
+            "named": true
           },
           {
             "type": "merge",
             "named": true
           },
           {
-            "type": "one_sample_delay_operator",
+            "type": "modifier_op",
             "named": true
           },
           {
-            "type": "operator",
+            "type": "op",
             "named": true
           },
           {
@@ -1423,8 +1394,12 @@
             "named": true
           },
           {
-            "type": "prefix",
-            "named": false
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prefix_primitive",
+            "named": true
           },
           {
             "type": "real",
@@ -1471,6 +1446,109 @@
     }
   },
   {
+    "type": "prefix_op",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "access",
+          "named": true
+        },
+        {
+          "type": "cut",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "infix_op",
+          "named": true
+        },
+        {
+          "type": "int",
+          "named": true
+        },
+        {
+          "type": "iteration",
+          "named": true
+        },
+        {
+          "type": "mem",
+          "named": true
+        },
+        {
+          "type": "merge",
+          "named": true
+        },
+        {
+          "type": "merge_arg",
+          "named": true
+        },
+        {
+          "type": "modifier_op",
+          "named": true
+        },
+        {
+          "type": "op",
+          "named": true
+        },
+        {
+          "type": "parallel",
+          "named": true
+        },
+        {
+          "type": "params",
+          "named": true
+        },
+        {
+          "type": "prefix_op",
+          "named": true
+        },
+        {
+          "type": "prefix_primitive",
+          "named": true
+        },
+        {
+          "type": "real",
+          "named": true
+        },
+        {
+          "type": "recursive",
+          "named": true
+        },
+        {
+          "type": "recursive_arg",
+          "named": true
+        },
+        {
+          "type": "sequential",
+          "named": true
+        },
+        {
+          "type": "sequential_arg",
+          "named": true
+        },
+        {
+          "type": "split",
+          "named": true
+        },
+        {
+          "type": "split_arg",
+          "named": true
+        },
+        {
+          "type": "wire",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "recursive",
     "named": true,
     "fields": {
@@ -1503,19 +1581,7 @@
             "named": true
           },
           {
-            "type": "binary_op",
-            "named": true
-          },
-          {
             "type": "cut",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": false
-          },
-          {
-            "type": "function_call",
             "named": true
           },
           {
@@ -1523,8 +1589,8 @@
             "named": true
           },
           {
-            "type": "int",
-            "named": false
+            "type": "infix_op",
+            "named": true
           },
           {
             "type": "int",
@@ -1536,18 +1602,18 @@
           },
           {
             "type": "mem",
-            "named": false
+            "named": true
           },
           {
             "type": "merge",
             "named": true
           },
           {
-            "type": "one_sample_delay_operator",
+            "type": "modifier_op",
             "named": true
           },
           {
-            "type": "operator",
+            "type": "op",
             "named": true
           },
           {
@@ -1559,8 +1625,12 @@
             "named": true
           },
           {
-            "type": "prefix",
-            "named": false
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prefix_primitive",
+            "named": true
           },
           {
             "type": "real",
@@ -1613,19 +1683,7 @@
             "named": true
           },
           {
-            "type": "binary_op",
-            "named": true
-          },
-          {
             "type": "cut",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": false
-          },
-          {
-            "type": "function_call",
             "named": true
           },
           {
@@ -1633,8 +1691,8 @@
             "named": true
           },
           {
-            "type": "int",
-            "named": false
+            "type": "infix_op",
+            "named": true
           },
           {
             "type": "int",
@@ -1646,18 +1704,18 @@
           },
           {
             "type": "mem",
-            "named": false
+            "named": true
           },
           {
             "type": "merge",
             "named": true
           },
           {
-            "type": "one_sample_delay_operator",
+            "type": "modifier_op",
             "named": true
           },
           {
-            "type": "operator",
+            "type": "op",
             "named": true
           },
           {
@@ -1669,8 +1727,12 @@
             "named": true
           },
           {
-            "type": "prefix",
-            "named": false
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prefix_primitive",
+            "named": true
           },
           {
             "type": "real",
@@ -1729,19 +1791,7 @@
             "named": true
           },
           {
-            "type": "binary_op",
-            "named": true
-          },
-          {
             "type": "cut",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": false
-          },
-          {
-            "type": "function_call",
             "named": true
           },
           {
@@ -1749,8 +1799,8 @@
             "named": true
           },
           {
-            "type": "int",
-            "named": false
+            "type": "infix_op",
+            "named": true
           },
           {
             "type": "int",
@@ -1762,7 +1812,7 @@
           },
           {
             "type": "mem",
-            "named": false
+            "named": true
           },
           {
             "type": "merge",
@@ -1773,11 +1823,11 @@
             "named": true
           },
           {
-            "type": "one_sample_delay_operator",
+            "type": "modifier_op",
             "named": true
           },
           {
-            "type": "operator",
+            "type": "op",
             "named": true
           },
           {
@@ -1789,8 +1839,12 @@
             "named": true
           },
           {
-            "type": "prefix",
-            "named": false
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prefix_primitive",
+            "named": true
           },
           {
             "type": "real",
@@ -1855,19 +1909,7 @@
             "named": true
           },
           {
-            "type": "binary_op",
-            "named": true
-          },
-          {
             "type": "cut",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": false
-          },
-          {
-            "type": "function_call",
             "named": true
           },
           {
@@ -1875,8 +1917,8 @@
             "named": true
           },
           {
-            "type": "int",
-            "named": false
+            "type": "infix_op",
+            "named": true
           },
           {
             "type": "int",
@@ -1888,7 +1930,7 @@
           },
           {
             "type": "mem",
-            "named": false
+            "named": true
           },
           {
             "type": "merge",
@@ -1899,11 +1941,11 @@
             "named": true
           },
           {
-            "type": "one_sample_delay_operator",
+            "type": "modifier_op",
             "named": true
           },
           {
-            "type": "operator",
+            "type": "op",
             "named": true
           },
           {
@@ -1915,8 +1957,12 @@
             "named": true
           },
           {
-            "type": "prefix",
-            "named": false
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prefix_primitive",
+            "named": true
           },
           {
             "type": "real",
@@ -1987,19 +2033,7 @@
             "named": true
           },
           {
-            "type": "binary_op",
-            "named": true
-          },
-          {
             "type": "cut",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": false
-          },
-          {
-            "type": "function_call",
             "named": true
           },
           {
@@ -2007,8 +2041,8 @@
             "named": true
           },
           {
-            "type": "int",
-            "named": false
+            "type": "infix_op",
+            "named": true
           },
           {
             "type": "int",
@@ -2020,18 +2054,18 @@
           },
           {
             "type": "mem",
-            "named": false
+            "named": true
           },
           {
             "type": "merge",
             "named": true
           },
           {
-            "type": "one_sample_delay_operator",
+            "type": "modifier_op",
             "named": true
           },
           {
-            "type": "operator",
+            "type": "op",
             "named": true
           },
           {
@@ -2043,8 +2077,12 @@
             "named": true
           },
           {
-            "type": "prefix",
-            "named": false
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prefix_primitive",
+            "named": true
           },
           {
             "type": "real",
@@ -2097,19 +2135,7 @@
             "named": true
           },
           {
-            "type": "binary_op",
-            "named": true
-          },
-          {
             "type": "cut",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": false
-          },
-          {
-            "type": "function_call",
             "named": true
           },
           {
@@ -2117,8 +2143,8 @@
             "named": true
           },
           {
-            "type": "int",
-            "named": false
+            "type": "infix_op",
+            "named": true
           },
           {
             "type": "int",
@@ -2130,18 +2156,18 @@
           },
           {
             "type": "mem",
-            "named": false
+            "named": true
           },
           {
             "type": "merge",
             "named": true
           },
           {
-            "type": "one_sample_delay_operator",
+            "type": "modifier_op",
             "named": true
           },
           {
-            "type": "operator",
+            "type": "op",
             "named": true
           },
           {
@@ -2153,8 +2179,12 @@
             "named": true
           },
           {
-            "type": "prefix",
-            "named": false
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prefix_primitive",
+            "named": true
           },
           {
             "type": "real",
@@ -2213,19 +2243,7 @@
             "named": true
           },
           {
-            "type": "binary_op",
-            "named": true
-          },
-          {
             "type": "cut",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": false
-          },
-          {
-            "type": "function_call",
             "named": true
           },
           {
@@ -2233,8 +2251,8 @@
             "named": true
           },
           {
-            "type": "int",
-            "named": false
+            "type": "infix_op",
+            "named": true
           },
           {
             "type": "int",
@@ -2246,7 +2264,7 @@
           },
           {
             "type": "mem",
-            "named": false
+            "named": true
           },
           {
             "type": "merge",
@@ -2257,11 +2275,11 @@
             "named": true
           },
           {
-            "type": "one_sample_delay_operator",
+            "type": "modifier_op",
             "named": true
           },
           {
-            "type": "operator",
+            "type": "op",
             "named": true
           },
           {
@@ -2273,8 +2291,12 @@
             "named": true
           },
           {
-            "type": "prefix",
-            "named": false
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prefix_primitive",
+            "named": true
           },
           {
             "type": "real",
@@ -2339,19 +2361,7 @@
             "named": true
           },
           {
-            "type": "binary_op",
-            "named": true
-          },
-          {
             "type": "cut",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": false
-          },
-          {
-            "type": "function_call",
             "named": true
           },
           {
@@ -2359,8 +2369,8 @@
             "named": true
           },
           {
-            "type": "int",
-            "named": false
+            "type": "infix_op",
+            "named": true
           },
           {
             "type": "int",
@@ -2372,7 +2382,7 @@
           },
           {
             "type": "mem",
-            "named": false
+            "named": true
           },
           {
             "type": "merge",
@@ -2383,11 +2393,11 @@
             "named": true
           },
           {
-            "type": "one_sample_delay_operator",
+            "type": "modifier_op",
             "named": true
           },
           {
-            "type": "operator",
+            "type": "op",
             "named": true
           },
           {
@@ -2399,8 +2409,12 @@
             "named": true
           },
           {
-            "type": "prefix",
-            "named": false
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prefix_primitive",
+            "named": true
           },
           {
             "type": "real",
@@ -2510,19 +2524,7 @@
             "named": true
           },
           {
-            "type": "binary_op",
-            "named": true
-          },
-          {
             "type": "cut",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": false
-          },
-          {
-            "type": "function_call",
             "named": true
           },
           {
@@ -2530,8 +2532,8 @@
             "named": true
           },
           {
-            "type": "int",
-            "named": false
+            "type": "infix_op",
+            "named": true
           },
           {
             "type": "int",
@@ -2543,18 +2545,18 @@
           },
           {
             "type": "mem",
-            "named": false
+            "named": true
           },
           {
             "type": "merge",
             "named": true
           },
           {
-            "type": "one_sample_delay_operator",
+            "type": "modifier_op",
             "named": true
           },
           {
-            "type": "operator",
+            "type": "op",
             "named": true
           },
           {
@@ -2566,8 +2568,12 @@
             "named": true
           },
           {
-            "type": "prefix",
-            "named": false
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prefix_primitive",
+            "named": true
           },
           {
             "type": "real",
@@ -2620,19 +2626,7 @@
             "named": true
           },
           {
-            "type": "binary_op",
-            "named": true
-          },
-          {
             "type": "cut",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": false
-          },
-          {
-            "type": "function_call",
             "named": true
           },
           {
@@ -2640,8 +2634,8 @@
             "named": true
           },
           {
-            "type": "int",
-            "named": false
+            "type": "infix_op",
+            "named": true
           },
           {
             "type": "int",
@@ -2653,18 +2647,18 @@
           },
           {
             "type": "mem",
-            "named": false
+            "named": true
           },
           {
             "type": "merge",
             "named": true
           },
           {
-            "type": "one_sample_delay_operator",
+            "type": "modifier_op",
             "named": true
           },
           {
-            "type": "operator",
+            "type": "op",
             "named": true
           },
           {
@@ -2676,8 +2670,12 @@
             "named": true
           },
           {
-            "type": "prefix",
-            "named": false
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prefix_primitive",
+            "named": true
           },
           {
             "type": "real",
@@ -2736,19 +2734,7 @@
             "named": true
           },
           {
-            "type": "binary_op",
-            "named": true
-          },
-          {
             "type": "cut",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": false
-          },
-          {
-            "type": "function_call",
             "named": true
           },
           {
@@ -2756,8 +2742,8 @@
             "named": true
           },
           {
-            "type": "int",
-            "named": false
+            "type": "infix_op",
+            "named": true
           },
           {
             "type": "int",
@@ -2769,7 +2755,7 @@
           },
           {
             "type": "mem",
-            "named": false
+            "named": true
           },
           {
             "type": "merge",
@@ -2780,11 +2766,11 @@
             "named": true
           },
           {
-            "type": "one_sample_delay_operator",
+            "type": "modifier_op",
             "named": true
           },
           {
-            "type": "operator",
+            "type": "op",
             "named": true
           },
           {
@@ -2796,8 +2782,12 @@
             "named": true
           },
           {
-            "type": "prefix",
-            "named": false
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prefix_primitive",
+            "named": true
           },
           {
             "type": "real",
@@ -2862,19 +2852,7 @@
             "named": true
           },
           {
-            "type": "binary_op",
-            "named": true
-          },
-          {
             "type": "cut",
-            "named": true
-          },
-          {
-            "type": "float",
-            "named": false
-          },
-          {
-            "type": "function_call",
             "named": true
           },
           {
@@ -2882,8 +2860,8 @@
             "named": true
           },
           {
-            "type": "int",
-            "named": false
+            "type": "infix_op",
+            "named": true
           },
           {
             "type": "int",
@@ -2895,7 +2873,7 @@
           },
           {
             "type": "mem",
-            "named": false
+            "named": true
           },
           {
             "type": "merge",
@@ -2906,11 +2884,11 @@
             "named": true
           },
           {
-            "type": "one_sample_delay_operator",
+            "type": "modifier_op",
             "named": true
           },
           {
-            "type": "operator",
+            "type": "op",
             "named": true
           },
           {
@@ -2922,8 +2900,12 @@
             "named": true
           },
           {
-            "type": "prefix",
-            "named": false
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prefix_primitive",
+            "named": true
           },
           {
             "type": "real",
@@ -2962,21 +2944,14 @@
     }
   },
   {
-    "type": "variant",
+    "type": "sub",
     "named": true,
     "fields": {}
   },
   {
-    "type": "!=",
-    "named": false
-  },
-  {
-    "type": "%",
-    "named": false
-  },
-  {
-    "type": "&",
-    "named": false
+    "type": "variant",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "(",
@@ -2984,14 +2959,6 @@
   },
   {
     "type": ")",
-    "named": false
-  },
-  {
-    "type": "*",
-    "named": false
-  },
-  {
-    "type": "+",
     "named": false
   },
   {
@@ -3004,10 +2971,6 @@
   },
   {
     "type": ".",
-    "named": false
-  },
-  {
-    "type": "/",
     "named": false
   },
   {
@@ -3024,10 +2987,6 @@
   },
   {
     "type": ";",
-    "named": false
-  },
-  {
-    "type": "<",
     "named": false
   },
   {
@@ -3048,14 +3007,6 @@
   },
   {
     "type": "<:",
-    "named": false
-  },
-  {
-    "type": "<<",
-    "named": false
-  },
-  {
-    "type": "<=",
     "named": false
   },
   {
@@ -3091,32 +3042,16 @@
     "named": false
   },
   {
-    "type": "==",
-    "named": false
-  },
-  {
-    "type": ">",
-    "named": false
-  },
-  {
-    "type": ">=",
-    "named": false
-  },
-  {
-    "type": ">>",
-    "named": false
-  },
-  {
-    "type": "@",
-    "named": false
-  },
-  {
     "type": "\\",
     "named": false
   },
   {
-    "type": "^",
-    "named": false
+    "type": "add",
+    "named": true
+  },
+  {
+    "type": "and",
+    "named": true
   },
   {
     "type": "comment",
@@ -3131,16 +3066,40 @@
     "named": false
   },
   {
+    "type": "delay",
+    "named": true
+  },
+  {
+    "type": "div",
+    "named": true
+  },
+  {
     "type": "doubleprecision",
     "named": false
+  },
+  {
+    "type": "eq",
+    "named": true
+  },
+  {
+    "type": "exp",
+    "named": true
   },
   {
     "type": "fixedpointprecision",
     "named": false
   },
   {
-    "type": "float",
-    "named": false
+    "type": "float_cast",
+    "named": true
+  },
+  {
+    "type": "ge",
+    "named": true
+  },
+  {
+    "type": "gt",
+    "named": true
   },
   {
     "type": "import",
@@ -3148,18 +3107,46 @@
   },
   {
     "type": "int",
-    "named": false
+    "named": true
   },
   {
-    "type": "int",
+    "type": "int_cast",
+    "named": true
+  },
+  {
+    "type": "le",
+    "named": true
+  },
+  {
+    "type": "lshift",
+    "named": true
+  },
+  {
+    "type": "lt",
     "named": true
   },
   {
     "type": "mem",
-    "named": false
+    "named": true
   },
   {
-    "type": "one_sample_delay_operator",
+    "type": "mod",
+    "named": true
+  },
+  {
+    "type": "mult",
+    "named": true
+  },
+  {
+    "type": "neq",
+    "named": true
+  },
+  {
+    "type": "one_sample_delay",
+    "named": true
+  },
+  {
+    "type": "or",
     "named": true
   },
   {
@@ -3167,8 +3154,8 @@
     "named": false
   },
   {
-    "type": "prefix",
-    "named": false
+    "type": "prefix_primitive",
+    "named": true
   },
   {
     "type": "prod",
@@ -3180,6 +3167,10 @@
   },
   {
     "type": "real",
+    "named": true
+  },
+  {
+    "type": "rshift",
     "named": true
   },
   {
@@ -3204,11 +3195,7 @@
   },
   {
     "type": "xor",
-    "named": false
-  },
-  {
-    "type": "|",
-    "named": false
+    "named": true
   },
   {
     "type": "~",
