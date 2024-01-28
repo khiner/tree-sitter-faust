@@ -222,8 +222,12 @@
                 }
               },
               {
-                "type": "SYMBOL",
-                "name": "delay_op"
+                "type": "FIELD",
+                "name": "operator",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "delay_op"
+                }
               },
               {
                 "type": "FIELD",
@@ -251,8 +255,12 @@
                 }
               },
               {
-                "type": "SYMBOL",
-                "name": "exp_op"
+                "type": "FIELD",
+                "name": "operator",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "exp_op"
+                }
               },
               {
                 "type": "FIELD",
@@ -280,21 +288,25 @@
                 }
               },
               {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "mult_op"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "div_op"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "mod_op"
-                  }
-                ]
+                "type": "FIELD",
+                "name": "operator",
+                "content": {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "mult_op"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "div_op"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "mod_op"
+                    }
+                  ]
+                }
               },
               {
                 "type": "FIELD",
@@ -322,17 +334,21 @@
                 }
               },
               {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "add_op"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "sub_op"
-                  }
-                ]
+                "type": "FIELD",
+                "name": "operator",
+                "content": {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "add_op"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "sub_op"
+                    }
+                  ]
+                }
               },
               {
                 "type": "FIELD",
@@ -360,25 +376,29 @@
                 }
               },
               {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "and_op"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "xor_op"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "lshift_op"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "rshift_op"
-                  }
-                ]
+                "type": "FIELD",
+                "name": "operator",
+                "content": {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "and_op"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "xor_op"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "lshift_op"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "rshift_op"
+                    }
+                  ]
+                }
               },
               {
                 "type": "FIELD",
@@ -406,8 +426,12 @@
                 }
               },
               {
-                "type": "SYMBOL",
-                "name": "or_op"
+                "type": "FIELD",
+                "name": "operator",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "or_op"
+                }
               },
               {
                 "type": "FIELD",
@@ -435,33 +459,37 @@
                 }
               },
               {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "lt_op"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "le_op"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "gt_op"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "ge_op"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "eq_op"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "neq_op"
-                  }
-                ]
+                "type": "FIELD",
+                "name": "operator",
+                "content": {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "lt_op"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "le_op"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "gt_op"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "ge_op"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "eq_op"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "neq_op"
+                    }
+                  ]
+                }
               },
               {
                 "type": "FIELD",
@@ -483,16 +511,24 @@
         "type": "SEQ",
         "members": [
           {
-            "type": "SYMBOL",
-            "name": "_infix"
+            "type": "FIELD",
+            "name": "operator",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_infix"
+            }
           },
           {
             "type": "STRING",
             "value": "("
           },
           {
-            "type": "SYMBOL",
-            "name": "_args"
+            "type": "FIELD",
+            "name": "operand",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_args"
+            }
           },
           {
             "type": "STRING",
@@ -520,21 +556,29 @@
     },
     "access": {
       "type": "PREC",
-      "value": 2,
+      "value": 30,
       "content": {
         "type": "SEQ",
         "members": [
           {
-            "type": "SYMBOL",
-            "name": "_infix"
+            "type": "FIELD",
+            "name": "environment",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_infix"
+            }
           },
           {
             "type": "STRING",
             "value": "."
           },
           {
-            "type": "SYMBOL",
-            "name": "identifier"
+            "type": "FIELD",
+            "name": "definition",
+            "content": {
+              "type": "SYMBOL",
+              "name": "identifier"
+            }
           }
         ]
       }
@@ -852,65 +896,87 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "par"
-            },
-            {
-              "type": "STRING",
-              "value": "seq"
-            },
-            {
-              "type": "STRING",
-              "value": "sum"
-            },
-            {
-              "type": "STRING",
-              "value": "prod"
-            }
-          ]
+          "type": "FIELD",
+          "name": "type",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "par"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "seq"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "sum"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "prod"
+              }
+            ]
+          }
         },
         {
           "type": "STRING",
           "value": "("
         },
         {
-          "type": "ALIAS",
+          "type": "FIELD",
+          "name": "current_iter",
           "content": {
             "type": "SYMBOL",
             "name": "identifier"
-          },
-          "named": true,
-          "value": "current_iteration"
+          }
         },
         {
           "type": "STRING",
           "value": ","
         },
         {
-          "type": "ALIAS",
+          "type": "FIELD",
+          "name": "num_iters",
           "content": {
             "type": "SYMBOL",
             "name": "_argument"
-          },
-          "named": true,
-          "value": "numiter"
+          }
         },
         {
           "type": "STRING",
           "value": ","
         },
         {
-          "type": "SYMBOL",
-          "name": "_expression"
+          "type": "FIELD",
+          "name": "expression",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_expression"
+          }
         },
         {
           "type": "STRING",
           "value": ")"
         }
       ]
+    },
+    "par": {
+      "type": "STRING",
+      "value": "par"
+    },
+    "seq": {
+      "type": "STRING",
+      "value": "seq"
+    },
+    "sum": {
+      "type": "STRING",
+      "value": "sum"
+    },
+    "prod": {
+      "type": "STRING",
+      "value": "prod"
     },
     "_op": {
       "type": "CHOICE",

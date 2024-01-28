@@ -1,4 +1,5 @@
 const PREC = {
+  ACCESS: 30,
   // Operators
   ONE_SAMPLE_DELAY: 25,
   DELAY: 24,
@@ -18,7 +19,6 @@ const PREC = {
   // Expressions
   INFIX_OP: 3,
   PREFIX_OP: 3,
-  ACCESS: 2,
   EXPRESSION: 1,
 };
 
@@ -28,7 +28,7 @@ const binaryComposition = (op, precedence, assoc, field_rule) => $ =>
   prec[assoc](precedence, seq(field('left', field_rule($)), op, field('right', field_rule($))));
 
 const binaryOp = (symbol, precedence, operand_rule, assoc = 'left') =>
-  prec[assoc](precedence, seq(field('left', operand_rule), symbol, field('right', operand_rule)));
+  prec[assoc](precedence, seq(field('left', operand_rule), field('operator', symbol), field('right', operand_rule)));
 
 const decimal = /[0-9]/;
 const sign = optional(/[+-]/);
@@ -65,10 +65,10 @@ module.exports = grammar({
         binaryOp($.or_op, PREC.BITWISE_OR, $._infix),
         binaryOp(choice($.lt_op, $.le_op, $.gt_op, $.ge_op, $.eq_op, $.neq_op), PREC.COMPARISON, $._infix)
       ),
-    prefix_op: $ => prec(PREC.PREFIX_OP, seq($._infix, '(', $._args, ')')),
+    prefix_op: $ => prec(PREC.PREFIX_OP, seq(field('operator', $._infix), '(', field('operand', $._args), ')')),
     modifier_op: $ => prec(PREC.PREFIX_OP, seq($._infix, $._modifier)),
 
-    access: $ => prec(PREC.ACCESS, seq($._infix, '.', $.identifier)),
+    access: $ => prec(PREC.ACCESS, seq(field('environment', $._infix), '.', field('definition', $.identifier))),
 
     _primitive: $ =>
       choice(
@@ -96,18 +96,21 @@ module.exports = grammar({
     split_arg: binaryComposition('<:', PREC.SPLIT, 'right', $ => $._argument),
     merge_arg: binaryComposition(':>', PREC.MERGE, 'right', $ => $._argument),
 
-    // todo test
     iteration: $ =>
       seq(
-        choice('par', 'seq', 'sum', 'prod'),
+        field('type', choice($.par, $.seq, $.sum, $.prod)),
         '(',
-        alias($.identifier, $.current_iteration),
+        field('current_iter', $.identifier),
         ',',
-        alias($._argument, $.numiter),
+        field('num_iters', $._argument),
         ',',
-        $._expression,
+        field('expression', $._expression),
         ')'
       ),
+    par: _ => 'par',
+    seq: _ => 'seq',
+    sum: _ => 'sum',
+    prod: _ => 'prod',
 
     _op: $ =>
       choice(

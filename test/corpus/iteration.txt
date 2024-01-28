@@ -1,0 +1,103 @@
+====
+Par iteration
+====
+
+nHarmonics = 4;
+process = par(i, nHarmonics, _) :> /(nHarmonics) * si.smoo;
+
+---
+(program
+  (definition
+    name: (identifier)
+    value: (int))
+  (definition
+    name: (identifier)
+    value: (merge
+      left: (iteration
+        type: (par)
+        current_iter: (identifier)
+        num_iters: (identifier)
+        expression: (wire))
+      right: (infix_op
+        left: (prefix_op
+          operator: (div_op)
+          operand: (identifier))
+        operator: (mult_op)
+        right: (access
+          environment: (identifier)
+          definition: (identifier))))))
+
+====
+Seq iteration
+====
+
+nBands = 4;
+process = seq(i, nBands, oneBand(i));
+
+---
+(program
+  (definition
+    name: (identifier)
+    value: (int))
+  (definition
+    name: (identifier)
+    value: (iteration
+      type: (seq)
+      current_iter: (identifier)
+      num_iters: (identifier)
+      expression: (prefix_op
+        operator: (identifier)
+        operand: (identifier)))))
+
+====
+Sum iteration
+====
+
+nHarmonics = 4;
+process = sum(i, nHarmonics, _)/(nHarmonics) * si.smoo;
+
+---
+(program
+  (definition
+    name: (identifier)
+    value: (int))
+  (definition
+    name: (identifier)
+    value: (infix_op
+      left: (infix_op
+        left: (iteration
+          type: (sum)
+          current_iter: (identifier)
+          num_iters: (identifier)
+          expression: (wire))
+        operator: (div_op)
+        right: (identifier))
+      operator: (mult_op)
+      right: (access
+        environment: (identifier)
+        definition: (identifier)))))
+
+====
+Prod iteration
+====
+
+nOscs = 4;
+process = prod(i, nOscs, _) * si.smoo;
+
+---
+(program
+  (definition
+    name: (identifier)
+    value: (int))
+      (definition
+        name: (identifier)
+        value: (infix_op
+          left: (iteration
+            type: (prod)
+            current_iter: (identifier)
+            num_iters: (identifier)
+            expression: (wire))
+          operator: (mult_op)
+          right: (access
+            environment: (identifier)
+            definition: (identifier)))))
