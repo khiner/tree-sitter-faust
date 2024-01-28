@@ -142,22 +142,29 @@ ar(a,r,g) = v letrec {
         (recinition
           name: (identifier)
           expression: (infix
-            left: (prefix
-              operator: (identifier)
-              operand: (int)
-              operand: (infix
-                left: (infix
-                  left: (identifier)
-                  operator: (add_op)
+            left: (function_call
+              callee: (identifier)
+              (arguments
+                (int)
+                (infix
+                  left: (infix
+                    left: (identifier)
+                    operator: (add_op)
+                    right: (infix
+                      left: (infix
+                        left: (identifier)
+                        operator: (lt_op)
+                        right: (identifier))
+                      operator: (div_op)
+                      right: (identifier)))
+                  operator: (sub_op)
                   right: (infix
-                    left: (infix left: (identifier) operator: (lt_op) right: (identifier))
+                    left: (infix
+                      left: (identifier)
+                      operator: (ge_op)
+                      right: (identifier))
                     operator: (div_op)
-                    right: (identifier)))
-                operator: (sub_op)
-                right: (infix
-                  left: (infix left: (identifier) operator: (ge_op) right: (identifier))
-                  operator: (div_op)
-                  right: (identifier))))
+                    right: (identifier)))))
             operator: (mult_op)
             right: (identifier)))
         (definition

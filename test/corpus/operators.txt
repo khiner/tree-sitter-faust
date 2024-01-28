@@ -2,32 +2,25 @@
 Prefix op
 ====
 
-nested_unary = mem(int(float(1)));
-process = |(*(2,3), @(nested_unary', 2));
+nested_unary = int(float(1));
+process = |(*(2,3), @(nested_unary', 2)) : mem;
 
 ---
 (program
   (definition
     (identifier)
-    (prefix
-      (mem_op)
-      (prefix
-        (int_cast)
-        (prefix
-          (float_cast)
-          (int)))))
+    (prefix (int_cast) (prefix (float_cast) (int))))
   (definition
     (identifier)
-    (prefix
-      (or_op)
+    (sequential
       (prefix
-        (mult_op)
-        (int)
-        (int))
-      (prefix
-        (delay_op)
-        (modifier (identifier) (one_sample_delay_op))
-        (int)))))
+        (or_op)
+        (prefix (mult_op) (int) (int))
+        (prefix
+          (delay_op)
+          (modifier (identifier) (one_sample_delay_op))
+          (int)))
+      (mem))))
 
 ====
 Infix op

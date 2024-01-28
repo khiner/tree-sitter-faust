@@ -10,9 +10,7 @@ process = _~+(1);
     (identifier)
     (recursive
       (wire)
-      (prefix
-        (add_op)
-        (int)))))
+      (prefix (add_op) (int)))))
 
 =====
 Sequential

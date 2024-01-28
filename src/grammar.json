@@ -191,6 +191,10 @@
           },
           {
             "type": "SYMBOL",
+            "name": "function_call"
+          },
+          {
+            "type": "SYMBOL",
             "name": "prefix"
           },
           {
@@ -500,6 +504,35 @@
         }
       ]
     },
+    "function_call": {
+      "type": "PREC",
+      "value": 4,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "FIELD",
+            "name": "callee",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_infix_expression"
+            }
+          },
+          {
+            "type": "STRING",
+            "value": "("
+          },
+          {
+            "type": "SYMBOL",
+            "name": "arguments"
+          },
+          {
+            "type": "STRING",
+            "value": ")"
+          }
+        ]
+      }
+    },
     "prefix": {
       "type": "PREC",
       "value": 4,
@@ -510,8 +543,17 @@
             "type": "FIELD",
             "name": "operator",
             "content": {
-              "type": "SYMBOL",
-              "name": "_infix_expression"
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "_binary_op"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_unary_op"
+                }
+              ]
             }
           },
           {
@@ -596,15 +638,15 @@
         },
         {
           "type": "SYMBOL",
-          "name": "mem_op"
+          "name": "mem"
         },
         {
           "type": "SYMBOL",
-          "name": "prefix_op"
+          "name": "_unary_op"
         },
         {
           "type": "SYMBOL",
-          "name": "_op"
+          "name": "_binary_op"
         },
         {
           "type": "SEQ",
@@ -700,6 +742,23 @@
         }
       ]
     },
+    "_operator": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_binary_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_unary_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_modifier_op"
+        }
+      ]
+    },
     "parameters": {
       "type": "SEQ",
       "members": [
@@ -729,6 +788,31 @@
                 },
                 "named": true,
                 "value": "parameter"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "arguments": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_argument"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": ","
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_argument"
               }
             ]
           }
@@ -1179,7 +1263,20 @@
         }
       ]
     },
-    "_op": {
+    "_unary_op": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "int_cast"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "float_cast"
+        }
+      ]
+    },
+    "_binary_op": {
       "type": "CHOICE",
       "members": [
         {
@@ -1256,11 +1353,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "int_cast"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "float_cast"
+          "name": "prefix_op"
         }
       ]
     },
@@ -1272,18 +1365,6 @@
           "name": "one_sample_delay_op"
         }
       ]
-    },
-    "wire": {
-      "type": "STRING",
-      "value": "_"
-    },
-    "cut": {
-      "type": "STRING",
-      "value": "!"
-    },
-    "mem_op": {
-      "type": "STRING",
-      "value": "mem"
     },
     "int_cast": {
       "type": "STRING",
@@ -1376,6 +1457,18 @@
         "type": "STRING",
         "value": "'"
       }
+    },
+    "wire": {
+      "type": "STRING",
+      "value": "_"
+    },
+    "cut": {
+      "type": "STRING",
+      "value": "!"
+    },
+    "mem": {
+      "type": "STRING",
+      "value": "mem"
     },
     "_number": {
       "type": "CHOICE",

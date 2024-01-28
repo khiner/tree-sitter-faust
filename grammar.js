@@ -51,7 +51,7 @@ module.exports = grammar({
     function_definition: $ => seq(field('name', $.identifier), '(', $.parameters, ')', '=', field('value', $._expression)),
 
     _expression: $ => prec(PREC.EXPRESSION, choice($.with_environment, $.letrec_environment, $._binary_composition, $._infix_expression)),
-    _infix_expression: $ => prec(PREC.EXPRESSION, choice($.infix, $.modifier, $.access, $.prefix, $._primitive)),
+    _infix_expression: $ => prec(PREC.EXPRESSION, choice($.infix, $.modifier, $.access, $.function_call, $.prefix, $._primitive)),
 
     infix: $ =>
       choice(
@@ -63,7 +63,8 @@ module.exports = grammar({
         binaryOp($.or_op, PREC.BITWISE_OR, $._infix_expression),
         binaryOp(choice($.lt_op, $.le_op, $.gt_op, $.ge_op, $.eq_op, $.neq_op), PREC.COMPARISON, $._infix_expression)
       ),
-    prefix: $ => prec(PREC.PREFIX, seq(field('operator', $._infix_expression), '(', field('operand', $._args), ')')),
+    function_call: $ => prec(PREC.PREFIX, seq(field('callee', $._infix_expression), '(', $.arguments, ')')),
+    prefix: $ => prec(PREC.PREFIX, seq(field('operator', choice($._binary_op, $._unary_op)), '(', field('operand', $._args), ')')),
     modifier: $ => prec(PREC.ACCESS, seq($._infix_expression, $._modifier_op)),
 
     access: $ => prec(PREC.ACCESS, seq(field('environment', $._infix_expression), '.', field('definition', $.identifier))),
@@ -73,17 +74,19 @@ module.exports = grammar({
         $._number,
         $.wire,
         $.cut,
-        $.mem_op,
-        $.prefix_op,
-        $._op,
+        $.mem,
+        $._unary_op,
+        $._binary_op,
         seq(optional('-'), $.identifier),
         seq('(', $._expression, ')'),
         seq('\\', '(', $.parameters, ')', '.', '(', $._expression, ')'),
         $.iteration,
         seq('environment', $.environment)
       ),
+    _operator: $ => choice($._binary_op, $._unary_op, $._modifier_op),
 
     parameters: $ => sepBy(',', alias($.identifier, $.parameter)),
+    arguments: $ => sepBy(',', $._argument),
 
     _args: $ => sepBy(',', $._argument),
     _argument: $ => choice($.sequential_arg, $.split_arg, $.merge_arg, $.recursive_arg, $._infix_expression),
@@ -120,11 +123,11 @@ module.exports = grammar({
     // | expression LETREC LBRAQ reclist WHERE deflist RBRAQ    { $$ = boxWithRecDef($1,formatDefinitions($4),formatDefinitions($6)); }
     letrec_environment: $ =>
       prec.left(PREC.ENVIRONMENT, seq(field('expression', $._expression), 'letrec', field('local_environment', $.rec_environment))),
-    rec_environment: $ =>
-      seq('{', repeat($.recinition), optional(seq('where', repeat(seq(repeat($.variant), $._definition, ';')))), '}'),
+    rec_environment: $ => seq('{', repeat($.recinition), optional(seq('where', repeat(seq(repeat($.variant), $._definition, ';')))), '}'),
     recinition: $ => seq(seq("'", field('name', $.identifier)), '=', field('expression', $._expression), ';'),
 
-    _op: $ =>
+    _unary_op: $ => choice($.int_cast, $.float_cast),
+    _binary_op: $ =>
       choice(
         $.add_op,
         $.sub_op,
@@ -144,16 +147,11 @@ module.exports = grammar({
         $.eq_op,
         $.neq_op,
         $.delay_op,
-        $.int_cast,
-        $.float_cast
+        $.prefix_op
       ),
     _modifier_op: $ => choice($.one_sample_delay_op),
 
-    wire: _ => '_',
-    cut: _ => '!',
-
     /* Unary */
-    mem_op: _ => 'mem',
     int_cast: _ => 'int',
     float_cast: _ => 'float',
 
@@ -178,13 +176,17 @@ module.exports = grammar({
     ge_op: _ => '>=',
     eq_op: _ => '==',
     neq_op: _ => '!=',
-    // Delay
+    // Special
     delay_op: _ => '@',
-    // Other
     prefix_op: _ => 'prefix',
 
     /* Modifiers */
     one_sample_delay_op: _ => prec(PREC.ONE_SAMPLE_DELAY, "'"),
+
+    /* Primitives */
+    wire: _ => '_',
+    cut: _ => '!',
+    mem: _ => 'mem',
 
     _number: $ => choice($.int, $.real),
     int: _ => token(seq(sign, repeat1(decimal))),
