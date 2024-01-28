@@ -131,3 +131,22 @@ process = component("karplus32.dsp") : component("freeverb.dsp");
     (sequential
       (component (string))
       (component (string)))))
+
+===
+Explicit substitution
+===
+
+process = component("freeverb.dsp")[foo(x) = 1; bar = _;];
+
+---
+(program
+  (definition
+    name: (identifier)
+    value: (substitution
+      expression: (component (string))
+      (substitutions
+        (function_definition
+          name: (identifier)
+          (parameters (parameter))
+          value: (int))
+        (definition name: (identifier) value: (wire))))))

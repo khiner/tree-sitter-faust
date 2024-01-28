@@ -31,6 +31,9 @@ const binaryComposition = (op, precedence, assoc, field_rule) => $ =>
 const binaryOp = (symbol, precedence, operand_rule, assoc = 'left') =>
   prec[assoc](precedence, seq(field('left', operand_rule), field('operator', symbol), field('right', operand_rule)));
 
+// Can't be a regular rule because it matches the empty string.
+const definitionList = $ => repeat(seq(repeat($.variant), $._definition, ';'));
+
 const decimal = /[0-9]/;
 const sign = optional(/[+-]/);
 
@@ -50,7 +53,8 @@ module.exports = grammar({
     function_definition: $ => seq(field('name', $.identifier), '(', $.parameters, ')', '=', field('value', $._expression)),
 
     _expression: $ => prec(PREC.EXPRESSION, choice($.with_environment, $.letrec_environment, $._binary_composition, $._infix_expression)),
-    _infix_expression: $ => prec(PREC.EXPRESSION, choice($.infix, $.modifier, $.access, $.function_call, $.prefix, $._primitive)),
+    _infix_expression: $ =>
+      prec(PREC.EXPRESSION, choice($.infix, $.modifier, $.access, $.function_call, $.substitution, $.prefix, $._primitive)),
 
     infix: $ =>
       choice(
@@ -81,7 +85,7 @@ module.exports = grammar({
         seq('\\', '(', $.parameters, ')', '.', '(', $._expression, ')'),
         $.iteration,
         seq('environment', $.environment),
-        $.component,
+        $.component
       ),
     _operator: $ => choice($._binary_op, $._unary_op, $._modifier_op),
 
@@ -116,15 +120,15 @@ module.exports = grammar({
 
     with_environment: $ =>
       prec.left(PREC.ENVIRONMENT, seq(field('expression', $._expression), 'with', field('local_environment', $.environment))),
-    environment: $ => seq('{', repeat(seq(repeat($.variant), $._definition, ';')), '}'),
+    environment: $ => seq('{', definitionList($), '}'),
 
-    // recinition      : recname DEF expression ENDDEF               { $$ = cons($1,cons(gGlobal->nil,$3)); setDefProp($1, FAUSTfilename, FAUSTlineno); }
-    // | expression LETREC LBRAQ reclist RBRAQ  { $$ = boxWithRecDef($1,formatDefinitions($4), gGlobal->nil); }
-    // | expression LETREC LBRAQ reclist WHERE deflist RBRAQ    { $$ = boxWithRecDef($1,formatDefinitions($4),formatDefinitions($6)); }
     letrec_environment: $ =>
       prec.left(PREC.ENVIRONMENT, seq(field('expression', $._expression), 'letrec', field('local_environment', $.rec_environment))),
-    rec_environment: $ => seq('{', repeat($.recinition), optional(seq('where', repeat(seq(repeat($.variant), $._definition, ';')))), '}'),
+    rec_environment: $ => seq('{', repeat($.recinition), optional(seq('where', definitionList($))), '}'),
     recinition: $ => seq(seq("'", field('name', $.identifier)), '=', field('expression', $._expression), ';'),
+
+    substitution: $ => seq(field('expression', $._infix_expression), $.substitutions),
+    substitutions: $ => seq('[', definitionList($), ']'),
 
     component: $ => seq('component', '(', $.string, ')'),
 
