@@ -9,10 +9,10 @@
 #define STATE_COUNT 119
 #define LARGE_STATE_COUNT 2
 #define SYMBOL_COUNT 109
-#define ALIAS_COUNT 3
+#define ALIAS_COUNT 1
 #define TOKEN_COUNT 65
 #define EXTERNAL_TOKEN_COUNT 0
-#define FIELD_COUNT 12
+#define FIELD_COUNT 14
 #define MAX_ALIAS_SEQUENCE_LENGTH 8
 #define PRODUCTION_ID_COUNT 12
 
@@ -111,7 +111,7 @@ enum {
   sym__special_doc_tag = 92,
   sym_file_import = 93,
   sym_global_metadata = 94,
-  sym_definition_metadata = 95,
+  sym_function_metadata = 95,
   sym__binary_composition = 96,
   sym_recursive = 97,
   sym_sequential = 98,
@@ -125,9 +125,7 @@ enum {
   aux_sym__args_repeat1 = 106,
   aux_sym_documentation_repeat1 = 107,
   aux_sym_identifier_repeat1 = 108,
-  alias_sym_function_name = 109,
-  alias_sym_metadata_key = 110,
-  alias_sym_parameter = 111,
+  alias_sym_parameter = 109,
 };
 
 static const char * const ts_symbol_names[] = {
@@ -226,7 +224,7 @@ static const char * const ts_symbol_names[] = {
   [sym__special_doc_tag] = "_special_doc_tag",
   [sym_file_import] = "file_import",
   [sym_global_metadata] = "global_metadata",
-  [sym_definition_metadata] = "definition_metadata",
+  [sym_function_metadata] = "function_metadata",
   [sym__binary_composition] = "_binary_composition",
   [sym_recursive] = "recursive",
   [sym_sequential] = "sequential",
@@ -240,8 +238,6 @@ static const char * const ts_symbol_names[] = {
   [aux_sym__args_repeat1] = "_args_repeat1",
   [aux_sym_documentation_repeat1] = "documentation_repeat1",
   [aux_sym_identifier_repeat1] = "identifier_repeat1",
-  [alias_sym_function_name] = "function_name",
-  [alias_sym_metadata_key] = "metadata_key",
   [alias_sym_parameter] = "parameter",
 };
 
@@ -341,7 +337,7 @@ static const TSSymbol ts_symbol_map[] = {
   [sym__special_doc_tag] = sym__special_doc_tag,
   [sym_file_import] = sym_file_import,
   [sym_global_metadata] = sym_global_metadata,
-  [sym_definition_metadata] = sym_definition_metadata,
+  [sym_function_metadata] = sym_function_metadata,
   [sym__binary_composition] = sym__binary_composition,
   [sym_recursive] = sym_recursive,
   [sym_sequential] = sym_sequential,
@@ -355,8 +351,6 @@ static const TSSymbol ts_symbol_map[] = {
   [aux_sym__args_repeat1] = aux_sym__args_repeat1,
   [aux_sym_documentation_repeat1] = aux_sym_documentation_repeat1,
   [aux_sym_identifier_repeat1] = aux_sym_identifier_repeat1,
-  [alias_sym_function_name] = alias_sym_function_name,
-  [alias_sym_metadata_key] = alias_sym_metadata_key,
   [alias_sym_parameter] = alias_sym_parameter,
 };
 
@@ -741,7 +735,7 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = true,
   },
-  [sym_definition_metadata] = {
+  [sym_function_metadata] = {
     .visible = true,
     .named = true,
   },
@@ -797,14 +791,6 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = false,
     .named = false,
   },
-  [alias_sym_function_name] = {
-    .visible = true,
-    .named = true,
-  },
-  [alias_sym_metadata_key] = {
-    .visible = true,
-    .named = true,
-  },
   [alias_sym_parameter] = {
     .visible = true,
     .named = true,
@@ -816,14 +802,16 @@ enum {
   field_definition = 2,
   field_environment = 3,
   field_expression = 4,
-  field_left = 5,
-  field_name = 6,
-  field_num_iters = 7,
-  field_operand = 8,
-  field_operator = 9,
-  field_right = 10,
-  field_type = 11,
-  field_value = 12,
+  field_function_name = 5,
+  field_key = 6,
+  field_left = 7,
+  field_name = 8,
+  field_num_iters = 9,
+  field_operand = 10,
+  field_operator = 11,
+  field_right = 12,
+  field_type = 13,
+  field_value = 14,
 };
 
 static const char * const ts_field_names[] = {
@@ -832,6 +820,8 @@ static const char * const ts_field_names[] = {
   [field_definition] = "definition",
   [field_environment] = "environment",
   [field_expression] = "expression",
+  [field_function_name] = "function_name",
+  [field_key] = "key",
   [field_left] = "left",
   [field_name] = "name",
   [field_num_iters] = "num_iters",
@@ -843,36 +833,45 @@ static const char * const ts_field_names[] = {
 };
 
 static const TSFieldMapSlice ts_field_map_slices[PRODUCTION_ID_COUNT] = {
-  [2] = {.index = 0, .length = 2},
-  [5] = {.index = 2, .length = 2},
-  [6] = {.index = 4, .length = 2},
-  [7] = {.index = 6, .length = 3},
-  [9] = {.index = 9, .length = 2},
-  [10] = {.index = 11, .length = 2},
-  [11] = {.index = 13, .length = 4},
+  [1] = {.index = 0, .length = 2},
+  [2] = {.index = 2, .length = 2},
+  [4] = {.index = 4, .length = 3},
+  [5] = {.index = 7, .length = 2},
+  [6] = {.index = 9, .length = 2},
+  [7] = {.index = 11, .length = 3},
+  [9] = {.index = 14, .length = 2},
+  [10] = {.index = 16, .length = 2},
+  [11] = {.index = 18, .length = 4},
 };
 
 static const TSFieldMapEntry ts_field_map_entries[] = {
   [0] =
-    {field_name, 0},
+    {field_key, 1},
     {field_value, 2},
   [2] =
+    {field_name, 0},
+    {field_value, 2},
+  [4] =
+    {field_function_name, 1},
+    {field_key, 2},
+    {field_value, 3},
+  [7] =
     {field_left, 0},
     {field_right, 2},
-  [4] =
+  [9] =
     {field_definition, 2},
     {field_environment, 0},
-  [6] =
+  [11] =
     {field_left, 0},
     {field_operator, 1},
     {field_right, 2},
-  [9] =
+  [14] =
     {field_operand, 2},
     {field_operator, 0},
-  [11] =
+  [16] =
     {field_name, 0},
     {field_value, 5},
-  [13] =
+  [18] =
     {field_current_iter, 2},
     {field_expression, 6},
     {field_num_iters, 4},
@@ -881,15 +880,8 @@ static const TSFieldMapEntry ts_field_map_entries[] = {
 
 static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE_LENGTH] = {
   [0] = {0},
-  [1] = {
-    [1] = alias_sym_metadata_key,
-  },
   [3] = {
     [0] = alias_sym_parameter,
-  },
-  [4] = {
-    [1] = alias_sym_function_name,
-    [2] = alias_sym_metadata_key,
   },
   [8] = {
     [1] = alias_sym_parameter,
@@ -897,10 +889,8 @@ static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE
 };
 
 static const uint16_t ts_non_terminal_alias_map[] = {
-  sym_identifier, 4,
+  sym_identifier, 2,
     sym_identifier,
-    alias_sym_function_name,
-    alias_sym_metadata_key,
     alias_sym_parameter,
   0,
 };
@@ -2774,7 +2764,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [sym_documentation] = STATE(47),
     [sym_file_import] = STATE(113),
     [sym_global_metadata] = STATE(113),
-    [sym_definition_metadata] = STATE(113),
+    [sym_function_metadata] = STATE(113),
     [sym_identifier] = STATE(94),
     [aux_sym_program_repeat1] = STATE(47),
     [aux_sym__statement_repeat1] = STATE(49),
@@ -4977,7 +4967,7 @@ static const uint16_t ts_small_parse_table[] = {
       sym_function_definition,
       sym_file_import,
       sym_global_metadata,
-      sym_definition_metadata,
+      sym_function_metadata,
   [2522] = 12,
     ACTIONS(152), 1,
       ts_builtin_sym_end,
@@ -5012,7 +5002,7 @@ static const uint16_t ts_small_parse_table[] = {
       sym_function_definition,
       sym_file_import,
       sym_global_metadata,
-      sym_definition_metadata,
+      sym_function_metadata,
   [2569] = 8,
     ACTIONS(9), 1,
       anon_sym_import,
@@ -5037,7 +5027,7 @@ static const uint16_t ts_small_parse_table[] = {
       sym_function_definition,
       sym_file_import,
       sym_global_metadata,
-      sym_definition_metadata,
+      sym_function_metadata,
   [2602] = 4,
     ACTIONS(175), 1,
       anon_sym_LT_SLASHmdoc_GT,
@@ -5900,7 +5890,7 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [317] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_global_metadata, 3, .production_id = 1),
   [319] = {.entry = {.count = 1, .reusable = true}}, SHIFT(111),
   [321] = {.entry = {.count = 1, .reusable = true}}, SHIFT(3),
-  [323] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_definition_metadata, 4, .production_id = 4),
+  [323] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_function_metadata, 4, .production_id = 4),
   [325] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_file_import, 4),
   [327] = {.entry = {.count = 1, .reusable = true}}, SHIFT(104),
   [329] = {.entry = {.count = 1, .reusable = true}}, SHIFT(92),

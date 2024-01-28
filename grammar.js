@@ -42,7 +42,7 @@ module.exports = grammar({
       choice(
         seq(
           optional(repeat1($.variant)),
-          choice($.global_metadata, $.definition_metadata, $.file_import, $.function_definition, $.definition),
+          choice($.global_metadata, $.function_metadata, $.file_import, $.function_definition, $.definition),
           ';'
         ),
         $.documentation
@@ -198,8 +198,8 @@ module.exports = grammar({
 
     file_import: $ => seq('import', '(', $.string, ')'),
 
-    global_metadata: $ => seq('declare', alias($.identifier, $.metadata_key), $.string),
-    definition_metadata: $ => seq('declare', alias($.identifier, $.function_name), alias($.identifier, $.metadata_key), $.string),
+    global_metadata: $ => seq('declare', field('key', $.identifier), field('value', $.string)),
+    function_metadata: $ => seq('declare', field('function_name', $.identifier), field('key', $.identifier), field('value', $.string)),
 
     _binary_composition: $ => choice($.recursive, $.sequential, $.split, $.merge, $.parallel),
     recursive: binaryComposition('~', PREC.RECURSIVE, 'left', $ => $._expression),

@@ -47,7 +47,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "definition_metadata"
+                  "name": "function_metadata"
                 },
                 {
                   "type": "SYMBOL",
@@ -1519,21 +1519,24 @@
           "value": "declare"
         },
         {
-          "type": "ALIAS",
+          "type": "FIELD",
+          "name": "key",
           "content": {
             "type": "SYMBOL",
             "name": "identifier"
-          },
-          "named": true,
-          "value": "metadata_key"
+          }
         },
         {
-          "type": "SYMBOL",
-          "name": "string"
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string"
+          }
         }
       ]
     },
-    "definition_metadata": {
+    "function_metadata": {
       "type": "SEQ",
       "members": [
         {
@@ -1541,26 +1544,28 @@
           "value": "declare"
         },
         {
-          "type": "ALIAS",
+          "type": "FIELD",
+          "name": "function_name",
           "content": {
             "type": "SYMBOL",
             "name": "identifier"
-          },
-          "named": true,
-          "value": "function_name"
+          }
         },
         {
-          "type": "ALIAS",
+          "type": "FIELD",
+          "name": "key",
           "content": {
             "type": "SYMBOL",
             "name": "identifier"
-          },
-          "named": true,
-          "value": "metadata_key"
+          }
         },
         {
-          "type": "SYMBOL",
-          "name": "string"
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string"
+          }
         }
       ]
     },

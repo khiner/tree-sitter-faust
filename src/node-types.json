@@ -388,29 +388,6 @@
     }
   },
   {
-    "type": "definition_metadata",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "function_name",
-          "named": true
-        },
-        {
-          "type": "metadata_key",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "documentation",
     "named": true,
     "fields": {}
@@ -635,27 +612,65 @@
     }
   },
   {
-    "type": "function_name",
+    "type": "function_metadata",
     "named": true,
-    "fields": {}
+    "fields": {
+      "function_name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "key": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
   },
   {
     "type": "global_metadata",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "metadata_key",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
+    "fields": {
+      "key": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -2270,11 +2285,6 @@
     }
   },
   {
-    "type": "metadata_key",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "modifier",
     "named": true,
     "fields": {},
@@ -3227,10 +3237,6 @@
           "named": true
         },
         {
-          "type": "definition_metadata",
-          "named": true
-        },
-        {
           "type": "documentation",
           "named": true
         },
@@ -3240,6 +3246,10 @@
         },
         {
           "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "function_metadata",
           "named": true
         },
         {

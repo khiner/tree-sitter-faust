@@ -61,28 +61,30 @@ identity ( var ) = var ;
     (identifier)))
 
 ====
-Global metadata
+Metadata
 ====
 
 declare name "Noise";
-
----
-(program
-  (global_metadata
-    (metadata_key)
-    (string)))
-
-====
-Complex string
-====
-
 declare complex_string "a\"\n\r!@#$%^&*(),<.>?/~`{}\|\';:";
 
+declare add author "Karl Hiner";
+add = +;
+
 ---
 (program
   (global_metadata
-    (metadata_key)
-    (string)))
+    key: (identifier)
+    value: (string))
+  (global_metadata
+    key: (identifier)
+    value: (string))
+  (function_metadata
+    function_name: (identifier)
+    key: (identifier)
+    value: (string))
+  (definition
+    name: (identifier)
+    value: (add_op)))
 
 ====
 Import
