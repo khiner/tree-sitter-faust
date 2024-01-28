@@ -1,0 +1,87 @@
+====
+Empty with environment
+====
+
+pink = f : + ~ g with {};
+process = pink;
+
+---
+(program
+  (definition
+    name: (identifier)
+    value: (with
+      expression: (sequential
+        left: (identifier)
+        right: (recursive
+          left: (add_op)
+          right: (identifier)))))
+  (definition
+    name: (identifier)
+    value: (identifier)))
+
+====
+With environment
+====
+
+pink = f : + ~ g with {
+  f(x) = 0.04957526213389*x - 0.06305581334498*x' + 0.01483220320740*x'';
+  g(x) = 1.80116083982126*x - 0.80257737639225*x';
+};
+process = pink;
+
+---
+(program
+  (definition
+    name: (identifier)
+    value: (with
+      expression: (sequential
+        left: (identifier)
+        right: (recursive
+          left: (add_op)
+          right: (identifier)))
+      local_environment: (environment
+        (function_definition
+          name: (identifier)
+          (parameters
+            (parameter))
+          value: (infix
+            left: (infix
+              left: (infix
+                left: (real)
+                operator: (mult_op)
+                right: (identifier))
+              operator: (sub_op)
+              right: (infix
+                left: (real)
+                operator: (mult_op)
+                right: (modifier
+                  (identifier)
+                  (one_sample_delay_op))))
+            operator: (add_op)
+            right: (infix
+              left: (real)
+              operator: (mult_op)
+              right: (modifier
+                (modifier
+                  (identifier)
+                  (one_sample_delay_op))
+                (one_sample_delay_op)))))
+        (function_definition
+          name: (identifier)
+          (parameters
+            (parameter))
+          value: (infix
+            left: (infix
+              left: (real)
+              operator: (mult_op)
+              right: (identifier))
+            operator: (sub_op)
+            right: (infix
+              left: (real)
+              operator: (mult_op)
+              right: (modifier
+                (identifier)
+                (one_sample_delay_op))))))))
+  (definition
+    name: (identifier)
+    value: (identifier)))

@@ -17,9 +17,11 @@ const PREC = {
   SPLIT: 10,
   MERGE: 10,
   // Expressions
-  INFIX: 3,
-  PREFIX: 3,
-  EXPRESSION: 1,
+  INFIX: 4,
+  PREFIX: 4,
+  EXPRESSION: 3,
+  DEFINITION: 2,
+  ENVIRONMENT: 1,
 };
 
 const sepBy = (sep, rule) => seq(rule, repeat(seq(sep, rule)));
@@ -40,20 +42,15 @@ module.exports = grammar({
 
     _statement: $ =>
       choice(
-        seq(
-          optional(repeat1($.variant)),
-          choice($.global_metadata, $.function_metadata, $.file_import, $.function_definition, $.definition),
-          ';'
-        ),
+        seq(repeat($.variant), choice($.global_metadata, $.function_metadata, $.file_import, $.function_definition, $._definition), ';'),
         $.documentation
       ),
 
-    variant: _ => choice('singleprecision', 'doubleprecision', 'quadprecision', 'fixedpointprecision'),
-
+    _definition: $ => prec(PREC.DEFINITION, choice($.definition, $.function_definition)),
     definition: $ => seq(field('name', $.identifier), '=', field('value', $._expression)),
     function_definition: $ => seq(field('name', $.identifier), '(', $.parameters, ')', '=', field('value', $._expression)),
 
-    _expression: $ => prec(PREC.EXPRESSION, choice($._binary_composition, $._infix_expression)),
+    _expression: $ => prec(PREC.EXPRESSION, choice($.with, $._binary_composition, $._infix_expression)),
     _infix_expression: $ => prec(PREC.EXPRESSION, choice($.infix, $.modifier, $.access, $.prefix, $._primitive)),
 
     infix: $ =>
@@ -67,7 +64,7 @@ module.exports = grammar({
         binaryOp(choice($.lt_op, $.le_op, $.gt_op, $.ge_op, $.eq_op, $.neq_op), PREC.COMPARISON, $._infix_expression)
       ),
     prefix: $ => prec(PREC.PREFIX, seq(field('operator', $._infix_expression), '(', field('operand', $._args), ')')),
-    modifier: $ => prec(PREC.PREFIX, seq($._infix_expression, $._modifier_op)),
+    modifier: $ => prec(PREC.ACCESS, seq($._infix_expression, $._modifier_op)),
 
     access: $ => prec(PREC.ACCESS, seq(field('environment', $._infix_expression), '.', field('definition', $.identifier))),
 
@@ -112,6 +109,13 @@ module.exports = grammar({
     seq: _ => 'seq',
     sum: _ => 'sum',
     prod: _ => 'prod',
+
+    with: $ =>
+      prec.left(
+        PREC.ENVIRONMENT,
+        seq(field('expression', $._expression), 'with', '{', field('local_environment', optional($.environment)), '}')
+      ),
+    environment: $ => repeat1(seq(repeat($.variant), $._definition, ';')),
 
     _op: $ =>
       choice(
@@ -207,6 +211,8 @@ module.exports = grammar({
     split: binaryComposition('<:', PREC.SPLIT, 'right', $ => $._expression),
     merge: binaryComposition(':>', PREC.MERGE, 'right', $ => $._expression),
     parallel: binaryComposition(',', PREC.PAR, 'right', $ => $._expression),
+
+    variant: _ => choice('singleprecision', 'doubleprecision', 'quadprecision', 'fixedpointprecision'),
 
     string: _ => /"([^"\\]|\\.)*"/,
 

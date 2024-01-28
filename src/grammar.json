@@ -24,19 +24,11 @@
           "type": "SEQ",
           "members": [
             {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "REPEAT1",
-                  "content": {
-                    "type": "SYMBOL",
-                    "name": "variant"
-                  }
-                },
-                {
-                  "type": "BLANK"
-                }
-              ]
+              "type": "REPEAT",
+              "content": {
+                "type": "SYMBOL",
+                "name": "variant"
+              }
             },
             {
               "type": "CHOICE",
@@ -59,7 +51,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "definition"
+                  "name": "_definition"
                 }
               ]
             },
@@ -75,26 +67,22 @@
         }
       ]
     },
-    "variant": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "singleprecision"
-        },
-        {
-          "type": "STRING",
-          "value": "doubleprecision"
-        },
-        {
-          "type": "STRING",
-          "value": "quadprecision"
-        },
-        {
-          "type": "STRING",
-          "value": "fixedpointprecision"
-        }
-      ]
+    "_definition": {
+      "type": "PREC",
+      "value": 2,
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "definition"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "function_definition"
+          }
+        ]
+      }
     },
     "definition": {
       "type": "SEQ",
@@ -160,10 +148,14 @@
     },
     "_expression": {
       "type": "PREC",
-      "value": 1,
+      "value": 3,
       "content": {
         "type": "CHOICE",
         "members": [
+          {
+            "type": "SYMBOL",
+            "name": "with"
+          },
           {
             "type": "SYMBOL",
             "name": "_binary_composition"
@@ -177,7 +169,7 @@
     },
     "_infix_expression": {
       "type": "PREC",
-      "value": 1,
+      "value": 3,
       "content": {
         "type": "CHOICE",
         "members": [
@@ -506,7 +498,7 @@
     },
     "prefix": {
       "type": "PREC",
-      "value": 3,
+      "value": 4,
       "content": {
         "type": "SEQ",
         "members": [
@@ -539,7 +531,7 @@
     },
     "modifier": {
       "type": "PREC",
-      "value": 3,
+      "value": 30,
       "content": {
         "type": "SEQ",
         "members": [
@@ -977,6 +969,74 @@
     "prod": {
       "type": "STRING",
       "value": "prod"
+    },
+    "with": {
+      "type": "PREC_LEFT",
+      "value": 1,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "FIELD",
+            "name": "expression",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_expression"
+            }
+          },
+          {
+            "type": "STRING",
+            "value": "with"
+          },
+          {
+            "type": "STRING",
+            "value": "{"
+          },
+          {
+            "type": "FIELD",
+            "name": "local_environment",
+            "content": {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "environment"
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            }
+          },
+          {
+            "type": "STRING",
+            "value": "}"
+          }
+        ]
+      }
+    },
+    "environment": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "REPEAT",
+            "content": {
+              "type": "SYMBOL",
+              "name": "variant"
+            }
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_definition"
+          },
+          {
+            "type": "STRING",
+            "value": ";"
+          }
+        ]
+      }
     },
     "_op": {
       "type": "CHOICE",
@@ -1738,6 +1798,27 @@
           }
         ]
       }
+    },
+    "variant": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "singleprecision"
+        },
+        {
+          "type": "STRING",
+          "value": "doubleprecision"
+        },
+        {
+          "type": "STRING",
+          "value": "quadprecision"
+        },
+        {
+          "type": "STRING",
+          "value": "fixedpointprecision"
+        }
+      ]
     },
     "string": {
       "type": "PATTERN",
