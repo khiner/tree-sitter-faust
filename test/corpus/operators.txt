@@ -9,26 +9,24 @@ process = |(*(2,3), @(nested_unary', 2));
 (program
   (definition
     (identifier)
-    (prefix_op
+    (prefix
       (mem_op)
-      (prefix_op
+      (prefix
         (int_cast)
-        (prefix_op
+        (prefix
           (float_cast)
           (int)))))
   (definition
     (identifier)
-    (prefix_op
+    (prefix
       (or_op)
-      (prefix_op
+      (prefix
         (mult_op)
         (int)
         (int))
-      (prefix_op
+      (prefix
         (delay_op)
-        (modifier_op
-          (identifier)
-          (one_sample_delay))
+        (modifier (identifier) (one_sample_delay_op))
         (int)))))
 
 ====
@@ -41,18 +39,18 @@ process = 1 + 1 * 2 << 4 | 6 >= _ @ 7 ^ 2;
 (program
   (definition
     (identifier)
-    (infix_op
-      (infix_op
-        (infix_op
+    (infix
+      (infix
+        (infix
           (int)
           (add_op)
-          (infix_op
-            (infix_op (int) (mult_op) (int))
+          (infix
+            (infix (int) (mult_op) (int))
             (lshift_op)
             (int)))
         (or_op)
         (int))
       (ge_op)
-      (infix_op
-        (infix_op (wire) (delay_op) (int))
+      (infix
+        (infix (wire) (delay_op) (int))
         (exp_op) (int)))))

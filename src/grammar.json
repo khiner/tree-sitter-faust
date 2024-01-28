@@ -170,12 +170,12 @@
           },
           {
             "type": "SYMBOL",
-            "name": "_infix"
+            "name": "_infix_expression"
           }
         ]
       }
     },
-    "_infix": {
+    "_infix_expression": {
       "type": "PREC",
       "value": 1,
       "content": {
@@ -183,11 +183,11 @@
         "members": [
           {
             "type": "SYMBOL",
-            "name": "infix_op"
+            "name": "infix"
           },
           {
             "type": "SYMBOL",
-            "name": "modifier_op"
+            "name": "modifier"
           },
           {
             "type": "SYMBOL",
@@ -195,7 +195,7 @@
           },
           {
             "type": "SYMBOL",
-            "name": "prefix_op"
+            "name": "prefix"
           },
           {
             "type": "SYMBOL",
@@ -204,7 +204,7 @@
         ]
       }
     },
-    "infix_op": {
+    "infix": {
       "type": "CHOICE",
       "members": [
         {
@@ -218,7 +218,7 @@
                 "name": "left",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "_infix"
+                  "name": "_infix_expression"
                 }
               },
               {
@@ -234,7 +234,7 @@
                 "name": "right",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "_infix"
+                  "name": "_infix_expression"
                 }
               }
             ]
@@ -251,7 +251,7 @@
                 "name": "left",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "_infix"
+                  "name": "_infix_expression"
                 }
               },
               {
@@ -267,7 +267,7 @@
                 "name": "right",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "_infix"
+                  "name": "_infix_expression"
                 }
               }
             ]
@@ -284,7 +284,7 @@
                 "name": "left",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "_infix"
+                  "name": "_infix_expression"
                 }
               },
               {
@@ -313,7 +313,7 @@
                 "name": "right",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "_infix"
+                  "name": "_infix_expression"
                 }
               }
             ]
@@ -330,7 +330,7 @@
                 "name": "left",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "_infix"
+                  "name": "_infix_expression"
                 }
               },
               {
@@ -355,7 +355,7 @@
                 "name": "right",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "_infix"
+                  "name": "_infix_expression"
                 }
               }
             ]
@@ -372,7 +372,7 @@
                 "name": "left",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "_infix"
+                  "name": "_infix_expression"
                 }
               },
               {
@@ -405,7 +405,7 @@
                 "name": "right",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "_infix"
+                  "name": "_infix_expression"
                 }
               }
             ]
@@ -422,7 +422,7 @@
                 "name": "left",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "_infix"
+                  "name": "_infix_expression"
                 }
               },
               {
@@ -438,7 +438,7 @@
                 "name": "right",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "_infix"
+                  "name": "_infix_expression"
                 }
               }
             ]
@@ -455,7 +455,7 @@
                 "name": "left",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "_infix"
+                  "name": "_infix_expression"
                 }
               },
               {
@@ -496,7 +496,7 @@
                 "name": "right",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "_infix"
+                  "name": "_infix_expression"
                 }
               }
             ]
@@ -504,7 +504,7 @@
         }
       ]
     },
-    "prefix_op": {
+    "prefix": {
       "type": "PREC",
       "value": 3,
       "content": {
@@ -515,7 +515,7 @@
             "name": "operator",
             "content": {
               "type": "SYMBOL",
-              "name": "_infix"
+              "name": "_infix_expression"
             }
           },
           {
@@ -537,7 +537,7 @@
         ]
       }
     },
-    "modifier_op": {
+    "modifier": {
       "type": "PREC",
       "value": 3,
       "content": {
@@ -545,11 +545,11 @@
         "members": [
           {
             "type": "SYMBOL",
-            "name": "_infix"
+            "name": "_infix_expression"
           },
           {
             "type": "SYMBOL",
-            "name": "_modifier"
+            "name": "_modifier_op"
           }
         ]
       }
@@ -565,7 +565,7 @@
             "name": "environment",
             "content": {
               "type": "SYMBOL",
-              "name": "_infix"
+              "name": "_infix_expression"
             }
           },
           {
@@ -604,7 +604,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "prefix_primitive_op"
+          "name": "prefix_op"
         },
         {
           "type": "SYMBOL",
@@ -772,7 +772,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_infix"
+          "name": "_infix_expression"
         }
       ]
     },
@@ -1063,12 +1063,12 @@
         }
       ]
     },
-    "_modifier": {
+    "_modifier_op": {
       "type": "CHOICE",
       "members": [
         {
           "type": "SYMBOL",
-          "name": "one_sample_delay"
+          "name": "one_sample_delay_op"
         }
       ]
     },
@@ -1164,11 +1164,11 @@
       "type": "STRING",
       "value": "@"
     },
-    "prefix_primitive_op": {
+    "prefix_op": {
       "type": "STRING",
       "value": "prefix"
     },
-    "one_sample_delay": {
+    "one_sample_delay_op": {
       "type": "PREC",
       "value": 25,
       "content": {

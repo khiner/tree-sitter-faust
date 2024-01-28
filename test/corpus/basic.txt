@@ -111,10 +111,9 @@ process = var2';
     (identifier) (mem_op))
   (definition
     (identifier)
-    (prefix_op
+    (prefix
       (delay_op)
       (identifier)))
   (definition
     (identifier)
-    (modifier_op
-      (identifier) (one_sample_delay))))
+    (modifier (identifier) (one_sample_delay_op))))

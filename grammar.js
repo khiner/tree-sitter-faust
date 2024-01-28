@@ -17,8 +17,8 @@ const PREC = {
   SPLIT: 10,
   MERGE: 10,
   // Expressions
-  INFIX_OP: 3,
-  PREFIX_OP: 3,
+  INFIX: 3,
+  PREFIX: 3,
   EXPRESSION: 1,
 };
 
@@ -53,22 +53,23 @@ module.exports = grammar({
     definition: $ => seq(field('name', $.identifier), '=', field('value', $._expression)),
     function_definition: $ => seq(field('name', $.identifier), '(', $.parameters, ')', '=', field('value', $._expression)),
 
-    _expression: $ => prec(PREC.EXPRESSION, choice($._binary_composition, $._infix)),
-    _infix: $ => prec(PREC.EXPRESSION, choice($.infix_op, $.modifier_op, $.access, $.prefix_op, $._primitive)),
-    infix_op: $ =>
-      choice(
-        binaryOp($.delay_op, PREC.DELAY, $._infix),
-        binaryOp($.exp_op, PREC.EXPONENTIATION, $._infix),
-        binaryOp(choice($.mult_op, $.div_op, $.mod_op), PREC.MULTIPLICATION, $._infix),
-        binaryOp(choice($.add_op, $.sub_op), PREC.ADDITION, $._infix),
-        binaryOp(choice($.and_op, $.xor_op, $.lshift_op, $.rshift_op), PREC.BITWISE, $._infix),
-        binaryOp($.or_op, PREC.BITWISE_OR, $._infix),
-        binaryOp(choice($.lt_op, $.le_op, $.gt_op, $.ge_op, $.eq_op, $.neq_op), PREC.COMPARISON, $._infix)
-      ),
-    prefix_op: $ => prec(PREC.PREFIX_OP, seq(field('operator', $._infix), '(', field('operand', $._args), ')')),
-    modifier_op: $ => prec(PREC.PREFIX_OP, seq($._infix, $._modifier)),
+    _expression: $ => prec(PREC.EXPRESSION, choice($._binary_composition, $._infix_expression)),
+    _infix_expression: $ => prec(PREC.EXPRESSION, choice($.infix, $.modifier, $.access, $.prefix, $._primitive)),
 
-    access: $ => prec(PREC.ACCESS, seq(field('environment', $._infix), '.', field('definition', $.identifier))),
+    infix: $ =>
+      choice(
+        binaryOp($.delay_op, PREC.DELAY, $._infix_expression),
+        binaryOp($.exp_op, PREC.EXPONENTIATION, $._infix_expression),
+        binaryOp(choice($.mult_op, $.div_op, $.mod_op), PREC.MULTIPLICATION, $._infix_expression),
+        binaryOp(choice($.add_op, $.sub_op), PREC.ADDITION, $._infix_expression),
+        binaryOp(choice($.and_op, $.xor_op, $.lshift_op, $.rshift_op), PREC.BITWISE, $._infix_expression),
+        binaryOp($.or_op, PREC.BITWISE_OR, $._infix_expression),
+        binaryOp(choice($.lt_op, $.le_op, $.gt_op, $.ge_op, $.eq_op, $.neq_op), PREC.COMPARISON, $._infix_expression)
+      ),
+    prefix: $ => prec(PREC.PREFIX, seq(field('operator', $._infix_expression), '(', field('operand', $._args), ')')),
+    modifier: $ => prec(PREC.PREFIX, seq($._infix_expression, $._modifier_op)),
+
+    access: $ => prec(PREC.ACCESS, seq(field('environment', $._infix_expression), '.', field('definition', $.identifier))),
 
     _primitive: $ =>
       choice(
@@ -76,7 +77,7 @@ module.exports = grammar({
         $.wire,
         $.cut,
         $.mem_op,
-        $.prefix_primitive_op,
+        $.prefix_op,
         $._op,
         seq(optional('-'), $.identifier),
         seq('(', $._expression, ')'),
@@ -87,7 +88,7 @@ module.exports = grammar({
     parameters: $ => sepBy(',', alias($.identifier, $.parameter)),
 
     _args: $ => sepBy(',', $._argument),
-    _argument: $ => choice($.sequential_arg, $.split_arg, $.merge_arg, $.recursive_arg, $._infix),
+    _argument: $ => choice($.sequential_arg, $.split_arg, $.merge_arg, $.recursive_arg, $._infix_expression),
     // Binary compositions as arguments are restricted to non-parallel compositions to avoid ambiguity with commas.
     // Note: Can we allow parallel compositions in arguments when surrounded by parentheses?
     // This could be contributed to Faust.
@@ -135,7 +136,7 @@ module.exports = grammar({
         $.int_cast,
         $.float_cast
       ),
-    _modifier: $ => choice($.one_sample_delay),
+    _modifier_op: $ => choice($.one_sample_delay_op),
 
     wire: _ => '_',
     cut: _ => '!',
@@ -169,10 +170,10 @@ module.exports = grammar({
     // Delay
     delay_op: _ => '@',
     // Other
-    prefix_primitive_op: _ => 'prefix',
+    prefix_op: _ => 'prefix',
 
     /* Modifiers */
-    one_sample_delay: _ => prec(PREC.ONE_SAMPLE_DELAY, "'"),
+    one_sample_delay_op: _ => prec(PREC.ONE_SAMPLE_DELAY, "'"),
 
     _number: $ => choice($.int, $.real),
     int: _ => token(seq(sign, repeat1(decimal))),

@@ -29,6 +29,6 @@ doubleprecision quadprecision int_part(idv) = int(idv);
     (identifier)
     (parameters
       (parameter))
-    (prefix_op
+    (prefix
       (int_cast)
       (identifier))))

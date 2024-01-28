@@ -86,7 +86,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -126,7 +126,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -150,11 +150,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -280,7 +280,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -320,7 +320,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -344,11 +344,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -517,7 +517,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -557,7 +557,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -581,11 +581,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -664,7 +664,7 @@
     "fields": {}
   },
   {
-    "type": "infix_op",
+    "type": "infix",
     "named": true,
     "fields": {
       "left": {
@@ -740,7 +740,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -780,7 +780,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -804,11 +804,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -996,7 +996,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -1036,7 +1036,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -1060,11 +1060,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -1190,7 +1190,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -1230,7 +1230,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -1254,11 +1254,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -1368,7 +1368,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -1412,7 +1412,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -1436,11 +1436,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -1590,7 +1590,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -1630,7 +1630,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -1654,11 +1654,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -1768,7 +1768,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -1808,7 +1808,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -1832,11 +1832,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -1952,7 +1952,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -1996,7 +1996,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -2020,11 +2020,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -2146,7 +2146,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -2190,7 +2190,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -2214,11 +2214,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -2275,7 +2275,7 @@
     "fields": {}
   },
   {
-    "type": "modifier_op",
+    "type": "modifier",
     "named": true,
     "fields": {},
     "children": {
@@ -2331,7 +2331,7 @@
           "named": true
         },
         {
-          "type": "infix_op",
+          "type": "infix",
           "named": true
         },
         {
@@ -2371,7 +2371,7 @@
           "named": true
         },
         {
-          "type": "modifier_op",
+          "type": "modifier",
           "named": true
         },
         {
@@ -2383,7 +2383,7 @@
           "named": true
         },
         {
-          "type": "one_sample_delay",
+          "type": "one_sample_delay_op",
           "named": true
         },
         {
@@ -2399,11 +2399,11 @@
           "named": true
         },
         {
-          "type": "prefix_op",
+          "type": "prefix",
           "named": true
         },
         {
-          "type": "prefix_primitive_op",
+          "type": "prefix_op",
           "named": true
         },
         {
@@ -2442,7 +2442,7 @@
     }
   },
   {
-    "type": "one_sample_delay",
+    "type": "one_sample_delay_op",
     "named": true,
     "fields": {}
   },
@@ -2523,7 +2523,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -2563,7 +2563,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -2587,11 +2587,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -2701,7 +2701,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -2741,7 +2741,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -2765,11 +2765,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -2829,7 +2829,7 @@
     }
   },
   {
-    "type": "prefix_op",
+    "type": "prefix",
     "named": true,
     "fields": {
       "operand": {
@@ -2909,7 +2909,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -2953,7 +2953,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -2977,11 +2977,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -3103,7 +3103,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -3143,7 +3143,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -3167,11 +3167,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -3330,7 +3330,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -3370,7 +3370,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -3394,11 +3394,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -3508,7 +3508,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -3548,7 +3548,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -3572,11 +3572,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -3692,7 +3692,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -3736,7 +3736,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -3760,11 +3760,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -3886,7 +3886,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -3930,7 +3930,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -3954,11 +3954,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -4086,7 +4086,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -4126,7 +4126,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -4150,11 +4150,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -4264,7 +4264,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -4304,7 +4304,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -4328,11 +4328,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -4448,7 +4448,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -4492,7 +4492,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -4516,11 +4516,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -4642,7 +4642,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -4686,7 +4686,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -4710,11 +4710,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -4842,7 +4842,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -4882,7 +4882,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -4906,11 +4906,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -5020,7 +5020,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -5060,7 +5060,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -5084,11 +5084,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -5204,7 +5204,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -5248,7 +5248,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -5272,11 +5272,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -5398,7 +5398,7 @@
             "named": true
           },
           {
-            "type": "infix_op",
+            "type": "infix",
             "named": true
           },
           {
@@ -5442,7 +5442,7 @@
             "named": true
           },
           {
-            "type": "modifier_op",
+            "type": "modifier",
             "named": true
           },
           {
@@ -5466,11 +5466,11 @@
             "named": true
           },
           {
-            "type": "prefix_op",
+            "type": "prefix",
             "named": true
           },
           {
-            "type": "prefix_primitive_op",
+            "type": "prefix_op",
             "named": true
           },
           {
@@ -5732,7 +5732,7 @@
     "named": true
   },
   {
-    "type": "prefix_primitive_op",
+    "type": "prefix_op",
     "named": true
   },
   {

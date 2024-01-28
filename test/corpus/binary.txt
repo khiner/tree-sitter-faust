@@ -10,7 +10,7 @@ process = _~+(1);
     (identifier)
     (recursive
       (wire)
-      (prefix_op
+      (prefix
         (add_op)
         (int)))))
 
