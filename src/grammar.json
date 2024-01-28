@@ -739,6 +739,10 @@
               "name": "environment"
             }
           ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "component"
         }
       ]
     },
@@ -1260,6 +1264,27 @@
         {
           "type": "STRING",
           "value": ";"
+        }
+      ]
+    },
+    "component": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "component"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        },
+        {
+          "type": "STRING",
+          "value": ")"
         }
       ]
     },

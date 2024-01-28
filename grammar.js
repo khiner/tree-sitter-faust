@@ -9,7 +9,6 @@ const PREC = {
   BITWISE_OR: 21,
   ADDITION: 21,
   COMPARISON: 20,
-
   // Binary compositions
   RECURSIVE: 13,
   PAR: 12,
@@ -81,7 +80,8 @@ module.exports = grammar({
         seq('(', $._expression, ')'),
         seq('\\', '(', $.parameters, ')', '.', '(', $._expression, ')'),
         $.iteration,
-        seq('environment', $.environment)
+        seq('environment', $.environment),
+        $.component,
       ),
     _operator: $ => choice($._binary_op, $._unary_op, $._modifier_op),
 
@@ -125,6 +125,8 @@ module.exports = grammar({
       prec.left(PREC.ENVIRONMENT, seq(field('expression', $._expression), 'letrec', field('local_environment', $.rec_environment))),
     rec_environment: $ => seq('{', repeat($.recinition), optional(seq('where', repeat(seq(repeat($.variant), $._definition, ';')))), '}'),
     recinition: $ => seq(seq("'", field('name', $.identifier)), '=', field('expression', $._expression), ';'),
+
+    component: $ => seq('component', '(', $.string, ')'),
 
     _unary_op: $ => choice($.int_cast, $.float_cast),
     _binary_op: $ =>

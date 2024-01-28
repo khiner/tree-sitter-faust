@@ -117,3 +117,17 @@ process = var2';
   (definition
     (identifier)
     (modifier (identifier) (one_sample_delay_op))))
+
+===
+Component
+===
+
+process = component("karplus32.dsp") : component("freeverb.dsp");
+
+---
+(program
+  (definition
+    (identifier)
+    (sequential
+      (component (string))
+      (component (string)))))

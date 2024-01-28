@@ -50,6 +50,10 @@
             "named": true
           },
           {
+            "type": "component",
+            "named": true
+          },
+          {
             "type": "cut",
             "named": true
           },
@@ -234,6 +238,10 @@
           "named": true
         },
         {
+          "type": "component",
+          "named": true
+        },
+        {
           "type": "cut",
           "named": true
         },
@@ -409,6 +417,21 @@
     }
   },
   {
+    "type": "component",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "definition",
     "named": true,
     "fields": {
@@ -456,6 +479,10 @@
           },
           {
             "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "component",
             "named": true
           },
           {
@@ -706,6 +733,10 @@
             "named": true
           },
           {
+            "type": "component",
+            "named": true
+          },
+          {
             "type": "cut",
             "named": true
           },
@@ -927,6 +958,10 @@
           },
           {
             "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "component",
             "named": true
           },
           {
@@ -1211,6 +1246,10 @@
             "named": true
           },
           {
+            "type": "component",
+            "named": true
+          },
+          {
             "type": "cut",
             "named": true
           },
@@ -1487,6 +1526,10 @@
             "named": true
           },
           {
+            "type": "component",
+            "named": true
+          },
+          {
             "type": "cut",
             "named": true
           },
@@ -1701,6 +1744,10 @@
             "named": true
           },
           {
+            "type": "component",
+            "named": true
+          },
+          {
             "type": "cut",
             "named": true
           },
@@ -1896,6 +1943,10 @@
           },
           {
             "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "component",
             "named": true
           },
           {
@@ -2141,6 +2192,10 @@
             "named": true
           },
           {
+            "type": "component",
+            "named": true
+          },
+          {
             "type": "cut",
             "named": true
           },
@@ -2355,6 +2410,10 @@
             "named": true
           },
           {
+            "type": "component",
+            "named": true
+          },
+          {
             "type": "cut",
             "named": true
           },
@@ -2550,6 +2609,10 @@
           },
           {
             "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "component",
             "named": true
           },
           {
@@ -2757,6 +2820,10 @@
             "named": true
           },
           {
+            "type": "component",
+            "named": true
+          },
+          {
             "type": "cut",
             "named": true
           },
@@ -2971,6 +3038,10 @@
             "named": true
           },
           {
+            "type": "component",
+            "named": true
+          },
+          {
             "type": "cut",
             "named": true
           },
@@ -3168,6 +3239,10 @@
         },
         {
           "type": "and_op",
+          "named": true
+        },
+        {
+          "type": "component",
           "named": true
         },
         {
@@ -3379,6 +3454,10 @@
             "named": true
           },
           {
+            "type": "component",
+            "named": true
+          },
+          {
             "type": "cut",
             "named": true
           },
@@ -3574,6 +3653,10 @@
           },
           {
             "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "component",
             "named": true
           },
           {
@@ -3802,6 +3885,10 @@
           },
           {
             "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "component",
             "named": true
           },
           {
@@ -4185,6 +4272,10 @@
             "named": true
           },
           {
+            "type": "component",
+            "named": true
+          },
+          {
             "type": "cut",
             "named": true
           },
@@ -4399,6 +4490,10 @@
             "named": true
           },
           {
+            "type": "component",
+            "named": true
+          },
+          {
             "type": "cut",
             "named": true
           },
@@ -4594,6 +4689,10 @@
           },
           {
             "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "component",
             "named": true
           },
           {
@@ -4798,6 +4897,10 @@
           },
           {
             "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "component",
             "named": true
           },
           {
@@ -5012,6 +5115,10 @@
           },
           {
             "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "component",
             "named": true
           },
           {
@@ -5235,6 +5342,10 @@
             "named": true
           },
           {
+            "type": "component",
+            "named": true
+          },
+          {
             "type": "cut",
             "named": true
           },
@@ -5430,6 +5541,10 @@
           },
           {
             "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "component",
             "named": true
           },
           {
@@ -5634,6 +5749,10 @@
           },
           {
             "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "component",
             "named": true
           },
           {
@@ -5848,6 +5967,10 @@
           },
           {
             "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "component",
             "named": true
           },
           {
@@ -6071,6 +6194,10 @@
             "named": true
           },
           {
+            "type": "component",
+            "named": true
+          },
+          {
             "type": "cut",
             "named": true
           },
@@ -6266,6 +6393,10 @@
           },
           {
             "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "component",
             "named": true
           },
           {
@@ -6470,6 +6601,10 @@
           },
           {
             "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "component",
             "named": true
           },
           {
@@ -6684,6 +6819,10 @@
           },
           {
             "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "component",
             "named": true
           },
           {
@@ -6914,6 +7053,10 @@
           },
           {
             "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "component",
             "named": true
           },
           {
@@ -7197,6 +7340,10 @@
   {
     "type": "comment",
     "named": true
+  },
+  {
+    "type": "component",
+    "named": false
   },
   {
     "type": "cut",
