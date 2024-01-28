@@ -50,7 +50,7 @@ module.exports = grammar({
     definition: $ => seq(field('name', $.identifier), '=', field('value', $._expression)),
     function_definition: $ => seq(field('name', $.identifier), '(', $.parameters, ')', '=', field('value', $._expression)),
 
-    _expression: $ => prec(PREC.EXPRESSION, choice($.with, $._binary_composition, $._infix_expression)),
+    _expression: $ => prec(PREC.EXPRESSION, choice($.with_environment, $._binary_composition, $._infix_expression)),
     _infix_expression: $ => prec(PREC.EXPRESSION, choice($.infix, $.modifier, $.access, $.prefix, $._primitive)),
 
     infix: $ =>
@@ -79,7 +79,8 @@ module.exports = grammar({
         seq(optional('-'), $.identifier),
         seq('(', $._expression, ')'),
         seq('\\', '(', $.parameters, ')', '.', '(', $._expression, ')'),
-        $.iteration
+        $.iteration,
+        seq('environment', $.environment)
       ),
 
     parameters: $ => sepBy(',', alias($.identifier, $.parameter)),
@@ -110,12 +111,9 @@ module.exports = grammar({
     sum: _ => 'sum',
     prod: _ => 'prod',
 
-    with: $ =>
-      prec.left(
-        PREC.ENVIRONMENT,
-        seq(field('expression', $._expression), 'with', '{', field('local_environment', optional($.environment)), '}')
-      ),
-    environment: $ => repeat1(seq(repeat($.variant), $._definition, ';')),
+    with_environment: $ =>
+      prec.left(PREC.ENVIRONMENT, seq(field('expression', $._expression), 'with', field('local_environment', $.environment))),
+    environment: $ => seq('{', repeat(seq(repeat($.variant), $._definition, ';')), '}'),
 
     _op: $ =>
       choice(

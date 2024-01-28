@@ -62,6 +62,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -186,7 +194,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -260,6 +268,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -384,7 +400,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -406,7 +422,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "definition",
@@ -501,6 +517,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -625,7 +649,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -766,6 +790,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -890,7 +922,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -1026,6 +1058,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -1150,7 +1190,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -1224,6 +1264,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -1348,7 +1396,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -1403,6 +1451,14 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
             "named": true
           },
           {
@@ -1546,7 +1602,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -1632,6 +1688,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -1756,7 +1820,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -1814,6 +1878,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -1938,7 +2010,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -2002,6 +2074,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -2142,7 +2222,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -2200,6 +2280,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -2340,7 +2428,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -2381,6 +2469,10 @@
         },
         {
           "type": "div_op",
+          "named": true
+        },
+        {
+          "type": "environment",
           "named": true
         },
         {
@@ -2512,7 +2604,7 @@
           "named": true
         },
         {
-          "type": "with",
+          "type": "with_environment",
           "named": true
         },
         {
@@ -2580,6 +2672,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -2704,7 +2804,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -2762,6 +2862,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -2886,7 +2994,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -2971,6 +3079,14 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
             "named": true
           },
           {
@@ -3114,7 +3230,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -3169,6 +3285,14 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
             "named": true
           },
           {
@@ -3296,7 +3420,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -3403,6 +3527,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -3527,7 +3659,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -3585,6 +3717,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -3709,7 +3849,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -3773,6 +3913,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -3913,7 +4061,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -3971,6 +4119,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -4111,7 +4267,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -4175,6 +4331,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -4299,7 +4463,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -4357,6 +4521,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -4481,7 +4653,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -4545,6 +4717,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -4685,7 +4865,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -4743,6 +4923,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -4883,7 +5071,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -4947,6 +5135,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -5071,7 +5267,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -5129,6 +5325,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -5253,7 +5457,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -5317,6 +5521,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -5457,7 +5669,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -5515,6 +5727,14 @@
             "named": true
           },
           {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
             "type": "eq_op",
             "named": true
           },
@@ -5655,7 +5875,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -5677,7 +5897,7 @@
     "fields": {}
   },
   {
-    "type": "with",
+    "type": "with_environment",
     "named": true,
     "fields": {
       "expression": {
@@ -5726,6 +5946,14 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
             "named": true
           },
           {
@@ -5853,7 +6081,7 @@
             "named": true
           },
           {
-            "type": "with",
+            "type": "with_environment",
             "named": true
           },
           {
@@ -5864,7 +6092,7 @@
       },
       "local_environment": {
         "multiple": false,
-        "required": false,
+        "required": true,
         "types": [
           {
             "type": "environment",
@@ -6000,6 +6228,10 @@
   },
   {
     "type": "doubleprecision",
+    "named": false
+  },
+  {
+    "type": "environment",
     "named": false
   },
   {
