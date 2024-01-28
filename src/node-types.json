@@ -114,6 +114,10 @@
             "named": true
           },
           {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
             "type": "lshift_op",
             "named": true
           },
@@ -317,6 +321,10 @@
           },
           {
             "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
             "named": true
           },
           {
@@ -566,6 +574,10 @@
           },
           {
             "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
             "named": true
           },
           {
@@ -842,6 +854,10 @@
             "named": true
           },
           {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
             "type": "lshift_op",
             "named": true
           },
@@ -1110,6 +1126,10 @@
             "named": true
           },
           {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
             "type": "lshift_op",
             "named": true
           },
@@ -1316,6 +1336,10 @@
             "named": true
           },
           {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
             "type": "lshift_op",
             "named": true
           },
@@ -1506,6 +1530,10 @@
             "named": true
           },
           {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
             "type": "lshift_op",
             "named": true
           },
@@ -1636,6 +1664,216 @@
     }
   },
   {
+    "type": "letrec_environment",
+    "named": true,
+    "fields": {
+      "expression": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": ".",
+            "named": false
+          },
+          {
+            "type": "\\",
+            "named": false
+          },
+          {
+            "type": "access",
+            "named": true
+          },
+          {
+            "type": "add_op",
+            "named": true
+          },
+          {
+            "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "cut",
+            "named": true
+          },
+          {
+            "type": "delay_op",
+            "named": true
+          },
+          {
+            "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
+            "type": "eq_op",
+            "named": true
+          },
+          {
+            "type": "exp_op",
+            "named": true
+          },
+          {
+            "type": "float_cast",
+            "named": true
+          },
+          {
+            "type": "ge_op",
+            "named": true
+          },
+          {
+            "type": "gt_op",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "infix",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          },
+          {
+            "type": "int_cast",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "lshift_op",
+            "named": true
+          },
+          {
+            "type": "lt_op",
+            "named": true
+          },
+          {
+            "type": "mem_op",
+            "named": true
+          },
+          {
+            "type": "merge",
+            "named": true
+          },
+          {
+            "type": "mod_op",
+            "named": true
+          },
+          {
+            "type": "modifier",
+            "named": true
+          },
+          {
+            "type": "mult_op",
+            "named": true
+          },
+          {
+            "type": "neq_op",
+            "named": true
+          },
+          {
+            "type": "or_op",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "parameters",
+            "named": true
+          },
+          {
+            "type": "prefix",
+            "named": true
+          },
+          {
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "real",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "rshift_op",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "split",
+            "named": true
+          },
+          {
+            "type": "sub_op",
+            "named": true
+          },
+          {
+            "type": "wire",
+            "named": true
+          },
+          {
+            "type": "with_environment",
+            "named": true
+          },
+          {
+            "type": "xor_op",
+            "named": true
+          }
+        ]
+      },
+      "local_environment": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "rec_environment",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "merge",
     "named": true,
     "fields": {
@@ -1737,6 +1975,10 @@
           },
           {
             "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
             "named": true
           },
           {
@@ -1927,6 +2169,10 @@
           },
           {
             "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
             "named": true
           },
           {
@@ -2126,6 +2372,10 @@
             "named": true
           },
           {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
             "type": "lshift_op",
             "named": true
           },
@@ -2332,6 +2582,10 @@
             "named": true
           },
           {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
             "type": "lshift_op",
             "named": true
           },
@@ -2517,6 +2771,10 @@
         },
         {
           "type": "le_op",
+          "named": true
+        },
+        {
+          "type": "letrec_environment",
           "named": true
         },
         {
@@ -2724,6 +2982,10 @@
             "named": true
           },
           {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
             "type": "lshift_op",
             "named": true
           },
@@ -2911,6 +3173,10 @@
           },
           {
             "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
             "named": true
           },
           {
@@ -3134,6 +3400,10 @@
             "named": true
           },
           {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
             "type": "lshift_op",
             "named": true
           },
@@ -3340,6 +3610,10 @@
             "named": true
           },
           {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
             "type": "lshift_op",
             "named": true
           },
@@ -3475,6 +3749,243 @@
     }
   },
   {
+    "type": "rec_environment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "definition",
+          "named": true
+        },
+        {
+          "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "recinition",
+          "named": true
+        },
+        {
+          "type": "variant",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "recinition",
+    "named": true,
+    "fields": {
+      "expression": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": ".",
+            "named": false
+          },
+          {
+            "type": "\\",
+            "named": false
+          },
+          {
+            "type": "access",
+            "named": true
+          },
+          {
+            "type": "add_op",
+            "named": true
+          },
+          {
+            "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "cut",
+            "named": true
+          },
+          {
+            "type": "delay_op",
+            "named": true
+          },
+          {
+            "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
+            "type": "eq_op",
+            "named": true
+          },
+          {
+            "type": "exp_op",
+            "named": true
+          },
+          {
+            "type": "float_cast",
+            "named": true
+          },
+          {
+            "type": "ge_op",
+            "named": true
+          },
+          {
+            "type": "gt_op",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "infix",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          },
+          {
+            "type": "int_cast",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "lshift_op",
+            "named": true
+          },
+          {
+            "type": "lt_op",
+            "named": true
+          },
+          {
+            "type": "mem_op",
+            "named": true
+          },
+          {
+            "type": "merge",
+            "named": true
+          },
+          {
+            "type": "mod_op",
+            "named": true
+          },
+          {
+            "type": "modifier",
+            "named": true
+          },
+          {
+            "type": "mult_op",
+            "named": true
+          },
+          {
+            "type": "neq_op",
+            "named": true
+          },
+          {
+            "type": "or_op",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "parameters",
+            "named": true
+          },
+          {
+            "type": "prefix",
+            "named": true
+          },
+          {
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "real",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "rshift_op",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "split",
+            "named": true
+          },
+          {
+            "type": "sub_op",
+            "named": true
+          },
+          {
+            "type": "wire",
+            "named": true
+          },
+          {
+            "type": "with_environment",
+            "named": true
+          },
+          {
+            "type": "xor_op",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "recursive",
     "named": true,
     "fields": {
@@ -3576,6 +4087,10 @@
           },
           {
             "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
             "named": true
           },
           {
@@ -3766,6 +4281,10 @@
           },
           {
             "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
             "named": true
           },
           {
@@ -3962,6 +4481,10 @@
           },
           {
             "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
             "named": true
           },
           {
@@ -4168,6 +4691,10 @@
           },
           {
             "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
             "named": true
           },
           {
@@ -4383,6 +4910,10 @@
             "named": true
           },
           {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
             "type": "lshift_op",
             "named": true
           },
@@ -4570,6 +5101,10 @@
           },
           {
             "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
             "named": true
           },
           {
@@ -4766,6 +5301,10 @@
           },
           {
             "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
             "named": true
           },
           {
@@ -4972,6 +5511,10 @@
           },
           {
             "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
             "named": true
           },
           {
@@ -5187,6 +5730,10 @@
             "named": true
           },
           {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
             "type": "lshift_op",
             "named": true
           },
@@ -5374,6 +5921,10 @@
           },
           {
             "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
             "named": true
           },
           {
@@ -5570,6 +6121,10 @@
           },
           {
             "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
             "named": true
           },
           {
@@ -5776,6 +6331,10 @@
           },
           {
             "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
             "named": true
           },
           {
@@ -5998,6 +6557,10 @@
           },
           {
             "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
             "named": true
           },
           {
@@ -6275,6 +6838,10 @@
     "named": true
   },
   {
+    "type": "letrec",
+    "named": false
+  },
+  {
     "type": "lshift_op",
     "named": true
   },
@@ -6341,6 +6908,10 @@
   {
     "type": "sum",
     "named": true
+  },
+  {
+    "type": "where",
+    "named": false
   },
   {
     "type": "wire",

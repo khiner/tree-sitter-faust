@@ -50,7 +50,7 @@ module.exports = grammar({
     definition: $ => seq(field('name', $.identifier), '=', field('value', $._expression)),
     function_definition: $ => seq(field('name', $.identifier), '(', $.parameters, ')', '=', field('value', $._expression)),
 
-    _expression: $ => prec(PREC.EXPRESSION, choice($.with_environment, $._binary_composition, $._infix_expression)),
+    _expression: $ => prec(PREC.EXPRESSION, choice($.with_environment, $.letrec_environment, $._binary_composition, $._infix_expression)),
     _infix_expression: $ => prec(PREC.EXPRESSION, choice($.infix, $.modifier, $.access, $.prefix, $._primitive)),
 
     infix: $ =>
@@ -114,6 +114,15 @@ module.exports = grammar({
     with_environment: $ =>
       prec.left(PREC.ENVIRONMENT, seq(field('expression', $._expression), 'with', field('local_environment', $.environment))),
     environment: $ => seq('{', repeat(seq(repeat($.variant), $._definition, ';')), '}'),
+
+    // recinition      : recname DEF expression ENDDEF               { $$ = cons($1,cons(gGlobal->nil,$3)); setDefProp($1, FAUSTfilename, FAUSTlineno); }
+    // | expression LETREC LBRAQ reclist RBRAQ  { $$ = boxWithRecDef($1,formatDefinitions($4), gGlobal->nil); }
+    // | expression LETREC LBRAQ reclist WHERE deflist RBRAQ    { $$ = boxWithRecDef($1,formatDefinitions($4),formatDefinitions($6)); }
+    letrec_environment: $ =>
+      prec.left(PREC.ENVIRONMENT, seq(field('expression', $._expression), 'letrec', field('local_environment', $.rec_environment))),
+    rec_environment: $ =>
+      seq('{', repeat($.recinition), optional(seq('where', repeat(seq(repeat($.variant), $._definition, ';')))), '}'),
+    recinition: $ => seq(seq("'", field('name', $.identifier)), '=', field('expression', $._expression), ';'),
 
     _op: $ =>
       choice(
