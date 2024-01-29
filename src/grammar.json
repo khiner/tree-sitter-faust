@@ -1436,6 +1436,18 @@
         {
           "type": "SYMBOL",
           "name": "prefix_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "attach_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "enable_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "control_op"
         }
       ]
     },
@@ -1531,6 +1543,18 @@
     "prefix_op": {
       "type": "STRING",
       "value": "prefix"
+    },
+    "attach_op": {
+      "type": "STRING",
+      "value": "attach"
+    },
+    "enable_op": {
+      "type": "STRING",
+      "value": "enable"
+    },
+    "control_op": {
+      "type": "STRING",
+      "value": "control"
     },
     "one_sample_delay_op": {
       "type": "PREC",

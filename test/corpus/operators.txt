@@ -47,3 +47,31 @@ process = 1 + 1 * 2 << 4 | 6 >= _ @ 7 ^ 2;
       (infix
         (infix (wire) (delay_op) (int))
         (exp_op) (int)))))
+
+====
+Special primitive ops
+====
+
+process = prefix(
+  attach(
+    enable(
+      control(1, 2),
+      3),
+    4),
+  5);
+
+---
+(program
+  (definition
+    (identifier)
+    (prefix
+      (prefix_op)
+      (prefix
+        (attach_op)
+        (prefix
+          (enable_op)
+          (prefix
+            (control_op) (int) (int))
+          (int))
+        (int))
+      (int))))

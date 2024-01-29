@@ -153,7 +153,10 @@ module.exports = grammar({
         $.eq_op,
         $.neq_op,
         $.delay_op,
-        $.prefix_op
+        $.prefix_op,
+        $.attach_op,
+        $.enable_op,
+        $.control_op
       ),
     _modifier_op: $ => choice($.one_sample_delay_op),
 
@@ -185,6 +188,9 @@ module.exports = grammar({
     // Special
     delay_op: _ => '@',
     prefix_op: _ => 'prefix',
+    attach_op: _ => 'attach',
+    enable_op: _ => 'enable',
+    control_op: _ => 'control',
 
     /* Modifiers */
     one_sample_delay_op: _ => prec(PREC.ONE_SAMPLE_DELAY, "'"),

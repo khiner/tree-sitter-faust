@@ -50,7 +50,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -63,6 +71,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -242,7 +254,15 @@
           "named": true
         },
         {
+          "type": "attach_op",
+          "named": true
+        },
+        {
           "type": "component",
+          "named": true
+        },
+        {
+          "type": "control_op",
           "named": true
         },
         {
@@ -255,6 +275,10 @@
         },
         {
           "type": "div_op",
+          "named": true
+        },
+        {
+          "type": "enable_op",
           "named": true
         },
         {
@@ -490,7 +514,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -503,6 +535,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -745,7 +781,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -758,6 +802,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -977,7 +1025,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -990,6 +1046,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -1266,7 +1326,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -1279,6 +1347,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -1550,7 +1622,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -1563,6 +1643,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -1772,7 +1856,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -1785,6 +1877,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -1978,7 +2074,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -1991,6 +2095,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -2228,7 +2336,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -2241,6 +2357,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -2450,7 +2570,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -2463,6 +2591,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -2656,7 +2788,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -2669,6 +2809,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -2868,7 +3012,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -2881,6 +3033,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -3090,7 +3246,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -3103,6 +3267,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -3298,7 +3466,15 @@
           "named": true
         },
         {
+          "type": "attach_op",
+          "named": true
+        },
+        {
           "type": "component",
+          "named": true
+        },
+        {
+          "type": "control_op",
           "named": true
         },
         {
@@ -3311,6 +3487,10 @@
         },
         {
           "type": "div_op",
+          "named": true
+        },
+        {
+          "type": "enable_op",
           "named": true
         },
         {
@@ -3514,7 +3694,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -3527,6 +3715,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -3720,7 +3912,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -3733,6 +3933,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -3956,7 +4160,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -3969,6 +4181,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -4154,11 +4370,23 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
+            "type": "control_op",
+            "named": true
+          },
+          {
             "type": "delay_op",
             "named": true
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -4344,7 +4572,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -4357,6 +4593,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -4566,7 +4806,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -4579,6 +4827,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -4772,7 +5024,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -4785,6 +5045,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -4984,7 +5248,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -4997,6 +5269,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -5206,7 +5482,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -5219,6 +5503,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -5434,7 +5722,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -5447,6 +5743,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -5640,7 +5940,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -5653,6 +5961,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -5852,7 +6164,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -5865,6 +6185,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -6074,7 +6398,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -6087,6 +6419,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -6302,7 +6638,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -6315,6 +6659,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -6508,7 +6856,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -6521,6 +6877,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -6720,7 +7080,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -6733,6 +7101,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -6942,7 +7314,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -6955,6 +7335,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -7175,7 +7559,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -7188,6 +7580,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -7425,7 +7821,15 @@
             "named": true
           },
           {
+            "type": "attach_op",
+            "named": true
+          },
+          {
             "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
             "named": true
           },
           {
@@ -7438,6 +7842,10 @@
           },
           {
             "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
             "named": true
           },
           {
@@ -7719,12 +8127,20 @@
     "named": true
   },
   {
+    "type": "attach_op",
+    "named": true
+  },
+  {
     "type": "comment",
     "named": true
   },
   {
     "type": "component",
     "named": false
+  },
+  {
+    "type": "control_op",
+    "named": true
   },
   {
     "type": "cut",
@@ -7745,6 +8161,10 @@
   {
     "type": "doubleprecision",
     "named": false
+  },
+  {
+    "type": "enable_op",
+    "named": true
   },
   {
     "type": "environment",
