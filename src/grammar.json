@@ -263,7 +263,7 @@
                 "name": "operator",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "exp_op"
+                  "name": "pow_op"
                 }
               },
               {
@@ -586,12 +586,20 @@
         "type": "SEQ",
         "members": [
           {
-            "type": "SYMBOL",
-            "name": "_infix_expression"
+            "type": "FIELD",
+            "name": "operand",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_infix_expression"
+            }
           },
           {
-            "type": "SYMBOL",
-            "name": "_modifier_op"
+            "type": "FIELD",
+            "name": "operator",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_modifier_op"
+            }
           }
         ]
       }
@@ -1355,6 +1363,66 @@
         {
           "type": "SYMBOL",
           "name": "float_cast"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "exp_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "log_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "log10_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "sqrt_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "abs_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "floor_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "ceil_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "rint_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "round_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "acos_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "asin_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "atan_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "cos_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "sin_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "tan_op"
         }
       ]
     },
@@ -1383,7 +1451,31 @@
         },
         {
           "type": "SYMBOL",
-          "name": "exp_op"
+          "name": "pow_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "pow_fun_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "min_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "max_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "fmod_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "remainder_op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "atan2_op"
         },
         {
           "type": "SYMBOL",
@@ -1468,6 +1560,66 @@
       "type": "STRING",
       "value": "float"
     },
+    "exp_op": {
+      "type": "STRING",
+      "value": "exp"
+    },
+    "log_op": {
+      "type": "STRING",
+      "value": "log"
+    },
+    "log10_op": {
+      "type": "STRING",
+      "value": "log10"
+    },
+    "sqrt_op": {
+      "type": "STRING",
+      "value": "sqrt"
+    },
+    "abs_op": {
+      "type": "STRING",
+      "value": "abs"
+    },
+    "floor_op": {
+      "type": "STRING",
+      "value": "floor"
+    },
+    "ceil_op": {
+      "type": "STRING",
+      "value": "ceil"
+    },
+    "rint_op": {
+      "type": "STRING",
+      "value": "rint"
+    },
+    "round_op": {
+      "type": "STRING",
+      "value": "round"
+    },
+    "acos_op": {
+      "type": "STRING",
+      "value": "acos"
+    },
+    "asin_op": {
+      "type": "STRING",
+      "value": "asin"
+    },
+    "atan_op": {
+      "type": "STRING",
+      "value": "atan"
+    },
+    "cos_op": {
+      "type": "STRING",
+      "value": "cos"
+    },
+    "sin_op": {
+      "type": "STRING",
+      "value": "sin"
+    },
+    "tan_op": {
+      "type": "STRING",
+      "value": "tan"
+    },
     "add_op": {
       "type": "STRING",
       "value": "+"
@@ -1488,9 +1640,33 @@
       "type": "STRING",
       "value": "%"
     },
-    "exp_op": {
+    "pow_op": {
       "type": "STRING",
       "value": "^"
+    },
+    "pow_fun_op": {
+      "type": "STRING",
+      "value": "pow"
+    },
+    "min_op": {
+      "type": "STRING",
+      "value": "min"
+    },
+    "max_op": {
+      "type": "STRING",
+      "value": "max"
+    },
+    "fmod_op": {
+      "type": "STRING",
+      "value": "fmod"
+    },
+    "remainder_op": {
+      "type": "STRING",
+      "value": "remainder"
+    },
+    "atan2_op": {
+      "type": "STRING",
+      "value": "atan2"
     },
     "or_op": {
       "type": "STRING",

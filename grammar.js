@@ -59,7 +59,7 @@ module.exports = grammar({
     infix: $ =>
       choice(
         binaryOp($.delay_op, PREC.DELAY, $._infix_expression),
-        binaryOp($.exp_op, PREC.EXPONENTIATION, $._infix_expression),
+        binaryOp($.pow_op, PREC.EXPONENTIATION, $._infix_expression),
         binaryOp(choice($.mult_op, $.div_op, $.mod_op), PREC.MULTIPLICATION, $._infix_expression),
         binaryOp(choice($.add_op, $.sub_op), PREC.ADDITION, $._infix_expression),
         binaryOp(choice($.and_op, $.xor_op, $.lshift_op, $.rshift_op), PREC.BITWISE, $._infix_expression),
@@ -68,7 +68,7 @@ module.exports = grammar({
       ),
     function_call: $ => prec(PREC.PREFIX, seq(field('callee', $._infix_expression), '(', $.arguments, ')')),
     prefix: $ => prec(PREC.PREFIX, seq(field('operator', choice($._binary_op, $._unary_op)), '(', field('operand', $._args), ')')),
-    modifier: $ => prec(PREC.ACCESS, seq($._infix_expression, $._modifier_op)),
+    modifier: $ => prec(PREC.ACCESS, seq(field('operand', $._infix_expression), field('operator', $._modifier_op))),
 
     access: $ => prec(PREC.ACCESS, seq(field('environment', $._infix_expression), '.', field('definition', $.identifier))),
 
@@ -132,7 +132,26 @@ module.exports = grammar({
 
     component: $ => seq('component', '(', $.string, ')'),
 
-    _unary_op: $ => choice($.int_cast, $.float_cast),
+    _unary_op: $ =>
+      choice(
+        $.int_cast,
+        $.float_cast,
+        $.exp_op,
+        $.log_op,
+        $.log10_op,
+        $.sqrt_op,
+        $.abs_op,
+        $.floor_op,
+        $.ceil_op,
+        $.rint_op,
+        $.round_op,
+        $.acos_op,
+        $.asin_op,
+        $.atan_op,
+        $.cos_op,
+        $.sin_op,
+        $.tan_op
+      ),
     _binary_op: $ =>
       choice(
         $.add_op,
@@ -140,7 +159,13 @@ module.exports = grammar({
         $.mult_op,
         $.div_op,
         $.mod_op,
-        $.exp_op,
+        $.pow_op,
+        $.pow_fun_op,
+        $.min_op,
+        $.max_op,
+        $.fmod_op,
+        $.remainder_op,
+        $.atan2_op,
         $.or_op,
         $.and_op,
         $.xor_op,
@@ -161,8 +186,26 @@ module.exports = grammar({
     _modifier_op: $ => choice($.one_sample_delay_op),
 
     /* Unary */
+    // Cast
     int_cast: _ => 'int',
     float_cast: _ => 'float',
+    // Math
+    exp_op: _ => 'exp',
+    log_op: _ => 'log',
+    log10_op: _ => 'log10',
+    sqrt_op: _ => 'sqrt',
+    abs_op: _ => 'abs',
+    floor_op: _ => 'floor',
+    ceil_op: _ => 'ceil',
+    rint_op: _ => 'rint',
+    round_op: _ => 'round',
+    // Trig
+    acos_op: _ => 'acos',
+    asin_op: _ => 'asin',
+    atan_op: _ => 'atan',
+    cos_op: _ => 'cos',
+    sin_op: _ => 'sin',
+    tan_op: _ => 'tan',
 
     /* Binary */
     // Math
@@ -171,7 +214,15 @@ module.exports = grammar({
     mult_op: _ => '*',
     div_op: _ => '/',
     mod_op: _ => '%',
-    exp_op: _ => '^',
+    pow_op: _ => '^',
+    pow_fun_op: _ => 'pow',
+    min_op: _ => 'min',
+    max_op: _ => 'max',
+    fmod_op: _ => 'fmod',
+    remainder_op: _ => 'remainder',
+    // Trig
+    atan2_op: _ => 'atan2',
+  
     // Bitwise
     or_op: _ => '|',
     and_op: _ => '&',

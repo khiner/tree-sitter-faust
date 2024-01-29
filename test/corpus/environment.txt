@@ -64,52 +64,36 @@ process = pink;
     value: (with_environment
       expression: (sequential
         left: (identifier)
-        right: (recursive
-          left: (add_op)
-          right: (identifier)))
+        right: (recursive left: (add_op) right: (identifier)))
       local_environment: (environment
         (function_definition
           name: (identifier)
-          (parameters
-            (parameter))
+          (parameters (parameter))
           value: (infix
             left: (infix
-              left: (infix
-                left: (real)
-                operator: (mult_op)
-                right: (identifier))
+              left: (infix left: (real) operator: (mult_op) right: (identifier))
               operator: (sub_op)
               right: (infix
                 left: (real)
                 operator: (mult_op)
-                right: (modifier
-                  (identifier)
-                  (one_sample_delay_op))))
+                right: (modifier operand: (identifier) operator: (one_sample_delay_op))))
             operator: (add_op)
             right: (infix
               left: (real)
               operator: (mult_op)
               right: (modifier
-                (modifier
-                  (identifier)
-                  (one_sample_delay_op))
-                (one_sample_delay_op)))))
+                operand: (modifier operand: (identifier) operator: (one_sample_delay_op))
+                operator: (one_sample_delay_op)))))
         (function_definition
           name: (identifier)
-          (parameters
-            (parameter))
+          (parameters (parameter))
           value: (infix
-            left: (infix
-              left: (real)
-              operator: (mult_op)
-              right: (identifier))
+            left: (infix left: (real) operator: (mult_op) right: (identifier))
             operator: (sub_op)
             right: (infix
               left: (real)
               operator: (mult_op)
-              right: (modifier
-                (identifier)
-                (one_sample_delay_op))))))))
+              right: (modifier operand: (identifier) operator: (one_sample_delay_op))))))))
   (definition
     name: (identifier)
     value: (identifier)))
@@ -142,29 +126,22 @@ ar(a,r,g) = v letrec {
         (recinition
           name: (identifier)
           expression: (infix
-            left: (function_call
-              callee: (identifier)
-              (arguments
-                (int)
-                (infix
-                  left: (infix
-                    left: (identifier)
-                    operator: (add_op)
-                    right: (infix
-                      left: (infix
-                        left: (identifier)
-                        operator: (lt_op)
-                        right: (identifier))
-                      operator: (div_op)
-                      right: (identifier)))
-                  operator: (sub_op)
+            left: (prefix
+              operator: (max_op)
+              operand: (int)
+              operand: (infix
+                left: (infix
+                  left: (identifier)
+                  operator: (add_op)
                   right: (infix
-                    left: (infix
-                      left: (identifier)
-                      operator: (ge_op)
-                      right: (identifier))
+                    left: (infix left: (identifier) operator: (lt_op) right: (identifier))
                     operator: (div_op)
-                    right: (identifier)))))
+                    right: (identifier)))
+                operator: (sub_op)
+                right: (infix
+                  left: (infix left: (identifier) operator: (ge_op) right: (identifier))
+                  operator: (div_op)
+                  right: (identifier))))
             operator: (mult_op)
             right: (identifier)))
         (definition
@@ -172,4 +149,4 @@ ar(a,r,g) = v letrec {
           value: (infix
             left: (identifier)
             operator: (le_op)
-            right: (modifier (identifier) (one_sample_delay_op))))))))
+            right: (modifier operand: (identifier) operator: (one_sample_delay_op))))))))

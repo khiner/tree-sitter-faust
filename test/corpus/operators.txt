@@ -46,19 +46,75 @@ process = 1 + 1 * 2 << 4 | 6 >= _ @ 7 ^ 2;
       (ge_op)
       (infix
         (infix (wire) (delay_op) (int))
-        (exp_op) (int)))))
+        (pow_op) (int)))))
 
+
+====
+Advanced math ops
+====
+
+unitary_a = exp(log(log10(sqrt(abs(floor(ceil(rint(round(1.0)))))))));
+unitary_b = acos(asin(atan(cos(sin(tan(3.14))))));
+binary = pow(min(max(fmod(remainder(atan2(1.0, 2.0), 3.0), 4.0), 5.0), 6.0), _);
+
+---
+(program
+  (definition
+    (identifier)
+    (prefix
+      (exp_op)
+      (prefix
+        (log_op)
+        (prefix
+          (log10_op)
+          (prefix
+            (sqrt_op)
+            (prefix
+              (abs_op)
+              (prefix
+                (floor_op)
+                (prefix
+                  (ceil_op)
+                  (prefix
+                    (rint_op)
+                    (prefix (round_op) (real)))))))))))
+  (definition
+    (identifier)
+    (prefix
+      (acos_op)
+      (prefix
+        (asin_op)
+        (prefix
+          (atan_op)
+          (prefix
+            (cos_op)
+            (prefix
+              (sin_op)
+              (prefix (tan_op) (real))))))))
+  (definition
+    (identifier)
+    (prefix
+      (pow_fun_op)
+      (prefix
+        (min_op)
+        (prefix
+          (max_op)
+          (prefix
+            (fmod_op)
+            (prefix
+              (remainder_op)
+              (prefix (atan2_op) (real) (real))
+              (real))
+            (real))
+          (real))
+        (real))
+      (wire))))
+  
 ====
 Special primitive ops
 ====
 
-process = prefix(
-  attach(
-    enable(
-      control(1, 2),
-      3),
-    4),
-  5);
+process = prefix(attach(enable(control(1, 2), 3), 4), _);
 
 ---
 (program
@@ -74,4 +130,4 @@ process = prefix(
             (control_op) (int) (int))
           (int))
         (int))
-      (int))))
+      (wire))))
