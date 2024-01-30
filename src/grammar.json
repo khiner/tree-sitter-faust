@@ -317,6 +317,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "prim4"
+        },
+        {
+          "type": "SYMBOL",
           "name": "prim5"
         },
         {
@@ -810,6 +814,35 @@
         ]
       }
     },
+    "prim4": {
+      "type": "PREC",
+      "value": 30,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "FIELD",
+            "name": "primitive",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_prim4"
+            }
+          },
+          {
+            "type": "STRING",
+            "value": "("
+          },
+          {
+            "type": "SYMBOL",
+            "name": "arguments"
+          },
+          {
+            "type": "STRING",
+            "value": ")"
+          }
+        ]
+      }
+    },
     "prim5": {
       "type": "PREC",
       "value": 30,
@@ -956,6 +989,10 @@
         {
           "type": "SYMBOL",
           "name": "_prim3"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_prim4"
         },
         {
           "type": "SYMBOL",
@@ -1790,6 +1827,19 @@
         {
           "type": "SYMBOL",
           "name": "rdtable"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "select2"
+        }
+      ]
+    },
+    "_prim4": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "select3"
         }
       ]
     },
@@ -2254,6 +2304,14 @@
     "rwtable": {
       "type": "STRING",
       "value": "rwtable"
+    },
+    "select2": {
+      "type": "STRING",
+      "value": "select2"
+    },
+    "select3": {
+      "type": "STRING",
+      "value": "select3"
     },
     "documentation": {
       "type": "SEQ",

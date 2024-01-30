@@ -54,6 +54,7 @@ module.exports = grammar({
         $.prim1,
         $.prim2,
         $.prim3,
+        $.prim4,
         $.prim5,
         $.function_call,
         $.modifier,
@@ -82,6 +83,7 @@ module.exports = grammar({
     prim1: $ => prec(PREC.FUNCTION_CALL, seq(field('primitive', $._prim1), '(', field('argument', $._argument), ')')),
     prim2: $ => prec(PREC.FUNCTION_CALL, seq(field('primitive', $._prim2), '(', $.arguments, ')')),
     prim3: $ => prec(PREC.FUNCTION_CALL, seq(field('primitive', $._prim3), '(', $.arguments, ')')),
+    prim4: $ => prec(PREC.FUNCTION_CALL, seq(field('primitive', $._prim4), '(', $.arguments, ')')),
     prim5: $ => prec(PREC.FUNCTION_CALL, seq(field('primitive', $._prim5), '(', $.arguments, ')')),
     // Arbitrary non-primitive function call
     function_call: $ => prec(PREC.FUNCTION_CALL, seq(field('callee', $._infix_expression), '(', $.arguments, ')')),
@@ -99,6 +101,7 @@ module.exports = grammar({
         $._prim1,
         $._prim2,
         $._prim3,
+        $._prim4,
         $._prim5,
         seq(optional('-'), $.id),
         seq('(', $._expression, ')'),
@@ -198,7 +201,8 @@ module.exports = grammar({
       ),
     // (Non-infix) binary primitive
     _prim2: $ => choice($.pow_fun, $.min, $.max, $.fmod, $.remainder, $.atan2, $.prefix_prim, $.attach, $.enable, $.control),
-    _prim3: $ => choice($.rdtable),
+    _prim3: $ => choice($.rdtable, $.select2),
+    _prim4: $ => choice($.select3),
     _prim5: $ => choice($.rwtable),
 
     /** Modifiers **/
@@ -288,6 +292,8 @@ module.exports = grammar({
 
     rdtable: _ => 'rdtable',
     rwtable: _ => 'rwtable',
+    select2: _ => 'select2',
+    select3: _ => 'select3',
 
     documentation: $ => seq('<mdoc>', repeat($._doc_content), '</mdoc>'),
     _doc_content: $ => choice($._doc_char, $._special_doc_tag),

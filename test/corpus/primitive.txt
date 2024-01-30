@@ -152,3 +152,25 @@ bar = _ : rwtable(n,s,w,_,r) : _;
       (sequential
         (prim5 (rwtable) (arguments (id) (id) (id) (wire) (id)))
         (wire)))))
+
+====
+Selectors
+====
+
+foo = _,_ : select2(s) : _;
+bar = _,_,_ : select3(s) : _;
+
+---
+(program
+  (definition (id)
+    (sequential
+      (parallel (wire) (wire))
+      (sequential
+        (prim3 (select2) (arguments (id)))
+        (wire))))
+  (definition (id)
+    (sequential
+      (parallel (wire) (parallel (wire) (wire)))
+      (sequential
+        (prim4 (select3) (arguments (id)))
+        (wire)))))
