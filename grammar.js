@@ -47,7 +47,20 @@ module.exports = grammar({
 
     _expression: $ => choice($.with_environment, $.letrec_environment, $._binary_composition, $._infix_expression),
     _infix_expression: $ =>
-      choice($.infix, $.prefix, $.partial, $.prim1, $.prim2, $.function_call, $.modifier, $.access, $.substitution, $._primitive),
+      choice(
+        $.infix,
+        $.prefix,
+        $.partial,
+        $.prim1,
+        $.prim2,
+        $.prim3,
+        $.prim5,
+        $.function_call,
+        $.modifier,
+        $.access,
+        $.substitution,
+        $._primitive
+      ),
 
     infix: $ =>
       choice(
@@ -59,15 +72,17 @@ module.exports = grammar({
         define_infix($, $.or, PREC.BITWISE_OR),
         define_infix($, choice($.lt, $.le, $.gt, $.ge, $.eq, $.neq), PREC.COMPARISON)
       ),
-    // Binary function call on infix operator
+    // Unary function call on an infix operator primitive
+    partial: $ => prec(PREC.FUNCTION_CALL, seq(field('operator', $._infix), '(', field('operand', $._argument), ')')),
+    // Binary function call on an infix operator primitive
     prefix: $ =>
       prec(PREC.FUNCTION_CALL, seq(field('operator', $._infix), '(', field('left', $._argument), ',', field('right', $._argument), ')')),
-    // Unary function call on infix operator
-    partial: $ => prec(PREC.FUNCTION_CALL, seq(field('operator', $._infix), '(', field('operand', $._argument), ')')),
-    // Unary function call on non-infix primitive
+
+    /* Unary/binary/ternary/... function call on a non-infix primitive */
     prim1: $ => prec(PREC.FUNCTION_CALL, seq(field('primitive', $._prim1), '(', field('argument', $._argument), ')')),
-    // Binary function call on non-infix primitive
     prim2: $ => prec(PREC.FUNCTION_CALL, seq(field('primitive', $._prim2), '(', $.arguments, ')')),
+    prim3: $ => prec(PREC.FUNCTION_CALL, seq(field('primitive', $._prim3), '(', $.arguments, ')')),
+    prim5: $ => prec(PREC.FUNCTION_CALL, seq(field('primitive', $._prim5), '(', $.arguments, ')')),
     // Arbitrary non-primitive function call
     function_call: $ => prec(PREC.FUNCTION_CALL, seq(field('callee', $._infix_expression), '(', $.arguments, ')')),
     modifier: $ => prec(PREC.ACCESS, seq(field('operand', $._infix_expression), field('operator', $._modifier))),
@@ -83,6 +98,8 @@ module.exports = grammar({
         $._infix,
         $._prim1,
         $._prim2,
+        $._prim3,
+        $._prim5,
         seq(optional('-'), $.id),
         seq('(', $._expression, ')'),
         seq('\\', '(', $.parameters, ')', '.', '(', $._expression, ')'),
@@ -132,6 +149,8 @@ module.exports = grammar({
 
     component: $ => seq('component', '(', $.string, ')'),
 
+    /*** Primitives ***/
+
     // Infix operators are built-in binary primitives that can be used in infix notation.
     // https://faustdoc.grame.fr/manual/syntax/#infix-operators
     _infix: $ =>
@@ -179,9 +198,14 @@ module.exports = grammar({
       ),
     // (Non-infix) binary primitive
     _prim2: $ => choice($.pow_fun, $.min, $.max, $.fmod, $.remainder, $.atan2, $.prefix_prim, $.attach, $.enable, $.control),
-    _modifier: $ => choice($.one_sample_delay),
+    _prim3: $ => choice($.rdtable),
+    _prim5: $ => choice($.rwtable),
 
-    /** Infix primitives **/
+    /** Modifiers **/
+    _modifier: $ => choice($.one_sample_delay),
+    one_sample_delay: _ => prec(PREC.FUNCTION_CALL, "'"),
+
+    /** Infix (binary) primitives **/
     // Math
     add: _ => '+',
     sub: _ => '-',
@@ -205,8 +229,7 @@ module.exports = grammar({
     // Special
     delay: _ => '@',
 
-    /** Non-infix primitives */
-
+    /** Non-infix primitives **/
     /* Unary */
     // Math
     exp: _ => 'exp',
@@ -228,7 +251,6 @@ module.exports = grammar({
     // Type casting
     int_cast: _ => 'int',
     float_cast: _ => 'float',
-
     /* Binary */
     // Math
     pow_fun: _ => 'pow',
@@ -244,10 +266,7 @@ module.exports = grammar({
     enable: _ => 'enable',
     control: _ => 'control',
 
-    /* Modifiers */
-    one_sample_delay: _ => prec(PREC.FUNCTION_CALL, "'"),
-
-    /* Primitives */
+    /** Other primitives **/
     wire: _ => '_',
     cut: _ => '!',
     mem: _ => 'mem',
@@ -266,6 +285,9 @@ module.exports = grammar({
         )
       );
     },
+
+    rdtable: _ => 'rdtable',
+    rwtable: _ => 'rwtable',
 
     documentation: $ => seq('<mdoc>', repeat($._doc_content), '</mdoc>'),
     _doc_content: $ => choice($._doc_char, $._special_doc_tag),

@@ -313,6 +313,14 @@
         },
         {
           "type": "SYMBOL",
+          "name": "prim3"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "prim5"
+        },
+        {
+          "type": "SYMBOL",
           "name": "function_call"
         },
         {
@@ -633,6 +641,39 @@
         }
       ]
     },
+    "partial": {
+      "type": "PREC",
+      "value": 30,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "FIELD",
+            "name": "operator",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_infix"
+            }
+          },
+          {
+            "type": "STRING",
+            "value": "("
+          },
+          {
+            "type": "FIELD",
+            "name": "operand",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_argument"
+            }
+          },
+          {
+            "type": "STRING",
+            "value": ")"
+          }
+        ]
+      }
+    },
     "prefix": {
       "type": "PREC",
       "value": 30,
@@ -666,39 +707,6 @@
           {
             "type": "FIELD",
             "name": "right",
-            "content": {
-              "type": "SYMBOL",
-              "name": "_argument"
-            }
-          },
-          {
-            "type": "STRING",
-            "value": ")"
-          }
-        ]
-      }
-    },
-    "partial": {
-      "type": "PREC",
-      "value": 30,
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "FIELD",
-            "name": "operator",
-            "content": {
-              "type": "SYMBOL",
-              "name": "_infix"
-            }
-          },
-          {
-            "type": "STRING",
-            "value": "("
-          },
-          {
-            "type": "FIELD",
-            "name": "operand",
             "content": {
               "type": "SYMBOL",
               "name": "_argument"
@@ -756,6 +764,64 @@
             "content": {
               "type": "SYMBOL",
               "name": "_prim2"
+            }
+          },
+          {
+            "type": "STRING",
+            "value": "("
+          },
+          {
+            "type": "SYMBOL",
+            "name": "arguments"
+          },
+          {
+            "type": "STRING",
+            "value": ")"
+          }
+        ]
+      }
+    },
+    "prim3": {
+      "type": "PREC",
+      "value": 30,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "FIELD",
+            "name": "primitive",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_prim3"
+            }
+          },
+          {
+            "type": "STRING",
+            "value": "("
+          },
+          {
+            "type": "SYMBOL",
+            "name": "arguments"
+          },
+          {
+            "type": "STRING",
+            "value": ")"
+          }
+        ]
+      }
+    },
+    "prim5": {
+      "type": "PREC",
+      "value": 30,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "FIELD",
+            "name": "primitive",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_prim5"
             }
           },
           {
@@ -886,6 +952,14 @@
         {
           "type": "SYMBOL",
           "name": "_prim2"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_prim3"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_prim5"
         },
         {
           "type": "SEQ",
@@ -1710,6 +1784,24 @@
         }
       ]
     },
+    "_prim3": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "rdtable"
+        }
+      ]
+    },
+    "_prim5": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "rwtable"
+        }
+      ]
+    },
     "_modifier": {
       "type": "CHOICE",
       "members": [
@@ -1718,6 +1810,14 @@
           "name": "one_sample_delay"
         }
       ]
+    },
+    "one_sample_delay": {
+      "type": "PREC",
+      "value": 30,
+      "content": {
+        "type": "STRING",
+        "value": "'"
+      }
     },
     "add": {
       "type": "STRING",
@@ -1898,14 +1998,6 @@
     "control": {
       "type": "STRING",
       "value": "control"
-    },
-    "one_sample_delay": {
-      "type": "PREC",
-      "value": 30,
-      "content": {
-        "type": "STRING",
-        "value": "'"
-      }
     },
     "wire": {
       "type": "STRING",
@@ -2154,6 +2246,14 @@
           }
         ]
       }
+    },
+    "rdtable": {
+      "type": "STRING",
+      "value": "rdtable"
+    },
+    "rwtable": {
+      "type": "STRING",
+      "value": "rwtable"
     },
     "documentation": {
       "type": "SEQ",

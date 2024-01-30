@@ -113,10 +113,10 @@ binary = pow(min(max(fmod(remainder(atan2(1.0, 2.0), 3.0), 4.0), 5.0), 6.0), _);
         (wire)))))
   
 ====
-Special primitives
+Special binary primitives
 ====
 
-process = prefix(attach(enable(control(1, 2), 3), 4), _);
+process = prefix(attach(enable(control(_, _), _), _), _);
 
 ---
 (program
@@ -128,7 +128,27 @@ process = prefix(attach(enable(control(1, 2), 3), 4), _);
             (prim2 (enable)
               (arguments
                 (prim2 (control)
-                  (arguments (int) (int)))
-                (int)))
-            (int)))
+                  (arguments (wire) (wire)))
+                (wire)))
+            (wire)))
+        (wire)))))
+
+====
+Tables
+====
+
+foo = rdtable(n,s,r) : _;
+bar = _ : rwtable(n,s,w,_,r) : _;
+
+---
+(program
+  (definition (id)
+    (sequential
+      (prim3 (rdtable) (arguments (id) (id) (id)))
+      (wire)))
+  (definition (id)
+    (sequential
+      (wire)
+      (sequential
+        (prim5 (rwtable) (arguments (id) (id) (id) (wire) (id)))
         (wire)))))
