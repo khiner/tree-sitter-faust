@@ -983,6 +983,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "variants",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -1005,10 +1015,6 @@
         {
           "type": "function_definition",
           "named": true
-        },
-        {
-          "type": "variant",
-          "named": true
         }
       ]
     }
@@ -1018,11 +1024,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "string",
+          "named": true
+        },
+        {
+          "type": "variants",
           "named": true
         }
       ]
@@ -1688,11 +1698,15 @@
       }
     },
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "parameters",
+          "named": true
+        },
+        {
+          "type": "variants",
           "named": true
         }
       ]
@@ -7443,10 +7457,6 @@
         {
           "type": "global_metadata",
           "named": true
-        },
-        {
-          "type": "variant",
-          "named": true
         }
       ]
     }
@@ -7469,10 +7479,6 @@
         },
         {
           "type": "recinition",
-          "named": true
-        },
-        {
-          "type": "variant",
           "named": true
         }
       ]
@@ -12058,18 +12064,36 @@
         {
           "type": "function_definition",
           "named": true
-        },
-        {
-          "type": "variant",
-          "named": true
         }
       ]
     }
   },
   {
-    "type": "variant",
+    "type": "variants",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "double_precision",
+          "named": true
+        },
+        {
+          "type": "fixed_point_precision",
+          "named": true
+        },
+        {
+          "type": "quad_precision",
+          "named": true
+        },
+        {
+          "type": "single_precision",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "with_environment",
@@ -12574,8 +12598,8 @@
     "named": true
   },
   {
-    "type": "doubleprecision",
-    "named": false
+    "type": "double_precision",
+    "named": true
   },
   {
     "type": "enable",
@@ -12594,8 +12618,8 @@
     "named": true
   },
   {
-    "type": "fixedpointprecision",
-    "named": false
+    "type": "fixed_point_precision",
+    "named": true
   },
   {
     "type": "float_cast",
@@ -12702,8 +12726,8 @@
     "named": true
   },
   {
-    "type": "quadprecision",
-    "named": false
+    "type": "quad_precision",
+    "named": true
   },
   {
     "type": "real",
@@ -12734,8 +12758,8 @@
     "named": true
   },
   {
-    "type": "singleprecision",
-    "named": false
+    "type": "single_precision",
+    "named": true
   },
   {
     "type": "sqrt",

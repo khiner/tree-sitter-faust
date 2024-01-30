@@ -83,29 +83,25 @@ import ( "stdfaust.lib" ) ;
   (file_import (string)))
 
 ====
-Single variant
+Variant
 ====
+
+fixedpointprecision import("stdfaust.lib");
 
 singleprecision int_part(idv) = idv : _,!;
-
----
-(program
-  (variant)
-  (function_definition (id)
-    (parameters (parameter))
-    (sequential (id) (parallel (wire) (cut)))))
-
-====
-Two variants
-====
-
 doubleprecision quadprecision int_part(idv) = int(idv);
 
 ---
 (program
-  (variant)
-  (variant)
-  (function_definition (id)
+  (file_import (variants (fixed_point_precision)) (string))
+  (function_definition
+    (variants (single_precision))
+    (id)
+    (parameters (parameter))
+    (sequential (id) (parallel (wire) (cut))))
+  (function_definition
+    (variants (double_precision) (quad_precision))
+    (id)
     (parameters (parameter))
     (prim1 (int_cast) (id))))
 

@@ -1,7 +1,6 @@
 const PREC = {
   // Function
-  ACCESS: 32,
-  MODIFIER: 31,
+  ACCESS: 31,
   FUNCTION_CALL: 30,
   // Infix
   DELAY: 24,
@@ -17,8 +16,6 @@ const PREC = {
   SEQ: 11,
   SPLIT: 10,
   MERGE: 10,
-  // Expression
-  DEFINITION: 1,
 };
 
 const sepBy = (sep, rule) => seq(rule, repeat(seq(sep, rule)));
@@ -28,9 +25,6 @@ const define_binary_comp = (op, precedence, assoc, field_rule) => $ =>
 const define_infix = ($, symbol, precedence, assoc = 'left') =>
   prec[assoc](precedence, seq(field('left', $._infix_expression), field('operator', symbol), field('right', $._infix_expression)));
 
-// Can't be a regular rule because it matches the empty string.
-const definitionList = $ => repeat(seq(repeat($.variant), $._definition, ';'));
-
 const decimal = /[0-9]/;
 const sign = optional(/[+-]/);
 
@@ -39,15 +33,17 @@ module.exports = grammar({
   rules: {
     program: $ => repeat(choice($.comment, $._statement)),
 
-    _statement: $ =>
-      choice(
-        seq(repeat($.variant), choice($.global_metadata, $.function_metadata, $.file_import, $.function_definition, $._definition), ';'),
-        $.documentation
-      ),
+    _statement: $ => choice($.file_import, $._definition, $._metadata_definition, $.documentation),
 
-    _definition: $ => prec(PREC.DEFINITION, choice($.definition, $.function_definition)),
-    definition: $ => seq(field('name', $.id), '=', field('value', $._expression)),
-    function_definition: $ => seq(field('name', $.id), '(', $.parameters, ')', '=', field('value', $._expression)),
+    _definition: $ => seq(choice($.definition, $.function_definition), ';'),
+    definition: $ => seq(optional($.variants), field('name', $.id), '=', field('value', $._expression)),
+    function_definition: $ => seq(optional($.variants), field('name', $.id), '(', $.parameters, ')', '=', field('value', $._expression)),
+
+    _metadata_definition: $ => seq(choice($.global_metadata, $.function_metadata), ';'),
+    global_metadata: $ => seq('declare', field('key', $.id), field('value', $.string)),
+    function_metadata: $ => seq('declare', field('function_name', $.id), field('key', $.id), field('value', $.string)),
+
+    file_import: $ => seq(optional($.variants), 'import', '(', $.string, ')', ';'),
 
     _expression: $ => choice($.with_environment, $.letrec_environment, $._binary_composition, $._infix_expression),
     _infix_expression: $ =>
@@ -125,14 +121,14 @@ module.exports = grammar({
     prod: _ => 'prod',
 
     with_environment: $ => prec.left(seq(field('expression', $._expression), 'with', field('local_environment', $.environment))),
-    environment: $ => seq('{', definitionList($), '}'),
+    environment: $ => seq('{', repeat($._definition), '}'),
 
     letrec_environment: $ => prec.left(seq(field('expression', $._expression), 'letrec', field('local_environment', $.rec_environment))),
-    rec_environment: $ => seq('{', repeat($.recinition), optional(seq('where', definitionList($))), '}'),
+    rec_environment: $ => seq('{', repeat($.recinition), optional(seq('where', repeat($._definition))), '}'),
     recinition: $ => seq(seq("'", field('name', $.id)), '=', field('expression', $._expression), ';'),
 
     substitution: $ => seq(field('expression', $._infix_expression), $.substitutions),
-    substitutions: $ => seq('[', definitionList($), ']'),
+    substitutions: $ => seq('[', repeat($._definition), ']'),
 
     component: $ => seq('component', '(', $.string, ')'),
 
@@ -249,7 +245,7 @@ module.exports = grammar({
     control: _ => 'control',
 
     /* Modifiers */
-    one_sample_delay: _ => prec(PREC.MODIFIER, "'"),
+    one_sample_delay: _ => prec(PREC.FUNCTION_CALL, "'"),
 
     /* Primitives */
     wire: _ => '_',
@@ -277,11 +273,6 @@ module.exports = grammar({
     _special_doc_tag: $ =>
       choice('<notice/>', '<notice />', '<equation>', '</equation>', '<diagram>', '</diagram>', '<metadata>', '</metadata>', '<listing'),
 
-    file_import: $ => seq('import', '(', $.string, ')'),
-
-    global_metadata: $ => seq('declare', field('key', $.id), field('value', $.string)),
-    function_metadata: $ => seq('declare', field('function_name', $.id), field('key', $.id), field('value', $.string)),
-
     _binary_composition: $ => choice($.recursive, $.sequential, $.split, $.merge, $.parallel),
     recursive: define_binary_comp('~', PREC.RECURSIVE, 'left', $ => $._expression),
     sequential: define_binary_comp(':', PREC.SEQ, 'right', $ => $._expression),
@@ -289,7 +280,12 @@ module.exports = grammar({
     merge: define_binary_comp(':>', PREC.MERGE, 'right', $ => $._expression),
     parallel: define_binary_comp(',', PREC.PAR, 'right', $ => $._expression),
 
-    variant: _ => choice('singleprecision', 'doubleprecision', 'quadprecision', 'fixedpointprecision'),
+    variants: $ => repeat1($._variant),
+    _variant: $ => choice($.single_precision, $.double_precision, $.quad_precision, $.fixed_point_precision),
+    single_precision: _ => 'singleprecision',
+    double_precision: _ => 'doubleprecision',
+    quad_precision: _ => 'quadprecision',
+    fixed_point_precision: _ => 'fixedpointprecision',
 
     string: _ => /"([^"\\]|\\.)*"/,
 
