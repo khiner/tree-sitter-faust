@@ -6,8 +6,7 @@ process = _~+(1);
 
 ---
 (program
-  (definition
-    (identifier)
+  (definition (id)
     (recursive
       (wire)
       (partial (add) (int)))))
@@ -20,8 +19,7 @@ a=_:_;
 
 ---
 (program
-  (definition
-    (identifier)
+  (definition (id)
     (sequential (wire) (wire))))
 
 =====
@@ -32,8 +30,7 @@ a=_<:_,_;
 
 ---
 (program
-  (definition
-    (identifier)
+  (definition (id)
     (split
       (wire)
       (parallel (wire) (wire)))))
@@ -46,8 +43,7 @@ a=_<:_,_,_;
 
 ---
 (program
-  (definition
-    (identifier)
+  (definition (id)
     (split
       (wire)
       (parallel
@@ -62,8 +58,7 @@ a=_,_:>_;
 
 ---
 (program
-  (definition
-    (identifier)
+  (definition (id)
     (merge
       (parallel (wire) (wire))
       (wire))))
@@ -76,8 +71,7 @@ a=_,_,_:>_;
 
 ---
 (program
-  (definition
-    (identifier)
+  (definition (id)
     (merge
       (parallel
         (wire)

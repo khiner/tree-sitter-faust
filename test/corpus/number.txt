@@ -6,8 +6,7 @@ process = 1,+10,-100;
 
 ---
 (program
-  (definition
-    (identifier)
+  (definition (id)
     (parallel
       (int)
       (parallel (int) (int)))))
@@ -20,16 +19,10 @@ process = 0.5,.5,5.,+1.,-1.f,500.5e4,-500e40f;
 
 ---
 (program
-  (definition
-    (identifier)
-    (parallel
-      (real)
-      (parallel
-        (real)
-        (parallel
-          (real)
-          (parallel
-            (real)
-            (parallel
-              (real)
+  (definition (id)
+    (parallel (real)
+      (parallel (real)
+        (parallel (real)
+          (parallel (real)
+            (parallel (real)
               (parallel (real) (real)))))))))

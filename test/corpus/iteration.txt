@@ -7,23 +7,19 @@ process = par(i, nHarmonics, _) :> /(nHarmonics) * si.smoo;
 
 ---
 (program
+  (definition name: (id) value: (int))
   (definition
-    name: (identifier)
-    value: (int))
-  (definition
-    name: (identifier)
+    name: (id)
     value: (merge
       left: (iteration
         type: (par)
-        current_iter: (identifier)
-        num_iters: (identifier)
+        current_iter: (id)
+        num_iters: (id)
         expression: (wire))
       right: (infix
-        left: (partial operator: (div) operand: (identifier))
+        left: (partial operator: (div) operand: (id))
         operator: (mult)
-        right: (access
-          environment: (identifier)
-          definition: (identifier))))))
+        right: (access environment: (id) definition: (id))))))
 
 ====
 Seq iteration
@@ -34,18 +30,14 @@ process = seq(i, nBands, oneBand(i));
 
 ---
 (program
+  (definition name: (id) value: (int))
   (definition
-    name: (identifier)
-    value: (int))
-  (definition
-    name: (identifier)
+    name: (id)
     value: (iteration
       type: (seq)
-      current_iter: (identifier)
-      num_iters: (identifier)
-      expression: (function_call
-        callee: (identifier)
-        (arguments (identifier))))))
+      current_iter: (id)
+      num_iters: (id)
+      expression: (function_call callee: (id) (arguments (id))))))
 
 ====
 Sum iteration
@@ -57,23 +49,21 @@ process = sum(i, nHarmonics, _)/(nHarmonics) * si.smoo;
 ---
 (program
   (definition
-    name: (identifier)
+    name: (id)
     value: (int))
   (definition
-    name: (identifier)
+    name: (id)
     value: (infix
       left: (infix
         left: (iteration
           type: (sum)
-          current_iter: (identifier)
-          num_iters: (identifier)
+          current_iter: (id)
+          num_iters: (id)
           expression: (wire))
         operator: (div)
-        right: (identifier))
+        right: (id))
       operator: (mult)
-      right: (access
-        environment: (identifier)
-        definition: (identifier)))))
+      right: (access environment: (id) definition: (id)))))
 
 ====
 Prod iteration
@@ -85,17 +75,15 @@ process = prod(i, nOscs, _) * si.smoo;
 ---
 (program
   (definition
-    name: (identifier)
+    name: (id)
     value: (int))
       (definition
-        name: (identifier)
+        name: (id)
         value: (infix
           left: (iteration
             type: (prod)
-            current_iter: (identifier)
-            num_iters: (identifier)
+            current_iter: (id)
+            num_iters: (id)
             expression: (wire))
           operator: (mult)
-          right: (access
-            environment: (identifier)
-            definition: (identifier)))))
+          right: (access environment: (id) definition: (id)))))

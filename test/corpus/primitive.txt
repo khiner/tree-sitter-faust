@@ -7,7 +7,7 @@ process = 1 + 1 * 2 << 4 | 6 >= _ @ 7 ^ 2;
 ---
 (program
   (definition
-    name: (identifier)
+    name: (id)
     value: (infix
       left: (infix
         left: (infix
@@ -34,7 +34,7 @@ process = |(*(2,3), @(_', 2)) : mem;
 ---
 (program
   (definition
-    name: (identifier)
+    name: (id)
     value: (sequential
       left: (prefix
         operator: (or)
@@ -54,7 +54,7 @@ process = |(*(2), @(_')) : mem;
 ---
 (program
   (definition
-    name: (identifier)
+    name: (id)
     value: (sequential
       left: (prefix
         operator: (or)
@@ -74,8 +74,7 @@ binary = pow(min(max(fmod(remainder(atan2(1.0, 2.0), 3.0), 4.0), 5.0), 6.0), _);
 
 ---
 (program
-  (definition
-    (identifier)
+  (definition (id)
     (prim1 (exp)
       (prim1 (log)
         (prim1 (log10)
@@ -85,19 +84,16 @@ binary = pow(min(max(fmod(remainder(atan2(1.0, 2.0), 3.0), 4.0), 5.0), 6.0), _);
                 (prim1 (ceil)
                   (prim1 (rint)
                     (prim1 (round)
-                      (prim1
-                        (float_cast)
+                      (prim1 (float_cast)
                         (prim1 (int_cast) (real)))))))))))))
-  (definition
-    (identifier)
+  (definition (id)
     (prim1 (acos)
       (prim1 (asin)
         (prim1 (atan)
           (prim1 (cos)
             (prim1 (sin)
               (prim1 (tan) (real))))))))
-  (definition
-    (identifier)
+  (definition (id)
     (prim2 (pow_fun)
       (arguments
         (prim2 (min)
@@ -124,16 +120,14 @@ process = prefix(attach(enable(control(1, 2), 3), 4), _);
 
 ---
 (program
-  (definition
-    (identifier)
+  (definition (id)
     (prim2 (prefix_prim)
       (arguments
         (prim2 (attach)
           (arguments
             (prim2 (enable)
               (arguments
-                (prim2
-                  (control)
+                (prim2 (control)
                   (arguments (int) (int)))
                 (int)))
             (int)))

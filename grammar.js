@@ -46,8 +46,8 @@ module.exports = grammar({
       ),
 
     _definition: $ => prec(PREC.DEFINITION, choice($.definition, $.function_definition)),
-    definition: $ => seq(field('name', $.identifier), '=', field('value', $._expression)),
-    function_definition: $ => seq(field('name', $.identifier), '(', $.parameters, ')', '=', field('value', $._expression)),
+    definition: $ => seq(field('name', $.id), '=', field('value', $._expression)),
+    function_definition: $ => seq(field('name', $.id), '(', $.parameters, ')', '=', field('value', $._expression)),
 
     _expression: $ => choice($.with_environment, $.letrec_environment, $._binary_composition, $._infix_expression),
     _infix_expression: $ =>
@@ -76,7 +76,7 @@ module.exports = grammar({
     function_call: $ => prec(PREC.FUNCTION_CALL, seq(field('callee', $._infix_expression), '(', $.arguments, ')')),
     modifier: $ => prec(PREC.ACCESS, seq(field('operand', $._infix_expression), field('operator', $._modifier))),
 
-    access: $ => prec(PREC.ACCESS, seq(field('environment', $._infix_expression), '.', field('definition', $.identifier))),
+    access: $ => prec(PREC.ACCESS, seq(field('environment', $._infix_expression), '.', field('definition', $.id))),
 
     _primitive: $ =>
       choice(
@@ -87,7 +87,7 @@ module.exports = grammar({
         $._infix,
         $._prim1,
         $._prim2,
-        seq(optional('-'), $.identifier),
+        seq(optional('-'), $.id),
         seq('(', $._expression, ')'),
         seq('\\', '(', $.parameters, ')', '.', '(', $._expression, ')'),
         $.iteration,
@@ -95,7 +95,7 @@ module.exports = grammar({
         $.component
       ),
 
-    parameters: $ => sepBy(',', alias($.identifier, $.parameter)),
+    parameters: $ => sepBy(',', alias($.id, $.parameter)),
     arguments: $ => sepBy(',', $._argument),
 
     _args: $ => sepBy(',', $._argument),
@@ -112,7 +112,7 @@ module.exports = grammar({
       seq(
         field('type', choice($.par, $.seq, $.sum, $.prod)),
         '(',
-        field('current_iter', $.identifier),
+        field('current_iter', $.id),
         ',',
         field('num_iters', $._argument),
         ',',
@@ -129,7 +129,7 @@ module.exports = grammar({
 
     letrec_environment: $ => prec.left(seq(field('expression', $._expression), 'letrec', field('local_environment', $.rec_environment))),
     rec_environment: $ => seq('{', repeat($.recinition), optional(seq('where', definitionList($))), '}'),
-    recinition: $ => seq(seq("'", field('name', $.identifier)), '=', field('expression', $._expression), ';'),
+    recinition: $ => seq(seq("'", field('name', $.id)), '=', field('expression', $._expression), ';'),
 
     substitution: $ => seq(field('expression', $._infix_expression), $.substitutions),
     substitutions: $ => seq('[', definitionList($), ']'),
@@ -279,8 +279,8 @@ module.exports = grammar({
 
     file_import: $ => seq('import', '(', $.string, ')'),
 
-    global_metadata: $ => seq('declare', field('key', $.identifier), field('value', $.string)),
-    function_metadata: $ => seq('declare', field('function_name', $.identifier), field('key', $.identifier), field('value', $.string)),
+    global_metadata: $ => seq('declare', field('key', $.id), field('value', $.string)),
+    function_metadata: $ => seq('declare', field('function_name', $.id), field('key', $.id), field('value', $.string)),
 
     _binary_composition: $ => choice($.recursive, $.sequential, $.split, $.merge, $.parallel),
     recursive: define_binary_comp('~', PREC.RECURSIVE, 'left', $ => $._expression),
@@ -296,7 +296,7 @@ module.exports = grammar({
     // todo Improve qualified identifiers, using a visible rule for 'qualified_identifier'
     //   See 'qualified_identifier' in https://github.com/tree-sitter/tree-sitter-cpp/blob/master/grammar.js,
     //   and the test: https://github.com/tree-sitter/tree-sitter-cpp/blob/master/test/corpus/statements.txt#L409-L425
-    identifier: $ => prec.right(seq(optional('::'), seq($._id, repeat(seq('::', $._id))))),
+    id: $ => prec.right(seq(optional('::'), seq($._id, repeat(seq('::', $._id))))),
     _id: _ => /_*[a-zA-Z][_a-zA-Z0-9]*/,
 
     comment: _ => token(choice(seq('//', /(\\(.|\r?\n)|[^\\\n])*/), seq('/*', /[^*]*\*+([^/*][^*]*\*+)*/, '/'))),

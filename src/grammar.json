@@ -92,7 +92,7 @@
           "name": "name",
           "content": {
             "type": "SYMBOL",
-            "name": "identifier"
+            "name": "id"
           }
         },
         {
@@ -117,7 +117,7 @@
           "name": "name",
           "content": {
             "type": "SYMBOL",
-            "name": "identifier"
+            "name": "id"
           }
         },
         {
@@ -729,7 +729,7 @@
             "name": "definition",
             "content": {
               "type": "SYMBOL",
-              "name": "identifier"
+              "name": "id"
             }
           }
         ]
@@ -783,7 +783,7 @@
             },
             {
               "type": "SYMBOL",
-              "name": "identifier"
+              "name": "id"
             }
           ]
         },
@@ -871,7 +871,7 @@
           "type": "ALIAS",
           "content": {
             "type": "SYMBOL",
-            "name": "identifier"
+            "name": "id"
           },
           "named": true,
           "value": "parameter"
@@ -889,7 +889,7 @@
                 "type": "ALIAS",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "identifier"
+                  "name": "id"
                 },
                 "named": true,
                 "value": "parameter"
@@ -1127,7 +1127,7 @@
           "name": "current_iter",
           "content": {
             "type": "SYMBOL",
-            "name": "identifier"
+            "name": "id"
           }
         },
         {
@@ -1345,7 +1345,7 @@
               "name": "name",
               "content": {
                 "type": "SYMBOL",
-                "name": "identifier"
+                "name": "id"
               }
             }
           ]
@@ -2193,7 +2193,7 @@
           "name": "key",
           "content": {
             "type": "SYMBOL",
-            "name": "identifier"
+            "name": "id"
           }
         },
         {
@@ -2218,7 +2218,7 @@
           "name": "function_name",
           "content": {
             "type": "SYMBOL",
-            "name": "identifier"
+            "name": "id"
           }
         },
         {
@@ -2226,7 +2226,7 @@
           "name": "key",
           "content": {
             "type": "SYMBOL",
-            "name": "identifier"
+            "name": "id"
           }
         },
         {
@@ -2434,7 +2434,7 @@
       "type": "PATTERN",
       "value": "\"([^\"\\\\]|\\\\.)*\""
     },
-    "identifier": {
+    "id": {
       "type": "PREC_RIGHT",
       "value": 0,
       "content": {
