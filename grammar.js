@@ -107,12 +107,17 @@ module.exports = grammar({
         $.id,
         seq('(', $._expression, ')'),
         $.lambda,
+        $.modulation,
         $.iteration,
         seq('environment', $.environment),
         $.component
       ),
 
     lambda: $ => seq('\\', '(', $.parameters, ')', '.', '(', field('value', $._expression), ')'),
+    modulation: $ => seq('[', $.modulators, '->', field('expression', $._expression), ']'),
+    modulators: $ => sepBy(',', $.modulator),
+    modulator: $ => choice(field('name', $.string), seq(field('name', $.string), ':', field('value', $._argument))),
+
     parameters: $ => sepBy(',', alias($.id, $.parameter)),
     arguments: $ => sepBy(',', $._argument),
 
