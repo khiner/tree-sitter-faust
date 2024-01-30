@@ -12,9 +12,9 @@ For example, [tree-sitter-cpp](https://github.com/tree-sitter/tree-sitter-cpp/bl
 "1.0 <=> b" => (binary_expression left: (number_literal) right: (identifier))
 ```
 
-... while this Faust grammar defines unique rules for each operation (a _primitive_ in Faust parlance), producing e.g. infix binary operations like:
+... while this Faust grammar defines unique rules for each operation (a _primitive_ in Faust parlance), producing e.g. infix operations like:
 ```
-"1.0 < b" => (infix left: (real) operator: (lt_op) right: (identifier))
+"1.0 < b" => (infix left: (real) operator: (lt) right: (identifier))
 ```
 
 The extra detail is added because this grammar is intended for two purposes:

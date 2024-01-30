@@ -84,7 +84,7 @@ add = +;
     value: (string))
   (definition
     name: (identifier)
-    value: (add_op)))
+    value: (add)))
 
 ====
 Import
@@ -145,10 +145,10 @@ process = var2';
     (identifier) (mem))
   (definition
     (identifier)
-    (partial (delay_op) (identifier)))
+    (partial (delay) (identifier)))
   (definition
     (identifier)
-    (modifier (identifier) (one_sample_delay_op))))
+    (modifier (identifier) (one_sample_delay))))
 
 ===
 Component

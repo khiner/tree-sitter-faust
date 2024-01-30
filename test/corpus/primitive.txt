@@ -12,17 +12,17 @@ process = 1 + 1 * 2 << 4 | 6 >= _ @ 7 ^ 2;
       left: (infix
         left: (infix
           left: (int)
-          operator: (add_op)
+          operator: (add)
           right: (infix
-            left: (infix left: (int) operator: (mult_op) right: (int))
-            operator: (lshift_op)
+            left: (infix left: (int) operator: (mult) right: (int))
+            operator: (lshift)
             right: (int)))
-        operator: (or_op)
+        operator: (or)
         right: (int))
-      operator: (ge_op)
+      operator: (ge)
       right: (infix
-        left: (infix left: (wire) operator: (delay_op) right: (int))
-        operator: (pow_op)
+        left: (infix left: (wire) operator: (delay) right: (int))
+        operator: (pow)
         right: (int)))))
 
 ====
@@ -37,11 +37,11 @@ process = |(*(2,3), @(_', 2)) : mem;
     name: (identifier)
     value: (sequential
       left: (prefix
-        operator: (or_op)
-        left: (prefix operator: (mult_op) left: (int) right: (int))
+        operator: (or)
+        left: (prefix operator: (mult) left: (int) right: (int))
         right: (prefix
-          operator: (delay_op)
-          left: (modifier operand: (wire) operator: (one_sample_delay_op))
+          operator: (delay)
+          left: (modifier operand: (wire) operator: (one_sample_delay))
           right: (int)))
       right: (mem))))
 
@@ -57,11 +57,11 @@ process = |(*(2), @(_')) : mem;
     name: (identifier)
     value: (sequential
       left: (prefix
-        operator: (or_op)
-        left: (partial operator: (mult_op) operand: (int))
+        operator: (or)
+        left: (partial operator: (mult) operand: (int))
         right: (partial
-          operator: (delay_op)
-          operand: (modifier operand: (wire) operator: (one_sample_delay_op))))
+          operator: (delay)
+          operand: (modifier operand: (wire) operator: (one_sample_delay))))
       right: (mem))))
 
 ====
@@ -76,39 +76,39 @@ binary = pow(min(max(fmod(remainder(atan2(1.0, 2.0), 3.0), 4.0), 5.0), 6.0), _);
 (program
   (definition
     (identifier)
-    (prim1 (exp_op)
-      (prim1 (log_op)
-        (prim1 (log10_op)
-          (prim1 (sqrt_op)
-            (prim1 (abs_op)
-              (prim1 (floor_op)
-                (prim1 (ceil_op)
-                  (prim1 (rint_op)
-                    (prim1 (round_op)
+    (prim1 (exp)
+      (prim1 (log)
+        (prim1 (log10)
+          (prim1 (sqrt)
+            (prim1 (abs)
+              (prim1 (floor)
+                (prim1 (ceil)
+                  (prim1 (rint)
+                    (prim1 (round)
                       (prim1
                         (float_cast)
                         (prim1 (int_cast) (real)))))))))))))
   (definition
     (identifier)
-    (prim1 (acos_op)
-      (prim1 (asin_op)
-        (prim1 (atan_op)
-          (prim1 (cos_op)
-            (prim1 (sin_op)
-              (prim1 (tan_op) (real))))))))
+    (prim1 (acos)
+      (prim1 (asin)
+        (prim1 (atan)
+          (prim1 (cos)
+            (prim1 (sin)
+              (prim1 (tan) (real))))))))
   (definition
     (identifier)
-    (prim2 (pow_fun_op)
+    (prim2 (pow_fun)
       (arguments
-        (prim2 (min_op)
+        (prim2 (min)
           (arguments
-            (prim2 (max_op)
+            (prim2 (max)
               (arguments
-                (prim2 (fmod_op)
+                (prim2 (fmod)
                   (arguments
-                    (prim2 (remainder_op)
+                    (prim2 (remainder)
                       (arguments
-                        (prim2 (atan2_op)
+                        (prim2 (atan2)
                           (arguments (real) (real)))
                         (real)))
                     (real)))
@@ -126,14 +126,14 @@ process = prefix(attach(enable(control(1, 2), 3), 4), _);
 (program
   (definition
     (identifier)
-    (prim2 (prefix_op)
+    (prim2 (prefix_prim)
       (arguments
-        (prim2 (attach_op)
+        (prim2 (attach)
           (arguments
-            (prim2 (enable_op)
+            (prim2 (enable)
               (arguments
                 (prim2
-                  (control_op)
+                  (control)
                   (arguments (int) (int)))
                 (int)))
             (int)))

@@ -19,8 +19,8 @@ process = par(i, nHarmonics, _) :> /(nHarmonics) * si.smoo;
         num_iters: (identifier)
         expression: (wire))
       right: (infix
-        left: (partial operator: (div_op) operand: (identifier))
-        operator: (mult_op)
+        left: (partial operator: (div) operand: (identifier))
+        operator: (mult)
         right: (access
           environment: (identifier)
           definition: (identifier))))))
@@ -68,9 +68,9 @@ process = sum(i, nHarmonics, _)/(nHarmonics) * si.smoo;
           current_iter: (identifier)
           num_iters: (identifier)
           expression: (wire))
-        operator: (div_op)
+        operator: (div)
         right: (identifier))
-      operator: (mult_op)
+      operator: (mult)
       right: (access
         environment: (identifier)
         definition: (identifier)))))
@@ -95,7 +95,7 @@ process = prod(i, nOscs, _) * si.smoo;
             current_iter: (identifier)
             num_iters: (identifier)
             expression: (wire))
-          operator: (mult_op)
+          operator: (mult)
           right: (access
             environment: (identifier)
             definition: (identifier)))))

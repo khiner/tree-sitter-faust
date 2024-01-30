@@ -234,7 +234,7 @@
                 "name": "operator",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "delay_op"
+                  "name": "delay"
                 }
               },
               {
@@ -267,7 +267,7 @@
                 "name": "operator",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "pow_op"
+                  "name": "pow"
                 }
               },
               {
@@ -303,15 +303,15 @@
                   "members": [
                     {
                       "type": "SYMBOL",
-                      "name": "mult_op"
+                      "name": "mult"
                     },
                     {
                       "type": "SYMBOL",
-                      "name": "div_op"
+                      "name": "div"
                     },
                     {
                       "type": "SYMBOL",
-                      "name": "mod_op"
+                      "name": "mod"
                     }
                   ]
                 }
@@ -349,11 +349,11 @@
                   "members": [
                     {
                       "type": "SYMBOL",
-                      "name": "add_op"
+                      "name": "add"
                     },
                     {
                       "type": "SYMBOL",
-                      "name": "sub_op"
+                      "name": "sub"
                     }
                   ]
                 }
@@ -391,19 +391,19 @@
                   "members": [
                     {
                       "type": "SYMBOL",
-                      "name": "and_op"
+                      "name": "and"
                     },
                     {
                       "type": "SYMBOL",
-                      "name": "xor_op"
+                      "name": "xor"
                     },
                     {
                       "type": "SYMBOL",
-                      "name": "lshift_op"
+                      "name": "lshift"
                     },
                     {
                       "type": "SYMBOL",
-                      "name": "rshift_op"
+                      "name": "rshift"
                     }
                   ]
                 }
@@ -438,7 +438,7 @@
                 "name": "operator",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "or_op"
+                  "name": "or"
                 }
               },
               {
@@ -474,27 +474,27 @@
                   "members": [
                     {
                       "type": "SYMBOL",
-                      "name": "lt_op"
+                      "name": "lt"
                     },
                     {
                       "type": "SYMBOL",
-                      "name": "le_op"
+                      "name": "le"
                     },
                     {
                       "type": "SYMBOL",
-                      "name": "gt_op"
+                      "name": "gt"
                     },
                     {
                       "type": "SYMBOL",
-                      "name": "ge_op"
+                      "name": "ge"
                     },
                     {
                       "type": "SYMBOL",
-                      "name": "eq_op"
+                      "name": "eq"
                     },
                     {
                       "type": "SYMBOL",
-                      "name": "neq_op"
+                      "name": "neq"
                     }
                   ]
                 }
@@ -523,7 +523,7 @@
             "name": "operator",
             "content": {
               "type": "SYMBOL",
-              "name": "_infix_op"
+              "name": "_infix"
             }
           },
           {
@@ -568,7 +568,7 @@
             "name": "operator",
             "content": {
               "type": "SYMBOL",
-              "name": "_infix_op"
+              "name": "_infix"
             }
           },
           {
@@ -700,7 +700,7 @@
             "name": "operator",
             "content": {
               "type": "SYMBOL",
-              "name": "_modifier_op"
+              "name": "_modifier"
             }
           }
         ]
@@ -756,7 +756,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_infix_op"
+          "name": "_infix"
         },
         {
           "type": "SYMBOL",
@@ -1442,80 +1442,80 @@
         }
       ]
     },
-    "_infix_op": {
+    "_infix": {
       "type": "CHOICE",
       "members": [
         {
           "type": "SYMBOL",
-          "name": "add_op"
+          "name": "add"
         },
         {
           "type": "SYMBOL",
-          "name": "sub_op"
+          "name": "sub"
         },
         {
           "type": "SYMBOL",
-          "name": "mult_op"
+          "name": "mult"
         },
         {
           "type": "SYMBOL",
-          "name": "div_op"
+          "name": "div"
         },
         {
           "type": "SYMBOL",
-          "name": "mod_op"
+          "name": "mod"
         },
         {
           "type": "SYMBOL",
-          "name": "pow_op"
+          "name": "pow"
         },
         {
           "type": "SYMBOL",
-          "name": "or_op"
+          "name": "or"
         },
         {
           "type": "SYMBOL",
-          "name": "and_op"
+          "name": "and"
         },
         {
           "type": "SYMBOL",
-          "name": "xor_op"
+          "name": "xor"
         },
         {
           "type": "SYMBOL",
-          "name": "lshift_op"
+          "name": "lshift"
         },
         {
           "type": "SYMBOL",
-          "name": "rshift_op"
+          "name": "rshift"
         },
         {
           "type": "SYMBOL",
-          "name": "lt_op"
+          "name": "lt"
         },
         {
           "type": "SYMBOL",
-          "name": "le_op"
+          "name": "le"
         },
         {
           "type": "SYMBOL",
-          "name": "gt_op"
+          "name": "gt"
         },
         {
           "type": "SYMBOL",
-          "name": "ge_op"
+          "name": "ge"
         },
         {
           "type": "SYMBOL",
-          "name": "eq_op"
+          "name": "eq"
         },
         {
           "type": "SYMBOL",
-          "name": "neq_op"
+          "name": "neq"
         },
         {
           "type": "SYMBOL",
-          "name": "delay_op"
+          "name": "delay"
         }
       ]
     },
@@ -1532,63 +1532,63 @@
         },
         {
           "type": "SYMBOL",
-          "name": "exp_op"
+          "name": "exp"
         },
         {
           "type": "SYMBOL",
-          "name": "log_op"
+          "name": "log"
         },
         {
           "type": "SYMBOL",
-          "name": "log10_op"
+          "name": "log10"
         },
         {
           "type": "SYMBOL",
-          "name": "sqrt_op"
+          "name": "sqrt"
         },
         {
           "type": "SYMBOL",
-          "name": "abs_op"
+          "name": "abs"
         },
         {
           "type": "SYMBOL",
-          "name": "floor_op"
+          "name": "floor"
         },
         {
           "type": "SYMBOL",
-          "name": "ceil_op"
+          "name": "ceil"
         },
         {
           "type": "SYMBOL",
-          "name": "rint_op"
+          "name": "rint"
         },
         {
           "type": "SYMBOL",
-          "name": "round_op"
+          "name": "round"
         },
         {
           "type": "SYMBOL",
-          "name": "acos_op"
+          "name": "acos"
         },
         {
           "type": "SYMBOL",
-          "name": "asin_op"
+          "name": "asin"
         },
         {
           "type": "SYMBOL",
-          "name": "atan_op"
+          "name": "atan"
         },
         {
           "type": "SYMBOL",
-          "name": "cos_op"
+          "name": "cos"
         },
         {
           "type": "SYMBOL",
-          "name": "sin_op"
+          "name": "sin"
         },
         {
           "type": "SYMBOL",
-          "name": "tan_op"
+          "name": "tan"
         }
       ]
     },
@@ -1597,180 +1597,184 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "pow_fun_op"
+          "name": "pow_fun"
         },
         {
           "type": "SYMBOL",
-          "name": "min_op"
+          "name": "min"
         },
         {
           "type": "SYMBOL",
-          "name": "max_op"
+          "name": "max"
         },
         {
           "type": "SYMBOL",
-          "name": "fmod_op"
+          "name": "fmod"
         },
         {
           "type": "SYMBOL",
-          "name": "remainder_op"
+          "name": "remainder"
         },
         {
           "type": "SYMBOL",
-          "name": "atan2_op"
+          "name": "atan2"
         },
         {
           "type": "SYMBOL",
-          "name": "prefix_op"
+          "name": "prefix_prim"
         },
         {
           "type": "SYMBOL",
-          "name": "attach_op"
+          "name": "attach"
         },
         {
           "type": "SYMBOL",
-          "name": "enable_op"
+          "name": "enable"
         },
         {
           "type": "SYMBOL",
-          "name": "control_op"
+          "name": "control"
         }
       ]
     },
-    "_modifier_op": {
+    "_modifier": {
       "type": "CHOICE",
       "members": [
         {
           "type": "SYMBOL",
-          "name": "one_sample_delay_op"
+          "name": "one_sample_delay"
         }
       ]
     },
-    "add_op": {
+    "add": {
       "type": "STRING",
       "value": "+"
     },
-    "sub_op": {
+    "sub": {
       "type": "STRING",
       "value": "-"
     },
-    "mult_op": {
+    "mult": {
       "type": "STRING",
       "value": "*"
     },
-    "div_op": {
+    "div": {
       "type": "STRING",
       "value": "/"
     },
-    "mod_op": {
+    "mod": {
       "type": "STRING",
       "value": "%"
     },
-    "pow_op": {
+    "pow": {
       "type": "STRING",
       "value": "^"
     },
-    "or_op": {
+    "or": {
       "type": "STRING",
       "value": "|"
     },
-    "and_op": {
+    "and": {
       "type": "STRING",
       "value": "&"
     },
-    "xor_op": {
+    "xor": {
       "type": "STRING",
       "value": "xor"
     },
-    "lshift_op": {
+    "lshift": {
       "type": "STRING",
       "value": "<<"
     },
-    "rshift_op": {
+    "rshift": {
       "type": "STRING",
       "value": ">>"
     },
-    "lt_op": {
+    "lt": {
       "type": "STRING",
       "value": "<"
     },
-    "le_op": {
+    "le": {
       "type": "STRING",
       "value": "<="
     },
-    "gt_op": {
+    "gt": {
       "type": "STRING",
       "value": ">"
     },
-    "ge_op": {
+    "ge": {
       "type": "STRING",
       "value": ">="
     },
-    "eq_op": {
+    "eq": {
       "type": "STRING",
       "value": "=="
     },
-    "neq_op": {
+    "neq": {
       "type": "STRING",
       "value": "!="
     },
-    "exp_op": {
+    "delay": {
+      "type": "STRING",
+      "value": "@"
+    },
+    "exp": {
       "type": "STRING",
       "value": "exp"
     },
-    "log_op": {
+    "log": {
       "type": "STRING",
       "value": "log"
     },
-    "log10_op": {
+    "log10": {
       "type": "STRING",
       "value": "log10"
     },
-    "sqrt_op": {
+    "sqrt": {
       "type": "STRING",
       "value": "sqrt"
     },
-    "abs_op": {
+    "abs": {
       "type": "STRING",
       "value": "abs"
     },
-    "floor_op": {
+    "floor": {
       "type": "STRING",
       "value": "floor"
     },
-    "ceil_op": {
+    "ceil": {
       "type": "STRING",
       "value": "ceil"
     },
-    "rint_op": {
+    "rint": {
       "type": "STRING",
       "value": "rint"
     },
-    "round_op": {
+    "round": {
       "type": "STRING",
       "value": "round"
     },
-    "acos_op": {
+    "acos": {
       "type": "STRING",
       "value": "acos"
     },
-    "asin_op": {
+    "asin": {
       "type": "STRING",
       "value": "asin"
     },
-    "atan_op": {
+    "atan": {
       "type": "STRING",
       "value": "atan"
     },
-    "cos_op": {
+    "cos": {
       "type": "STRING",
       "value": "cos"
     },
-    "sin_op": {
+    "sin": {
       "type": "STRING",
       "value": "sin"
     },
-    "tan_op": {
+    "tan": {
       "type": "STRING",
       "value": "tan"
     },
@@ -1782,51 +1786,47 @@
       "type": "STRING",
       "value": "float"
     },
-    "pow_fun_op": {
+    "pow_fun": {
       "type": "STRING",
       "value": "pow"
     },
-    "min_op": {
+    "min": {
       "type": "STRING",
       "value": "min"
     },
-    "max_op": {
+    "max": {
       "type": "STRING",
       "value": "max"
     },
-    "fmod_op": {
+    "fmod": {
       "type": "STRING",
       "value": "fmod"
     },
-    "remainder_op": {
+    "remainder": {
       "type": "STRING",
       "value": "remainder"
     },
-    "atan2_op": {
+    "atan2": {
       "type": "STRING",
       "value": "atan2"
     },
-    "delay_op": {
-      "type": "STRING",
-      "value": "@"
-    },
-    "prefix_op": {
+    "prefix_prim": {
       "type": "STRING",
       "value": "prefix"
     },
-    "attach_op": {
+    "attach": {
       "type": "STRING",
       "value": "attach"
     },
-    "enable_op": {
+    "enable": {
       "type": "STRING",
       "value": "enable"
     },
-    "control_op": {
+    "control": {
       "type": "STRING",
       "value": "control"
     },
-    "one_sample_delay_op": {
+    "one_sample_delay": {
       "type": "PREC",
       "value": 31,
       "content": {

@@ -53,31 +53,28 @@ module.exports = grammar({
     _infix_expression: $ =>
       choice($.infix, $.prefix, $.partial, $.prim1, $.prim2, $.function_call, $.modifier, $.access, $.substitution, $._primitive),
 
-    // **TODO**
-    // - Rename `{...}_op` rules to `{...}`._
-
     infix: $ =>
       choice(
-        define_infix($, $.delay_op, PREC.DELAY),
-        define_infix($, $.pow_op, PREC.EXPONENTIATION),
-        define_infix($, choice($.mult_op, $.div_op, $.mod_op), PREC.MULTIPLICATION),
-        define_infix($, choice($.add_op, $.sub_op), PREC.ADDITION),
-        define_infix($, choice($.and_op, $.xor_op, $.lshift_op, $.rshift_op), PREC.BITWISE),
-        define_infix($, $.or_op, PREC.BITWISE_OR),
-        define_infix($, choice($.lt_op, $.le_op, $.gt_op, $.ge_op, $.eq_op, $.neq_op), PREC.COMPARISON)
+        define_infix($, $.delay, PREC.DELAY),
+        define_infix($, $.pow, PREC.EXPONENTIATION),
+        define_infix($, choice($.mult, $.div, $.mod), PREC.MULTIPLICATION),
+        define_infix($, choice($.add, $.sub), PREC.ADDITION),
+        define_infix($, choice($.and, $.xor, $.lshift, $.rshift), PREC.BITWISE),
+        define_infix($, $.or, PREC.BITWISE_OR),
+        define_infix($, choice($.lt, $.le, $.gt, $.ge, $.eq, $.neq), PREC.COMPARISON)
       ),
     // Binary function call on infix operator
     prefix: $ =>
-      prec(PREC.FUNCTION_CALL, seq(field('operator', $._infix_op), '(', field('left', $._argument), ',', field('right', $._argument), ')')),
+      prec(PREC.FUNCTION_CALL, seq(field('operator', $._infix), '(', field('left', $._argument), ',', field('right', $._argument), ')')),
     // Unary function call on infix operator
-    partial: $ => prec(PREC.FUNCTION_CALL, seq(field('operator', $._infix_op), '(', field('operand', $._argument), ')')),
+    partial: $ => prec(PREC.FUNCTION_CALL, seq(field('operator', $._infix), '(', field('operand', $._argument), ')')),
     // Unary function call on non-infix primitive
     prim1: $ => prec(PREC.FUNCTION_CALL, seq(field('primitive', $._prim1), '(', field('argument', $._argument), ')')),
     // Binary function call on non-infix primitive
     prim2: $ => prec(PREC.FUNCTION_CALL, seq(field('primitive', $._prim2), '(', $.arguments, ')')),
     // Arbitrary non-primitive function call
     function_call: $ => prec(PREC.FUNCTION_CALL, seq(field('callee', $._infix_expression), '(', $.arguments, ')')),
-    modifier: $ => prec(PREC.ACCESS, seq(field('operand', $._infix_expression), field('operator', $._modifier_op))),
+    modifier: $ => prec(PREC.ACCESS, seq(field('operand', $._infix_expression), field('operator', $._modifier))),
 
     access: $ => prec(PREC.ACCESS, seq(field('environment', $._infix_expression), '.', field('definition', $.identifier))),
 
@@ -87,7 +84,7 @@ module.exports = grammar({
         $.wire,
         $.cut,
         $.mem,
-        $._infix_op,
+        $._infix,
         $._prim1,
         $._prim2,
         seq(optional('-'), $.identifier),
@@ -141,26 +138,26 @@ module.exports = grammar({
 
     // Infix operators are built-in binary primitives that can be used in infix notation.
     // https://faustdoc.grame.fr/manual/syntax/#infix-operators
-    _infix_op: $ =>
+    _infix: $ =>
       choice(
-        $.add_op,
-        $.sub_op,
-        $.mult_op,
-        $.div_op,
-        $.mod_op,
-        $.pow_op,
-        $.or_op,
-        $.and_op,
-        $.xor_op,
-        $.lshift_op,
-        $.rshift_op,
-        $.lt_op,
-        $.le_op,
-        $.gt_op,
-        $.ge_op,
-        $.eq_op,
-        $.neq_op,
-        $.delay_op
+        $.add,
+        $.sub,
+        $.mult,
+        $.div,
+        $.mod,
+        $.pow,
+        $.or,
+        $.and,
+        $.xor,
+        $.lshift,
+        $.rshift,
+        $.lt,
+        $.le,
+        $.gt,
+        $.ge,
+        $.eq,
+        $.neq,
+        $.delay
       ),
 
     // Unary primitive
@@ -168,91 +165,91 @@ module.exports = grammar({
       choice(
         $.int_cast,
         $.float_cast,
-        $.exp_op,
-        $.log_op,
-        $.log10_op,
-        $.sqrt_op,
-        $.abs_op,
-        $.floor_op,
-        $.ceil_op,
-        $.rint_op,
-        $.round_op,
-        $.acos_op,
-        $.asin_op,
-        $.atan_op,
-        $.cos_op,
-        $.sin_op,
-        $.tan_op
+        $.exp,
+        $.log,
+        $.log10,
+        $.sqrt,
+        $.abs,
+        $.floor,
+        $.ceil,
+        $.rint,
+        $.round,
+        $.acos,
+        $.asin,
+        $.atan,
+        $.cos,
+        $.sin,
+        $.tan
       ),
     // (Non-infix) binary primitive
-    _prim2: $ =>
-      choice($.pow_fun_op, $.min_op, $.max_op, $.fmod_op, $.remainder_op, $.atan2_op, $.prefix_op, $.attach_op, $.enable_op, $.control_op),
-    _modifier_op: $ => choice($.one_sample_delay_op),
+    _prim2: $ => choice($.pow_fun, $.min, $.max, $.fmod, $.remainder, $.atan2, $.prefix_prim, $.attach, $.enable, $.control),
+    _modifier: $ => choice($.one_sample_delay),
 
     /** Infix primitives **/
     // Math
-    add_op: _ => '+',
-    sub_op: _ => '-',
-    mult_op: _ => '*',
-    div_op: _ => '/',
-    mod_op: _ => '%',
-    pow_op: _ => '^',
+    add: _ => '+',
+    sub: _ => '-',
+    mult: _ => '*',
+    div: _ => '/',
+    mod: _ => '%',
+    pow: _ => '^',
     // Bitwise
-    or_op: _ => '|',
-    and_op: _ => '&',
-    xor_op: _ => 'xor',
-    lshift_op: _ => '<<',
-    rshift_op: _ => '>>',
+    or: _ => '|',
+    and: _ => '&',
+    xor: _ => 'xor',
+    lshift: _ => '<<',
+    rshift: _ => '>>',
     // Comparison
-    lt_op: _ => '<',
-    le_op: _ => '<=',
-    gt_op: _ => '>',
-    ge_op: _ => '>=',
-    eq_op: _ => '==',
-    neq_op: _ => '!=',
+    lt: _ => '<',
+    le: _ => '<=',
+    gt: _ => '>',
+    ge: _ => '>=',
+    eq: _ => '==',
+    neq: _ => '!=',
+    // Special
+    delay: _ => '@',
 
     /** Non-infix primitives */
 
     /* Unary */
     // Math
-    exp_op: _ => 'exp',
-    log_op: _ => 'log',
-    log10_op: _ => 'log10',
-    sqrt_op: _ => 'sqrt',
-    abs_op: _ => 'abs',
-    floor_op: _ => 'floor',
-    ceil_op: _ => 'ceil',
-    rint_op: _ => 'rint',
-    round_op: _ => 'round',
+    exp: _ => 'exp',
+    log: _ => 'log',
+    log10: _ => 'log10',
+    sqrt: _ => 'sqrt',
+    abs: _ => 'abs',
+    floor: _ => 'floor',
+    ceil: _ => 'ceil',
+    rint: _ => 'rint',
+    round: _ => 'round',
     // Trig
-    acos_op: _ => 'acos',
-    asin_op: _ => 'asin',
-    atan_op: _ => 'atan',
-    cos_op: _ => 'cos',
-    sin_op: _ => 'sin',
-    tan_op: _ => 'tan',
+    acos: _ => 'acos',
+    asin: _ => 'asin',
+    atan: _ => 'atan',
+    cos: _ => 'cos',
+    sin: _ => 'sin',
+    tan: _ => 'tan',
     // Type casting
     int_cast: _ => 'int',
     float_cast: _ => 'float',
 
     /* Binary */
     // Math
-    pow_fun_op: _ => 'pow',
-    min_op: _ => 'min',
-    max_op: _ => 'max',
-    fmod_op: _ => 'fmod',
-    remainder_op: _ => 'remainder',
+    pow_fun: _ => 'pow',
+    min: _ => 'min',
+    max: _ => 'max',
+    fmod: _ => 'fmod',
+    remainder: _ => 'remainder',
     // Trig
-    atan2_op: _ => 'atan2',
+    atan2: _ => 'atan2',
     // Special
-    delay_op: _ => '@',
-    prefix_op: _ => 'prefix',
-    attach_op: _ => 'attach',
-    enable_op: _ => 'enable',
-    control_op: _ => 'control',
+    prefix_prim: _ => 'prefix',
+    attach: _ => 'attach',
+    enable: _ => 'enable',
+    control: _ => 'control',
 
     /* Modifiers */
-    one_sample_delay_op: _ => prec(PREC.MODIFIER, "'"),
+    one_sample_delay: _ => prec(PREC.MODIFIER, "'"),
 
     /* Primitives */
     wire: _ => '_',
