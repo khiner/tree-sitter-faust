@@ -1708,14 +1708,6 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "int_cast"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "float_cast"
-        },
-        {
-          "type": "SYMBOL",
           "name": "exp"
         },
         {
@@ -1773,6 +1765,22 @@
         {
           "type": "SYMBOL",
           "name": "tan"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "int_cast"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "float_cast"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "lowest"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "highest"
         }
       ]
     },
@@ -1831,6 +1839,10 @@
         {
           "type": "SYMBOL",
           "name": "select2"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "assertbounds"
         }
       ]
     },
@@ -2060,6 +2072,34 @@
     "mem": {
       "type": "STRING",
       "value": "mem"
+    },
+    "rdtable": {
+      "type": "STRING",
+      "value": "rdtable"
+    },
+    "rwtable": {
+      "type": "STRING",
+      "value": "rwtable"
+    },
+    "select2": {
+      "type": "STRING",
+      "value": "select2"
+    },
+    "select3": {
+      "type": "STRING",
+      "value": "select3"
+    },
+    "lowest": {
+      "type": "STRING",
+      "value": "lowest"
+    },
+    "highest": {
+      "type": "STRING",
+      "value": "highest"
+    },
+    "assertbounds": {
+      "type": "STRING",
+      "value": "assertbounds"
     },
     "_number": {
       "type": "CHOICE",
@@ -2296,22 +2336,6 @@
           }
         ]
       }
-    },
-    "rdtable": {
-      "type": "STRING",
-      "value": "rdtable"
-    },
-    "rwtable": {
-      "type": "STRING",
-      "value": "rwtable"
-    },
-    "select2": {
-      "type": "STRING",
-      "value": "select2"
-    },
-    "select3": {
-      "type": "STRING",
-      "value": "select3"
     },
     "documentation": {
       "type": "SEQ",

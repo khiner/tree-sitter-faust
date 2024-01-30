@@ -62,6 +62,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -146,6 +150,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -179,6 +187,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -390,6 +402,10 @@
           "named": true
         },
         {
+          "type": "assertbounds",
+          "named": true
+        },
+        {
           "type": "atan",
           "named": true
         },
@@ -470,6 +486,10 @@
           "named": true
         },
         {
+          "type": "highest",
+          "named": true
+        },
+        {
           "type": "id",
           "named": true
         },
@@ -503,6 +523,10 @@
         },
         {
           "type": "log10",
+          "named": true
+        },
+        {
+          "type": "lowest",
           "named": true
         },
         {
@@ -774,6 +798,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -858,6 +886,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -891,6 +923,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -1182,6 +1218,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -1266,6 +1306,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -1299,6 +1343,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -1550,6 +1598,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -1634,6 +1686,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -1667,6 +1723,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -1979,6 +2039,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -2063,6 +2127,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -2096,6 +2164,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -2399,6 +2471,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -2483,6 +2559,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -2516,6 +2596,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -2757,6 +2841,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -2841,6 +2929,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -2874,6 +2966,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -3099,6 +3195,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -3183,6 +3283,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -3216,6 +3320,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -3485,6 +3593,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -3569,6 +3681,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -3602,6 +3718,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -3843,6 +3963,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -3927,6 +4051,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -3960,6 +4088,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -4185,6 +4317,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -4269,6 +4405,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -4302,6 +4442,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -4533,6 +4677,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -4617,6 +4765,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -4650,6 +4802,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -4891,6 +5047,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -4975,6 +5135,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -5008,6 +5172,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -5255,6 +5423,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -5339,6 +5511,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -5372,6 +5548,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -5618,6 +5798,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -5702,6 +5886,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -5735,6 +5923,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -5960,6 +6152,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -6044,6 +6240,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -6077,6 +6277,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -6328,6 +6532,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -6412,6 +6620,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -6445,6 +6657,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -6770,6 +6986,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -6854,6 +7074,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -6887,6 +7111,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -7206,6 +7434,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -7290,6 +7522,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -7323,6 +7559,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -7570,6 +7810,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -7654,6 +7898,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -7687,6 +7935,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -7920,6 +8172,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "int_cast",
             "named": true
           },
@@ -7929,6 +8185,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -8025,6 +8285,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "assertbounds",
+            "named": true
+          },
           {
             "type": "rdtable",
             "named": true
@@ -8214,6 +8478,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -8298,6 +8566,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -8331,6 +8603,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -8572,6 +8848,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -8656,6 +8936,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -8689,6 +8973,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -8914,6 +9202,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -8998,6 +9290,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -9031,6 +9327,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -9262,6 +9562,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -9346,6 +9650,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -9379,6 +9687,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -9620,6 +9932,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -9704,6 +10020,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -9737,6 +10057,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -9984,6 +10308,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -10068,6 +10396,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -10101,6 +10433,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -10326,6 +10662,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -10410,6 +10750,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -10443,6 +10787,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -10674,6 +11022,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -10758,6 +11110,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -10791,6 +11147,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -11032,6 +11392,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -11116,6 +11480,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -11149,6 +11517,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -11396,6 +11768,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -11480,6 +11856,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -11513,6 +11893,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -11738,6 +12122,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -11822,6 +12210,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -11855,6 +12247,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -12086,6 +12482,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -12170,6 +12570,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -12203,6 +12607,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -12444,6 +12852,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -12528,6 +12940,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -12561,6 +12977,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -12813,6 +13233,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -12897,6 +13321,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -12930,6 +13358,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -13217,6 +13649,10 @@
             "named": true
           },
           {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
             "type": "atan",
             "named": true
           },
@@ -13301,6 +13737,10 @@
             "named": true
           },
           {
+            "type": "highest",
+            "named": true
+          },
+          {
             "type": "id",
             "named": true
           },
@@ -13334,6 +13774,10 @@
           },
           {
             "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
             "named": true
           },
           {
@@ -13647,6 +14091,10 @@
     "named": true
   },
   {
+    "type": "assertbounds",
+    "named": true
+  },
+  {
     "type": "atan",
     "named": true
   },
@@ -13739,6 +14187,10 @@
     "named": true
   },
   {
+    "type": "highest",
+    "named": true
+  },
+  {
     "type": "import",
     "named": false
   },
@@ -13764,6 +14216,10 @@
   },
   {
     "type": "log10",
+    "named": true
+  },
+  {
+    "type": "lowest",
     "named": true
   },
   {

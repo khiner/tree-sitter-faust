@@ -181,8 +181,6 @@ module.exports = grammar({
     // Unary primitive
     _prim1: $ =>
       choice(
-        $.int_cast,
-        $.float_cast,
         $.exp,
         $.log,
         $.log10,
@@ -197,11 +195,17 @@ module.exports = grammar({
         $.atan,
         $.cos,
         $.sin,
-        $.tan
+        $.tan,
+
+        $.int_cast,
+        $.float_cast,
+
+        $.lowest,
+        $.highest
       ),
     // (Non-infix) binary primitive
     _prim2: $ => choice($.pow_fun, $.min, $.max, $.fmod, $.remainder, $.atan2, $.prefix_prim, $.attach, $.enable, $.control),
-    _prim3: $ => choice($.rdtable, $.select2),
+    _prim3: $ => choice($.rdtable, $.select2, $.assertbounds),
     _prim4: $ => choice($.select3),
     _prim5: $ => choice($.rwtable),
 
@@ -234,6 +238,7 @@ module.exports = grammar({
     delay: _ => '@',
 
     /** Non-infix primitives **/
+
     /* Unary */
     // Math
     exp: _ => 'exp',
@@ -255,6 +260,7 @@ module.exports = grammar({
     // Type casting
     int_cast: _ => 'int',
     float_cast: _ => 'float',
+
     /* Binary */
     // Math
     pow_fun: _ => 'pow',
@@ -270,10 +276,21 @@ module.exports = grammar({
     enable: _ => 'enable',
     control: _ => 'control',
 
-    /** Other primitives **/
+    /* Other primitives */
     wire: _ => '_',
     cut: _ => '!',
     mem: _ => 'mem',
+
+    rdtable: _ => 'rdtable',
+    rwtable: _ => 'rwtable',
+    select2: _ => 'select2',
+    select3: _ => 'select3',
+
+    // These primitives are not documented or used anywhere, but they are in the Faust Bison grammar.
+    // They come from the [Adding Feature guide](https://github.com/grame-cncm/faust/blob/master-dev/adding-feature.md).
+    lowest: _ => 'lowest', // prim1
+    highest: _ => 'highest', // prim1
+    assertbounds: _ => 'assertbounds', // prim3
 
     _number: $ => choice($.int, $.real),
     int: _ => token(seq(sign, repeat1(decimal))),
@@ -289,11 +306,6 @@ module.exports = grammar({
         )
       );
     },
-
-    rdtable: _ => 'rdtable',
-    rwtable: _ => 'rwtable',
-    select2: _ => 'select2',
-    select3: _ => 'select3',
 
     documentation: $ => seq('<mdoc>', repeat($._doc_content), '</mdoc>'),
     _doc_content: $ => choice($._doc_char, $._special_doc_tag),
