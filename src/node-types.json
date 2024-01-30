@@ -26,14 +26,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -170,6 +162,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -239,10 +235,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -510,6 +502,10 @@
           "named": true
         },
         {
+          "type": "lambda",
+          "named": true
+        },
+        {
           "type": "le",
           "named": true
         },
@@ -583,10 +579,6 @@
         },
         {
           "type": "parallel",
-          "named": true
-        },
-        {
-          "type": "parameters",
           "named": true
         },
         {
@@ -766,14 +758,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -910,6 +894,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -979,10 +967,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -1186,14 +1170,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -1330,6 +1306,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -1399,10 +1379,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -1566,14 +1542,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -1710,6 +1678,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -1779,10 +1751,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -2007,14 +1975,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -2151,6 +2111,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -2220,10 +2184,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -2439,14 +2399,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -2583,6 +2535,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -2652,10 +2608,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -2809,14 +2761,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -2953,6 +2897,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -3022,10 +2970,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -3163,14 +3107,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -3307,6 +3243,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -3380,10 +3320,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -3545,10 +3481,10 @@
     }
   },
   {
-    "type": "letrec_environment",
+    "type": "lambda",
     "named": true,
     "fields": {
-      "expression": {
+      "value": {
         "multiple": true,
         "required": true,
         "types": [
@@ -3558,14 +3494,6 @@
           },
           {
             "type": ")",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
             "named": false
           },
           {
@@ -3705,6 +3633,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -3777,7 +3709,365 @@
             "named": true
           },
           {
-            "type": "parameters",
+            "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pow",
+            "named": true
+          },
+          {
+            "type": "pow_fun",
+            "named": true
+          },
+          {
+            "type": "prefix",
+            "named": true
+          },
+          {
+            "type": "prefix_prim",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
+            "named": true
+          },
+          {
+            "type": "prim3",
+            "named": true
+          },
+          {
+            "type": "prim4",
+            "named": true
+          },
+          {
+            "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "rdtable",
+            "named": true
+          },
+          {
+            "type": "real",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "remainder",
+            "named": true
+          },
+          {
+            "type": "rint",
+            "named": true
+          },
+          {
+            "type": "round",
+            "named": true
+          },
+          {
+            "type": "rshift",
+            "named": true
+          },
+          {
+            "type": "rwtable",
+            "named": true
+          },
+          {
+            "type": "select2",
+            "named": true
+          },
+          {
+            "type": "select3",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "sin",
+            "named": true
+          },
+          {
+            "type": "split",
+            "named": true
+          },
+          {
+            "type": "sqrt",
+            "named": true
+          },
+          {
+            "type": "sub",
+            "named": true
+          },
+          {
+            "type": "substitution",
+            "named": true
+          },
+          {
+            "type": "tan",
+            "named": true
+          },
+          {
+            "type": "wire",
+            "named": true
+          },
+          {
+            "type": "with_environment",
+            "named": true
+          },
+          {
+            "type": "xor",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "parameters",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "letrec_environment",
+    "named": true,
+    "fields": {
+      "expression": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "abs",
+            "named": true
+          },
+          {
+            "type": "access",
+            "named": true
+          },
+          {
+            "type": "acos",
+            "named": true
+          },
+          {
+            "type": "add",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": true
+          },
+          {
+            "type": "asin",
+            "named": true
+          },
+          {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
+            "type": "atan",
+            "named": true
+          },
+          {
+            "type": "atan2",
+            "named": true
+          },
+          {
+            "type": "attach",
+            "named": true
+          },
+          {
+            "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "component",
+            "named": true
+          },
+          {
+            "type": "control",
+            "named": true
+          },
+          {
+            "type": "cos",
+            "named": true
+          },
+          {
+            "type": "cut",
+            "named": true
+          },
+          {
+            "type": "delay",
+            "named": true
+          },
+          {
+            "type": "div",
+            "named": true
+          },
+          {
+            "type": "enable",
+            "named": true
+          },
+          {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
+            "type": "eq",
+            "named": true
+          },
+          {
+            "type": "exp",
+            "named": true
+          },
+          {
+            "type": "float_cast",
+            "named": true
+          },
+          {
+            "type": "floor",
+            "named": true
+          },
+          {
+            "type": "fmod",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "ge",
+            "named": true
+          },
+          {
+            "type": "gt",
+            "named": true
+          },
+          {
+            "type": "highest",
+            "named": true
+          },
+          {
+            "type": "id",
+            "named": true
+          },
+          {
+            "type": "infix",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          },
+          {
+            "type": "int_cast",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "lambda",
+            "named": true
+          },
+          {
+            "type": "le",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "log",
+            "named": true
+          },
+          {
+            "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
+            "named": true
+          },
+          {
+            "type": "lshift",
+            "named": true
+          },
+          {
+            "type": "lt",
+            "named": true
+          },
+          {
+            "type": "max",
+            "named": true
+          },
+          {
+            "type": "mem",
+            "named": true
+          },
+          {
+            "type": "merge",
+            "named": true
+          },
+          {
+            "type": "min",
+            "named": true
+          },
+          {
+            "type": "mod",
+            "named": true
+          },
+          {
+            "type": "modifier",
+            "named": true
+          },
+          {
+            "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
+            "named": true
+          },
+          {
+            "type": "neq",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": true
+          },
+          {
+            "type": "parallel",
             "named": true
           },
           {
@@ -3931,14 +4221,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -4075,6 +4357,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -4144,10 +4430,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -4285,14 +4567,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -4429,6 +4703,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -4498,10 +4776,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -4645,14 +4919,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -4789,6 +5055,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -4862,10 +5132,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -5015,14 +5281,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -5159,6 +5417,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -5232,10 +5494,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -5391,14 +5649,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -5535,6 +5785,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -5604,10 +5858,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -5781,14 +6031,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -5925,6 +6167,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -5994,10 +6240,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -6135,14 +6377,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -6279,6 +6513,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -6348,10 +6586,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -6515,14 +6749,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -6659,6 +6885,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -6732,10 +6962,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -6969,14 +7195,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -7113,6 +7331,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -7186,10 +7408,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -7417,14 +7635,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -7561,6 +7771,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -7634,10 +7848,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -7793,14 +8003,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -7937,6 +8139,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -8010,10 +8216,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -8461,14 +8663,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -8605,6 +8799,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -8674,10 +8872,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -8831,14 +9025,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -8975,6 +9161,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -9044,10 +9234,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -9185,14 +9371,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -9329,6 +9507,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -9398,10 +9580,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -9545,14 +9723,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -9689,6 +9859,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -9762,10 +9936,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -9915,14 +10085,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -10059,6 +10221,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -10132,10 +10298,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -10291,14 +10453,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -10435,6 +10589,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -10504,10 +10662,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -10645,14 +10799,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -10789,6 +10935,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -10858,10 +11008,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -11005,14 +11151,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -11149,6 +11287,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -11222,10 +11364,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -11375,14 +11513,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -11519,6 +11649,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -11592,10 +11726,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -11751,14 +11881,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -11895,6 +12017,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -11964,10 +12090,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -12105,14 +12227,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -12249,6 +12363,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -12318,10 +12436,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -12465,14 +12579,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -12609,6 +12715,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -12682,10 +12792,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -12835,14 +12941,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -12979,6 +13077,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -13052,10 +13154,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -13216,14 +13314,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -13360,6 +13450,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -13429,10 +13523,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {
@@ -13632,14 +13722,6 @@
             "named": false
           },
           {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": "\\",
-            "named": false
-          },
-          {
             "type": "abs",
             "named": true
           },
@@ -13776,6 +13858,10 @@
             "named": true
           },
           {
+            "type": "lambda",
+            "named": true
+          },
+          {
             "type": "le",
             "named": true
           },
@@ -13845,10 +13931,6 @@
           },
           {
             "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "parameters",
             "named": true
           },
           {

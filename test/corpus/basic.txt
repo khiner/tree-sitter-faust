@@ -57,6 +57,23 @@ identity ( var ) = var ;
   (function_definition (id) (parameters (parameter)) (id)))
 
 ====
+Lambda function definition
+====
+
+linear2db = \(x).(20*log10(x));
+
+---
+(program
+  (definition
+    name: (id)
+    value: (lambda
+      (parameters (parameter))
+      value: (infix
+        left: (int)
+        operator: (mult)
+        right: (prim1 primitive: (log10) argument: (id))))))
+
+====
 Metadata
 ====
 

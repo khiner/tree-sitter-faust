@@ -106,12 +106,13 @@ module.exports = grammar({
         $.negate_id,
         $.id,
         seq('(', $._expression, ')'),
-        seq('\\', '(', $.parameters, ')', '.', '(', $._expression, ')'),
+        $.lambda,
         $.iteration,
         seq('environment', $.environment),
         $.component
       ),
 
+    lambda: $ => seq('\\', '(', $.parameters, ')', '.', '(', field('value', $._expression), ')'),
     parameters: $ => sepBy(',', alias($.id, $.parameter)),
     arguments: $ => sepBy(',', $._argument),
 
