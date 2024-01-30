@@ -43,7 +43,7 @@ module.exports = grammar({
     global_metadata: $ => seq('declare', field('key', $.id), field('value', $.string)),
     function_metadata: $ => seq('declare', field('function_name', $.id), field('key', $.id), field('value', $.string)),
 
-    file_import: $ => seq(optional($.variants), 'import', '(', $.string, ')', ';'),
+    file_import: $ => seq(optional($.variants), 'import', '(', field('filename', $.string), ')', ';'),
 
     _expression: $ => choice($.with_environment, $.letrec_environment, $._binary_composition, $._infix_expression),
     _infix_expression: $ =>

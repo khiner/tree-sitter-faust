@@ -79,8 +79,8 @@ import("stdfaust.lib");
 import ( "stdfaust.lib" ) ;
 ---
 (program
-  (file_import (string))
-  (file_import (string)))
+  (file_import filename: (string))
+  (file_import filename: (string)))
 
 ====
 Variant

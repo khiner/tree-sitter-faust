@@ -1022,15 +1022,22 @@
   {
     "type": "file_import",
     "named": true,
-    "fields": {},
+    "fields": {
+      "filename": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
-      "multiple": true,
-      "required": true,
+      "multiple": false,
+      "required": false,
       "types": [
-        {
-          "type": "string",
-          "named": true
-        },
         {
           "type": "variants",
           "named": true
