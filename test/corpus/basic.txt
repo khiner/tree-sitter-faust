@@ -98,6 +98,38 @@ import ( "stdfaust.lib" ) ;
   (file_import (string)))
 
 ====
+Single variant
+====
+
+singleprecision int_part(idv) = idv : _,!;
+
+---
+(program
+  (variant)
+  (function_definition
+    (identifier)
+    (parameters
+      (parameter))
+    (sequential
+      (identifier)
+      (parallel (wire) (cut)))))
+
+====
+Two variants
+====
+
+doubleprecision quadprecision int_part(idv) = int(idv);
+
+---
+(program
+  (variant)
+  (variant)
+  (function_definition
+    (identifier)
+    (parameters (parameter))
+    (prim1 (int_cast) (identifier))))
+
+====
 Memory
 ====
 
@@ -113,7 +145,7 @@ process = var2';
     (identifier) (mem))
   (definition
     (identifier)
-    (prefix (delay_op) (identifier)))
+    (partial (delay_op) (identifier)))
   (definition
     (identifier)
     (modifier (identifier) (one_sample_delay_op))))

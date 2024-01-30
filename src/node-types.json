@@ -234,6 +234,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -247,6 +251,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -522,6 +534,10 @@
           "named": true
         },
         {
+          "type": "partial",
+          "named": true
+        },
+        {
           "type": "pow_fun_op",
           "named": true
         },
@@ -535,6 +551,14 @@
         },
         {
           "type": "prefix_op",
+          "named": true
+        },
+        {
+          "type": "prim1",
+          "named": true
+        },
+        {
+          "type": "prim2",
           "named": true
         },
         {
@@ -866,6 +890,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -879,6 +907,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -1217,6 +1253,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -1230,6 +1270,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -1545,6 +1593,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -1558,6 +1610,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -1930,6 +1990,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -1943,6 +2007,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -2310,6 +2382,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -2323,6 +2399,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -2628,6 +2712,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -2641,6 +2729,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -2934,6 +3030,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -2947,6 +3047,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -3276,6 +3384,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -3289,6 +3401,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -3594,6 +3714,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -3607,6 +3731,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -3896,6 +4028,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -3909,6 +4045,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -4208,6 +4352,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -4221,6 +4369,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -4526,6 +4682,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -4539,6 +4699,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -4846,6 +5014,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -4859,6 +5031,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -5169,6 +5349,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -5182,6 +5366,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -5471,6 +5663,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -5484,6 +5680,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -5575,7 +5779,7 @@
     }
   },
   {
-    "type": "prefix",
+    "type": "partial",
     "named": true,
     "fields": {
       "operand": {
@@ -5588,10 +5792,6 @@
           },
           {
             "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
             "named": false
           },
           {
@@ -5807,6 +6007,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -5820,6 +6024,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -5905,7 +6117,115 @@
         "required": true,
         "types": [
           {
+            "type": "add_op",
+            "named": true
+          },
+          {
+            "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "delay_op",
+            "named": true
+          },
+          {
+            "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "eq_op",
+            "named": true
+          },
+          {
+            "type": "ge_op",
+            "named": true
+          },
+          {
+            "type": "gt_op",
+            "named": true
+          },
+          {
+            "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "lshift_op",
+            "named": true
+          },
+          {
+            "type": "lt_op",
+            "named": true
+          },
+          {
+            "type": "mod_op",
+            "named": true
+          },
+          {
+            "type": "mult_op",
+            "named": true
+          },
+          {
+            "type": "neq_op",
+            "named": true
+          },
+          {
+            "type": "or_op",
+            "named": true
+          },
+          {
+            "type": "pow_op",
+            "named": true
+          },
+          {
+            "type": "rshift_op",
+            "named": true
+          },
+          {
+            "type": "sub_op",
+            "named": true
+          },
+          {
+            "type": "xor_op",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "prefix",
+    "named": true,
+    "fields": {
+      "left": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": ".",
+            "named": false
+          },
+          {
+            "type": "\\",
+            "named": false
+          },
+          {
             "type": "abs_op",
+            "named": true
+          },
+          {
+            "type": "access",
             "named": true
           },
           {
@@ -5941,11 +6261,19 @@
             "named": true
           },
           {
+            "type": "component",
+            "named": true
+          },
+          {
             "type": "control_op",
             "named": true
           },
           {
             "type": "cos_op",
+            "named": true
+          },
+          {
+            "type": "cut",
             "named": true
           },
           {
@@ -5958,6 +6286,14 @@
           },
           {
             "type": "enable_op",
+            "named": true
+          },
+          {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
             "named": true
           },
           {
@@ -5981,6 +6317,10 @@
             "named": true
           },
           {
+            "type": "function_call",
+            "named": true
+          },
+          {
             "type": "ge_op",
             "named": true
           },
@@ -5989,11 +6329,31 @@
             "named": true
           },
           {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "infix",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          },
+          {
             "type": "int_cast",
             "named": true
           },
           {
+            "type": "iteration",
+            "named": true
+          },
+          {
             "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
             "named": true
           },
           {
@@ -6017,11 +6377,27 @@
             "named": true
           },
           {
+            "type": "mem",
+            "named": true
+          },
+          {
+            "type": "merge",
+            "named": true
+          },
+          {
+            "type": "merge_arg",
+            "named": true
+          },
+          {
             "type": "min_op",
             "named": true
           },
           {
             "type": "mod_op",
+            "named": true
+          },
+          {
+            "type": "modifier",
             "named": true
           },
           {
@@ -6037,6 +6413,18 @@
             "named": true
           },
           {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "parameters",
+            "named": true
+          },
+          {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -6045,7 +6433,31 @@
             "named": true
           },
           {
+            "type": "prefix",
+            "named": true
+          },
+          {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
+            "named": true
+          },
+          {
+            "type": "real",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "recursive_arg",
             "named": true
           },
           {
@@ -6065,7 +6477,23 @@
             "named": true
           },
           {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "sequential_arg",
+            "named": true
+          },
+          {
             "type": "sin_op",
+            "named": true
+          },
+          {
+            "type": "split",
+            "named": true
+          },
+          {
+            "type": "split_arg",
             "named": true
           },
           {
@@ -6077,7 +6505,427 @@
             "named": true
           },
           {
+            "type": "substitution",
+            "named": true
+          },
+          {
             "type": "tan_op",
+            "named": true
+          },
+          {
+            "type": "wire",
+            "named": true
+          },
+          {
+            "type": "with_environment",
+            "named": true
+          },
+          {
+            "type": "xor_op",
+            "named": true
+          }
+        ]
+      },
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_op",
+            "named": true
+          },
+          {
+            "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "delay_op",
+            "named": true
+          },
+          {
+            "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "eq_op",
+            "named": true
+          },
+          {
+            "type": "ge_op",
+            "named": true
+          },
+          {
+            "type": "gt_op",
+            "named": true
+          },
+          {
+            "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "lshift_op",
+            "named": true
+          },
+          {
+            "type": "lt_op",
+            "named": true
+          },
+          {
+            "type": "mod_op",
+            "named": true
+          },
+          {
+            "type": "mult_op",
+            "named": true
+          },
+          {
+            "type": "neq_op",
+            "named": true
+          },
+          {
+            "type": "or_op",
+            "named": true
+          },
+          {
+            "type": "pow_op",
+            "named": true
+          },
+          {
+            "type": "rshift_op",
+            "named": true
+          },
+          {
+            "type": "sub_op",
+            "named": true
+          },
+          {
+            "type": "xor_op",
+            "named": true
+          }
+        ]
+      },
+      "right": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": ".",
+            "named": false
+          },
+          {
+            "type": "\\",
+            "named": false
+          },
+          {
+            "type": "abs_op",
+            "named": true
+          },
+          {
+            "type": "access",
+            "named": true
+          },
+          {
+            "type": "acos_op",
+            "named": true
+          },
+          {
+            "type": "add_op",
+            "named": true
+          },
+          {
+            "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "asin_op",
+            "named": true
+          },
+          {
+            "type": "atan2_op",
+            "named": true
+          },
+          {
+            "type": "atan_op",
+            "named": true
+          },
+          {
+            "type": "attach_op",
+            "named": true
+          },
+          {
+            "type": "ceil_op",
+            "named": true
+          },
+          {
+            "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
+            "named": true
+          },
+          {
+            "type": "cos_op",
+            "named": true
+          },
+          {
+            "type": "cut",
+            "named": true
+          },
+          {
+            "type": "delay_op",
+            "named": true
+          },
+          {
+            "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
+            "named": true
+          },
+          {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
+            "type": "eq_op",
+            "named": true
+          },
+          {
+            "type": "exp_op",
+            "named": true
+          },
+          {
+            "type": "float_cast",
+            "named": true
+          },
+          {
+            "type": "floor_op",
+            "named": true
+          },
+          {
+            "type": "fmod_op",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "ge_op",
+            "named": true
+          },
+          {
+            "type": "gt_op",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "infix",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          },
+          {
+            "type": "int_cast",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "log10_op",
+            "named": true
+          },
+          {
+            "type": "log_op",
+            "named": true
+          },
+          {
+            "type": "lshift_op",
+            "named": true
+          },
+          {
+            "type": "lt_op",
+            "named": true
+          },
+          {
+            "type": "max_op",
+            "named": true
+          },
+          {
+            "type": "mem",
+            "named": true
+          },
+          {
+            "type": "merge",
+            "named": true
+          },
+          {
+            "type": "merge_arg",
+            "named": true
+          },
+          {
+            "type": "min_op",
+            "named": true
+          },
+          {
+            "type": "mod_op",
+            "named": true
+          },
+          {
+            "type": "modifier",
+            "named": true
+          },
+          {
+            "type": "mult_op",
+            "named": true
+          },
+          {
+            "type": "neq_op",
+            "named": true
+          },
+          {
+            "type": "or_op",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "parameters",
+            "named": true
+          },
+          {
+            "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pow_fun_op",
+            "named": true
+          },
+          {
+            "type": "pow_op",
+            "named": true
+          },
+          {
+            "type": "prefix",
+            "named": true
+          },
+          {
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
+            "named": true
+          },
+          {
+            "type": "real",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "recursive_arg",
+            "named": true
+          },
+          {
+            "type": "remainder_op",
+            "named": true
+          },
+          {
+            "type": "rint_op",
+            "named": true
+          },
+          {
+            "type": "round_op",
+            "named": true
+          },
+          {
+            "type": "rshift_op",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "sequential_arg",
+            "named": true
+          },
+          {
+            "type": "sin_op",
+            "named": true
+          },
+          {
+            "type": "split",
+            "named": true
+          },
+          {
+            "type": "split_arg",
+            "named": true
+          },
+          {
+            "type": "sqrt_op",
+            "named": true
+          },
+          {
+            "type": "sub_op",
+            "named": true
+          },
+          {
+            "type": "substitution",
+            "named": true
+          },
+          {
+            "type": "tan_op",
+            "named": true
+          },
+          {
+            "type": "wire",
+            "named": true
+          },
+          {
+            "type": "with_environment",
             "named": true
           },
           {
@@ -6086,6 +6934,478 @@
           }
         ]
       }
+    }
+  },
+  {
+    "type": "prim1",
+    "named": true,
+    "fields": {
+      "argument": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": ".",
+            "named": false
+          },
+          {
+            "type": "\\",
+            "named": false
+          },
+          {
+            "type": "abs_op",
+            "named": true
+          },
+          {
+            "type": "access",
+            "named": true
+          },
+          {
+            "type": "acos_op",
+            "named": true
+          },
+          {
+            "type": "add_op",
+            "named": true
+          },
+          {
+            "type": "and_op",
+            "named": true
+          },
+          {
+            "type": "asin_op",
+            "named": true
+          },
+          {
+            "type": "atan2_op",
+            "named": true
+          },
+          {
+            "type": "atan_op",
+            "named": true
+          },
+          {
+            "type": "attach_op",
+            "named": true
+          },
+          {
+            "type": "ceil_op",
+            "named": true
+          },
+          {
+            "type": "component",
+            "named": true
+          },
+          {
+            "type": "control_op",
+            "named": true
+          },
+          {
+            "type": "cos_op",
+            "named": true
+          },
+          {
+            "type": "cut",
+            "named": true
+          },
+          {
+            "type": "delay_op",
+            "named": true
+          },
+          {
+            "type": "div_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
+            "named": true
+          },
+          {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
+            "type": "eq_op",
+            "named": true
+          },
+          {
+            "type": "exp_op",
+            "named": true
+          },
+          {
+            "type": "float_cast",
+            "named": true
+          },
+          {
+            "type": "floor_op",
+            "named": true
+          },
+          {
+            "type": "fmod_op",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "ge_op",
+            "named": true
+          },
+          {
+            "type": "gt_op",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "infix",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          },
+          {
+            "type": "int_cast",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "le_op",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "log10_op",
+            "named": true
+          },
+          {
+            "type": "log_op",
+            "named": true
+          },
+          {
+            "type": "lshift_op",
+            "named": true
+          },
+          {
+            "type": "lt_op",
+            "named": true
+          },
+          {
+            "type": "max_op",
+            "named": true
+          },
+          {
+            "type": "mem",
+            "named": true
+          },
+          {
+            "type": "merge",
+            "named": true
+          },
+          {
+            "type": "merge_arg",
+            "named": true
+          },
+          {
+            "type": "min_op",
+            "named": true
+          },
+          {
+            "type": "mod_op",
+            "named": true
+          },
+          {
+            "type": "modifier",
+            "named": true
+          },
+          {
+            "type": "mult_op",
+            "named": true
+          },
+          {
+            "type": "neq_op",
+            "named": true
+          },
+          {
+            "type": "or_op",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "parameters",
+            "named": true
+          },
+          {
+            "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pow_fun_op",
+            "named": true
+          },
+          {
+            "type": "pow_op",
+            "named": true
+          },
+          {
+            "type": "prefix",
+            "named": true
+          },
+          {
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
+            "named": true
+          },
+          {
+            "type": "real",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "recursive_arg",
+            "named": true
+          },
+          {
+            "type": "remainder_op",
+            "named": true
+          },
+          {
+            "type": "rint_op",
+            "named": true
+          },
+          {
+            "type": "round_op",
+            "named": true
+          },
+          {
+            "type": "rshift_op",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "sequential_arg",
+            "named": true
+          },
+          {
+            "type": "sin_op",
+            "named": true
+          },
+          {
+            "type": "split",
+            "named": true
+          },
+          {
+            "type": "split_arg",
+            "named": true
+          },
+          {
+            "type": "sqrt_op",
+            "named": true
+          },
+          {
+            "type": "sub_op",
+            "named": true
+          },
+          {
+            "type": "substitution",
+            "named": true
+          },
+          {
+            "type": "tan_op",
+            "named": true
+          },
+          {
+            "type": "wire",
+            "named": true
+          },
+          {
+            "type": "with_environment",
+            "named": true
+          },
+          {
+            "type": "xor_op",
+            "named": true
+          }
+        ]
+      },
+      "primitive": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "abs_op",
+            "named": true
+          },
+          {
+            "type": "acos_op",
+            "named": true
+          },
+          {
+            "type": "asin_op",
+            "named": true
+          },
+          {
+            "type": "atan_op",
+            "named": true
+          },
+          {
+            "type": "ceil_op",
+            "named": true
+          },
+          {
+            "type": "cos_op",
+            "named": true
+          },
+          {
+            "type": "exp_op",
+            "named": true
+          },
+          {
+            "type": "float_cast",
+            "named": true
+          },
+          {
+            "type": "floor_op",
+            "named": true
+          },
+          {
+            "type": "int_cast",
+            "named": true
+          },
+          {
+            "type": "log10_op",
+            "named": true
+          },
+          {
+            "type": "log_op",
+            "named": true
+          },
+          {
+            "type": "rint_op",
+            "named": true
+          },
+          {
+            "type": "round_op",
+            "named": true
+          },
+          {
+            "type": "sin_op",
+            "named": true
+          },
+          {
+            "type": "sqrt_op",
+            "named": true
+          },
+          {
+            "type": "tan_op",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "prim2",
+    "named": true,
+    "fields": {
+      "primitive": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "atan2_op",
+            "named": true
+          },
+          {
+            "type": "attach_op",
+            "named": true
+          },
+          {
+            "type": "control_op",
+            "named": true
+          },
+          {
+            "type": "enable_op",
+            "named": true
+          },
+          {
+            "type": "fmod_op",
+            "named": true
+          },
+          {
+            "type": "max_op",
+            "named": true
+          },
+          {
+            "type": "min_op",
+            "named": true
+          },
+          {
+            "type": "pow_fun_op",
+            "named": true
+          },
+          {
+            "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "remainder_op",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "arguments",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -6383,6 +7703,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -6396,6 +7720,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -6701,6 +8033,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -6714,6 +8050,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -7003,6 +8347,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -7016,6 +8364,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -7315,6 +8671,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -7328,6 +8688,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -7633,6 +9001,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -7646,6 +9018,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -7953,6 +9333,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -7966,6 +9350,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -8255,6 +9647,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -8268,6 +9664,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -8567,6 +9971,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -8580,6 +9988,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -8885,6 +10301,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -8898,6 +10318,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -9205,6 +10633,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -9218,6 +10650,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -9507,6 +10947,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -9520,6 +10964,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -9819,6 +11271,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -9832,6 +11288,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -10137,6 +11601,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -10150,6 +11618,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -10462,6 +11938,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -10475,6 +11955,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {
@@ -10808,6 +12296,10 @@
             "named": true
           },
           {
+            "type": "partial",
+            "named": true
+          },
+          {
             "type": "pow_fun_op",
             "named": true
           },
@@ -10821,6 +12313,14 @@
           },
           {
             "type": "prefix_op",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
             "named": true
           },
           {

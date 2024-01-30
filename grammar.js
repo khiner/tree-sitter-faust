@@ -1,7 +1,9 @@
 const PREC = {
-  ACCESS: 30,
-  // Operators
-  ONE_SAMPLE_DELAY: 25,
+  // Function
+  ACCESS: 32,
+  MODIFIER: 31,
+  FUNCTION_CALL: 30,
+  // Infix
   DELAY: 24,
   EXPONENTIATION: 23,
   MULTIPLICATION: 22,
@@ -15,9 +17,7 @@ const PREC = {
   SEQ: 11,
   SPLIT: 10,
   MERGE: 10,
-  // Expressions
-  INFIX: 4,
-  PREFIX: 4,
+  // Expression
   EXPRESSION: 3,
   DEFINITION: 2,
   ENVIRONMENT: 1,
@@ -25,11 +25,10 @@ const PREC = {
 
 const sepBy = (sep, rule) => seq(rule, repeat(seq(sep, rule)));
 
-const binaryComposition = (op, precedence, assoc, field_rule) => $ =>
+const define_binary_comp = (op, precedence, assoc, field_rule) => $ =>
   prec[assoc](precedence, seq(field('left', field_rule($)), op, field('right', field_rule($))));
-
-const binaryOp = (symbol, precedence, operand_rule, assoc = 'left') =>
-  prec[assoc](precedence, seq(field('left', operand_rule), field('operator', symbol), field('right', operand_rule)));
+const define_infix = ($, symbol, precedence, assoc = 'left') =>
+  prec[assoc](precedence, seq(field('left', $._infix_expression), field('operator', symbol), field('right', $._infix_expression)));
 
 // Can't be a regular rule because it matches the empty string.
 const definitionList = $ => repeat(seq(repeat($.variant), $._definition, ';'));
@@ -54,20 +53,34 @@ module.exports = grammar({
 
     _expression: $ => prec(PREC.EXPRESSION, choice($.with_environment, $.letrec_environment, $._binary_composition, $._infix_expression)),
     _infix_expression: $ =>
-      prec(PREC.EXPRESSION, choice($.infix, $.modifier, $.access, $.function_call, $.substitution, $.prefix, $._primitive)),
+      prec(
+        PREC.EXPRESSION,
+        choice($.infix, $.prefix, $.partial, $.prim1, $.prim2, $.function_call, $.modifier, $.access, $.substitution, $._primitive)
+      ),
+
+    // **TODO**
+    // - Rename `{...}_op` rules to `{...}`._
 
     infix: $ =>
       choice(
-        binaryOp($.delay_op, PREC.DELAY, $._infix_expression),
-        binaryOp($.pow_op, PREC.EXPONENTIATION, $._infix_expression),
-        binaryOp(choice($.mult_op, $.div_op, $.mod_op), PREC.MULTIPLICATION, $._infix_expression),
-        binaryOp(choice($.add_op, $.sub_op), PREC.ADDITION, $._infix_expression),
-        binaryOp(choice($.and_op, $.xor_op, $.lshift_op, $.rshift_op), PREC.BITWISE, $._infix_expression),
-        binaryOp($.or_op, PREC.BITWISE_OR, $._infix_expression),
-        binaryOp(choice($.lt_op, $.le_op, $.gt_op, $.ge_op, $.eq_op, $.neq_op), PREC.COMPARISON, $._infix_expression)
+        define_infix($, $.delay_op, PREC.DELAY),
+        define_infix($, $.pow_op, PREC.EXPONENTIATION),
+        define_infix($, choice($.mult_op, $.div_op, $.mod_op), PREC.MULTIPLICATION),
+        define_infix($, choice($.add_op, $.sub_op), PREC.ADDITION),
+        define_infix($, choice($.and_op, $.xor_op, $.lshift_op, $.rshift_op), PREC.BITWISE),
+        define_infix($, $.or_op, PREC.BITWISE_OR),
+        define_infix($, choice($.lt_op, $.le_op, $.gt_op, $.ge_op, $.eq_op, $.neq_op), PREC.COMPARISON)
       ),
-    function_call: $ => prec(PREC.PREFIX, seq(field('callee', $._infix_expression), '(', $.arguments, ')')),
-    prefix: $ => prec(PREC.PREFIX, seq(field('operator', choice($._binary_op, $._unary_op)), '(', field('operand', $._args), ')')),
+    // Binary function call on infix operator
+    prefix: $ => prec(PREC.FUNCTION_CALL, seq(field('operator', $._infix_op), '(', field('left', $._argument), ',', field('right', $._argument), ')')),
+    // Unary function call on infix operator
+    partial: $ => prec(PREC.FUNCTION_CALL, seq(field('operator', $._infix_op), '(', field('operand', $._argument), ')')),
+    // Unary function call on non-infix primitive
+    prim1: $ => prec(PREC.FUNCTION_CALL, seq(field('primitive', $._prim1), '(', field('argument', $._argument), ')')),
+    // Binary function call on non-infix primitive
+    prim2: $ => prec(PREC.FUNCTION_CALL, seq(field('primitive', $._prim2), '(', $.arguments, ')')),
+    // Arbitrary non-primitive function call
+    function_call: $ => prec(PREC.FUNCTION_CALL, seq(field('callee', $._infix_expression), '(', $.arguments, ')')),
     modifier: $ => prec(PREC.ACCESS, seq(field('operand', $._infix_expression), field('operator', $._modifier_op))),
 
     access: $ => prec(PREC.ACCESS, seq(field('environment', $._infix_expression), '.', field('definition', $.identifier))),
@@ -78,8 +91,9 @@ module.exports = grammar({
         $.wire,
         $.cut,
         $.mem,
-        $._unary_op,
-        $._binary_op,
+        $._infix_op,
+        $._prim1,
+        $._prim2,
         seq(optional('-'), $.identifier),
         seq('(', $._expression, ')'),
         seq('\\', '(', $.parameters, ')', '.', '(', $._expression, ')'),
@@ -87,7 +101,6 @@ module.exports = grammar({
         seq('environment', $.environment),
         $.component
       ),
-    _operator: $ => choice($._binary_op, $._unary_op, $._modifier_op),
 
     parameters: $ => sepBy(',', alias($.identifier, $.parameter)),
     arguments: $ => sepBy(',', $._argument),
@@ -97,10 +110,10 @@ module.exports = grammar({
     // Binary compositions as arguments are restricted to non-parallel compositions to avoid ambiguity with commas.
     // Note: Can we allow parallel compositions in arguments when surrounded by parentheses?
     // This could be contributed to Faust.
-    recursive_arg: binaryComposition('~', PREC.RECURSIVE, 'left', $ => $._argument),
-    sequential_arg: binaryComposition(':', PREC.SEQ, 'right', $ => $._argument),
-    split_arg: binaryComposition('<:', PREC.SPLIT, 'right', $ => $._argument),
-    merge_arg: binaryComposition(':>', PREC.MERGE, 'right', $ => $._argument),
+    recursive_arg: define_binary_comp('~', PREC.RECURSIVE, 'left', $ => $._argument),
+    sequential_arg: define_binary_comp(':', PREC.SEQ, 'right', $ => $._argument),
+    split_arg: define_binary_comp('<:', PREC.SPLIT, 'right', $ => $._argument),
+    merge_arg: define_binary_comp(':>', PREC.MERGE, 'right', $ => $._argument),
 
     iteration: $ =>
       seq(
@@ -132,7 +145,32 @@ module.exports = grammar({
 
     component: $ => seq('component', '(', $.string, ')'),
 
-    _unary_op: $ =>
+    // Infix operators are built-in binary primitives that can be used in infix notation.
+    // https://faustdoc.grame.fr/manual/syntax/#infix-operators
+    _infix_op: $ =>
+      choice(
+        $.add_op,
+        $.sub_op,
+        $.mult_op,
+        $.div_op,
+        $.mod_op,
+        $.pow_op,
+        $.or_op,
+        $.and_op,
+        $.xor_op,
+        $.lshift_op,
+        $.rshift_op,
+        $.lt_op,
+        $.le_op,
+        $.gt_op,
+        $.ge_op,
+        $.eq_op,
+        $.neq_op,
+        $.delay_op
+      ),
+
+    // Unary primitive
+    _prim1: $ =>
       choice(
         $.int_cast,
         $.float_cast,
@@ -152,43 +190,36 @@ module.exports = grammar({
         $.sin_op,
         $.tan_op
       ),
-    _binary_op: $ =>
-      choice(
-        $.add_op,
-        $.sub_op,
-        $.mult_op,
-        $.div_op,
-        $.mod_op,
-        $.pow_op,
-        $.pow_fun_op,
-        $.min_op,
-        $.max_op,
-        $.fmod_op,
-        $.remainder_op,
-        $.atan2_op,
-        $.or_op,
-        $.and_op,
-        $.xor_op,
-        $.lshift_op,
-        $.rshift_op,
-        $.lt_op,
-        $.le_op,
-        $.gt_op,
-        $.ge_op,
-        $.eq_op,
-        $.neq_op,
-        $.delay_op,
-        $.prefix_op,
-        $.attach_op,
-        $.enable_op,
-        $.control_op
-      ),
+    // (Non-infix) binary primitive
+    _prim2: $ =>
+      choice($.pow_fun_op, $.min_op, $.max_op, $.fmod_op, $.remainder_op, $.atan2_op, $.prefix_op, $.attach_op, $.enable_op, $.control_op),
     _modifier_op: $ => choice($.one_sample_delay_op),
 
+    /** Infix primitives **/
+    // Math
+    add_op: _ => '+',
+    sub_op: _ => '-',
+    mult_op: _ => '*',
+    div_op: _ => '/',
+    mod_op: _ => '%',
+    pow_op: _ => '^',
+    // Bitwise
+    or_op: _ => '|',
+    and_op: _ => '&',
+    xor_op: _ => 'xor',
+    lshift_op: _ => '<<',
+    rshift_op: _ => '>>',
+    // Comparison
+    lt_op: _ => '<',
+    le_op: _ => '<=',
+    gt_op: _ => '>',
+    ge_op: _ => '>=',
+    eq_op: _ => '==',
+    neq_op: _ => '!=',
+
+    /** Non-infix primitives */
+
     /* Unary */
-    // Cast
-    int_cast: _ => 'int',
-    float_cast: _ => 'float',
     // Math
     exp_op: _ => 'exp',
     log_op: _ => 'log',
@@ -206,15 +237,12 @@ module.exports = grammar({
     cos_op: _ => 'cos',
     sin_op: _ => 'sin',
     tan_op: _ => 'tan',
+    // Type casting
+    int_cast: _ => 'int',
+    float_cast: _ => 'float',
 
     /* Binary */
     // Math
-    add_op: _ => '+',
-    sub_op: _ => '-',
-    mult_op: _ => '*',
-    div_op: _ => '/',
-    mod_op: _ => '%',
-    pow_op: _ => '^',
     pow_fun_op: _ => 'pow',
     min_op: _ => 'min',
     max_op: _ => 'max',
@@ -222,20 +250,6 @@ module.exports = grammar({
     remainder_op: _ => 'remainder',
     // Trig
     atan2_op: _ => 'atan2',
-  
-    // Bitwise
-    or_op: _ => '|',
-    and_op: _ => '&',
-    xor_op: _ => 'xor',
-    lshift_op: _ => '<<',
-    rshift_op: _ => '>>',
-    // Comparison
-    lt_op: _ => '<',
-    le_op: _ => '<=',
-    gt_op: _ => '>',
-    ge_op: _ => '>=',
-    eq_op: _ => '==',
-    neq_op: _ => '!=',
     // Special
     delay_op: _ => '@',
     prefix_op: _ => 'prefix',
@@ -244,7 +258,7 @@ module.exports = grammar({
     control_op: _ => 'control',
 
     /* Modifiers */
-    one_sample_delay_op: _ => prec(PREC.ONE_SAMPLE_DELAY, "'"),
+    one_sample_delay_op: _ => prec(PREC.MODIFIER, "'"),
 
     /* Primitives */
     wire: _ => '_',
@@ -278,11 +292,11 @@ module.exports = grammar({
     function_metadata: $ => seq('declare', field('function_name', $.identifier), field('key', $.identifier), field('value', $.string)),
 
     _binary_composition: $ => choice($.recursive, $.sequential, $.split, $.merge, $.parallel),
-    recursive: binaryComposition('~', PREC.RECURSIVE, 'left', $ => $._expression),
-    sequential: binaryComposition(':', PREC.SEQ, 'right', $ => $._expression),
-    split: binaryComposition('<:', PREC.SPLIT, 'right', $ => $._expression),
-    merge: binaryComposition(':>', PREC.MERGE, 'right', $ => $._expression),
-    parallel: binaryComposition(',', PREC.PAR, 'right', $ => $._expression),
+    recursive: define_binary_comp('~', PREC.RECURSIVE, 'left', $ => $._expression),
+    sequential: define_binary_comp(':', PREC.SEQ, 'right', $ => $._expression),
+    split: define_binary_comp('<:', PREC.SPLIT, 'right', $ => $._expression),
+    merge: define_binary_comp(':>', PREC.MERGE, 'right', $ => $._expression),
+    parallel: define_binary_comp(',', PREC.PAR, 'right', $ => $._expression),
 
     variant: _ => choice('singleprecision', 'doubleprecision', 'quadprecision', 'fixedpointprecision'),
 

@@ -19,7 +19,7 @@ process = par(i, nHarmonics, _) :> /(nHarmonics) * si.smoo;
         num_iters: (identifier)
         expression: (wire))
       right: (infix
-        left: (prefix operator: (div_op) operand: (identifier))
+        left: (partial operator: (div_op) operand: (identifier))
         operator: (mult_op)
         right: (access
           environment: (identifier)
