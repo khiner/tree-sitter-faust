@@ -33,14 +33,16 @@ process = var; /* Comment at the end of a line. */
   (comment))
 
 ====
-Namespaced variable assignment
+Variable assignment
 ====
 
-process = ::foo::bar::baz;
+var = ::foo::bar::baz;
+negated_var = -var;
 
 ---
 (program
-  (definition (id) (id)))
+  (definition name: (id) value: (id))
+  (definition name: (id) value: (negate_id (id))))
 
 ====
 Function definition

@@ -999,25 +999,12 @@
           "name": "_prim5"
         },
         {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "-"
-                },
-                {
-                  "type": "BLANK"
-                }
-              ]
-            },
-            {
-              "type": "SYMBOL",
-              "name": "id"
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "negate_id"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "id"
         },
         {
           "type": "SEQ",
@@ -2678,6 +2665,19 @@
           }
         ]
       }
+    },
+    "negate_id": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "-"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "id"
+        }
+      ]
     },
     "_id": {
       "type": "PATTERN",

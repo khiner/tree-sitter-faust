@@ -103,7 +103,8 @@ module.exports = grammar({
         $._prim3,
         $._prim4,
         $._prim5,
-        seq(optional('-'), $.id),
+        $.negate_id,
+        $.id,
         seq('(', $._expression, ')'),
         seq('\\', '(', $.parameters, ')', '.', '(', $._expression, ')'),
         $.iteration,
@@ -333,6 +334,7 @@ module.exports = grammar({
     //   See 'qualified_identifier' in https://github.com/tree-sitter/tree-sitter-cpp/blob/master/grammar.js,
     //   and the test: https://github.com/tree-sitter/tree-sitter-cpp/blob/master/test/corpus/statements.txt#L409-L425
     id: $ => prec.right(seq(optional('::'), seq($._id, repeat(seq('::', $._id))))),
+    negate_id: $ => seq('-', $.id),
     _id: _ => /_*[a-zA-Z][_a-zA-Z0-9]*/,
 
     comment: _ => token(choice(seq('//', /(\\(.|\r?\n)|[^\\\n])*/), seq('/*', /[^*]*\*+([^/*][^*]*\*+)*/, '/'))),

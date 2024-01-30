@@ -26,10 +26,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -227,6 +223,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -570,6 +570,10 @@
           "named": true
         },
         {
+          "type": "negate_id",
+          "named": true
+        },
+        {
           "type": "neq",
           "named": true
         },
@@ -759,10 +763,6 @@
           },
           {
             "type": ")",
-            "named": false
-          },
-          {
-            "type": "-",
             "named": false
           },
           {
@@ -963,6 +963,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -1182,10 +1186,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -1383,6 +1383,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -1562,10 +1566,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -1763,6 +1763,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -2003,10 +2007,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -2204,6 +2204,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -2435,10 +2439,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -2636,6 +2636,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -2805,10 +2809,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -3009,6 +3009,10 @@
             "named": true
           },
           {
+            "type": "negate_id",
+            "named": true
+          },
+          {
             "type": "neq",
             "named": true
           },
@@ -3156,10 +3160,6 @@
           },
           {
             "type": ")",
-            "named": false
-          },
-          {
-            "type": "-",
             "named": false
           },
           {
@@ -3364,6 +3364,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -3557,10 +3561,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -3758,6 +3758,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -3927,10 +3931,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -4128,6 +4128,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -4281,10 +4285,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -4482,6 +4482,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -4638,10 +4642,6 @@
           },
           {
             "type": ")",
-            "named": false
-          },
-          {
-            "type": "-",
             "named": false
           },
           {
@@ -4846,6 +4846,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -5011,10 +5015,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -5216,6 +5216,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -5387,10 +5391,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -5588,6 +5588,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -5741,6 +5745,21 @@
     }
   },
   {
+    "type": "negate_id",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "id",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "one_sample_delay",
     "named": true,
     "fields": {}
@@ -5759,10 +5778,6 @@
           },
           {
             "type": ")",
-            "named": false
-          },
-          {
-            "type": "-",
             "named": false
           },
           {
@@ -5963,6 +5978,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -6116,10 +6135,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -6317,6 +6332,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -6496,10 +6515,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -6701,6 +6716,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -6950,10 +6969,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -7155,6 +7170,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -7398,10 +7417,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -7603,6 +7618,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -7774,10 +7793,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -7979,6 +7994,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -8442,10 +8461,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -8643,6 +8658,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -8812,10 +8831,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -9013,6 +9028,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -9166,10 +9185,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -9367,6 +9382,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -9523,10 +9542,6 @@
           },
           {
             "type": ")",
-            "named": false
-          },
-          {
-            "type": "-",
             "named": false
           },
           {
@@ -9731,6 +9746,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -9896,10 +9915,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -10101,6 +10116,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -10272,10 +10291,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -10473,6 +10488,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -10626,10 +10645,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -10827,6 +10842,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -10983,10 +11002,6 @@
           },
           {
             "type": ")",
-            "named": false
-          },
-          {
-            "type": "-",
             "named": false
           },
           {
@@ -11191,6 +11206,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -11356,10 +11375,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -11561,6 +11576,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -11732,10 +11751,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -11933,6 +11948,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -12086,10 +12105,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -12287,6 +12302,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -12443,10 +12462,6 @@
           },
           {
             "type": ")",
-            "named": false
-          },
-          {
-            "type": "-",
             "named": false
           },
           {
@@ -12651,6 +12666,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -12816,10 +12835,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -13021,6 +13036,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -13197,10 +13216,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -13398,6 +13413,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
@@ -13613,10 +13632,6 @@
             "named": false
           },
           {
-            "type": "-",
-            "named": false
-          },
-          {
             "type": ".",
             "named": false
           },
@@ -13814,6 +13829,10 @@
           },
           {
             "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
             "named": true
           },
           {
