@@ -18,9 +18,7 @@ const PREC = {
   SPLIT: 10,
   MERGE: 10,
   // Expression
-  EXPRESSION: 3,
-  DEFINITION: 2,
-  ENVIRONMENT: 1,
+  DEFINITION: 1,
 };
 
 const sepBy = (sep, rule) => seq(rule, repeat(seq(sep, rule)));
@@ -51,12 +49,9 @@ module.exports = grammar({
     definition: $ => seq(field('name', $.identifier), '=', field('value', $._expression)),
     function_definition: $ => seq(field('name', $.identifier), '(', $.parameters, ')', '=', field('value', $._expression)),
 
-    _expression: $ => prec(PREC.EXPRESSION, choice($.with_environment, $.letrec_environment, $._binary_composition, $._infix_expression)),
+    _expression: $ => choice($.with_environment, $.letrec_environment, $._binary_composition, $._infix_expression),
     _infix_expression: $ =>
-      prec(
-        PREC.EXPRESSION,
-        choice($.infix, $.prefix, $.partial, $.prim1, $.prim2, $.function_call, $.modifier, $.access, $.substitution, $._primitive)
-      ),
+      choice($.infix, $.prefix, $.partial, $.prim1, $.prim2, $.function_call, $.modifier, $.access, $.substitution, $._primitive),
 
     // **TODO**
     // - Rename `{...}_op` rules to `{...}`._
@@ -72,7 +67,8 @@ module.exports = grammar({
         define_infix($, choice($.lt_op, $.le_op, $.gt_op, $.ge_op, $.eq_op, $.neq_op), PREC.COMPARISON)
       ),
     // Binary function call on infix operator
-    prefix: $ => prec(PREC.FUNCTION_CALL, seq(field('operator', $._infix_op), '(', field('left', $._argument), ',', field('right', $._argument), ')')),
+    prefix: $ =>
+      prec(PREC.FUNCTION_CALL, seq(field('operator', $._infix_op), '(', field('left', $._argument), ',', field('right', $._argument), ')')),
     // Unary function call on infix operator
     partial: $ => prec(PREC.FUNCTION_CALL, seq(field('operator', $._infix_op), '(', field('operand', $._argument), ')')),
     // Unary function call on non-infix primitive
@@ -131,12 +127,10 @@ module.exports = grammar({
     sum: _ => 'sum',
     prod: _ => 'prod',
 
-    with_environment: $ =>
-      prec.left(PREC.ENVIRONMENT, seq(field('expression', $._expression), 'with', field('local_environment', $.environment))),
+    with_environment: $ => prec.left(seq(field('expression', $._expression), 'with', field('local_environment', $.environment))),
     environment: $ => seq('{', definitionList($), '}'),
 
-    letrec_environment: $ =>
-      prec.left(PREC.ENVIRONMENT, seq(field('expression', $._expression), 'letrec', field('local_environment', $.rec_environment))),
+    letrec_environment: $ => prec.left(seq(field('expression', $._expression), 'letrec', field('local_environment', $.rec_environment))),
     rec_environment: $ => seq('{', repeat($.recinition), optional(seq('where', definitionList($))), '}'),
     recinition: $ => seq(seq("'", field('name', $.identifier)), '=', field('expression', $._expression), ';'),
 

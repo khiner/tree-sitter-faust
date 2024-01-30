@@ -69,7 +69,7 @@
     },
     "_definition": {
       "type": "PREC",
-      "value": 2,
+      "value": 1,
       "content": {
         "type": "CHOICE",
         "members": [
@@ -147,78 +147,70 @@
       ]
     },
     "_expression": {
-      "type": "PREC",
-      "value": 3,
-      "content": {
-        "type": "CHOICE",
-        "members": [
-          {
-            "type": "SYMBOL",
-            "name": "with_environment"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "letrec_environment"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "_binary_composition"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "_infix_expression"
-          }
-        ]
-      }
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "with_environment"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "letrec_environment"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_binary_composition"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_infix_expression"
+        }
+      ]
     },
     "_infix_expression": {
-      "type": "PREC",
-      "value": 3,
-      "content": {
-        "type": "CHOICE",
-        "members": [
-          {
-            "type": "SYMBOL",
-            "name": "infix"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "prefix"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "partial"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "prim1"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "prim2"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "function_call"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "modifier"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "access"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "substitution"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "_primitive"
-          }
-        ]
-      }
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "infix"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "prefix"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "partial"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "prim1"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "prim2"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "function_call"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "modifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "access"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "substitution"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_primitive"
+        }
+      ]
     },
     "infix": {
       "type": "CHOICE",
@@ -1186,7 +1178,7 @@
     },
     "with_environment": {
       "type": "PREC_LEFT",
-      "value": 1,
+      "value": 0,
       "content": {
         "type": "SEQ",
         "members": [
@@ -1251,7 +1243,7 @@
     },
     "letrec_environment": {
       "type": "PREC_LEFT",
-      "value": 1,
+      "value": 0,
       "content": {
         "type": "SEQ",
         "members": [
