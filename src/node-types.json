@@ -186,6 +186,10 @@
             "named": true
           },
           {
+            "type": "library",
+            "named": true
+          },
+          {
             "type": "log",
             "named": true
           },
@@ -546,6 +550,10 @@
           "named": true
         },
         {
+          "type": "library",
+          "named": true
+        },
+        {
           "type": "log",
           "named": true
         },
@@ -743,16 +751,17 @@
   {
     "type": "component",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
+    "fields": {
+      "filename": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -939,6 +948,10 @@
           },
           {
             "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
             "named": true
           },
           {
@@ -1458,6 +1471,10 @@
             "named": true
           },
           {
+            "type": "library",
+            "named": true
+          },
+          {
             "type": "log",
             "named": true
           },
@@ -1847,6 +1864,10 @@
           },
           {
             "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
             "named": true
           },
           {
@@ -2367,6 +2388,10 @@
             "named": true
           },
           {
+            "type": "library",
+            "named": true
+          },
+          {
             "type": "log",
             "named": true
           },
@@ -2811,6 +2836,10 @@
             "named": true
           },
           {
+            "type": "library",
+            "named": true
+          },
+          {
             "type": "log",
             "named": true
           },
@@ -3193,6 +3222,10 @@
             "named": true
           },
           {
+            "type": "library",
+            "named": true
+          },
+          {
             "type": "log",
             "named": true
           },
@@ -3556,6 +3589,10 @@
           },
           {
             "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
             "named": true
           },
           {
@@ -3953,6 +3990,10 @@
             "named": true
           },
           {
+            "type": "library",
+            "named": true
+          },
+          {
             "type": "log",
             "named": true
           },
@@ -4335,6 +4376,10 @@
             "named": true
           },
           {
+            "type": "library",
+            "named": true
+          },
+          {
             "type": "log",
             "named": true
           },
@@ -4541,6 +4586,22 @@
     }
   },
   {
+    "type": "library",
+    "named": true,
+    "fields": {
+      "filename": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "merge",
     "named": true,
     "fields": {
@@ -4714,6 +4775,10 @@
           },
           {
             "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
             "named": true
           },
           {
@@ -5080,6 +5145,10 @@
           },
           {
             "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
             "named": true
           },
           {
@@ -5452,6 +5521,10 @@
           },
           {
             "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
             "named": true
           },
           {
@@ -5834,6 +5907,10 @@
           },
           {
             "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
             "named": true
           },
           {
@@ -6226,6 +6303,10 @@
           },
           {
             "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
             "named": true
           },
           {
@@ -6641,6 +6722,10 @@
             "named": true
           },
           {
+            "type": "library",
+            "named": true
+          },
+          {
             "type": "log",
             "named": true
           },
@@ -7004,6 +7089,10 @@
           },
           {
             "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
             "named": true
           },
           {
@@ -7419,6 +7508,10 @@
           },
           {
             "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
             "named": true
           },
           {
@@ -7887,6 +7980,10 @@
             "named": true
           },
           {
+            "type": "library",
+            "named": true
+          },
+          {
             "type": "log",
             "named": true
           },
@@ -8331,6 +8428,10 @@
             "named": true
           },
           {
+            "type": "library",
+            "named": true
+          },
+          {
             "type": "log",
             "named": true
           },
@@ -8700,6 +8801,10 @@
           },
           {
             "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
             "named": true
           },
           {
@@ -9367,6 +9472,10 @@
             "named": true
           },
           {
+            "type": "library",
+            "named": true
+          },
+          {
             "type": "log",
             "named": true
           },
@@ -9749,6 +9858,10 @@
             "named": true
           },
           {
+            "type": "library",
+            "named": true
+          },
+          {
             "type": "log",
             "named": true
           },
@@ -10112,6 +10225,10 @@
           },
           {
             "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
             "named": true
           },
           {
@@ -10484,6 +10601,10 @@
           },
           {
             "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
             "named": true
           },
           {
@@ -10884,6 +11005,10 @@
             "named": true
           },
           {
+            "type": "library",
+            "named": true
+          },
+          {
             "type": "log",
             "named": true
           },
@@ -11247,6 +11372,10 @@
           },
           {
             "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
             "named": true
           },
           {
@@ -11656,6 +11785,10 @@
             "named": true
           },
           {
+            "type": "library",
+            "named": true
+          },
+          {
             "type": "log",
             "named": true
           },
@@ -12019,6 +12152,10 @@
           },
           {
             "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
             "named": true
           },
           {
@@ -12396,6 +12533,10 @@
           },
           {
             "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
             "named": true
           },
           {
@@ -12824,6 +12965,10 @@
           },
           {
             "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
             "named": true
           },
           {
@@ -13310,6 +13455,10 @@
   },
   {
     "type": "letrec",
+    "named": false
+  },
+  {
+    "type": "library",
     "named": false
   },
   {

@@ -115,6 +115,7 @@ module.exports = grammar({
         $.fconst,
         $.fvariable,
         $.component,
+        $.library,
         seq('environment', $.environment)
       ),
 
@@ -315,7 +316,8 @@ module.exports = grammar({
     cut: _ => '!',
     mem: _ => 'mem',
 
-    component: $ => seq('component', '(', $.string, ')'),
+    component: $ => seq('component', '(', field('filename', $.string), ')'),
+    library: $ => seq('library', '(', field('filename', $.string), ')'),
 
     rdtable: _ => 'rdtable',
     rwtable: _ => 'rwtable',

@@ -1056,6 +1056,10 @@
           "name": "component"
         },
         {
+          "type": "SYMBOL",
+          "name": "library"
+        },
+        {
           "type": "SEQ",
           "members": [
             {
@@ -2610,8 +2614,37 @@
           "value": "("
         },
         {
-          "type": "SYMBOL",
-          "name": "string"
+          "type": "FIELD",
+          "name": "filename",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "library": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "library"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "FIELD",
+          "name": "filename",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string"
+          }
         },
         {
           "type": "STRING",

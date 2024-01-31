@@ -141,17 +141,6 @@ process = var2';
   (definition (id) (modifier (id) (one_sample_delay))))
 
 ===
-Component
-===
-
-process = component("karplus32.dsp") : component("freeverb.dsp");
-
----
-(program
-  (definition (id)
-    (sequential (component (string)) (component (string)))))
-
-===
 Explicit substitution
 ===
 
@@ -162,7 +151,37 @@ process = component("freeverb.dsp")[foo(x) = 1; bar = _;];
   (definition
     name: (id)
     value: (substitution
-      expression: (component (string))
+      expression: (component filename: (string))
       (substitutions
         (function_definition name: (id) (parameters (parameter)) value: (int))
         (definition name: (id) value: (wire))))))
+
+===
+Component
+===
+
+process = component("karplus32.dsp") : component("freeverb.dsp");
+
+---
+(program
+  (definition
+    name: (id)
+    value: (sequential
+      left: (component filename: (string))
+      right: (component filename: (string)))))
+
+===
+Library
+===
+
+fl = library("filters.lib");
+process = fl.lowpass;
+
+---
+(program
+  (definition
+    name: (id)
+    value: (library filename: (string)))
+  (definition
+    name: (id)
+    value: (access environment: (id) definition: (id))))
