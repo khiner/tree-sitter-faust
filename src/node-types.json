@@ -114,6 +114,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -127,6 +135,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -462,6 +474,14 @@
           "named": true
         },
         {
+          "type": "fconst",
+          "named": true
+        },
+        {
+          "type": "ffunction",
+          "named": true
+        },
+        {
           "type": "float_cast",
           "named": true
         },
@@ -475,6 +495,10 @@
         },
         {
           "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "fvariable",
           "named": true
         },
         {
@@ -846,6 +870,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -859,6 +891,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -1136,6 +1172,90 @@
     }
   },
   {
+    "type": "fconst",
+    "named": true,
+    "fields": {
+      "include_file": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "fstring",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "float",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "ffunction",
+    "named": true,
+    "fields": {
+      "include_file": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "fstring",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "library_file": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "signature",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "file_import",
     "named": true,
     "fields": {
@@ -1266,6 +1386,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -1279,6 +1407,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -1646,6 +1778,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -1659,6 +1799,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -1952,6 +2096,70 @@
     }
   },
   {
+    "type": "function_name",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "function_names",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "function_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fvariable",
+    "named": true,
+    "fields": {
+      "include_file": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "fstring",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "float",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "global_metadata",
     "named": true,
     "fields": {
@@ -2087,6 +2295,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -2100,6 +2316,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -2519,6 +2739,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -2532,6 +2760,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -2889,6 +3121,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -2902,6 +3142,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -3243,6 +3487,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -3256,6 +3508,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -3625,6 +3881,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -3638,6 +3902,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -3995,6 +4263,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -4008,6 +4284,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -4365,6 +4645,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -4378,6 +4666,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -4719,6 +5011,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -4732,6 +5032,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -5079,6 +5383,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -5092,6 +5404,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -5449,6 +5765,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -5462,6 +5786,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -5829,6 +6157,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -5842,6 +6178,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -6120,6 +6460,11 @@
     "fields": {}
   },
   {
+    "type": "or",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "parallel",
     "named": true,
     "fields": {
@@ -6224,6 +6569,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -6237,6 +6590,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -6578,6 +6935,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -6591,6 +6956,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -6839,6 +7208,29 @@
     "fields": {}
   },
   {
+    "type": "parameter_types",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "any",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "int",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "parameters",
     "named": true,
     "fields": {},
@@ -6958,6 +7350,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -6971,6 +7371,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -7411,6 +7815,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -7424,6 +7836,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -7843,6 +8259,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -7856,6 +8280,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -8203,6 +8631,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -8216,6 +8652,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -8855,6 +9295,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -8868,6 +9316,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -9225,6 +9677,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -9238,6 +9698,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -9579,6 +10043,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -9592,6 +10064,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -9939,6 +10415,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -9952,6 +10436,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -10324,6 +10812,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -10337,6 +10833,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -10678,6 +11178,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -10691,6 +11199,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -10934,6 +11446,40 @@
     }
   },
   {
+    "type": "signature",
+    "named": true,
+    "fields": {
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "float",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "function_names",
+          "named": true
+        },
+        {
+          "type": "parameter_types",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "split",
     "named": true,
     "fields": {
@@ -11038,6 +11584,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -11051,6 +11605,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -11392,6 +11950,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -11405,6 +11971,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -11757,6 +12327,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -11770,6 +12348,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -12173,6 +12755,14 @@
             "named": true
           },
           {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
             "type": "float_cast",
             "named": true
           },
@@ -12186,6 +12776,10 @@
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
             "named": true
           },
           {
@@ -12567,6 +13161,10 @@
     "named": true
   },
   {
+    "type": "any",
+    "named": true
+  },
+  {
     "type": "asin",
     "named": true
   },
@@ -12647,7 +13245,19 @@
     "named": true
   },
   {
+    "type": "fconstant",
+    "named": false
+  },
+  {
+    "type": "ffunction",
+    "named": false
+  },
+  {
     "type": "fixed_point_precision",
+    "named": true
+  },
+  {
+    "type": "float",
     "named": true
   },
   {
@@ -12661,6 +13271,14 @@
   {
     "type": "fmod",
     "named": true
+  },
+  {
+    "type": "fstring",
+    "named": true
+  },
+  {
+    "type": "fvariable",
+    "named": false
   },
   {
     "type": "ge",
@@ -12736,10 +13354,6 @@
   },
   {
     "type": "neq",
-    "named": true
-  },
-  {
-    "type": "or",
     "named": true
   },
   {
@@ -12848,6 +13462,10 @@
   },
   {
     "type": "{",
+    "named": false
+  },
+  {
+    "type": "|",
     "named": false
   },
   {

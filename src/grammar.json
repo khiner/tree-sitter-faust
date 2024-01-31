@@ -1029,15 +1029,31 @@
         },
         {
           "type": "SYMBOL",
-          "name": "modulation"
-        },
-        {
-          "type": "SYMBOL",
           "name": "iteration"
         },
         {
           "type": "SYMBOL",
+          "name": "modulation"
+        },
+        {
+          "type": "SYMBOL",
           "name": "pattern"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "ffunction"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "fconst"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "fvariable"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "component"
         },
         {
           "type": "SEQ",
@@ -1051,10 +1067,6 @@
               "name": "environment"
             }
           ]
-        },
-        {
-          "type": "SYMBOL",
-          "name": "component"
         }
       ]
     },
@@ -1781,12 +1793,12 @@
         }
       ]
     },
-    "component": {
+    "ffunction": {
       "type": "SEQ",
       "members": [
         {
           "type": "STRING",
-          "value": "component"
+          "value": "ffunction"
         },
         {
           "type": "STRING",
@@ -1794,13 +1806,346 @@
         },
         {
           "type": "SYMBOL",
-          "name": "string"
+          "name": "signature"
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_include_file"
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "FIELD",
+          "name": "library_file",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string"
+          }
         },
         {
           "type": "STRING",
           "value": ")"
         }
       ]
+    },
+    "fconst": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "fconstant"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_type"
+        },
+        {
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "id"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_include_file"
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "fvariable": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "fvariable"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_type"
+        },
+        {
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "id"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_include_file"
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "signature": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "function_names"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "parameter_types"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "parameter_types": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "ALIAS",
+              "content": {
+                "type": "SYMBOL",
+                "name": "int_cast"
+              },
+              "named": true,
+              "value": "int"
+            },
+            {
+              "type": "ALIAS",
+              "content": {
+                "type": "SYMBOL",
+                "name": "float_cast"
+              },
+              "named": true,
+              "value": "float"
+            },
+            {
+              "type": "ALIAS",
+              "content": {
+                "type": "SYMBOL",
+                "name": "any_cast"
+              },
+              "named": true,
+              "value": "any"
+            }
+          ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": ","
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "ALIAS",
+                    "content": {
+                      "type": "SYMBOL",
+                      "name": "int_cast"
+                    },
+                    "named": true,
+                    "value": "int"
+                  },
+                  {
+                    "type": "ALIAS",
+                    "content": {
+                      "type": "SYMBOL",
+                      "name": "float_cast"
+                    },
+                    "named": true,
+                    "value": "float"
+                  },
+                  {
+                    "type": "ALIAS",
+                    "content": {
+                      "type": "SYMBOL",
+                      "name": "any_cast"
+                    },
+                    "named": true,
+                    "value": "any"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "_include_file": {
+      "type": "FIELD",
+      "name": "include_file",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "fstring"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "string"
+          }
+        ]
+      }
+    },
+    "function_names": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_func_name"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "|"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_func_name"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "|"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_func_name"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "|"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_func_name"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "_func_name": {
+      "type": "ALIAS",
+      "content": {
+        "type": "SYMBOL",
+        "name": "id"
+      },
+      "named": true,
+      "value": "function_name"
+    },
+    "_type": {
+      "type": "FIELD",
+      "name": "type",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
+              "name": "int_cast"
+            },
+            "named": true,
+            "value": "int"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
+              "name": "float_cast"
+            },
+            "named": true,
+            "value": "float"
+          }
+        ]
+      }
     },
     "_infix": {
       "type": "CHOICE",
@@ -2197,6 +2542,10 @@
       "type": "STRING",
       "value": "float"
     },
+    "any_cast": {
+      "type": "STRING",
+      "value": "any"
+    },
     "pow_fun": {
       "type": "STRING",
       "value": "pow"
@@ -2248,6 +2597,27 @@
     "mem": {
       "type": "STRING",
       "value": "mem"
+    },
+    "component": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "component"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
     },
     "rdtable": {
       "type": "STRING",
@@ -2808,6 +3178,10 @@
     "string": {
       "type": "PATTERN",
       "value": "\"([^\"\\\\]|\\\\.)*\""
+    },
+    "fstring": {
+      "type": "PATTERN",
+      "value": "<[a-zA-Z]*\\.?[a-zA-Z]*>"
     },
     "id": {
       "type": "PREC_RIGHT",

@@ -90,6 +90,8 @@ module.exports = grammar({
     modifier: $ => prec(PREC.ACCESS, seq(field('operand', $._infix_expression), field('operator', $._modifier))),
     access: $ => prec(PREC.ACCESS, seq(field('environment', $._infix_expression), '.', field('definition', $.id))),
 
+    /*** Primitives ***/
+
     _primitive: $ =>
       choice(
         $._number,
@@ -106,11 +108,14 @@ module.exports = grammar({
         $.id,
         seq('(', $._expression, ')'),
         $.lambda,
-        $.modulation,
         $.iteration,
+        $.modulation,
         $.pattern,
-        seq('environment', $.environment),
-        $.component
+        $.ffunction,
+        $.fconst,
+        $.fvariable,
+        $.component,
+        seq('environment', $.environment)
       ),
 
     lambda: $ => seq('\\', '(', $.parameters, ')', '.', '(', field('value', $._expression), ')'),
@@ -169,9 +174,18 @@ module.exports = grammar({
     substitution: $ => seq(field('expression', $._infix_expression), $.substitutions),
     substitutions: $ => seq('[', repeat($._definition), ']'),
 
-    component: $ => seq('component', '(', $.string, ')'),
+    /* Foreign functions/variables */
+    ffunction: $ => seq('ffunction', '(', $.signature, ',', $._include_file, ',', field('library_file', $.string), ')'),
+    fconst: $ => seq('fconstant', '(', $._type, field('name', $.id), ',', $._include_file, ')'),
+    fvariable: $ => seq('fvariable', '(', $._type, field('name', $.id), ',', $._include_file, ')'),
 
-    /*** Primitives ***/
+    signature: $ => seq($._type, $.function_names, '(', optional($.parameter_types), ')'),
+    parameter_types: $ => sepBy(',', choice(alias($.int_cast, $.int), alias($.float_cast, $.float), alias($.any_cast, $.any))),
+    _include_file: $ => field('include_file', choice($.fstring, $.string)),
+    function_names: $ =>
+      seq($._func_name, optional(seq('|', $._func_name)), optional(seq('|', $._func_name)), optional(seq('|', $._func_name))),
+    _func_name: $ => alias($.id, $.function_name),
+    _type: $ => field('type', choice(alias($.int_cast, $.int), alias($.float_cast, $.float))),
 
     // Infix operators are built-in binary primitives that can be used in infix notation.
     // https://faustdoc.grame.fr/manual/syntax/#infix-operators
@@ -279,6 +293,7 @@ module.exports = grammar({
     // Type casting
     int_cast: _ => 'int',
     float_cast: _ => 'float',
+    any_cast: _ => 'any', // Only used in foreign function types.
 
     /* Binary */
     // Math
@@ -299,6 +314,8 @@ module.exports = grammar({
     wire: _ => '_',
     cut: _ => '!',
     mem: _ => 'mem',
+
+    component: $ => seq('component', '(', $.string, ')'),
 
     rdtable: _ => 'rdtable',
     rwtable: _ => 'rwtable',
@@ -347,6 +364,7 @@ module.exports = grammar({
     fixed_point_precision: _ => 'fixedpointprecision',
 
     string: _ => /"([^"\\]|\\.)*"/,
+    fstring: _ => /<[a-zA-Z]*\.?[a-zA-Z]*>/,
 
     // todo Improve qualified identifiers, using a visible rule for 'qualified_identifier'
     //   See 'qualified_identifier' in https://github.com/tree-sitter/tree-sitter-cpp/blob/master/grammar.js,
