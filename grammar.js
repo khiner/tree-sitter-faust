@@ -107,6 +107,7 @@ module.exports = grammar({
         $.negate_id,
         $.id,
         seq('(', $._expression, ')'),
+        seq('environment', $.environment),
         $.lambda,
         $.iteration,
         $.modulation,
@@ -118,7 +119,14 @@ module.exports = grammar({
         $.library,
         $.waveform,
         $.route,
-        seq('environment', $.environment)
+        $.button,
+        $.checkbox,
+        $.numeric_widget, // vslider, hslider, nentry
+        $.group, // vgroup, hgroup, tgroup
+        $.bargraph, // vbargraph, hbargraph
+        $.soundfile,
+        $.inputs,
+        $.outputs
       ),
 
     lambda: $ => seq('\\', '(', $.parameters, ')', '.', '(', field('value', $._expression), ')'),
@@ -203,6 +211,52 @@ module.exports = grammar({
         optional(seq(',', field('expression', $._expression))),
         ')'
       ),
+
+    button: $ => seq('button', '(', field('label', $.string), ')'),
+    checkbox: $ => seq('checkbox', '(', field('label', $.string), ')'),
+    numeric_widget: $ =>
+      seq(
+        field('type', choice($.vslider_type, $.hslider_type, $.nentry_type)),
+        '(',
+        field('label', $.string),
+        ',',
+        field('init', $._argument),
+        ',',
+        field('min', $._argument),
+        ',',
+        field('max', $._argument),
+        ',',
+        field('step', $._argument),
+        ')'
+      ),
+    group: $ =>
+      seq(
+        field('type', choice($.vgroup_type, $.hgroup_type, $.tgroup_type)),
+        '(',
+        field('label', $.string),
+        ',',
+        field('expression', $._expression),
+        ')'
+      ),
+    bargraph: $ =>
+      seq(
+        field('type', choice($.vbargraph_type, $.hbargraph_type)),
+        '(',
+        field('label', $.string),
+        ',',
+        field('min', $._argument),
+        ',',
+        field('max', $._argument),
+        ')'
+      ),
+    soundfile: $ => seq('soundfile', '(', field('filename', $.string), ',', field('num_channels', $._argument), ')'),
+
+    // finputs         : INPUTS LPAR expression RPAR { $$ = boxInputs($3); }
+    //         ;
+    // foutputs        : OUTPUTS LPAR expression RPAR { $$ = boxOutputs($3); }
+    //         ;
+    inputs: $ => seq('inputs', '(', field('expression', $._expression), ')'),
+    outputs: $ => seq('outputs', '(', field('expression', $._expression), ')'),
 
     // Infix operators are built-in binary primitives that can be used in infix notation.
     // https://faustdoc.grame.fr/manual/syntax/#infix-operators
@@ -380,6 +434,17 @@ module.exports = grammar({
     double_precision: _ => 'doubleprecision',
     quad_precision: _ => 'quadprecision',
     fixed_point_precision: _ => 'fixedpointprecision',
+
+    vslider_type: _ => 'vslider',
+    hslider_type: _ => 'hslider',
+    nentry_type: _ => 'nentry',
+
+    vgroup_type: _ => 'vgroup',
+    hgroup_type: _ => 'hgroup',
+    tgroup_type: _ => 'tgroup',
+
+    vbargraph_type: _ => 'vbargraph',
+    hbargraph_type: _ => 'hbargraph',
 
     string: _ => /"([^"\\]|\\.)*"/,
     fstring: _ => /<[a-zA-Z]*\.?[a-zA-Z]*>/,

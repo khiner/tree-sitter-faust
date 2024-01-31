@@ -66,7 +66,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -146,6 +158,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -159,6 +175,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -250,7 +270,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -354,6 +382,10 @@
             "named": true
           },
           {
+            "type": "soundfile",
+            "named": true
+          },
+          {
             "type": "split",
             "named": true
           },
@@ -442,7 +474,19 @@
           "named": true
         },
         {
+          "type": "bargraph",
+          "named": true
+        },
+        {
+          "type": "button",
+          "named": true
+        },
+        {
           "type": "ceil",
+          "named": true
+        },
+        {
+          "type": "checkbox",
           "named": true
         },
         {
@@ -518,6 +562,10 @@
           "named": true
         },
         {
+          "type": "group",
+          "named": true
+        },
+        {
           "type": "gt",
           "named": true
         },
@@ -531,6 +579,10 @@
         },
         {
           "type": "infix",
+          "named": true
+        },
+        {
+          "type": "inputs",
           "named": true
         },
         {
@@ -622,7 +674,15 @@
           "named": true
         },
         {
+          "type": "numeric_widget",
+          "named": true
+        },
+        {
           "type": "or",
+          "named": true
+        },
+        {
+          "type": "outputs",
           "named": true
         },
         {
@@ -726,6 +786,10 @@
           "named": true
         },
         {
+          "type": "soundfile",
+          "named": true
+        },
+        {
           "type": "split",
           "named": true
         },
@@ -765,10 +829,10 @@
     }
   },
   {
-    "type": "component",
+    "type": "bargraph",
     "named": true,
     "fields": {
-      "filename": {
+      "label": {
         "multiple": false,
         "required": true,
         "types": [
@@ -777,24 +841,8 @@
             "named": true
           }
         ]
-      }
-    }
-  },
-  {
-    "type": "definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "id",
-            "named": true
-          }
-        ]
       },
-      "value": {
+      "max": {
         "multiple": true,
         "required": true,
         "types": [
@@ -847,7 +895,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -927,6 +987,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -940,6 +1004,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -1031,7 +1099,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -1132,6 +1208,908 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
+            "named": true
+          },
+          {
+            "type": "split",
+            "named": true
+          },
+          {
+            "type": "sqrt",
+            "named": true
+          },
+          {
+            "type": "sub",
+            "named": true
+          },
+          {
+            "type": "substitution",
+            "named": true
+          },
+          {
+            "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
+            "named": true
+          },
+          {
+            "type": "wire",
+            "named": true
+          },
+          {
+            "type": "with_environment",
+            "named": true
+          },
+          {
+            "type": "xor",
+            "named": true
+          }
+        ]
+      },
+      "min": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "abs",
+            "named": true
+          },
+          {
+            "type": "access",
+            "named": true
+          },
+          {
+            "type": "acos",
+            "named": true
+          },
+          {
+            "type": "add",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": true
+          },
+          {
+            "type": "asin",
+            "named": true
+          },
+          {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
+            "type": "atan",
+            "named": true
+          },
+          {
+            "type": "atan2",
+            "named": true
+          },
+          {
+            "type": "attach",
+            "named": true
+          },
+          {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
+            "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
+            "named": true
+          },
+          {
+            "type": "component",
+            "named": true
+          },
+          {
+            "type": "control",
+            "named": true
+          },
+          {
+            "type": "cos",
+            "named": true
+          },
+          {
+            "type": "cut",
+            "named": true
+          },
+          {
+            "type": "delay",
+            "named": true
+          },
+          {
+            "type": "div",
+            "named": true
+          },
+          {
+            "type": "enable",
+            "named": true
+          },
+          {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
+            "type": "eq",
+            "named": true
+          },
+          {
+            "type": "exp",
+            "named": true
+          },
+          {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
+            "type": "float_cast",
+            "named": true
+          },
+          {
+            "type": "floor",
+            "named": true
+          },
+          {
+            "type": "fmod",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
+            "named": true
+          },
+          {
+            "type": "ge",
+            "named": true
+          },
+          {
+            "type": "group",
+            "named": true
+          },
+          {
+            "type": "gt",
+            "named": true
+          },
+          {
+            "type": "highest",
+            "named": true
+          },
+          {
+            "type": "id",
+            "named": true
+          },
+          {
+            "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          },
+          {
+            "type": "int_cast",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "lambda",
+            "named": true
+          },
+          {
+            "type": "le",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
+            "named": true
+          },
+          {
+            "type": "log",
+            "named": true
+          },
+          {
+            "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
+            "named": true
+          },
+          {
+            "type": "lshift",
+            "named": true
+          },
+          {
+            "type": "lt",
+            "named": true
+          },
+          {
+            "type": "max",
+            "named": true
+          },
+          {
+            "type": "mem",
+            "named": true
+          },
+          {
+            "type": "merge",
+            "named": true
+          },
+          {
+            "type": "min",
+            "named": true
+          },
+          {
+            "type": "mod",
+            "named": true
+          },
+          {
+            "type": "modifier",
+            "named": true
+          },
+          {
+            "type": "modulation",
+            "named": true
+          },
+          {
+            "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
+            "named": true
+          },
+          {
+            "type": "neq",
+            "named": true
+          },
+          {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
+            "named": true
+          },
+          {
+            "type": "pow",
+            "named": true
+          },
+          {
+            "type": "pow_fun",
+            "named": true
+          },
+          {
+            "type": "prefix",
+            "named": true
+          },
+          {
+            "type": "prefix_prim",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
+            "named": true
+          },
+          {
+            "type": "prim3",
+            "named": true
+          },
+          {
+            "type": "prim4",
+            "named": true
+          },
+          {
+            "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "rdtable",
+            "named": true
+          },
+          {
+            "type": "real",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "remainder",
+            "named": true
+          },
+          {
+            "type": "rint",
+            "named": true
+          },
+          {
+            "type": "round",
+            "named": true
+          },
+          {
+            "type": "route",
+            "named": true
+          },
+          {
+            "type": "rshift",
+            "named": true
+          },
+          {
+            "type": "rwtable",
+            "named": true
+          },
+          {
+            "type": "select2",
+            "named": true
+          },
+          {
+            "type": "select3",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
+            "named": true
+          },
+          {
+            "type": "split",
+            "named": true
+          },
+          {
+            "type": "sqrt",
+            "named": true
+          },
+          {
+            "type": "sub",
+            "named": true
+          },
+          {
+            "type": "substitution",
+            "named": true
+          },
+          {
+            "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
+            "named": true
+          },
+          {
+            "type": "wire",
+            "named": true
+          },
+          {
+            "type": "with_environment",
+            "named": true
+          },
+          {
+            "type": "xor",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "hbargraph_type",
+            "named": true
+          },
+          {
+            "type": "vbargraph_type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "button",
+    "named": true,
+    "fields": {
+      "label": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "checkbox",
+    "named": true,
+    "fields": {
+      "label": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "component",
+    "named": true,
+    "fields": {
+      "filename": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "definition",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "abs",
+            "named": true
+          },
+          {
+            "type": "access",
+            "named": true
+          },
+          {
+            "type": "acos",
+            "named": true
+          },
+          {
+            "type": "add",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": true
+          },
+          {
+            "type": "asin",
+            "named": true
+          },
+          {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
+            "type": "atan",
+            "named": true
+          },
+          {
+            "type": "atan2",
+            "named": true
+          },
+          {
+            "type": "attach",
+            "named": true
+          },
+          {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
+            "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
+            "named": true
+          },
+          {
+            "type": "component",
+            "named": true
+          },
+          {
+            "type": "control",
+            "named": true
+          },
+          {
+            "type": "cos",
+            "named": true
+          },
+          {
+            "type": "cut",
+            "named": true
+          },
+          {
+            "type": "delay",
+            "named": true
+          },
+          {
+            "type": "div",
+            "named": true
+          },
+          {
+            "type": "enable",
+            "named": true
+          },
+          {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
+            "type": "eq",
+            "named": true
+          },
+          {
+            "type": "exp",
+            "named": true
+          },
+          {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
+            "type": "float_cast",
+            "named": true
+          },
+          {
+            "type": "floor",
+            "named": true
+          },
+          {
+            "type": "fmod",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
+            "named": true
+          },
+          {
+            "type": "ge",
+            "named": true
+          },
+          {
+            "type": "group",
+            "named": true
+          },
+          {
+            "type": "gt",
+            "named": true
+          },
+          {
+            "type": "highest",
+            "named": true
+          },
+          {
+            "type": "id",
+            "named": true
+          },
+          {
+            "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          },
+          {
+            "type": "int_cast",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "lambda",
+            "named": true
+          },
+          {
+            "type": "le",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
+            "named": true
+          },
+          {
+            "type": "log",
+            "named": true
+          },
+          {
+            "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
+            "named": true
+          },
+          {
+            "type": "lshift",
+            "named": true
+          },
+          {
+            "type": "lt",
+            "named": true
+          },
+          {
+            "type": "max",
+            "named": true
+          },
+          {
+            "type": "mem",
+            "named": true
+          },
+          {
+            "type": "merge",
+            "named": true
+          },
+          {
+            "type": "min",
+            "named": true
+          },
+          {
+            "type": "mod",
+            "named": true
+          },
+          {
+            "type": "modifier",
+            "named": true
+          },
+          {
+            "type": "modulation",
+            "named": true
+          },
+          {
+            "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
+            "named": true
+          },
+          {
+            "type": "neq",
+            "named": true
+          },
+          {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
+            "named": true
+          },
+          {
+            "type": "pow",
+            "named": true
+          },
+          {
+            "type": "pow_fun",
+            "named": true
+          },
+          {
+            "type": "prefix",
+            "named": true
+          },
+          {
+            "type": "prefix_prim",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
+            "named": true
+          },
+          {
+            "type": "prim3",
+            "named": true
+          },
+          {
+            "type": "prim4",
+            "named": true
+          },
+          {
+            "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "rdtable",
+            "named": true
+          },
+          {
+            "type": "real",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "remainder",
+            "named": true
+          },
+          {
+            "type": "rint",
+            "named": true
+          },
+          {
+            "type": "round",
+            "named": true
+          },
+          {
+            "type": "route",
+            "named": true
+          },
+          {
+            "type": "rshift",
+            "named": true
+          },
+          {
+            "type": "rwtable",
+            "named": true
+          },
+          {
+            "type": "select2",
+            "named": true
+          },
+          {
+            "type": "select3",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -1375,7 +2353,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -1455,6 +2445,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -1468,6 +2462,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -1559,7 +2557,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -1660,6 +2666,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -1779,7 +2789,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -1859,6 +2881,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -1872,6 +2898,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -1963,7 +2993,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -2064,6 +3102,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -2247,15 +3289,10 @@
     }
   },
   {
-    "type": "id",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "infix",
+    "type": "group",
     "named": true,
     "fields": {
-      "left": {
+      "expression": {
         "multiple": true,
         "required": true,
         "types": [
@@ -2308,7 +3345,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -2388,6 +3437,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -2401,6 +3454,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -2492,7 +3549,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -2593,6 +3658,459 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
+            "named": true
+          },
+          {
+            "type": "split",
+            "named": true
+          },
+          {
+            "type": "sqrt",
+            "named": true
+          },
+          {
+            "type": "sub",
+            "named": true
+          },
+          {
+            "type": "substitution",
+            "named": true
+          },
+          {
+            "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
+            "named": true
+          },
+          {
+            "type": "wire",
+            "named": true
+          },
+          {
+            "type": "with_environment",
+            "named": true
+          },
+          {
+            "type": "xor",
+            "named": true
+          }
+        ]
+      },
+      "label": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "hgroup_type",
+            "named": true
+          },
+          {
+            "type": "tgroup_type",
+            "named": true
+          },
+          {
+            "type": "vgroup_type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "id",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "infix",
+    "named": true,
+    "fields": {
+      "left": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "abs",
+            "named": true
+          },
+          {
+            "type": "access",
+            "named": true
+          },
+          {
+            "type": "acos",
+            "named": true
+          },
+          {
+            "type": "add",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": true
+          },
+          {
+            "type": "asin",
+            "named": true
+          },
+          {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
+            "type": "atan",
+            "named": true
+          },
+          {
+            "type": "atan2",
+            "named": true
+          },
+          {
+            "type": "attach",
+            "named": true
+          },
+          {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
+            "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
+            "named": true
+          },
+          {
+            "type": "component",
+            "named": true
+          },
+          {
+            "type": "control",
+            "named": true
+          },
+          {
+            "type": "cos",
+            "named": true
+          },
+          {
+            "type": "cut",
+            "named": true
+          },
+          {
+            "type": "delay",
+            "named": true
+          },
+          {
+            "type": "div",
+            "named": true
+          },
+          {
+            "type": "enable",
+            "named": true
+          },
+          {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
+            "type": "eq",
+            "named": true
+          },
+          {
+            "type": "exp",
+            "named": true
+          },
+          {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
+            "type": "float_cast",
+            "named": true
+          },
+          {
+            "type": "floor",
+            "named": true
+          },
+          {
+            "type": "fmod",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
+            "named": true
+          },
+          {
+            "type": "ge",
+            "named": true
+          },
+          {
+            "type": "group",
+            "named": true
+          },
+          {
+            "type": "gt",
+            "named": true
+          },
+          {
+            "type": "highest",
+            "named": true
+          },
+          {
+            "type": "id",
+            "named": true
+          },
+          {
+            "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          },
+          {
+            "type": "int_cast",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "lambda",
+            "named": true
+          },
+          {
+            "type": "le",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
+            "named": true
+          },
+          {
+            "type": "log",
+            "named": true
+          },
+          {
+            "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
+            "named": true
+          },
+          {
+            "type": "lshift",
+            "named": true
+          },
+          {
+            "type": "lt",
+            "named": true
+          },
+          {
+            "type": "max",
+            "named": true
+          },
+          {
+            "type": "mem",
+            "named": true
+          },
+          {
+            "type": "merge",
+            "named": true
+          },
+          {
+            "type": "min",
+            "named": true
+          },
+          {
+            "type": "mod",
+            "named": true
+          },
+          {
+            "type": "modifier",
+            "named": true
+          },
+          {
+            "type": "modulation",
+            "named": true
+          },
+          {
+            "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
+            "named": true
+          },
+          {
+            "type": "neq",
+            "named": true
+          },
+          {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
+            "named": true
+          },
+          {
+            "type": "pow",
+            "named": true
+          },
+          {
+            "type": "pow_fun",
+            "named": true
+          },
+          {
+            "type": "prefix",
+            "named": true
+          },
+          {
+            "type": "prefix_prim",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
+            "named": true
+          },
+          {
+            "type": "prim3",
+            "named": true
+          },
+          {
+            "type": "prim4",
+            "named": true
+          },
+          {
+            "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "rdtable",
+            "named": true
+          },
+          {
+            "type": "real",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "remainder",
+            "named": true
+          },
+          {
+            "type": "rint",
+            "named": true
+          },
+          {
+            "type": "round",
+            "named": true
+          },
+          {
+            "type": "route",
+            "named": true
+          },
+          {
+            "type": "rshift",
+            "named": true
+          },
+          {
+            "type": "rwtable",
+            "named": true
+          },
+          {
+            "type": "select2",
+            "named": true
+          },
+          {
+            "type": "select3",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -2764,7 +4282,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -2844,6 +4374,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -2857,6 +4391,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -2948,7 +4486,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -3049,6 +4595,426 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
+            "named": true
+          },
+          {
+            "type": "split",
+            "named": true
+          },
+          {
+            "type": "sqrt",
+            "named": true
+          },
+          {
+            "type": "sub",
+            "named": true
+          },
+          {
+            "type": "substitution",
+            "named": true
+          },
+          {
+            "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
+            "named": true
+          },
+          {
+            "type": "wire",
+            "named": true
+          },
+          {
+            "type": "with_environment",
+            "named": true
+          },
+          {
+            "type": "xor",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "inputs",
+    "named": true,
+    "fields": {
+      "expression": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "abs",
+            "named": true
+          },
+          {
+            "type": "access",
+            "named": true
+          },
+          {
+            "type": "acos",
+            "named": true
+          },
+          {
+            "type": "add",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": true
+          },
+          {
+            "type": "asin",
+            "named": true
+          },
+          {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
+            "type": "atan",
+            "named": true
+          },
+          {
+            "type": "atan2",
+            "named": true
+          },
+          {
+            "type": "attach",
+            "named": true
+          },
+          {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
+            "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
+            "named": true
+          },
+          {
+            "type": "component",
+            "named": true
+          },
+          {
+            "type": "control",
+            "named": true
+          },
+          {
+            "type": "cos",
+            "named": true
+          },
+          {
+            "type": "cut",
+            "named": true
+          },
+          {
+            "type": "delay",
+            "named": true
+          },
+          {
+            "type": "div",
+            "named": true
+          },
+          {
+            "type": "enable",
+            "named": true
+          },
+          {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
+            "type": "eq",
+            "named": true
+          },
+          {
+            "type": "exp",
+            "named": true
+          },
+          {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
+            "type": "float_cast",
+            "named": true
+          },
+          {
+            "type": "floor",
+            "named": true
+          },
+          {
+            "type": "fmod",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
+            "named": true
+          },
+          {
+            "type": "ge",
+            "named": true
+          },
+          {
+            "type": "group",
+            "named": true
+          },
+          {
+            "type": "gt",
+            "named": true
+          },
+          {
+            "type": "highest",
+            "named": true
+          },
+          {
+            "type": "id",
+            "named": true
+          },
+          {
+            "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          },
+          {
+            "type": "int_cast",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "lambda",
+            "named": true
+          },
+          {
+            "type": "le",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
+            "named": true
+          },
+          {
+            "type": "log",
+            "named": true
+          },
+          {
+            "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
+            "named": true
+          },
+          {
+            "type": "lshift",
+            "named": true
+          },
+          {
+            "type": "lt",
+            "named": true
+          },
+          {
+            "type": "max",
+            "named": true
+          },
+          {
+            "type": "mem",
+            "named": true
+          },
+          {
+            "type": "merge",
+            "named": true
+          },
+          {
+            "type": "min",
+            "named": true
+          },
+          {
+            "type": "mod",
+            "named": true
+          },
+          {
+            "type": "modifier",
+            "named": true
+          },
+          {
+            "type": "modulation",
+            "named": true
+          },
+          {
+            "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
+            "named": true
+          },
+          {
+            "type": "neq",
+            "named": true
+          },
+          {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
+            "named": true
+          },
+          {
+            "type": "pow",
+            "named": true
+          },
+          {
+            "type": "pow_fun",
+            "named": true
+          },
+          {
+            "type": "prefix",
+            "named": true
+          },
+          {
+            "type": "prefix_prim",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
+            "named": true
+          },
+          {
+            "type": "prim3",
+            "named": true
+          },
+          {
+            "type": "prim4",
+            "named": true
+          },
+          {
+            "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "rdtable",
+            "named": true
+          },
+          {
+            "type": "real",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "remainder",
+            "named": true
+          },
+          {
+            "type": "rint",
+            "named": true
+          },
+          {
+            "type": "round",
+            "named": true
+          },
+          {
+            "type": "route",
+            "named": true
+          },
+          {
+            "type": "rshift",
+            "named": true
+          },
+          {
+            "type": "rwtable",
+            "named": true
+          },
+          {
+            "type": "select2",
+            "named": true
+          },
+          {
+            "type": "select3",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -3158,7 +5124,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -3238,6 +5216,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -3251,6 +5233,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -3342,7 +5328,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -3443,6 +5437,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -3536,7 +5534,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -3616,6 +5626,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -3629,6 +5643,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -3720,7 +5738,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -3821,6 +5847,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -3942,7 +5972,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -4022,6 +6064,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -4035,6 +6081,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -4126,7 +6176,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -4227,6 +6285,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -4336,7 +6398,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -4416,6 +6490,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -4429,6 +6507,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -4520,7 +6602,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -4621,6 +6711,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -4746,7 +6840,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -4826,6 +6932,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -4839,6 +6949,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -4930,7 +7044,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -5031,6 +7153,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -5124,7 +7250,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -5204,6 +7342,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -5217,6 +7359,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -5308,7 +7454,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -5409,6 +7563,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -5508,7 +7666,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -5588,6 +7758,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -5601,6 +7775,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -5692,7 +7870,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -5793,6 +7979,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -5902,7 +8092,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -5982,6 +8184,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -5995,6 +8201,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -6086,7 +8296,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -6187,6 +8405,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -6306,7 +8528,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -6386,6 +8620,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -6399,6 +8637,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -6490,7 +8732,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -6591,6 +8841,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -6664,20 +8918,10 @@
     }
   },
   {
-    "type": "one_sample_delay",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "or",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "parallel",
+    "type": "numeric_widget",
     "named": true,
     "fields": {
-      "left": {
+      "init": {
         "multiple": true,
         "required": true,
         "types": [
@@ -6730,7 +8974,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -6810,6 +9066,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -6823,6 +9083,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -6914,7 +9178,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -7015,6 +9287,2110 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
+            "named": true
+          },
+          {
+            "type": "split",
+            "named": true
+          },
+          {
+            "type": "sqrt",
+            "named": true
+          },
+          {
+            "type": "sub",
+            "named": true
+          },
+          {
+            "type": "substitution",
+            "named": true
+          },
+          {
+            "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
+            "named": true
+          },
+          {
+            "type": "wire",
+            "named": true
+          },
+          {
+            "type": "with_environment",
+            "named": true
+          },
+          {
+            "type": "xor",
+            "named": true
+          }
+        ]
+      },
+      "label": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "max": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "abs",
+            "named": true
+          },
+          {
+            "type": "access",
+            "named": true
+          },
+          {
+            "type": "acos",
+            "named": true
+          },
+          {
+            "type": "add",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": true
+          },
+          {
+            "type": "asin",
+            "named": true
+          },
+          {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
+            "type": "atan",
+            "named": true
+          },
+          {
+            "type": "atan2",
+            "named": true
+          },
+          {
+            "type": "attach",
+            "named": true
+          },
+          {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
+            "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
+            "named": true
+          },
+          {
+            "type": "component",
+            "named": true
+          },
+          {
+            "type": "control",
+            "named": true
+          },
+          {
+            "type": "cos",
+            "named": true
+          },
+          {
+            "type": "cut",
+            "named": true
+          },
+          {
+            "type": "delay",
+            "named": true
+          },
+          {
+            "type": "div",
+            "named": true
+          },
+          {
+            "type": "enable",
+            "named": true
+          },
+          {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
+            "type": "eq",
+            "named": true
+          },
+          {
+            "type": "exp",
+            "named": true
+          },
+          {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
+            "type": "float_cast",
+            "named": true
+          },
+          {
+            "type": "floor",
+            "named": true
+          },
+          {
+            "type": "fmod",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
+            "named": true
+          },
+          {
+            "type": "ge",
+            "named": true
+          },
+          {
+            "type": "group",
+            "named": true
+          },
+          {
+            "type": "gt",
+            "named": true
+          },
+          {
+            "type": "highest",
+            "named": true
+          },
+          {
+            "type": "id",
+            "named": true
+          },
+          {
+            "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          },
+          {
+            "type": "int_cast",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "lambda",
+            "named": true
+          },
+          {
+            "type": "le",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
+            "named": true
+          },
+          {
+            "type": "log",
+            "named": true
+          },
+          {
+            "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
+            "named": true
+          },
+          {
+            "type": "lshift",
+            "named": true
+          },
+          {
+            "type": "lt",
+            "named": true
+          },
+          {
+            "type": "max",
+            "named": true
+          },
+          {
+            "type": "mem",
+            "named": true
+          },
+          {
+            "type": "merge",
+            "named": true
+          },
+          {
+            "type": "min",
+            "named": true
+          },
+          {
+            "type": "mod",
+            "named": true
+          },
+          {
+            "type": "modifier",
+            "named": true
+          },
+          {
+            "type": "modulation",
+            "named": true
+          },
+          {
+            "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
+            "named": true
+          },
+          {
+            "type": "neq",
+            "named": true
+          },
+          {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
+            "named": true
+          },
+          {
+            "type": "pow",
+            "named": true
+          },
+          {
+            "type": "pow_fun",
+            "named": true
+          },
+          {
+            "type": "prefix",
+            "named": true
+          },
+          {
+            "type": "prefix_prim",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
+            "named": true
+          },
+          {
+            "type": "prim3",
+            "named": true
+          },
+          {
+            "type": "prim4",
+            "named": true
+          },
+          {
+            "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "rdtable",
+            "named": true
+          },
+          {
+            "type": "real",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "remainder",
+            "named": true
+          },
+          {
+            "type": "rint",
+            "named": true
+          },
+          {
+            "type": "round",
+            "named": true
+          },
+          {
+            "type": "route",
+            "named": true
+          },
+          {
+            "type": "rshift",
+            "named": true
+          },
+          {
+            "type": "rwtable",
+            "named": true
+          },
+          {
+            "type": "select2",
+            "named": true
+          },
+          {
+            "type": "select3",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
+            "named": true
+          },
+          {
+            "type": "split",
+            "named": true
+          },
+          {
+            "type": "sqrt",
+            "named": true
+          },
+          {
+            "type": "sub",
+            "named": true
+          },
+          {
+            "type": "substitution",
+            "named": true
+          },
+          {
+            "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
+            "named": true
+          },
+          {
+            "type": "wire",
+            "named": true
+          },
+          {
+            "type": "with_environment",
+            "named": true
+          },
+          {
+            "type": "xor",
+            "named": true
+          }
+        ]
+      },
+      "min": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "abs",
+            "named": true
+          },
+          {
+            "type": "access",
+            "named": true
+          },
+          {
+            "type": "acos",
+            "named": true
+          },
+          {
+            "type": "add",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": true
+          },
+          {
+            "type": "asin",
+            "named": true
+          },
+          {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
+            "type": "atan",
+            "named": true
+          },
+          {
+            "type": "atan2",
+            "named": true
+          },
+          {
+            "type": "attach",
+            "named": true
+          },
+          {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
+            "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
+            "named": true
+          },
+          {
+            "type": "component",
+            "named": true
+          },
+          {
+            "type": "control",
+            "named": true
+          },
+          {
+            "type": "cos",
+            "named": true
+          },
+          {
+            "type": "cut",
+            "named": true
+          },
+          {
+            "type": "delay",
+            "named": true
+          },
+          {
+            "type": "div",
+            "named": true
+          },
+          {
+            "type": "enable",
+            "named": true
+          },
+          {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
+            "type": "eq",
+            "named": true
+          },
+          {
+            "type": "exp",
+            "named": true
+          },
+          {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
+            "type": "float_cast",
+            "named": true
+          },
+          {
+            "type": "floor",
+            "named": true
+          },
+          {
+            "type": "fmod",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
+            "named": true
+          },
+          {
+            "type": "ge",
+            "named": true
+          },
+          {
+            "type": "group",
+            "named": true
+          },
+          {
+            "type": "gt",
+            "named": true
+          },
+          {
+            "type": "highest",
+            "named": true
+          },
+          {
+            "type": "id",
+            "named": true
+          },
+          {
+            "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          },
+          {
+            "type": "int_cast",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "lambda",
+            "named": true
+          },
+          {
+            "type": "le",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
+            "named": true
+          },
+          {
+            "type": "log",
+            "named": true
+          },
+          {
+            "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
+            "named": true
+          },
+          {
+            "type": "lshift",
+            "named": true
+          },
+          {
+            "type": "lt",
+            "named": true
+          },
+          {
+            "type": "max",
+            "named": true
+          },
+          {
+            "type": "mem",
+            "named": true
+          },
+          {
+            "type": "merge",
+            "named": true
+          },
+          {
+            "type": "min",
+            "named": true
+          },
+          {
+            "type": "mod",
+            "named": true
+          },
+          {
+            "type": "modifier",
+            "named": true
+          },
+          {
+            "type": "modulation",
+            "named": true
+          },
+          {
+            "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
+            "named": true
+          },
+          {
+            "type": "neq",
+            "named": true
+          },
+          {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
+            "named": true
+          },
+          {
+            "type": "pow",
+            "named": true
+          },
+          {
+            "type": "pow_fun",
+            "named": true
+          },
+          {
+            "type": "prefix",
+            "named": true
+          },
+          {
+            "type": "prefix_prim",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
+            "named": true
+          },
+          {
+            "type": "prim3",
+            "named": true
+          },
+          {
+            "type": "prim4",
+            "named": true
+          },
+          {
+            "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "rdtable",
+            "named": true
+          },
+          {
+            "type": "real",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "remainder",
+            "named": true
+          },
+          {
+            "type": "rint",
+            "named": true
+          },
+          {
+            "type": "round",
+            "named": true
+          },
+          {
+            "type": "route",
+            "named": true
+          },
+          {
+            "type": "rshift",
+            "named": true
+          },
+          {
+            "type": "rwtable",
+            "named": true
+          },
+          {
+            "type": "select2",
+            "named": true
+          },
+          {
+            "type": "select3",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
+            "named": true
+          },
+          {
+            "type": "split",
+            "named": true
+          },
+          {
+            "type": "sqrt",
+            "named": true
+          },
+          {
+            "type": "sub",
+            "named": true
+          },
+          {
+            "type": "substitution",
+            "named": true
+          },
+          {
+            "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
+            "named": true
+          },
+          {
+            "type": "wire",
+            "named": true
+          },
+          {
+            "type": "with_environment",
+            "named": true
+          },
+          {
+            "type": "xor",
+            "named": true
+          }
+        ]
+      },
+      "step": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "abs",
+            "named": true
+          },
+          {
+            "type": "access",
+            "named": true
+          },
+          {
+            "type": "acos",
+            "named": true
+          },
+          {
+            "type": "add",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": true
+          },
+          {
+            "type": "asin",
+            "named": true
+          },
+          {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
+            "type": "atan",
+            "named": true
+          },
+          {
+            "type": "atan2",
+            "named": true
+          },
+          {
+            "type": "attach",
+            "named": true
+          },
+          {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
+            "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
+            "named": true
+          },
+          {
+            "type": "component",
+            "named": true
+          },
+          {
+            "type": "control",
+            "named": true
+          },
+          {
+            "type": "cos",
+            "named": true
+          },
+          {
+            "type": "cut",
+            "named": true
+          },
+          {
+            "type": "delay",
+            "named": true
+          },
+          {
+            "type": "div",
+            "named": true
+          },
+          {
+            "type": "enable",
+            "named": true
+          },
+          {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
+            "type": "eq",
+            "named": true
+          },
+          {
+            "type": "exp",
+            "named": true
+          },
+          {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
+            "type": "float_cast",
+            "named": true
+          },
+          {
+            "type": "floor",
+            "named": true
+          },
+          {
+            "type": "fmod",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
+            "named": true
+          },
+          {
+            "type": "ge",
+            "named": true
+          },
+          {
+            "type": "group",
+            "named": true
+          },
+          {
+            "type": "gt",
+            "named": true
+          },
+          {
+            "type": "highest",
+            "named": true
+          },
+          {
+            "type": "id",
+            "named": true
+          },
+          {
+            "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          },
+          {
+            "type": "int_cast",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "lambda",
+            "named": true
+          },
+          {
+            "type": "le",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
+            "named": true
+          },
+          {
+            "type": "log",
+            "named": true
+          },
+          {
+            "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
+            "named": true
+          },
+          {
+            "type": "lshift",
+            "named": true
+          },
+          {
+            "type": "lt",
+            "named": true
+          },
+          {
+            "type": "max",
+            "named": true
+          },
+          {
+            "type": "mem",
+            "named": true
+          },
+          {
+            "type": "merge",
+            "named": true
+          },
+          {
+            "type": "min",
+            "named": true
+          },
+          {
+            "type": "mod",
+            "named": true
+          },
+          {
+            "type": "modifier",
+            "named": true
+          },
+          {
+            "type": "modulation",
+            "named": true
+          },
+          {
+            "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
+            "named": true
+          },
+          {
+            "type": "neq",
+            "named": true
+          },
+          {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
+            "named": true
+          },
+          {
+            "type": "pow",
+            "named": true
+          },
+          {
+            "type": "pow_fun",
+            "named": true
+          },
+          {
+            "type": "prefix",
+            "named": true
+          },
+          {
+            "type": "prefix_prim",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
+            "named": true
+          },
+          {
+            "type": "prim3",
+            "named": true
+          },
+          {
+            "type": "prim4",
+            "named": true
+          },
+          {
+            "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "rdtable",
+            "named": true
+          },
+          {
+            "type": "real",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "remainder",
+            "named": true
+          },
+          {
+            "type": "rint",
+            "named": true
+          },
+          {
+            "type": "round",
+            "named": true
+          },
+          {
+            "type": "route",
+            "named": true
+          },
+          {
+            "type": "rshift",
+            "named": true
+          },
+          {
+            "type": "rwtable",
+            "named": true
+          },
+          {
+            "type": "select2",
+            "named": true
+          },
+          {
+            "type": "select3",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
+            "named": true
+          },
+          {
+            "type": "split",
+            "named": true
+          },
+          {
+            "type": "sqrt",
+            "named": true
+          },
+          {
+            "type": "sub",
+            "named": true
+          },
+          {
+            "type": "substitution",
+            "named": true
+          },
+          {
+            "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
+            "named": true
+          },
+          {
+            "type": "wire",
+            "named": true
+          },
+          {
+            "type": "with_environment",
+            "named": true
+          },
+          {
+            "type": "xor",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "hslider_type",
+            "named": true
+          },
+          {
+            "type": "nentry_type",
+            "named": true
+          },
+          {
+            "type": "vslider_type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "one_sample_delay",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "or",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "outputs",
+    "named": true,
+    "fields": {
+      "expression": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "abs",
+            "named": true
+          },
+          {
+            "type": "access",
+            "named": true
+          },
+          {
+            "type": "acos",
+            "named": true
+          },
+          {
+            "type": "add",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": true
+          },
+          {
+            "type": "asin",
+            "named": true
+          },
+          {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
+            "type": "atan",
+            "named": true
+          },
+          {
+            "type": "atan2",
+            "named": true
+          },
+          {
+            "type": "attach",
+            "named": true
+          },
+          {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
+            "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
+            "named": true
+          },
+          {
+            "type": "component",
+            "named": true
+          },
+          {
+            "type": "control",
+            "named": true
+          },
+          {
+            "type": "cos",
+            "named": true
+          },
+          {
+            "type": "cut",
+            "named": true
+          },
+          {
+            "type": "delay",
+            "named": true
+          },
+          {
+            "type": "div",
+            "named": true
+          },
+          {
+            "type": "enable",
+            "named": true
+          },
+          {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
+            "type": "eq",
+            "named": true
+          },
+          {
+            "type": "exp",
+            "named": true
+          },
+          {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
+            "type": "float_cast",
+            "named": true
+          },
+          {
+            "type": "floor",
+            "named": true
+          },
+          {
+            "type": "fmod",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
+            "named": true
+          },
+          {
+            "type": "ge",
+            "named": true
+          },
+          {
+            "type": "group",
+            "named": true
+          },
+          {
+            "type": "gt",
+            "named": true
+          },
+          {
+            "type": "highest",
+            "named": true
+          },
+          {
+            "type": "id",
+            "named": true
+          },
+          {
+            "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          },
+          {
+            "type": "int_cast",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "lambda",
+            "named": true
+          },
+          {
+            "type": "le",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
+            "named": true
+          },
+          {
+            "type": "log",
+            "named": true
+          },
+          {
+            "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
+            "named": true
+          },
+          {
+            "type": "lshift",
+            "named": true
+          },
+          {
+            "type": "lt",
+            "named": true
+          },
+          {
+            "type": "max",
+            "named": true
+          },
+          {
+            "type": "mem",
+            "named": true
+          },
+          {
+            "type": "merge",
+            "named": true
+          },
+          {
+            "type": "min",
+            "named": true
+          },
+          {
+            "type": "mod",
+            "named": true
+          },
+          {
+            "type": "modifier",
+            "named": true
+          },
+          {
+            "type": "modulation",
+            "named": true
+          },
+          {
+            "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
+            "named": true
+          },
+          {
+            "type": "neq",
+            "named": true
+          },
+          {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
+            "named": true
+          },
+          {
+            "type": "pow",
+            "named": true
+          },
+          {
+            "type": "pow_fun",
+            "named": true
+          },
+          {
+            "type": "prefix",
+            "named": true
+          },
+          {
+            "type": "prefix_prim",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
+            "named": true
+          },
+          {
+            "type": "prim3",
+            "named": true
+          },
+          {
+            "type": "prim4",
+            "named": true
+          },
+          {
+            "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "rdtable",
+            "named": true
+          },
+          {
+            "type": "real",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "remainder",
+            "named": true
+          },
+          {
+            "type": "rint",
+            "named": true
+          },
+          {
+            "type": "round",
+            "named": true
+          },
+          {
+            "type": "route",
+            "named": true
+          },
+          {
+            "type": "rshift",
+            "named": true
+          },
+          {
+            "type": "rwtable",
+            "named": true
+          },
+          {
+            "type": "select2",
+            "named": true
+          },
+          {
+            "type": "select3",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
+            "named": true
+          },
+          {
+            "type": "split",
+            "named": true
+          },
+          {
+            "type": "sqrt",
+            "named": true
+          },
+          {
+            "type": "sub",
+            "named": true
+          },
+          {
+            "type": "substitution",
+            "named": true
+          },
+          {
+            "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
+            "named": true
+          },
+          {
+            "type": "wire",
+            "named": true
+          },
+          {
+            "type": "with_environment",
+            "named": true
+          },
+          {
+            "type": "xor",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "parallel",
+    "named": true,
+    "fields": {
+      "left": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "abs",
+            "named": true
+          },
+          {
+            "type": "access",
+            "named": true
+          },
+          {
+            "type": "acos",
+            "named": true
+          },
+          {
+            "type": "add",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": true
+          },
+          {
+            "type": "asin",
+            "named": true
+          },
+          {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
+            "type": "atan",
+            "named": true
+          },
+          {
+            "type": "atan2",
+            "named": true
+          },
+          {
+            "type": "attach",
+            "named": true
+          },
+          {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
+            "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
+            "named": true
+          },
+          {
+            "type": "component",
+            "named": true
+          },
+          {
+            "type": "control",
+            "named": true
+          },
+          {
+            "type": "cos",
+            "named": true
+          },
+          {
+            "type": "cut",
+            "named": true
+          },
+          {
+            "type": "delay",
+            "named": true
+          },
+          {
+            "type": "div",
+            "named": true
+          },
+          {
+            "type": "enable",
+            "named": true
+          },
+          {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
+            "type": "eq",
+            "named": true
+          },
+          {
+            "type": "exp",
+            "named": true
+          },
+          {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
+            "type": "float_cast",
+            "named": true
+          },
+          {
+            "type": "floor",
+            "named": true
+          },
+          {
+            "type": "fmod",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
+            "named": true
+          },
+          {
+            "type": "ge",
+            "named": true
+          },
+          {
+            "type": "group",
+            "named": true
+          },
+          {
+            "type": "gt",
+            "named": true
+          },
+          {
+            "type": "highest",
+            "named": true
+          },
+          {
+            "type": "id",
+            "named": true
+          },
+          {
+            "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          },
+          {
+            "type": "int_cast",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "lambda",
+            "named": true
+          },
+          {
+            "type": "le",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
+            "named": true
+          },
+          {
+            "type": "log",
+            "named": true
+          },
+          {
+            "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
+            "named": true
+          },
+          {
+            "type": "lshift",
+            "named": true
+          },
+          {
+            "type": "lt",
+            "named": true
+          },
+          {
+            "type": "max",
+            "named": true
+          },
+          {
+            "type": "mem",
+            "named": true
+          },
+          {
+            "type": "merge",
+            "named": true
+          },
+          {
+            "type": "min",
+            "named": true
+          },
+          {
+            "type": "mod",
+            "named": true
+          },
+          {
+            "type": "modifier",
+            "named": true
+          },
+          {
+            "type": "modulation",
+            "named": true
+          },
+          {
+            "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
+            "named": true
+          },
+          {
+            "type": "neq",
+            "named": true
+          },
+          {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
+            "named": true
+          },
+          {
+            "type": "pow",
+            "named": true
+          },
+          {
+            "type": "pow_fun",
+            "named": true
+          },
+          {
+            "type": "prefix",
+            "named": true
+          },
+          {
+            "type": "prefix_prim",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
+            "named": true
+          },
+          {
+            "type": "prim3",
+            "named": true
+          },
+          {
+            "type": "prim4",
+            "named": true
+          },
+          {
+            "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "rdtable",
+            "named": true
+          },
+          {
+            "type": "real",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "remainder",
+            "named": true
+          },
+          {
+            "type": "rint",
+            "named": true
+          },
+          {
+            "type": "round",
+            "named": true
+          },
+          {
+            "type": "route",
+            "named": true
+          },
+          {
+            "type": "rshift",
+            "named": true
+          },
+          {
+            "type": "rwtable",
+            "named": true
+          },
+          {
+            "type": "select2",
+            "named": true
+          },
+          {
+            "type": "select3",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -7108,7 +11484,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -7188,6 +11576,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -7201,6 +11593,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -7292,7 +11688,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -7393,6 +11797,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -7535,7 +11943,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -7615,6 +12035,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -7628,6 +12052,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -7719,7 +12147,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -7820,6 +12256,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -8012,7 +12452,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -8092,6 +12544,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -8105,6 +12561,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -8196,7 +12656,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -8297,6 +12765,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -8468,7 +12940,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -8548,6 +13032,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -8561,6 +13049,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -8652,7 +13144,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -8753,6 +13253,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -8852,7 +13356,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -8932,6 +13448,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -8945,6 +13465,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -9036,7 +13560,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -9137,6 +13669,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -9528,7 +14064,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -9608,6 +14156,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -9621,6 +14173,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -9712,7 +14268,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -9813,6 +14377,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -9922,7 +14490,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -10002,6 +14582,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -10015,6 +14599,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -10106,7 +14694,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -10207,6 +14803,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -10300,7 +14900,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -10380,6 +14992,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -10393,6 +15009,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -10484,7 +15104,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -10585,6 +15213,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -10684,7 +15316,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -10764,6 +15408,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -10777,6 +15425,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -10868,7 +15520,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -10969,6 +15629,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -11062,7 +15726,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -11142,6 +15818,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -11155,6 +15835,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -11246,7 +15930,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -11347,6 +16039,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -11440,7 +16136,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -11520,6 +16228,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -11533,6 +16245,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -11624,7 +16340,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -11725,6 +16449,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -11824,7 +16552,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -11904,6 +16644,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -11917,6 +16661,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -12008,7 +16756,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -12109,6 +16865,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -12233,7 +16993,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -12313,6 +17085,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -12326,6 +17102,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -12417,7 +17197,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -12518,6 +17306,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -12611,7 +17403,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -12691,6 +17495,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -12704,6 +17512,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -12795,7 +17607,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -12896,6 +17716,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -12973,10 +17797,20 @@
     }
   },
   {
-    "type": "split",
+    "type": "soundfile",
     "named": true,
     "fields": {
-      "left": {
+      "filename": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "num_channels": {
         "multiple": true,
         "required": true,
         "types": [
@@ -13029,7 +17863,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -13109,6 +17955,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -13122,6 +17972,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -13213,7 +18067,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -13314,6 +18176,426 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
+            "named": true
+          },
+          {
+            "type": "split",
+            "named": true
+          },
+          {
+            "type": "sqrt",
+            "named": true
+          },
+          {
+            "type": "sub",
+            "named": true
+          },
+          {
+            "type": "substitution",
+            "named": true
+          },
+          {
+            "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
+            "named": true
+          },
+          {
+            "type": "wire",
+            "named": true
+          },
+          {
+            "type": "with_environment",
+            "named": true
+          },
+          {
+            "type": "xor",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "split",
+    "named": true,
+    "fields": {
+      "left": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "abs",
+            "named": true
+          },
+          {
+            "type": "access",
+            "named": true
+          },
+          {
+            "type": "acos",
+            "named": true
+          },
+          {
+            "type": "add",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": true
+          },
+          {
+            "type": "asin",
+            "named": true
+          },
+          {
+            "type": "assertbounds",
+            "named": true
+          },
+          {
+            "type": "atan",
+            "named": true
+          },
+          {
+            "type": "atan2",
+            "named": true
+          },
+          {
+            "type": "attach",
+            "named": true
+          },
+          {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
+            "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
+            "named": true
+          },
+          {
+            "type": "component",
+            "named": true
+          },
+          {
+            "type": "control",
+            "named": true
+          },
+          {
+            "type": "cos",
+            "named": true
+          },
+          {
+            "type": "cut",
+            "named": true
+          },
+          {
+            "type": "delay",
+            "named": true
+          },
+          {
+            "type": "div",
+            "named": true
+          },
+          {
+            "type": "enable",
+            "named": true
+          },
+          {
+            "type": "environment",
+            "named": false
+          },
+          {
+            "type": "environment",
+            "named": true
+          },
+          {
+            "type": "eq",
+            "named": true
+          },
+          {
+            "type": "exp",
+            "named": true
+          },
+          {
+            "type": "fconst",
+            "named": true
+          },
+          {
+            "type": "ffunction",
+            "named": true
+          },
+          {
+            "type": "float_cast",
+            "named": true
+          },
+          {
+            "type": "floor",
+            "named": true
+          },
+          {
+            "type": "fmod",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "fvariable",
+            "named": true
+          },
+          {
+            "type": "ge",
+            "named": true
+          },
+          {
+            "type": "group",
+            "named": true
+          },
+          {
+            "type": "gt",
+            "named": true
+          },
+          {
+            "type": "highest",
+            "named": true
+          },
+          {
+            "type": "id",
+            "named": true
+          },
+          {
+            "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          },
+          {
+            "type": "int_cast",
+            "named": true
+          },
+          {
+            "type": "iteration",
+            "named": true
+          },
+          {
+            "type": "lambda",
+            "named": true
+          },
+          {
+            "type": "le",
+            "named": true
+          },
+          {
+            "type": "letrec_environment",
+            "named": true
+          },
+          {
+            "type": "library",
+            "named": true
+          },
+          {
+            "type": "log",
+            "named": true
+          },
+          {
+            "type": "log10",
+            "named": true
+          },
+          {
+            "type": "lowest",
+            "named": true
+          },
+          {
+            "type": "lshift",
+            "named": true
+          },
+          {
+            "type": "lt",
+            "named": true
+          },
+          {
+            "type": "max",
+            "named": true
+          },
+          {
+            "type": "mem",
+            "named": true
+          },
+          {
+            "type": "merge",
+            "named": true
+          },
+          {
+            "type": "min",
+            "named": true
+          },
+          {
+            "type": "mod",
+            "named": true
+          },
+          {
+            "type": "modifier",
+            "named": true
+          },
+          {
+            "type": "modulation",
+            "named": true
+          },
+          {
+            "type": "mult",
+            "named": true
+          },
+          {
+            "type": "negate_id",
+            "named": true
+          },
+          {
+            "type": "neq",
+            "named": true
+          },
+          {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
+            "named": true
+          },
+          {
+            "type": "parallel",
+            "named": true
+          },
+          {
+            "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
+            "named": true
+          },
+          {
+            "type": "pow",
+            "named": true
+          },
+          {
+            "type": "pow_fun",
+            "named": true
+          },
+          {
+            "type": "prefix",
+            "named": true
+          },
+          {
+            "type": "prefix_prim",
+            "named": true
+          },
+          {
+            "type": "prim1",
+            "named": true
+          },
+          {
+            "type": "prim2",
+            "named": true
+          },
+          {
+            "type": "prim3",
+            "named": true
+          },
+          {
+            "type": "prim4",
+            "named": true
+          },
+          {
+            "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "rdtable",
+            "named": true
+          },
+          {
+            "type": "real",
+            "named": true
+          },
+          {
+            "type": "recursive",
+            "named": true
+          },
+          {
+            "type": "remainder",
+            "named": true
+          },
+          {
+            "type": "rint",
+            "named": true
+          },
+          {
+            "type": "round",
+            "named": true
+          },
+          {
+            "type": "route",
+            "named": true
+          },
+          {
+            "type": "rshift",
+            "named": true
+          },
+          {
+            "type": "rwtable",
+            "named": true
+          },
+          {
+            "type": "select2",
+            "named": true
+          },
+          {
+            "type": "select3",
+            "named": true
+          },
+          {
+            "type": "sequential",
+            "named": true
+          },
+          {
+            "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -13407,7 +18689,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -13487,6 +18781,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -13500,6 +18798,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -13591,7 +18893,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -13692,6 +19002,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -13796,7 +19110,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -13876,6 +19202,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -13889,6 +19219,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -13980,7 +19314,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -14081,6 +19423,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -14270,7 +19616,19 @@
             "named": true
           },
           {
+            "type": "bargraph",
+            "named": true
+          },
+          {
+            "type": "button",
+            "named": true
+          },
+          {
             "type": "ceil",
+            "named": true
+          },
+          {
+            "type": "checkbox",
             "named": true
           },
           {
@@ -14350,6 +19708,10 @@
             "named": true
           },
           {
+            "type": "group",
+            "named": true
+          },
+          {
             "type": "gt",
             "named": true
           },
@@ -14363,6 +19725,10 @@
           },
           {
             "type": "infix",
+            "named": true
+          },
+          {
+            "type": "inputs",
             "named": true
           },
           {
@@ -14454,7 +19820,15 @@
             "named": true
           },
           {
+            "type": "numeric_widget",
+            "named": true
+          },
+          {
             "type": "or",
+            "named": true
+          },
+          {
+            "type": "outputs",
             "named": true
           },
           {
@@ -14555,6 +19929,10 @@
           },
           {
             "type": "sin",
+            "named": true
+          },
+          {
+            "type": "soundfile",
             "named": true
           },
           {
@@ -14760,12 +20138,20 @@
     "named": true
   },
   {
+    "type": "button",
+    "named": false
+  },
+  {
     "type": "case",
     "named": false
   },
   {
     "type": "ceil",
     "named": true
+  },
+  {
+    "type": "checkbox",
+    "named": false
   },
   {
     "type": "comment",
@@ -14864,11 +20250,27 @@
     "named": true
   },
   {
+    "type": "hbargraph_type",
+    "named": true
+  },
+  {
+    "type": "hgroup_type",
+    "named": true
+  },
+  {
     "type": "highest",
     "named": true
   },
   {
+    "type": "hslider_type",
+    "named": true
+  },
+  {
     "type": "import",
+    "named": false
+  },
+  {
+    "type": "inputs",
     "named": false
   },
   {
@@ -14932,8 +20334,16 @@
     "named": true
   },
   {
+    "type": "nentry_type",
+    "named": true
+  },
+  {
     "type": "neq",
     "named": true
+  },
+  {
+    "type": "outputs",
+    "named": false
   },
   {
     "type": "par",
@@ -15012,6 +20422,10 @@
     "named": true
   },
   {
+    "type": "soundfile",
+    "named": false
+  },
+  {
     "type": "sqrt",
     "named": true
   },
@@ -15025,6 +20439,22 @@
   },
   {
     "type": "tan",
+    "named": true
+  },
+  {
+    "type": "tgroup_type",
+    "named": true
+  },
+  {
+    "type": "vbargraph_type",
+    "named": true
+  },
+  {
+    "type": "vgroup_type",
+    "named": true
+  },
+  {
+    "type": "vslider_type",
     "named": true
   },
   {

@@ -2,8 +2,6 @@
 
 This is a tree-sitter grammar for the [Faust audio programming language](https://faustdoc.grame.fr/manual/syntax/).
 
-WIP
-
 ## Design
 
 The rules of the grammar are somewhat more detailed than typical grammars.

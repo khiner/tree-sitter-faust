@@ -174,3 +174,116 @@ bar = _,_,_ : select3(s) : _;
       (sequential
         (prim4 (select3) (arguments (id)))
         (wire)))))
+
+===
+Component
+===
+
+process = component("karplus32.dsp") : component("freeverb.dsp");
+
+---
+(program
+  (definition
+    name: (id)
+    value: (sequential
+      left: (component filename: (string))
+      right: (component filename: (string)))))
+
+===
+Library
+===
+
+fl = library("filters.lib");
+process = fl.lowpass;
+
+---
+(program
+  (definition
+    name: (id)
+    value: (library filename: (string)))
+  (definition
+    name: (id)
+    value: (access environment: (id) definition: (id))))
+
+===
+Waveform
+===
+
+triangleWave = waveform{0,0.5,1,0.5,0,-0.5,-1,-.5};
+
+---
+(program
+  (definition (id)
+    (waveform
+      (values
+        (int)
+        (real)
+        (int)
+        (real)
+        (int)
+        (real)
+        (int)
+        (real)))))
+
+===
+Route
+===
+
+fake_route = route(2,2);
+full_route = route(2,2,1,2,2,1);
+
+---
+(program
+  (definition
+    name: (id)
+    value: (route num_inputs: (int) num_outputs: (int)))
+  (definition
+    name: (id)
+    value: (route
+      num_inputs: (int)
+      num_outputs: (int)
+      expression: (parallel
+        left: (int)
+        right: (parallel
+          left: (int)
+          right: (parallel left: (int) right: (int)))))))
+
+===
+Soundfile
+===
+
+reader = _~+(1);
+process = 0,reader:soundfile("son[url:{'foo.wav'}]",2);
+
+---
+(program
+  (definition
+    name: (id)
+    value: (recursive
+      left: (wire)
+      right: (partial operator: (add) operand: (int))))
+  (definition
+    name: (id)
+    value: (sequential
+      left: (parallel left: (int) right: (id))
+      right: (soundfile filename: (string) num_channels: (int)))))
+
+===
+Inputs and outputs
+===
+
+expr = _,_;
+num_outs = outputs(expr);
+num_ints = inputs(expr);
+
+---
+(program
+  (definition
+    name: (id)
+    value: (parallel left: (wire) right: (wire)))
+  (definition
+    name: (id)
+    value: (outputs expression: (id)))
+  (definition
+    name: (id)
+    value: (inputs expression: (id))))

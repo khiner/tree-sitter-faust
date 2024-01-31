@@ -1024,6 +1024,19 @@
           ]
         },
         {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "environment"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "environment"
+            }
+          ]
+        },
+        {
           "type": "SYMBOL",
           "name": "lambda"
         },
@@ -1068,17 +1081,36 @@
           "name": "route"
         },
         {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "environment"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "environment"
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "button"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "checkbox"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "numeric_widget"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "group"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "bargraph"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "soundfile"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "inputs"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "outputs"
         }
       ]
     },
@@ -2267,6 +2299,349 @@
         }
       ]
     },
+    "button": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "button"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "FIELD",
+          "name": "label",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "checkbox": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "checkbox"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "FIELD",
+          "name": "label",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "numeric_widget": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "FIELD",
+          "name": "type",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "vslider_type"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "hslider_type"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "nentry_type"
+              }
+            ]
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "FIELD",
+          "name": "label",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "FIELD",
+          "name": "init",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_argument"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "FIELD",
+          "name": "min",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_argument"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "FIELD",
+          "name": "max",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_argument"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "FIELD",
+          "name": "step",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_argument"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "group": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "FIELD",
+          "name": "type",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "vgroup_type"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "hgroup_type"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "tgroup_type"
+              }
+            ]
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "FIELD",
+          "name": "label",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "FIELD",
+          "name": "expression",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_expression"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "bargraph": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "FIELD",
+          "name": "type",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "vbargraph_type"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "hbargraph_type"
+              }
+            ]
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "FIELD",
+          "name": "label",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "FIELD",
+          "name": "min",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_argument"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "FIELD",
+          "name": "max",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_argument"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "soundfile": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "soundfile"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "FIELD",
+          "name": "filename",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "FIELD",
+          "name": "num_channels",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_argument"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "inputs": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "inputs"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "FIELD",
+          "name": "expression",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_expression"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "outputs": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "outputs"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "FIELD",
+          "name": "expression",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_expression"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
     "_infix": {
       "type": "CHOICE",
       "members": [
@@ -3323,6 +3698,38 @@
     "fixed_point_precision": {
       "type": "STRING",
       "value": "fixedpointprecision"
+    },
+    "vslider_type": {
+      "type": "STRING",
+      "value": "vslider"
+    },
+    "hslider_type": {
+      "type": "STRING",
+      "value": "hslider"
+    },
+    "nentry_type": {
+      "type": "STRING",
+      "value": "nentry"
+    },
+    "vgroup_type": {
+      "type": "STRING",
+      "value": "vgroup"
+    },
+    "hgroup_type": {
+      "type": "STRING",
+      "value": "hgroup"
+    },
+    "tgroup_type": {
+      "type": "STRING",
+      "value": "tgroup"
+    },
+    "vbargraph_type": {
+      "type": "STRING",
+      "value": "vbargraph"
+    },
+    "hbargraph_type": {
+      "type": "STRING",
+      "value": "hbargraph"
     },
     "string": {
       "type": "PATTERN",
