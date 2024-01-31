@@ -117,6 +117,7 @@ module.exports = grammar({
         $.component,
         $.library,
         $.waveform,
+        $.route,
         seq('environment', $.environment)
       ),
 
@@ -192,9 +193,16 @@ module.exports = grammar({
     waveform: $ => seq('waveform', '{', $.values, '}'),
     values: $ => sepBy(',', $._number),
 
-    // "route"       return ROUTE;
-    // | ROUTE LPAR argument PAR argument RPAR       { $$ = boxRoute($3, $5, boxPar(boxInt(0),boxInt(0))); } // fake route
-    // | ROUTE LPAR argument PAR argument PAR expression RPAR       { $$ = boxRoute($3, $5, $7); }
+    route: $ =>
+      seq(
+        'route',
+        '(',
+        field('num_inputs', $._argument),
+        ',',
+        field('num_outputs', $._argument),
+        optional(seq(',', field('expression', $._expression))),
+        ')'
+      ),
 
     // Infix operators are built-in binary primitives that can be used in infix notation.
     // https://faustdoc.grame.fr/manual/syntax/#infix-operators

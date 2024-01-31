@@ -205,3 +205,26 @@ triangleWave = waveform{0,0.5,1,0.5,0,-0.5,-1,-.5};
         (real)
         (int)
         (real)))))
+
+===
+Route
+===
+
+fake_route = route(2,2);
+full_route = route(2,2,1,2,2,1);
+
+---
+(program
+  (definition
+    name: (id)
+    value: (route num_inputs: (int) num_outputs: (int)))
+  (definition
+    name: (id)
+    value: (route
+      num_inputs: (int)
+      num_outputs: (int)
+      expression: (parallel
+        left: (int)
+        right: (parallel
+          left: (int)
+          right: (parallel left: (int) right: (int)))))))
