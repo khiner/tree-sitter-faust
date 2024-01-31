@@ -1,0 +1,24 @@
+====
+Pattern
+====
+
+process = case {
+  (x:y) => y:x;
+  (x) => x;
+}(reverb : harmonizer);
+ 
+---
+(program
+  (definition
+    name: (id)
+    value: (function_call
+      callee: (pattern
+        (rules
+          (rule
+            (arguments (sequential left: (id) right: (id)))
+            expression: (sequential left: (id) right: (id)))
+          (rule
+            (arguments (id))
+            expression: (id))))
+      (arguments
+        (sequential left: (id) right: (id))))))

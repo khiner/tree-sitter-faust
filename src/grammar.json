@@ -1036,6 +1036,10 @@
           "name": "iteration"
         },
         {
+          "type": "SYMBOL",
+          "name": "pattern"
+        },
+        {
           "type": "SEQ",
           "members": [
             {
@@ -1276,24 +1280,105 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "sequential_arg"
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "sequential_arg"
+          },
+          "named": true,
+          "value": "sequential"
         },
         {
-          "type": "SYMBOL",
-          "name": "split_arg"
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "split_arg"
+          },
+          "named": true,
+          "value": "split"
         },
         {
-          "type": "SYMBOL",
-          "name": "merge_arg"
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "merge_arg"
+          },
+          "named": true,
+          "value": "merge"
         },
         {
-          "type": "SYMBOL",
-          "name": "recursive_arg"
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "recursive_arg"
+          },
+          "named": true,
+          "value": "recursive"
         },
         {
           "type": "SYMBOL",
           "name": "_infix_expression"
+        }
+      ]
+    },
+    "pattern": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "case"
+        },
+        {
+          "type": "STRING",
+          "value": "{"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "rules"
+        },
+        {
+          "type": "STRING",
+          "value": "}"
+        }
+      ]
+    },
+    "rules": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "SYMBOL",
+        "name": "rule"
+      }
+    },
+    "rule": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "SYMBOL",
+          "name": "arguments"
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        },
+        {
+          "type": "STRING",
+          "value": "=>"
+        },
+        {
+          "type": "FIELD",
+          "name": "expression",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_expression"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ";"
         }
       ]
     },

@@ -246,6 +246,10 @@
             "named": true
           },
           {
+            "type": "pattern",
+            "named": true
+          },
+          {
             "type": "pow",
             "named": true
           },
@@ -550,10 +554,6 @@
           "named": true
         },
         {
-          "type": "merge_arg",
-          "named": true
-        },
-        {
           "type": "min",
           "named": true
         },
@@ -591,6 +591,10 @@
         },
         {
           "type": "partial",
+          "named": true
+        },
+        {
+          "type": "pattern",
           "named": true
         },
         {
@@ -642,10 +646,6 @@
           "named": true
         },
         {
-          "type": "recursive_arg",
-          "named": true
-        },
-        {
           "type": "remainder",
           "named": true
         },
@@ -678,19 +678,11 @@
           "named": true
         },
         {
-          "type": "sequential_arg",
-          "named": true
-        },
-        {
           "type": "sin",
           "named": true
         },
         {
           "type": "split",
-          "named": true
-        },
-        {
-          "type": "split_arg",
           "named": true
         },
         {
@@ -983,6 +975,10 @@
           },
           {
             "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
             "named": true
           },
           {
@@ -1402,6 +1398,10 @@
             "named": true
           },
           {
+            "type": "pattern",
+            "named": true
+          },
+          {
             "type": "pow",
             "named": true
           },
@@ -1775,6 +1775,10 @@
           },
           {
             "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
             "named": true
           },
           {
@@ -2215,6 +2219,10 @@
             "named": true
           },
           {
+            "type": "pattern",
+            "named": true
+          },
+          {
             "type": "pow",
             "named": true
           },
@@ -2640,6 +2648,10 @@
           },
           {
             "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
             "named": true
           },
           {
@@ -3009,6 +3021,10 @@
             "named": true
           },
           {
+            "type": "pattern",
+            "named": true
+          },
+          {
             "type": "pow",
             "named": true
           },
@@ -3319,10 +3335,6 @@
             "named": true
           },
           {
-            "type": "merge_arg",
-            "named": true
-          },
-          {
             "type": "min",
             "named": true
           },
@@ -3360,6 +3372,10 @@
           },
           {
             "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
             "named": true
           },
           {
@@ -3411,10 +3427,6 @@
             "named": true
           },
           {
-            "type": "recursive_arg",
-            "named": true
-          },
-          {
             "type": "remainder",
             "named": true
           },
@@ -3447,19 +3459,11 @@
             "named": true
           },
           {
-            "type": "sequential_arg",
-            "named": true
-          },
-          {
             "type": "sin",
             "named": true
           },
           {
             "type": "split",
-            "named": true
-          },
-          {
-            "type": "split_arg",
             "named": true
           },
           {
@@ -3750,6 +3754,10 @@
           },
           {
             "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
             "named": true
           },
           {
@@ -4119,6 +4127,10 @@
             "named": true
           },
           {
+            "type": "pattern",
+            "named": true
+          },
+          {
             "type": "pow",
             "named": true
           },
@@ -4485,6 +4497,10 @@
             "named": true
           },
           {
+            "type": "pattern",
+            "named": true
+          },
+          {
             "type": "pow",
             "named": true
           },
@@ -4835,6 +4851,10 @@
             "named": true
           },
           {
+            "type": "pattern",
+            "named": true
+          },
+          {
             "type": "pow",
             "named": true
           },
@@ -4920,744 +4940,6 @@
           },
           {
             "type": "split",
-            "named": true
-          },
-          {
-            "type": "sqrt",
-            "named": true
-          },
-          {
-            "type": "sub",
-            "named": true
-          },
-          {
-            "type": "substitution",
-            "named": true
-          },
-          {
-            "type": "tan",
-            "named": true
-          },
-          {
-            "type": "wire",
-            "named": true
-          },
-          {
-            "type": "with_environment",
-            "named": true
-          },
-          {
-            "type": "xor",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "merge_arg",
-    "named": true,
-    "fields": {
-      "left": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "abs",
-            "named": true
-          },
-          {
-            "type": "access",
-            "named": true
-          },
-          {
-            "type": "acos",
-            "named": true
-          },
-          {
-            "type": "add",
-            "named": true
-          },
-          {
-            "type": "and",
-            "named": true
-          },
-          {
-            "type": "asin",
-            "named": true
-          },
-          {
-            "type": "assertbounds",
-            "named": true
-          },
-          {
-            "type": "atan",
-            "named": true
-          },
-          {
-            "type": "atan2",
-            "named": true
-          },
-          {
-            "type": "attach",
-            "named": true
-          },
-          {
-            "type": "ceil",
-            "named": true
-          },
-          {
-            "type": "component",
-            "named": true
-          },
-          {
-            "type": "control",
-            "named": true
-          },
-          {
-            "type": "cos",
-            "named": true
-          },
-          {
-            "type": "cut",
-            "named": true
-          },
-          {
-            "type": "delay",
-            "named": true
-          },
-          {
-            "type": "div",
-            "named": true
-          },
-          {
-            "type": "enable",
-            "named": true
-          },
-          {
-            "type": "environment",
-            "named": false
-          },
-          {
-            "type": "environment",
-            "named": true
-          },
-          {
-            "type": "eq",
-            "named": true
-          },
-          {
-            "type": "exp",
-            "named": true
-          },
-          {
-            "type": "float_cast",
-            "named": true
-          },
-          {
-            "type": "floor",
-            "named": true
-          },
-          {
-            "type": "fmod",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "ge",
-            "named": true
-          },
-          {
-            "type": "gt",
-            "named": true
-          },
-          {
-            "type": "highest",
-            "named": true
-          },
-          {
-            "type": "id",
-            "named": true
-          },
-          {
-            "type": "infix",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "int_cast",
-            "named": true
-          },
-          {
-            "type": "iteration",
-            "named": true
-          },
-          {
-            "type": "lambda",
-            "named": true
-          },
-          {
-            "type": "le",
-            "named": true
-          },
-          {
-            "type": "letrec_environment",
-            "named": true
-          },
-          {
-            "type": "log",
-            "named": true
-          },
-          {
-            "type": "log10",
-            "named": true
-          },
-          {
-            "type": "lowest",
-            "named": true
-          },
-          {
-            "type": "lshift",
-            "named": true
-          },
-          {
-            "type": "lt",
-            "named": true
-          },
-          {
-            "type": "max",
-            "named": true
-          },
-          {
-            "type": "mem",
-            "named": true
-          },
-          {
-            "type": "merge",
-            "named": true
-          },
-          {
-            "type": "merge_arg",
-            "named": true
-          },
-          {
-            "type": "min",
-            "named": true
-          },
-          {
-            "type": "mod",
-            "named": true
-          },
-          {
-            "type": "modifier",
-            "named": true
-          },
-          {
-            "type": "modulation",
-            "named": true
-          },
-          {
-            "type": "mult",
-            "named": true
-          },
-          {
-            "type": "negate_id",
-            "named": true
-          },
-          {
-            "type": "neq",
-            "named": true
-          },
-          {
-            "type": "or",
-            "named": true
-          },
-          {
-            "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "partial",
-            "named": true
-          },
-          {
-            "type": "pow",
-            "named": true
-          },
-          {
-            "type": "pow_fun",
-            "named": true
-          },
-          {
-            "type": "prefix",
-            "named": true
-          },
-          {
-            "type": "prefix_prim",
-            "named": true
-          },
-          {
-            "type": "prim1",
-            "named": true
-          },
-          {
-            "type": "prim2",
-            "named": true
-          },
-          {
-            "type": "prim3",
-            "named": true
-          },
-          {
-            "type": "prim4",
-            "named": true
-          },
-          {
-            "type": "prim5",
-            "named": true
-          },
-          {
-            "type": "rdtable",
-            "named": true
-          },
-          {
-            "type": "real",
-            "named": true
-          },
-          {
-            "type": "recursive",
-            "named": true
-          },
-          {
-            "type": "recursive_arg",
-            "named": true
-          },
-          {
-            "type": "remainder",
-            "named": true
-          },
-          {
-            "type": "rint",
-            "named": true
-          },
-          {
-            "type": "round",
-            "named": true
-          },
-          {
-            "type": "rshift",
-            "named": true
-          },
-          {
-            "type": "rwtable",
-            "named": true
-          },
-          {
-            "type": "select2",
-            "named": true
-          },
-          {
-            "type": "select3",
-            "named": true
-          },
-          {
-            "type": "sequential",
-            "named": true
-          },
-          {
-            "type": "sequential_arg",
-            "named": true
-          },
-          {
-            "type": "sin",
-            "named": true
-          },
-          {
-            "type": "split",
-            "named": true
-          },
-          {
-            "type": "split_arg",
-            "named": true
-          },
-          {
-            "type": "sqrt",
-            "named": true
-          },
-          {
-            "type": "sub",
-            "named": true
-          },
-          {
-            "type": "substitution",
-            "named": true
-          },
-          {
-            "type": "tan",
-            "named": true
-          },
-          {
-            "type": "wire",
-            "named": true
-          },
-          {
-            "type": "with_environment",
-            "named": true
-          },
-          {
-            "type": "xor",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "abs",
-            "named": true
-          },
-          {
-            "type": "access",
-            "named": true
-          },
-          {
-            "type": "acos",
-            "named": true
-          },
-          {
-            "type": "add",
-            "named": true
-          },
-          {
-            "type": "and",
-            "named": true
-          },
-          {
-            "type": "asin",
-            "named": true
-          },
-          {
-            "type": "assertbounds",
-            "named": true
-          },
-          {
-            "type": "atan",
-            "named": true
-          },
-          {
-            "type": "atan2",
-            "named": true
-          },
-          {
-            "type": "attach",
-            "named": true
-          },
-          {
-            "type": "ceil",
-            "named": true
-          },
-          {
-            "type": "component",
-            "named": true
-          },
-          {
-            "type": "control",
-            "named": true
-          },
-          {
-            "type": "cos",
-            "named": true
-          },
-          {
-            "type": "cut",
-            "named": true
-          },
-          {
-            "type": "delay",
-            "named": true
-          },
-          {
-            "type": "div",
-            "named": true
-          },
-          {
-            "type": "enable",
-            "named": true
-          },
-          {
-            "type": "environment",
-            "named": false
-          },
-          {
-            "type": "environment",
-            "named": true
-          },
-          {
-            "type": "eq",
-            "named": true
-          },
-          {
-            "type": "exp",
-            "named": true
-          },
-          {
-            "type": "float_cast",
-            "named": true
-          },
-          {
-            "type": "floor",
-            "named": true
-          },
-          {
-            "type": "fmod",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "ge",
-            "named": true
-          },
-          {
-            "type": "gt",
-            "named": true
-          },
-          {
-            "type": "highest",
-            "named": true
-          },
-          {
-            "type": "id",
-            "named": true
-          },
-          {
-            "type": "infix",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "int_cast",
-            "named": true
-          },
-          {
-            "type": "iteration",
-            "named": true
-          },
-          {
-            "type": "lambda",
-            "named": true
-          },
-          {
-            "type": "le",
-            "named": true
-          },
-          {
-            "type": "letrec_environment",
-            "named": true
-          },
-          {
-            "type": "log",
-            "named": true
-          },
-          {
-            "type": "log10",
-            "named": true
-          },
-          {
-            "type": "lowest",
-            "named": true
-          },
-          {
-            "type": "lshift",
-            "named": true
-          },
-          {
-            "type": "lt",
-            "named": true
-          },
-          {
-            "type": "max",
-            "named": true
-          },
-          {
-            "type": "mem",
-            "named": true
-          },
-          {
-            "type": "merge",
-            "named": true
-          },
-          {
-            "type": "merge_arg",
-            "named": true
-          },
-          {
-            "type": "min",
-            "named": true
-          },
-          {
-            "type": "mod",
-            "named": true
-          },
-          {
-            "type": "modifier",
-            "named": true
-          },
-          {
-            "type": "modulation",
-            "named": true
-          },
-          {
-            "type": "mult",
-            "named": true
-          },
-          {
-            "type": "negate_id",
-            "named": true
-          },
-          {
-            "type": "neq",
-            "named": true
-          },
-          {
-            "type": "or",
-            "named": true
-          },
-          {
-            "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "partial",
-            "named": true
-          },
-          {
-            "type": "pow",
-            "named": true
-          },
-          {
-            "type": "pow_fun",
-            "named": true
-          },
-          {
-            "type": "prefix",
-            "named": true
-          },
-          {
-            "type": "prefix_prim",
-            "named": true
-          },
-          {
-            "type": "prim1",
-            "named": true
-          },
-          {
-            "type": "prim2",
-            "named": true
-          },
-          {
-            "type": "prim3",
-            "named": true
-          },
-          {
-            "type": "prim4",
-            "named": true
-          },
-          {
-            "type": "prim5",
-            "named": true
-          },
-          {
-            "type": "rdtable",
-            "named": true
-          },
-          {
-            "type": "real",
-            "named": true
-          },
-          {
-            "type": "recursive",
-            "named": true
-          },
-          {
-            "type": "recursive_arg",
-            "named": true
-          },
-          {
-            "type": "remainder",
-            "named": true
-          },
-          {
-            "type": "rint",
-            "named": true
-          },
-          {
-            "type": "round",
-            "named": true
-          },
-          {
-            "type": "rshift",
-            "named": true
-          },
-          {
-            "type": "rwtable",
-            "named": true
-          },
-          {
-            "type": "select2",
-            "named": true
-          },
-          {
-            "type": "select3",
-            "named": true
-          },
-          {
-            "type": "sequential",
-            "named": true
-          },
-          {
-            "type": "sequential_arg",
-            "named": true
-          },
-          {
-            "type": "sin",
-            "named": true
-          },
-          {
-            "type": "split",
-            "named": true
-          },
-          {
-            "type": "split_arg",
             "named": true
           },
           {
@@ -5926,6 +5208,10 @@
           },
           {
             "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
             "named": true
           },
           {
@@ -6295,6 +5581,10 @@
             "named": true
           },
           {
+            "type": "pattern",
+            "named": true
+          },
+          {
             "type": "pow",
             "named": true
           },
@@ -6631,10 +5921,6 @@
             "named": true
           },
           {
-            "type": "merge_arg",
-            "named": true
-          },
-          {
             "type": "min",
             "named": true
           },
@@ -6672,6 +5958,10 @@
           },
           {
             "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
             "named": true
           },
           {
@@ -6723,10 +6013,6 @@
             "named": true
           },
           {
-            "type": "recursive_arg",
-            "named": true
-          },
-          {
             "type": "remainder",
             "named": true
           },
@@ -6759,19 +6045,11 @@
             "named": true
           },
           {
-            "type": "sequential_arg",
-            "named": true
-          },
-          {
             "type": "sin",
             "named": true
           },
           {
             "type": "split",
-            "named": true
-          },
-          {
-            "type": "split_arg",
             "named": true
           },
           {
@@ -7075,6 +6353,10 @@
           },
           {
             "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
             "named": true
           },
           {
@@ -7425,6 +6707,10 @@
           },
           {
             "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
             "named": true
           },
           {
@@ -7764,10 +7050,6 @@
             "named": true
           },
           {
-            "type": "merge_arg",
-            "named": true
-          },
-          {
             "type": "min",
             "named": true
           },
@@ -7805,6 +7087,10 @@
           },
           {
             "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
             "named": true
           },
           {
@@ -7856,10 +7142,6 @@
             "named": true
           },
           {
-            "type": "recursive_arg",
-            "named": true
-          },
-          {
             "type": "remainder",
             "named": true
           },
@@ -7892,19 +7174,11 @@
             "named": true
           },
           {
-            "type": "sequential_arg",
-            "named": true
-          },
-          {
             "type": "sin",
             "named": true
           },
           {
             "type": "split",
-            "named": true
-          },
-          {
-            "type": "split_arg",
             "named": true
           },
           {
@@ -8015,6 +7289,21 @@
           }
         ]
       }
+    }
+  },
+  {
+    "type": "pattern",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "rules",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -8214,10 +7503,6 @@
             "named": true
           },
           {
-            "type": "merge_arg",
-            "named": true
-          },
-          {
             "type": "min",
             "named": true
           },
@@ -8255,6 +7540,10 @@
           },
           {
             "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
             "named": true
           },
           {
@@ -8306,10 +7595,6 @@
             "named": true
           },
           {
-            "type": "recursive_arg",
-            "named": true
-          },
-          {
             "type": "remainder",
             "named": true
           },
@@ -8342,19 +7627,11 @@
             "named": true
           },
           {
-            "type": "sequential_arg",
-            "named": true
-          },
-          {
             "type": "sin",
             "named": true
           },
           {
             "type": "split",
-            "named": true
-          },
-          {
-            "type": "split_arg",
             "named": true
           },
           {
@@ -8658,10 +7935,6 @@
             "named": true
           },
           {
-            "type": "merge_arg",
-            "named": true
-          },
-          {
             "type": "min",
             "named": true
           },
@@ -8699,6 +7972,10 @@
           },
           {
             "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
             "named": true
           },
           {
@@ -8750,10 +8027,6 @@
             "named": true
           },
           {
-            "type": "recursive_arg",
-            "named": true
-          },
-          {
             "type": "remainder",
             "named": true
           },
@@ -8786,19 +8059,11 @@
             "named": true
           },
           {
-            "type": "sequential_arg",
-            "named": true
-          },
-          {
             "type": "sin",
             "named": true
           },
           {
             "type": "split",
-            "named": true
-          },
-          {
-            "type": "split_arg",
             "named": true
           },
           {
@@ -9030,10 +8295,6 @@
             "named": true
           },
           {
-            "type": "merge_arg",
-            "named": true
-          },
-          {
             "type": "min",
             "named": true
           },
@@ -9071,6 +8332,10 @@
           },
           {
             "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
             "named": true
           },
           {
@@ -9122,10 +8387,6 @@
             "named": true
           },
           {
-            "type": "recursive_arg",
-            "named": true
-          },
-          {
             "type": "remainder",
             "named": true
           },
@@ -9158,19 +8419,11 @@
             "named": true
           },
           {
-            "type": "sequential_arg",
-            "named": true
-          },
-          {
             "type": "sin",
             "named": true
           },
           {
             "type": "split",
-            "named": true
-          },
-          {
-            "type": "split_arg",
             "named": true
           },
           {
@@ -9734,6 +8987,10 @@
             "named": true
           },
           {
+            "type": "pattern",
+            "named": true
+          },
+          {
             "type": "pow",
             "named": true
           },
@@ -10100,6 +9357,10 @@
             "named": true
           },
           {
+            "type": "pattern",
+            "named": true
+          },
+          {
             "type": "pow",
             "named": true
           },
@@ -10447,6 +9708,10 @@
           },
           {
             "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
             "named": true
           },
           {
@@ -10570,10 +9835,10 @@
     }
   },
   {
-    "type": "recursive_arg",
+    "type": "rule",
     "named": true,
     "fields": {
-      "left": {
+      "expression": {
         "multiple": true,
         "required": true,
         "types": [
@@ -10766,10 +10031,6 @@
             "named": true
           },
           {
-            "type": "merge_arg",
-            "named": true
-          },
-          {
             "type": "min",
             "named": true
           },
@@ -10807,6 +10068,10 @@
           },
           {
             "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
             "named": true
           },
           {
@@ -10858,10 +10123,6 @@
             "named": true
           },
           {
-            "type": "recursive_arg",
-            "named": true
-          },
-          {
             "type": "remainder",
             "named": true
           },
@@ -10894,385 +10155,11 @@
             "named": true
           },
           {
-            "type": "sequential_arg",
-            "named": true
-          },
-          {
             "type": "sin",
             "named": true
           },
           {
             "type": "split",
-            "named": true
-          },
-          {
-            "type": "split_arg",
-            "named": true
-          },
-          {
-            "type": "sqrt",
-            "named": true
-          },
-          {
-            "type": "sub",
-            "named": true
-          },
-          {
-            "type": "substitution",
-            "named": true
-          },
-          {
-            "type": "tan",
-            "named": true
-          },
-          {
-            "type": "wire",
-            "named": true
-          },
-          {
-            "type": "with_environment",
-            "named": true
-          },
-          {
-            "type": "xor",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "abs",
-            "named": true
-          },
-          {
-            "type": "access",
-            "named": true
-          },
-          {
-            "type": "acos",
-            "named": true
-          },
-          {
-            "type": "add",
-            "named": true
-          },
-          {
-            "type": "and",
-            "named": true
-          },
-          {
-            "type": "asin",
-            "named": true
-          },
-          {
-            "type": "assertbounds",
-            "named": true
-          },
-          {
-            "type": "atan",
-            "named": true
-          },
-          {
-            "type": "atan2",
-            "named": true
-          },
-          {
-            "type": "attach",
-            "named": true
-          },
-          {
-            "type": "ceil",
-            "named": true
-          },
-          {
-            "type": "component",
-            "named": true
-          },
-          {
-            "type": "control",
-            "named": true
-          },
-          {
-            "type": "cos",
-            "named": true
-          },
-          {
-            "type": "cut",
-            "named": true
-          },
-          {
-            "type": "delay",
-            "named": true
-          },
-          {
-            "type": "div",
-            "named": true
-          },
-          {
-            "type": "enable",
-            "named": true
-          },
-          {
-            "type": "environment",
-            "named": false
-          },
-          {
-            "type": "environment",
-            "named": true
-          },
-          {
-            "type": "eq",
-            "named": true
-          },
-          {
-            "type": "exp",
-            "named": true
-          },
-          {
-            "type": "float_cast",
-            "named": true
-          },
-          {
-            "type": "floor",
-            "named": true
-          },
-          {
-            "type": "fmod",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "ge",
-            "named": true
-          },
-          {
-            "type": "gt",
-            "named": true
-          },
-          {
-            "type": "highest",
-            "named": true
-          },
-          {
-            "type": "id",
-            "named": true
-          },
-          {
-            "type": "infix",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "int_cast",
-            "named": true
-          },
-          {
-            "type": "iteration",
-            "named": true
-          },
-          {
-            "type": "lambda",
-            "named": true
-          },
-          {
-            "type": "le",
-            "named": true
-          },
-          {
-            "type": "letrec_environment",
-            "named": true
-          },
-          {
-            "type": "log",
-            "named": true
-          },
-          {
-            "type": "log10",
-            "named": true
-          },
-          {
-            "type": "lowest",
-            "named": true
-          },
-          {
-            "type": "lshift",
-            "named": true
-          },
-          {
-            "type": "lt",
-            "named": true
-          },
-          {
-            "type": "max",
-            "named": true
-          },
-          {
-            "type": "mem",
-            "named": true
-          },
-          {
-            "type": "merge",
-            "named": true
-          },
-          {
-            "type": "merge_arg",
-            "named": true
-          },
-          {
-            "type": "min",
-            "named": true
-          },
-          {
-            "type": "mod",
-            "named": true
-          },
-          {
-            "type": "modifier",
-            "named": true
-          },
-          {
-            "type": "modulation",
-            "named": true
-          },
-          {
-            "type": "mult",
-            "named": true
-          },
-          {
-            "type": "negate_id",
-            "named": true
-          },
-          {
-            "type": "neq",
-            "named": true
-          },
-          {
-            "type": "or",
-            "named": true
-          },
-          {
-            "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "partial",
-            "named": true
-          },
-          {
-            "type": "pow",
-            "named": true
-          },
-          {
-            "type": "pow_fun",
-            "named": true
-          },
-          {
-            "type": "prefix",
-            "named": true
-          },
-          {
-            "type": "prefix_prim",
-            "named": true
-          },
-          {
-            "type": "prim1",
-            "named": true
-          },
-          {
-            "type": "prim2",
-            "named": true
-          },
-          {
-            "type": "prim3",
-            "named": true
-          },
-          {
-            "type": "prim4",
-            "named": true
-          },
-          {
-            "type": "prim5",
-            "named": true
-          },
-          {
-            "type": "rdtable",
-            "named": true
-          },
-          {
-            "type": "real",
-            "named": true
-          },
-          {
-            "type": "recursive",
-            "named": true
-          },
-          {
-            "type": "recursive_arg",
-            "named": true
-          },
-          {
-            "type": "remainder",
-            "named": true
-          },
-          {
-            "type": "rint",
-            "named": true
-          },
-          {
-            "type": "round",
-            "named": true
-          },
-          {
-            "type": "rshift",
-            "named": true
-          },
-          {
-            "type": "rwtable",
-            "named": true
-          },
-          {
-            "type": "select2",
-            "named": true
-          },
-          {
-            "type": "select3",
-            "named": true
-          },
-          {
-            "type": "sequential",
-            "named": true
-          },
-          {
-            "type": "sequential_arg",
-            "named": true
-          },
-          {
-            "type": "sin",
-            "named": true
-          },
-          {
-            "type": "split",
-            "named": true
-          },
-          {
-            "type": "split_arg",
             "named": true
           },
           {
@@ -11305,6 +10192,31 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "arguments",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rules",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "rule",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -11544,6 +10456,10 @@
             "named": true
           },
           {
+            "type": "pattern",
+            "named": true
+          },
+          {
             "type": "pow",
             "named": true
           },
@@ -11894,6 +10810,10 @@
             "named": true
           },
           {
+            "type": "pattern",
+            "named": true
+          },
+          {
             "type": "pow",
             "named": true
           },
@@ -11979,744 +10899,6 @@
           },
           {
             "type": "split",
-            "named": true
-          },
-          {
-            "type": "sqrt",
-            "named": true
-          },
-          {
-            "type": "sub",
-            "named": true
-          },
-          {
-            "type": "substitution",
-            "named": true
-          },
-          {
-            "type": "tan",
-            "named": true
-          },
-          {
-            "type": "wire",
-            "named": true
-          },
-          {
-            "type": "with_environment",
-            "named": true
-          },
-          {
-            "type": "xor",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "sequential_arg",
-    "named": true,
-    "fields": {
-      "left": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "abs",
-            "named": true
-          },
-          {
-            "type": "access",
-            "named": true
-          },
-          {
-            "type": "acos",
-            "named": true
-          },
-          {
-            "type": "add",
-            "named": true
-          },
-          {
-            "type": "and",
-            "named": true
-          },
-          {
-            "type": "asin",
-            "named": true
-          },
-          {
-            "type": "assertbounds",
-            "named": true
-          },
-          {
-            "type": "atan",
-            "named": true
-          },
-          {
-            "type": "atan2",
-            "named": true
-          },
-          {
-            "type": "attach",
-            "named": true
-          },
-          {
-            "type": "ceil",
-            "named": true
-          },
-          {
-            "type": "component",
-            "named": true
-          },
-          {
-            "type": "control",
-            "named": true
-          },
-          {
-            "type": "cos",
-            "named": true
-          },
-          {
-            "type": "cut",
-            "named": true
-          },
-          {
-            "type": "delay",
-            "named": true
-          },
-          {
-            "type": "div",
-            "named": true
-          },
-          {
-            "type": "enable",
-            "named": true
-          },
-          {
-            "type": "environment",
-            "named": false
-          },
-          {
-            "type": "environment",
-            "named": true
-          },
-          {
-            "type": "eq",
-            "named": true
-          },
-          {
-            "type": "exp",
-            "named": true
-          },
-          {
-            "type": "float_cast",
-            "named": true
-          },
-          {
-            "type": "floor",
-            "named": true
-          },
-          {
-            "type": "fmod",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "ge",
-            "named": true
-          },
-          {
-            "type": "gt",
-            "named": true
-          },
-          {
-            "type": "highest",
-            "named": true
-          },
-          {
-            "type": "id",
-            "named": true
-          },
-          {
-            "type": "infix",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "int_cast",
-            "named": true
-          },
-          {
-            "type": "iteration",
-            "named": true
-          },
-          {
-            "type": "lambda",
-            "named": true
-          },
-          {
-            "type": "le",
-            "named": true
-          },
-          {
-            "type": "letrec_environment",
-            "named": true
-          },
-          {
-            "type": "log",
-            "named": true
-          },
-          {
-            "type": "log10",
-            "named": true
-          },
-          {
-            "type": "lowest",
-            "named": true
-          },
-          {
-            "type": "lshift",
-            "named": true
-          },
-          {
-            "type": "lt",
-            "named": true
-          },
-          {
-            "type": "max",
-            "named": true
-          },
-          {
-            "type": "mem",
-            "named": true
-          },
-          {
-            "type": "merge",
-            "named": true
-          },
-          {
-            "type": "merge_arg",
-            "named": true
-          },
-          {
-            "type": "min",
-            "named": true
-          },
-          {
-            "type": "mod",
-            "named": true
-          },
-          {
-            "type": "modifier",
-            "named": true
-          },
-          {
-            "type": "modulation",
-            "named": true
-          },
-          {
-            "type": "mult",
-            "named": true
-          },
-          {
-            "type": "negate_id",
-            "named": true
-          },
-          {
-            "type": "neq",
-            "named": true
-          },
-          {
-            "type": "or",
-            "named": true
-          },
-          {
-            "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "partial",
-            "named": true
-          },
-          {
-            "type": "pow",
-            "named": true
-          },
-          {
-            "type": "pow_fun",
-            "named": true
-          },
-          {
-            "type": "prefix",
-            "named": true
-          },
-          {
-            "type": "prefix_prim",
-            "named": true
-          },
-          {
-            "type": "prim1",
-            "named": true
-          },
-          {
-            "type": "prim2",
-            "named": true
-          },
-          {
-            "type": "prim3",
-            "named": true
-          },
-          {
-            "type": "prim4",
-            "named": true
-          },
-          {
-            "type": "prim5",
-            "named": true
-          },
-          {
-            "type": "rdtable",
-            "named": true
-          },
-          {
-            "type": "real",
-            "named": true
-          },
-          {
-            "type": "recursive",
-            "named": true
-          },
-          {
-            "type": "recursive_arg",
-            "named": true
-          },
-          {
-            "type": "remainder",
-            "named": true
-          },
-          {
-            "type": "rint",
-            "named": true
-          },
-          {
-            "type": "round",
-            "named": true
-          },
-          {
-            "type": "rshift",
-            "named": true
-          },
-          {
-            "type": "rwtable",
-            "named": true
-          },
-          {
-            "type": "select2",
-            "named": true
-          },
-          {
-            "type": "select3",
-            "named": true
-          },
-          {
-            "type": "sequential",
-            "named": true
-          },
-          {
-            "type": "sequential_arg",
-            "named": true
-          },
-          {
-            "type": "sin",
-            "named": true
-          },
-          {
-            "type": "split",
-            "named": true
-          },
-          {
-            "type": "split_arg",
-            "named": true
-          },
-          {
-            "type": "sqrt",
-            "named": true
-          },
-          {
-            "type": "sub",
-            "named": true
-          },
-          {
-            "type": "substitution",
-            "named": true
-          },
-          {
-            "type": "tan",
-            "named": true
-          },
-          {
-            "type": "wire",
-            "named": true
-          },
-          {
-            "type": "with_environment",
-            "named": true
-          },
-          {
-            "type": "xor",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "abs",
-            "named": true
-          },
-          {
-            "type": "access",
-            "named": true
-          },
-          {
-            "type": "acos",
-            "named": true
-          },
-          {
-            "type": "add",
-            "named": true
-          },
-          {
-            "type": "and",
-            "named": true
-          },
-          {
-            "type": "asin",
-            "named": true
-          },
-          {
-            "type": "assertbounds",
-            "named": true
-          },
-          {
-            "type": "atan",
-            "named": true
-          },
-          {
-            "type": "atan2",
-            "named": true
-          },
-          {
-            "type": "attach",
-            "named": true
-          },
-          {
-            "type": "ceil",
-            "named": true
-          },
-          {
-            "type": "component",
-            "named": true
-          },
-          {
-            "type": "control",
-            "named": true
-          },
-          {
-            "type": "cos",
-            "named": true
-          },
-          {
-            "type": "cut",
-            "named": true
-          },
-          {
-            "type": "delay",
-            "named": true
-          },
-          {
-            "type": "div",
-            "named": true
-          },
-          {
-            "type": "enable",
-            "named": true
-          },
-          {
-            "type": "environment",
-            "named": false
-          },
-          {
-            "type": "environment",
-            "named": true
-          },
-          {
-            "type": "eq",
-            "named": true
-          },
-          {
-            "type": "exp",
-            "named": true
-          },
-          {
-            "type": "float_cast",
-            "named": true
-          },
-          {
-            "type": "floor",
-            "named": true
-          },
-          {
-            "type": "fmod",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "ge",
-            "named": true
-          },
-          {
-            "type": "gt",
-            "named": true
-          },
-          {
-            "type": "highest",
-            "named": true
-          },
-          {
-            "type": "id",
-            "named": true
-          },
-          {
-            "type": "infix",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "int_cast",
-            "named": true
-          },
-          {
-            "type": "iteration",
-            "named": true
-          },
-          {
-            "type": "lambda",
-            "named": true
-          },
-          {
-            "type": "le",
-            "named": true
-          },
-          {
-            "type": "letrec_environment",
-            "named": true
-          },
-          {
-            "type": "log",
-            "named": true
-          },
-          {
-            "type": "log10",
-            "named": true
-          },
-          {
-            "type": "lowest",
-            "named": true
-          },
-          {
-            "type": "lshift",
-            "named": true
-          },
-          {
-            "type": "lt",
-            "named": true
-          },
-          {
-            "type": "max",
-            "named": true
-          },
-          {
-            "type": "mem",
-            "named": true
-          },
-          {
-            "type": "merge",
-            "named": true
-          },
-          {
-            "type": "merge_arg",
-            "named": true
-          },
-          {
-            "type": "min",
-            "named": true
-          },
-          {
-            "type": "mod",
-            "named": true
-          },
-          {
-            "type": "modifier",
-            "named": true
-          },
-          {
-            "type": "modulation",
-            "named": true
-          },
-          {
-            "type": "mult",
-            "named": true
-          },
-          {
-            "type": "negate_id",
-            "named": true
-          },
-          {
-            "type": "neq",
-            "named": true
-          },
-          {
-            "type": "or",
-            "named": true
-          },
-          {
-            "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "partial",
-            "named": true
-          },
-          {
-            "type": "pow",
-            "named": true
-          },
-          {
-            "type": "pow_fun",
-            "named": true
-          },
-          {
-            "type": "prefix",
-            "named": true
-          },
-          {
-            "type": "prefix_prim",
-            "named": true
-          },
-          {
-            "type": "prim1",
-            "named": true
-          },
-          {
-            "type": "prim2",
-            "named": true
-          },
-          {
-            "type": "prim3",
-            "named": true
-          },
-          {
-            "type": "prim4",
-            "named": true
-          },
-          {
-            "type": "prim5",
-            "named": true
-          },
-          {
-            "type": "rdtable",
-            "named": true
-          },
-          {
-            "type": "real",
-            "named": true
-          },
-          {
-            "type": "recursive",
-            "named": true
-          },
-          {
-            "type": "recursive_arg",
-            "named": true
-          },
-          {
-            "type": "remainder",
-            "named": true
-          },
-          {
-            "type": "rint",
-            "named": true
-          },
-          {
-            "type": "round",
-            "named": true
-          },
-          {
-            "type": "rshift",
-            "named": true
-          },
-          {
-            "type": "rwtable",
-            "named": true
-          },
-          {
-            "type": "select2",
-            "named": true
-          },
-          {
-            "type": "select3",
-            "named": true
-          },
-          {
-            "type": "sequential",
-            "named": true
-          },
-          {
-            "type": "sequential_arg",
-            "named": true
-          },
-          {
-            "type": "sin",
-            "named": true
-          },
-          {
-            "type": "split",
-            "named": true
-          },
-          {
-            "type": "split_arg",
             "named": true
           },
           {
@@ -12988,6 +11170,10 @@
             "named": true
           },
           {
+            "type": "pattern",
+            "named": true
+          },
+          {
             "type": "pow",
             "named": true
           },
@@ -13338,6 +11524,10 @@
             "named": true
           },
           {
+            "type": "pattern",
+            "named": true
+          },
+          {
             "type": "pow",
             "named": true
           },
@@ -13423,744 +11613,6 @@
           },
           {
             "type": "split",
-            "named": true
-          },
-          {
-            "type": "sqrt",
-            "named": true
-          },
-          {
-            "type": "sub",
-            "named": true
-          },
-          {
-            "type": "substitution",
-            "named": true
-          },
-          {
-            "type": "tan",
-            "named": true
-          },
-          {
-            "type": "wire",
-            "named": true
-          },
-          {
-            "type": "with_environment",
-            "named": true
-          },
-          {
-            "type": "xor",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "split_arg",
-    "named": true,
-    "fields": {
-      "left": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "abs",
-            "named": true
-          },
-          {
-            "type": "access",
-            "named": true
-          },
-          {
-            "type": "acos",
-            "named": true
-          },
-          {
-            "type": "add",
-            "named": true
-          },
-          {
-            "type": "and",
-            "named": true
-          },
-          {
-            "type": "asin",
-            "named": true
-          },
-          {
-            "type": "assertbounds",
-            "named": true
-          },
-          {
-            "type": "atan",
-            "named": true
-          },
-          {
-            "type": "atan2",
-            "named": true
-          },
-          {
-            "type": "attach",
-            "named": true
-          },
-          {
-            "type": "ceil",
-            "named": true
-          },
-          {
-            "type": "component",
-            "named": true
-          },
-          {
-            "type": "control",
-            "named": true
-          },
-          {
-            "type": "cos",
-            "named": true
-          },
-          {
-            "type": "cut",
-            "named": true
-          },
-          {
-            "type": "delay",
-            "named": true
-          },
-          {
-            "type": "div",
-            "named": true
-          },
-          {
-            "type": "enable",
-            "named": true
-          },
-          {
-            "type": "environment",
-            "named": false
-          },
-          {
-            "type": "environment",
-            "named": true
-          },
-          {
-            "type": "eq",
-            "named": true
-          },
-          {
-            "type": "exp",
-            "named": true
-          },
-          {
-            "type": "float_cast",
-            "named": true
-          },
-          {
-            "type": "floor",
-            "named": true
-          },
-          {
-            "type": "fmod",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "ge",
-            "named": true
-          },
-          {
-            "type": "gt",
-            "named": true
-          },
-          {
-            "type": "highest",
-            "named": true
-          },
-          {
-            "type": "id",
-            "named": true
-          },
-          {
-            "type": "infix",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "int_cast",
-            "named": true
-          },
-          {
-            "type": "iteration",
-            "named": true
-          },
-          {
-            "type": "lambda",
-            "named": true
-          },
-          {
-            "type": "le",
-            "named": true
-          },
-          {
-            "type": "letrec_environment",
-            "named": true
-          },
-          {
-            "type": "log",
-            "named": true
-          },
-          {
-            "type": "log10",
-            "named": true
-          },
-          {
-            "type": "lowest",
-            "named": true
-          },
-          {
-            "type": "lshift",
-            "named": true
-          },
-          {
-            "type": "lt",
-            "named": true
-          },
-          {
-            "type": "max",
-            "named": true
-          },
-          {
-            "type": "mem",
-            "named": true
-          },
-          {
-            "type": "merge",
-            "named": true
-          },
-          {
-            "type": "merge_arg",
-            "named": true
-          },
-          {
-            "type": "min",
-            "named": true
-          },
-          {
-            "type": "mod",
-            "named": true
-          },
-          {
-            "type": "modifier",
-            "named": true
-          },
-          {
-            "type": "modulation",
-            "named": true
-          },
-          {
-            "type": "mult",
-            "named": true
-          },
-          {
-            "type": "negate_id",
-            "named": true
-          },
-          {
-            "type": "neq",
-            "named": true
-          },
-          {
-            "type": "or",
-            "named": true
-          },
-          {
-            "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "partial",
-            "named": true
-          },
-          {
-            "type": "pow",
-            "named": true
-          },
-          {
-            "type": "pow_fun",
-            "named": true
-          },
-          {
-            "type": "prefix",
-            "named": true
-          },
-          {
-            "type": "prefix_prim",
-            "named": true
-          },
-          {
-            "type": "prim1",
-            "named": true
-          },
-          {
-            "type": "prim2",
-            "named": true
-          },
-          {
-            "type": "prim3",
-            "named": true
-          },
-          {
-            "type": "prim4",
-            "named": true
-          },
-          {
-            "type": "prim5",
-            "named": true
-          },
-          {
-            "type": "rdtable",
-            "named": true
-          },
-          {
-            "type": "real",
-            "named": true
-          },
-          {
-            "type": "recursive",
-            "named": true
-          },
-          {
-            "type": "recursive_arg",
-            "named": true
-          },
-          {
-            "type": "remainder",
-            "named": true
-          },
-          {
-            "type": "rint",
-            "named": true
-          },
-          {
-            "type": "round",
-            "named": true
-          },
-          {
-            "type": "rshift",
-            "named": true
-          },
-          {
-            "type": "rwtable",
-            "named": true
-          },
-          {
-            "type": "select2",
-            "named": true
-          },
-          {
-            "type": "select3",
-            "named": true
-          },
-          {
-            "type": "sequential",
-            "named": true
-          },
-          {
-            "type": "sequential_arg",
-            "named": true
-          },
-          {
-            "type": "sin",
-            "named": true
-          },
-          {
-            "type": "split",
-            "named": true
-          },
-          {
-            "type": "split_arg",
-            "named": true
-          },
-          {
-            "type": "sqrt",
-            "named": true
-          },
-          {
-            "type": "sub",
-            "named": true
-          },
-          {
-            "type": "substitution",
-            "named": true
-          },
-          {
-            "type": "tan",
-            "named": true
-          },
-          {
-            "type": "wire",
-            "named": true
-          },
-          {
-            "type": "with_environment",
-            "named": true
-          },
-          {
-            "type": "xor",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "abs",
-            "named": true
-          },
-          {
-            "type": "access",
-            "named": true
-          },
-          {
-            "type": "acos",
-            "named": true
-          },
-          {
-            "type": "add",
-            "named": true
-          },
-          {
-            "type": "and",
-            "named": true
-          },
-          {
-            "type": "asin",
-            "named": true
-          },
-          {
-            "type": "assertbounds",
-            "named": true
-          },
-          {
-            "type": "atan",
-            "named": true
-          },
-          {
-            "type": "atan2",
-            "named": true
-          },
-          {
-            "type": "attach",
-            "named": true
-          },
-          {
-            "type": "ceil",
-            "named": true
-          },
-          {
-            "type": "component",
-            "named": true
-          },
-          {
-            "type": "control",
-            "named": true
-          },
-          {
-            "type": "cos",
-            "named": true
-          },
-          {
-            "type": "cut",
-            "named": true
-          },
-          {
-            "type": "delay",
-            "named": true
-          },
-          {
-            "type": "div",
-            "named": true
-          },
-          {
-            "type": "enable",
-            "named": true
-          },
-          {
-            "type": "environment",
-            "named": false
-          },
-          {
-            "type": "environment",
-            "named": true
-          },
-          {
-            "type": "eq",
-            "named": true
-          },
-          {
-            "type": "exp",
-            "named": true
-          },
-          {
-            "type": "float_cast",
-            "named": true
-          },
-          {
-            "type": "floor",
-            "named": true
-          },
-          {
-            "type": "fmod",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "ge",
-            "named": true
-          },
-          {
-            "type": "gt",
-            "named": true
-          },
-          {
-            "type": "highest",
-            "named": true
-          },
-          {
-            "type": "id",
-            "named": true
-          },
-          {
-            "type": "infix",
-            "named": true
-          },
-          {
-            "type": "int",
-            "named": true
-          },
-          {
-            "type": "int_cast",
-            "named": true
-          },
-          {
-            "type": "iteration",
-            "named": true
-          },
-          {
-            "type": "lambda",
-            "named": true
-          },
-          {
-            "type": "le",
-            "named": true
-          },
-          {
-            "type": "letrec_environment",
-            "named": true
-          },
-          {
-            "type": "log",
-            "named": true
-          },
-          {
-            "type": "log10",
-            "named": true
-          },
-          {
-            "type": "lowest",
-            "named": true
-          },
-          {
-            "type": "lshift",
-            "named": true
-          },
-          {
-            "type": "lt",
-            "named": true
-          },
-          {
-            "type": "max",
-            "named": true
-          },
-          {
-            "type": "mem",
-            "named": true
-          },
-          {
-            "type": "merge",
-            "named": true
-          },
-          {
-            "type": "merge_arg",
-            "named": true
-          },
-          {
-            "type": "min",
-            "named": true
-          },
-          {
-            "type": "mod",
-            "named": true
-          },
-          {
-            "type": "modifier",
-            "named": true
-          },
-          {
-            "type": "modulation",
-            "named": true
-          },
-          {
-            "type": "mult",
-            "named": true
-          },
-          {
-            "type": "negate_id",
-            "named": true
-          },
-          {
-            "type": "neq",
-            "named": true
-          },
-          {
-            "type": "or",
-            "named": true
-          },
-          {
-            "type": "parallel",
-            "named": true
-          },
-          {
-            "type": "partial",
-            "named": true
-          },
-          {
-            "type": "pow",
-            "named": true
-          },
-          {
-            "type": "pow_fun",
-            "named": true
-          },
-          {
-            "type": "prefix",
-            "named": true
-          },
-          {
-            "type": "prefix_prim",
-            "named": true
-          },
-          {
-            "type": "prim1",
-            "named": true
-          },
-          {
-            "type": "prim2",
-            "named": true
-          },
-          {
-            "type": "prim3",
-            "named": true
-          },
-          {
-            "type": "prim4",
-            "named": true
-          },
-          {
-            "type": "prim5",
-            "named": true
-          },
-          {
-            "type": "rdtable",
-            "named": true
-          },
-          {
-            "type": "real",
-            "named": true
-          },
-          {
-            "type": "recursive",
-            "named": true
-          },
-          {
-            "type": "recursive_arg",
-            "named": true
-          },
-          {
-            "type": "remainder",
-            "named": true
-          },
-          {
-            "type": "rint",
-            "named": true
-          },
-          {
-            "type": "round",
-            "named": true
-          },
-          {
-            "type": "rshift",
-            "named": true
-          },
-          {
-            "type": "rwtable",
-            "named": true
-          },
-          {
-            "type": "select2",
-            "named": true
-          },
-          {
-            "type": "select3",
-            "named": true
-          },
-          {
-            "type": "sequential",
-            "named": true
-          },
-          {
-            "type": "sequential_arg",
-            "named": true
-          },
-          {
-            "type": "sin",
-            "named": true
-          },
-          {
-            "type": "split",
-            "named": true
-          },
-          {
-            "type": "split_arg",
             "named": true
           },
           {
@@ -14434,6 +11886,10 @@
           },
           {
             "type": "partial",
+            "named": true
+          },
+          {
+            "type": "pattern",
             "named": true
           },
           {
@@ -14849,6 +12305,10 @@
             "named": true
           },
           {
+            "type": "pattern",
+            "named": true
+          },
+          {
             "type": "pow",
             "named": true
           },
@@ -15075,6 +12535,10 @@
     "named": false
   },
   {
+    "type": "=>",
+    "named": false
+  },
+  {
     "type": "[",
     "named": false
   },
@@ -15121,6 +12585,10 @@
   {
     "type": "attach",
     "named": true
+  },
+  {
+    "type": "case",
+    "named": false
   },
   {
     "type": "ceil",

@@ -88,7 +88,6 @@ module.exports = grammar({
     // Arbitrary non-primitive function call
     function_call: $ => prec(PREC.FUNCTION_CALL, seq(field('callee', $._infix_expression), '(', $.arguments, ')')),
     modifier: $ => prec(PREC.ACCESS, seq(field('operand', $._infix_expression), field('operator', $._modifier))),
-
     access: $ => prec(PREC.ACCESS, seq(field('environment', $._infix_expression), '.', field('definition', $.id))),
 
     _primitive: $ =>
@@ -109,23 +108,36 @@ module.exports = grammar({
         $.lambda,
         $.modulation,
         $.iteration,
+        $.pattern,
         seq('environment', $.environment),
         $.component
       ),
 
     lambda: $ => seq('\\', '(', $.parameters, ')', '.', '(', field('value', $._expression), ')'),
+
     modulation: $ => seq('[', $.modulators, '->', field('expression', $._expression), ']'),
     modulators: $ => sepBy(',', $.modulator),
     modulator: $ => choice(field('name', $.string), seq(field('name', $.string), ':', field('value', $._argument))),
 
     parameters: $ => sepBy(',', alias($.id, $.parameter)),
     arguments: $ => sepBy(',', $._argument),
-
     _args: $ => sepBy(',', $._argument),
-    _argument: $ => choice($.sequential_arg, $.split_arg, $.merge_arg, $.recursive_arg, $._infix_expression),
-    // Binary compositions as arguments are restricted to non-parallel compositions to avoid ambiguity with commas.
-    // Note: Can we allow parallel compositions in arguments when surrounded by parentheses?
-    // This could be contributed to Faust.
+    // Binary compositions _as arguments_ are restricted to non-parallel compositions,
+    // I assume to avoid ambiguity with commas.
+    // todo: Contributed to Faust: Allow parallel compositions in arguments when surrounded by parentheses?
+    _argument: $ =>
+      choice(
+        alias($.sequential_arg, $.sequential),
+        alias($.split_arg, $.split),
+        alias($.merge_arg, $.merge),
+        alias($.recursive_arg, $.recursive),
+        $._infix_expression
+      ),
+
+    pattern: $ => seq('case', '{', $.rules, '}'),
+    rules: $ => repeat1($.rule),
+    rule: $ => seq('(', $.arguments, ')', '=>', field('expression', $._expression), ';'),
+
     recursive_arg: define_binary_comp('~', PREC.RECURSIVE, 'left', $ => $._argument),
     sequential_arg: define_binary_comp(':', PREC.SEQ, 'right', $ => $._argument),
     split_arg: define_binary_comp('<:', PREC.SPLIT, 'right', $ => $._argument),
