@@ -370,6 +370,10 @@
             "named": true
           },
           {
+            "type": "waveform",
+            "named": true
+          },
+          {
             "type": "wire",
             "named": true
           },
@@ -731,6 +735,10 @@
         },
         {
           "type": "tan",
+          "named": true
+        },
+        {
+          "type": "waveform",
           "named": true
         },
         {
@@ -1132,6 +1140,10 @@
           },
           {
             "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
             "named": true
           },
           {
@@ -1655,6 +1667,10 @@
             "named": true
           },
           {
+            "type": "waveform",
+            "named": true
+          },
+          {
             "type": "wire",
             "named": true
           },
@@ -2048,6 +2064,10 @@
           },
           {
             "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
             "named": true
           },
           {
@@ -2572,6 +2592,10 @@
             "named": true
           },
           {
+            "type": "waveform",
+            "named": true
+          },
+          {
             "type": "wire",
             "named": true
           },
@@ -3020,6 +3044,10 @@
             "named": true
           },
           {
+            "type": "waveform",
+            "named": true
+          },
+          {
             "type": "wire",
             "named": true
           },
@@ -3406,6 +3434,10 @@
             "named": true
           },
           {
+            "type": "waveform",
+            "named": true
+          },
+          {
             "type": "wire",
             "named": true
           },
@@ -3773,6 +3805,10 @@
           },
           {
             "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
             "named": true
           },
           {
@@ -4174,6 +4210,10 @@
             "named": true
           },
           {
+            "type": "waveform",
+            "named": true
+          },
+          {
             "type": "wire",
             "named": true
           },
@@ -4557,6 +4597,10 @@
           },
           {
             "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
             "named": true
           },
           {
@@ -4962,6 +5006,10 @@
             "named": true
           },
           {
+            "type": "waveform",
+            "named": true
+          },
+          {
             "type": "wire",
             "named": true
           },
@@ -5329,6 +5377,10 @@
           },
           {
             "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
             "named": true
           },
           {
@@ -5705,6 +5757,10 @@
           },
           {
             "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
             "named": true
           },
           {
@@ -6091,6 +6147,10 @@
           },
           {
             "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
             "named": true
           },
           {
@@ -6487,6 +6547,10 @@
           },
           {
             "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
             "named": true
           },
           {
@@ -6906,6 +6970,10 @@
             "named": true
           },
           {
+            "type": "waveform",
+            "named": true
+          },
+          {
             "type": "wire",
             "named": true
           },
@@ -7273,6 +7341,10 @@
           },
           {
             "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
             "named": true
           },
           {
@@ -7692,6 +7764,10 @@
           },
           {
             "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
             "named": true
           },
           {
@@ -8164,6 +8240,10 @@
             "named": true
           },
           {
+            "type": "waveform",
+            "named": true
+          },
+          {
             "type": "wire",
             "named": true
           },
@@ -8612,6 +8692,10 @@
             "named": true
           },
           {
+            "type": "waveform",
+            "named": true
+          },
+          {
             "type": "wire",
             "named": true
           },
@@ -8985,6 +9069,10 @@
           },
           {
             "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
             "named": true
           },
           {
@@ -9656,6 +9744,10 @@
             "named": true
           },
           {
+            "type": "waveform",
+            "named": true
+          },
+          {
             "type": "wire",
             "named": true
           },
@@ -10042,6 +10134,10 @@
             "named": true
           },
           {
+            "type": "waveform",
+            "named": true
+          },
+          {
             "type": "wire",
             "named": true
           },
@@ -10409,6 +10505,10 @@
           },
           {
             "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
             "named": true
           },
           {
@@ -10785,6 +10885,10 @@
           },
           {
             "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
             "named": true
           },
           {
@@ -11189,6 +11293,10 @@
             "named": true
           },
           {
+            "type": "waveform",
+            "named": true
+          },
+          {
             "type": "wire",
             "named": true
           },
@@ -11556,6 +11664,10 @@
           },
           {
             "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
             "named": true
           },
           {
@@ -11969,6 +12081,10 @@
             "named": true
           },
           {
+            "type": "waveform",
+            "named": true
+          },
+          {
             "type": "wire",
             "named": true
           },
@@ -12336,6 +12452,10 @@
           },
           {
             "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
             "named": true
           },
           {
@@ -12720,6 +12840,10 @@
             "named": true
           },
           {
+            "type": "waveform",
+            "named": true
+          },
+          {
             "type": "wire",
             "named": true
           },
@@ -12765,6 +12889,25 @@
     }
   },
   {
+    "type": "values",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "int",
+          "named": true
+        },
+        {
+          "type": "real",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "variants",
     "named": true,
     "fields": {},
@@ -12786,6 +12929,21 @@
         },
         {
           "type": "single_precision",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "waveform",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "values",
           "named": true
         }
       ]
@@ -13149,6 +13307,10 @@
           },
           {
             "type": "tan",
+            "named": true
+          },
+          {
+            "type": "waveform",
             "named": true
           },
           {
@@ -13592,6 +13754,10 @@
   {
     "type": "tan",
     "named": true
+  },
+  {
+    "type": "waveform",
+    "named": false
   },
   {
     "type": "where",

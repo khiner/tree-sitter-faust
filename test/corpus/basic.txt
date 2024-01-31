@@ -185,3 +185,23 @@ process = fl.lowpass;
   (definition
     name: (id)
     value: (access environment: (id) definition: (id))))
+
+===
+Waveform
+===
+
+triangleWave = waveform{0,0.5,1,0.5,0,-0.5,-1,-.5};
+
+---
+(program
+  (definition (id)
+    (waveform
+      (values
+        (int)
+        (real)
+        (int)
+        (real)
+        (int)
+        (real)
+        (int)
+        (real)))))

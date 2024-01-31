@@ -1060,6 +1060,10 @@
           "name": "library"
         },
         {
+          "type": "SYMBOL",
+          "name": "waveform"
+        },
+        {
           "type": "SEQ",
           "members": [
             {
@@ -2150,6 +2154,52 @@
           }
         ]
       }
+    },
+    "waveform": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "waveform"
+        },
+        {
+          "type": "STRING",
+          "value": "{"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "values"
+        },
+        {
+          "type": "STRING",
+          "value": "}"
+        }
+      ]
+    },
+    "values": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_number"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": ","
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_number"
+              }
+            ]
+          }
+        }
+      ]
     },
     "_infix": {
       "type": "CHOICE",
