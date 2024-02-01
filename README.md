@@ -11,7 +11,7 @@ The npm package is [here](https://www.npmjs.com/package/tree-sitter-faust).
 ## Commands
 
 ```shell
-$ npm run build # alias for `generate`
+$ npm run build # generate and build
 $ npm run generate # tree-sitter generate
 $ npm test # tree-sitter test
 $ npm run parse # tree-sitter parse

@@ -4,7 +4,7 @@
   "description": "Tree-sitter grammar for the Faust audio programming language",
   "main": "grammar.js",
   "scripts": {
-    "build": "tree-sitter generate",
+    "build": "tree-sitter generate && node-gyp build",
     "generate": "tree-sitter generate",
     "test": "tree-sitter test",
     "parse": "tree-sitter parse"
@@ -17,7 +17,8 @@
     "faust",
     "tree-sitter",
     "grammar",
-    "parser"
+    "parser",
+    "lexer"
   ],
   "author": "Karl Hiner",
   "license": "MIT",
@@ -29,6 +30,7 @@
     "nan": "^2.18.0"
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.20.8"
+    "tree-sitter-cli": "^0.20.8",
+    "node-gyp": "^10.0.1"
   }
 }
