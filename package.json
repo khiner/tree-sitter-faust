@@ -1,9 +1,10 @@
 {
   "name": "tree-sitter-faust",
-  "version": "0.0.1",
-  "description": "Faust grammar for tree-sitter",
+  "version": "1.0.0",
+  "description": "Tree-sitter grammar for the Faust audio programming language",
   "main": "grammar.js",
   "scripts": {
+    "build": "tree-sitter generate",
     "generate": "tree-sitter generate",
     "test": "tree-sitter test",
     "parse": "tree-sitter parse"
@@ -14,7 +15,9 @@
   },
   "keywords": [
     "faust",
-    "tree-sitter"
+    "tree-sitter",
+    "grammar",
+    "parser"
   ],
   "author": "Karl Hiner",
   "license": "MIT",

@@ -1,10 +1,23 @@
 # tree-sitter-faust
 
-This is a tree-sitter grammar for the [Faust audio programming language](https://faustdoc.grame.fr/manual/syntax/).
+[Tree-sitter](https://tree-sitter.github.io/) grammar for the [Faust audio programming language](https://faustdoc.grame.fr/manual/syntax/).
 
 Every Faust syntax feature should be supported.
 If you encounter any errors parsing a valid Faust program, please file an issue and I'll fix it!
 Also, please file an issue or pull request if you have any suggestions for improving the grammar.
+
+The npm package is [here](https://www.npmjs.com/package/tree-sitter-faust).
+
+## Commands
+
+```shell
+$ npm run build # alias for `generate`
+$ npm run generate # tree-sitter generate
+$ npm test # tree-sitter test
+$ npm run parse # tree-sitter parse
+```
+
+See [tree-sitter's documentation](https://tree-sitter.github.io/tree-sitter/creating-parsers#tool-overview) for details on tree-sitter CLI commands.
 
 ## Design notes
 
@@ -25,15 +38,6 @@ The extra detail is added because this grammar is intended for two purposes:
 
 To serve the second goal, the ASTs produced by this grammar must provide enough information to do everything the [Faust bison parser](https://github.com/grame-cncm/faust/blob/master-dev/compiler/parser/faustparser.y) does.
 
-## Commands
-
-```shell
-$ npm run generate # tree-sitter generate
-$ npm run test # tree-sitter test
-$ npm run parse # tree-sitter parse
-```
-
-See [tree-sitter's documentation](https://tree-sitter.github.io/tree-sitter/creating-parsers#tool-overview) for details on tree-sitter CLI commands.
 
 ## Resources
 
