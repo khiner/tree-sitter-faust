@@ -7,7 +7,7 @@ process = 1 + 1 * 2 << 4 | 6 >= _ @ 7 ^ 2;
 ---
 (program
   (definition
-    name: (id)
+    name: (identifier)
     value: (infix
       left: (infix
         left: (infix
@@ -34,7 +34,7 @@ process = |(*(2,3), @(_', 2)) : mem;
 ---
 (program
   (definition
-    name: (id)
+    name: (identifier)
     value: (sequential
       left: (prefix
         operator: (or)
@@ -54,7 +54,7 @@ process = |(*(2), @(_')) : mem;
 ---
 (program
   (definition
-    name: (id)
+    name: (identifier)
     value: (sequential
       left: (prefix
         operator: (or)
@@ -73,13 +73,13 @@ linear2db = \(x).(20*log10(x));
 ---
 (program
   (definition
-    name: (id)
+    name: (identifier)
     value: (lambda
-      (parameters (parameter))
+      (parameters (identifier))
       value: (infix
         left: (int)
         operator: (mult)
-        right: (prim1 primitive: (log10) argument: (id))))))
+        right: (prim1 primitive: (log10) argument: (identifier))))))
 
 ====
 Pattern
@@ -93,18 +93,18 @@ process = case {
 ---
 (program
   (definition
-    name: (id)
+    name: (identifier)
     value: (function_call
       callee: (pattern
         (rules
           (rule
-            (arguments (sequential left: (id) right: (id)))
-            expression: (sequential left: (id) right: (id)))
+            (arguments (sequential left: (identifier) right: (identifier)))
+            expression: (sequential left: (identifier) right: (identifier)))
           (rule
-            (arguments (id))
-            expression: (id))))
+            (arguments (identifier))
+            expression: (identifier))))
       (arguments
-        (sequential left: (id) right: (id))))))
+        (sequential left: (identifier) right: (identifier))))))
 
 ====
 Modulation
@@ -117,32 +117,32 @@ extra_modulators = ["Wet", "Damp", "RoomSize" -> freeverb];
 ---
 (program
   (definition
-    name: (id)
+    name: (identifier)
     value: (sequential
       left: (parallel
-        left: (function_call callee: (id) (arguments (int) (real)))
+        left: (function_call callee: (identifier) (arguments (int) (real)))
         right: (parallel left: (wire) right: (wire)))
       right: (modulation
         (modulators (modulator name: (string)))
-        expression: (id))))
+        expression: (identifier))))
   (definition
-    name: (id)
+    name: (identifier)
     value: (modulation
       (modulators
         (modulator
           name: (string)
           value: (partial
             operator: (mult)
-            operand: (function_call callee: (id) (arguments (int) (real))))))
-      expression: (id)))
+            operand: (function_call callee: (identifier) (arguments (int) (real))))))
+      expression: (identifier)))
   (definition
-    name: (id)
+    name: (identifier)
     value: (modulation
       (modulators
         (modulator name: (string))
         (modulator name: (string))
         (modulator name: (string)))
-      expression: (id))))
+      expression: (identifier))))
 
 
 ====
@@ -155,7 +155,7 @@ binary = pow(min(max(fmod(remainder(atan2(1.0, 2.0), 3.0), 4.0), 5.0), 6.0), _);
 
 ---
 (program
-  (definition (id)
+  (definition (identifier)
     (prim1 (exp)
       (prim1 (log)
         (prim1 (log10)
@@ -167,14 +167,14 @@ binary = pow(min(max(fmod(remainder(atan2(1.0, 2.0), 3.0), 4.0), 5.0), 6.0), _);
                     (prim1 (round)
                       (prim1 (float_cast)
                         (prim1 (int_cast) (real)))))))))))))
-  (definition (id)
+  (definition (identifier)
     (prim1 (acos)
       (prim1 (asin)
         (prim1 (atan)
           (prim1 (cos)
             (prim1 (sin)
               (prim1 (tan) (real))))))))
-  (definition (id)
+  (definition (identifier)
     (prim2 (pow_fun)
       (arguments
         (prim2 (min)
@@ -201,7 +201,7 @@ process = prefix(attach(enable(control(_, _), _), _), _);
 
 ---
 (program
-  (definition (id)
+  (definition (identifier)
     (prim2 (prefix_prim)
       (arguments
         (prim2 (attach)
@@ -223,15 +223,15 @@ bar = _ : rwtable(n,s,w,_,r) : _;
 
 ---
 (program
-  (definition (id)
+  (definition (identifier)
     (sequential
-      (prim3 (rdtable) (arguments (id) (id) (id)))
+      (prim3 (rdtable) (arguments (identifier) (identifier) (identifier)))
       (wire)))
-  (definition (id)
+  (definition (identifier)
     (sequential
       (wire)
       (sequential
-        (prim5 (rwtable) (arguments (id) (id) (id) (wire) (id)))
+        (prim5 (rwtable) (arguments (identifier) (identifier) (identifier) (wire) (identifier)))
         (wire)))))
 
 ====
@@ -243,17 +243,17 @@ bar = _,_,_ : select3(s) : _;
 
 ---
 (program
-  (definition (id)
+  (definition (identifier)
     (sequential
       (parallel (wire) (wire))
       (sequential
-        (prim3 (select2) (arguments (id)))
+        (prim3 (select2) (arguments (identifier)))
         (wire))))
-  (definition (id)
+  (definition (identifier)
     (sequential
       (parallel (wire) (parallel (wire) (wire)))
       (sequential
-        (prim4 (select3) (arguments (id)))
+        (prim4 (select3) (arguments (identifier)))
         (wire)))))
 
 ===
@@ -265,7 +265,7 @@ process = component("karplus32.dsp") : component("freeverb.dsp");
 ---
 (program
   (definition
-    name: (id)
+    name: (identifier)
     value: (sequential
       left: (component filename: (string))
       right: (component filename: (string)))))
@@ -280,11 +280,11 @@ process = fl.lowpass;
 ---
 (program
   (definition
-    name: (id)
+    name: (identifier)
     value: (library filename: (string)))
   (definition
-    name: (id)
-    value: (access environment: (id) definition: (id))))
+    name: (identifier)
+    value: (access environment: (identifier) definition: (identifier))))
 
 ===
 Waveform
@@ -294,7 +294,7 @@ triangleWave = waveform{0,0.5,1,0.5,0,-0.5,-1,-.5};
 
 ---
 (program
-  (definition (id)
+  (definition (identifier)
     (waveform
       (values
         (int)
@@ -316,10 +316,10 @@ full_route = route(2,2,1,2,2,1);
 ---
 (program
   (definition
-    name: (id)
+    name: (identifier)
     value: (route num_inputs: (int) num_outputs: (int)))
   (definition
-    name: (id)
+    name: (identifier)
     value: (route
       num_inputs: (int)
       num_outputs: (int)
@@ -339,14 +339,14 @@ process = 0,reader:soundfile("son[url:{'foo.wav'}]",2);
 ---
 (program
   (definition
-    name: (id)
+    name: (identifier)
     value: (recursive
       left: (wire)
       right: (partial operator: (add) operand: (int))))
   (definition
-    name: (id)
+    name: (identifier)
     value: (sequential
-      left: (parallel left: (int) right: (id))
+      left: (parallel left: (int) right: (identifier))
       right: (soundfile filename: (string) num_channels: (int)))))
 
 ===
@@ -360,11 +360,11 @@ num_ints = inputs(expr);
 ---
 (program
   (definition
-    name: (id)
+    name: (identifier)
     value: (parallel left: (wire) right: (wire)))
   (definition
-    name: (id)
-    value: (outputs expression: (id)))
+    name: (identifier)
+    value: (outputs expression: (identifier)))
   (definition
-    name: (id)
-    value: (inputs expression: (id))))
+    name: (identifier)
+    value: (inputs expression: (identifier))))

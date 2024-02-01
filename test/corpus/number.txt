@@ -6,7 +6,7 @@ ints = waveform{1,+10,-100};
 
 ---
 (program
-  (definition (id)
+  (definition (identifier)
     (waveform
       (values (int) (int) (int)))))
 
@@ -18,7 +18,7 @@ reals = waveform{0.5,.5,5.,+1.,-1.f,500.5e4,-500e40f};
 
 ---
 (program
-  (definition (id)
+  (definition (identifier)
     (waveform
       (values
         (real)

@@ -10,14 +10,14 @@ nonempty_env = environment {
 
 ---
 (program
-  (definition name: (id) value: (environment))
+  (definition name: (identifier) value: (environment))
   (definition
-    name: (id)
+    name: (identifier)
     value: (environment
-      (definition name: (id) value: (int))
+      (definition name: (identifier) value: (int))
       (definition
-        name: (id)
-        value: (parallel left: (id) right: (wire))))))
+        name: (identifier)
+        value: (parallel left: (identifier) right: (wire))))))
 
 ====
 Empty with environment
@@ -29,13 +29,13 @@ process = pink;
 ---
 (program
   (definition
-    name: (id)
+    name: (identifier)
     value: (with_environment
       expression: (sequential
-        left: (id)
-        right: (recursive left: (add) right: (id)))
+        left: (identifier)
+        right: (recursive left: (add) right: (identifier)))
       local_environment: (environment)))
-  (definition name: (id) value: (id)))
+  (definition name: (identifier) value: (identifier)))
 
 ====
 With environment
@@ -50,41 +50,41 @@ process = pink;
 ---
 (program
   (definition
-    name: (id)
+    name: (identifier)
     value: (with_environment
       expression: (sequential
-        left: (id)
-        right: (recursive left: (add) right: (id)))
+        left: (identifier)
+        right: (recursive left: (add) right: (identifier)))
       local_environment: (environment
         (function_definition
-          name: (id)
-          (parameters (parameter))
+          name: (identifier)
+          (parameters (identifier))
           value: (infix
             left: (infix
-              left: (infix left: (real) operator: (mult) right: (id))
+              left: (infix left: (real) operator: (mult) right: (identifier))
               operator: (sub)
               right: (infix
                 left: (real)
                 operator: (mult)
-                right: (modifier operand: (id) operator: (one_sample_delay))))
+                right: (modifier operand: (identifier) operator: (one_sample_delay))))
             operator: (add)
             right: (infix
               left: (real)
               operator: (mult)
               right: (modifier
-                operand: (modifier operand: (id) operator: (one_sample_delay))
+                operand: (modifier operand: (identifier) operator: (one_sample_delay))
                 operator: (one_sample_delay)))))
         (function_definition
-          name: (id)
-          (parameters (parameter))
+          name: (identifier)
+          (parameters (identifier))
           value: (infix
-            left: (infix left: (real) operator: (mult) right: (id))
+            left: (infix left: (real) operator: (mult) right: (identifier))
             operator: (sub)
             right: (infix
               left: (real)
               operator: (mult)
-              right: (modifier operand: (id) operator: (one_sample_delay))))))))
-  (definition name: (id) value: (id)))
+              right: (modifier operand: (identifier) operator: (one_sample_delay))))))))
+  (definition name: (identifier) value: (identifier)))
 
 ====
 letrec
@@ -100,41 +100,41 @@ ar(a,r,g) = v letrec {
 ---
 (program
   (function_definition
-    name: (id)
-    (parameters (parameter) (parameter) (parameter))
+    name: (identifier)
+    (parameters (identifier) (identifier) (identifier))
     value: (letrec_environment
-      expression: (id)
+      expression: (identifier)
       local_environment: (rec_environment
         (recinition
-          name: (id)
+          name: (identifier)
           expression: (infix
-            left: (infix left: (id) operator: (add) right: (int))
+            left: (infix left: (identifier) operator: (add) right: (int))
             operator: (mult)
-            right: (id)))
+            right: (identifier)))
         (recinition
-          name: (id)
+          name: (identifier)
           expression: (infix
             left: (prim2 primitive: (max)
               (arguments
                 (int)
                 (infix
                   left: (infix
-                    left: (id)
+                    left: (identifier)
                     operator: (add)
                     right: (infix
-                      left: (infix left: (id) operator: (lt) right: (id))
+                      left: (infix left: (identifier) operator: (lt) right: (identifier))
                       operator: (div)
-                      right: (id)))
+                      right: (identifier)))
                   operator: (sub)
                   right: (infix
-                    left: (infix left: (id) operator: (ge) right: (id))
+                    left: (infix left: (identifier) operator: (ge) right: (identifier))
                     operator: (div)
-                    right: (id)))))
+                    right: (identifier)))))
             operator: (mult)
-            right: (id)))
+            right: (identifier)))
         (definition
-          name: (id)
+          name: (identifier)
           value: (infix
-            left: (id)
+            left: (identifier)
             operator: (le)
-            right: (modifier operand: (id) operator: (one_sample_delay))))))))
+            right: (modifier operand: (identifier) operator: (one_sample_delay))))))))

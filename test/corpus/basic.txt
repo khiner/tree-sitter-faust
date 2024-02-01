@@ -26,9 +26,9 @@ process = var; /* Comment at the end of a line. */
 (program
   (comment)
   (comment)
-  (definition (id) (int))
+  (definition (identifier) (int))
   (comment)
-  (definition (id) (id))
+  (definition (identifier) (identifier))
   (comment)
   (comment))
 
@@ -41,8 +41,8 @@ negated_var = -var;
 
 ---
 (program
-  (definition name: (id) value: (id))
-  (definition name: (id) value: (negate_id (id))))
+  (definition name: (identifier) value: (identifier))
+  (definition name: (identifier) value: (negate_id (identifier))))
 
 ====
 Function definition
@@ -53,8 +53,8 @@ identity ( var ) = var ;
 
 ---
 (program
-  (function_definition (id) (parameters (parameter)) (id))
-  (function_definition (id) (parameters (parameter)) (id)))
+  (function_definition (identifier) (parameters (identifier)) (identifier))
+  (function_definition (identifier) (parameters (identifier)) (identifier)))
 
 ====
 Metadata
@@ -68,10 +68,10 @@ add = +;
 
 ---
 (program
-  (global_metadata key: (id) value: (string))
-  (global_metadata key: (id) value: (string))
-  (function_metadata function_name: (id) key: (id) value: (string))
-  (definition name: (id) value: (add)))
+  (global_metadata key: (identifier) value: (string))
+  (global_metadata key: (identifier) value: (string))
+  (function_metadata function_name: (identifier) key: (identifier) value: (string))
+  (definition name: (identifier) value: (add)))
 
 ====
 Import
@@ -98,14 +98,14 @@ doubleprecision quadprecision int_part(idv) = int(idv);
   (file_import (variants (fixed_point_precision)) (string))
   (function_definition
     (variants (single_precision))
-    (id)
-    (parameters (parameter))
-    (sequential (id) (parallel (wire) (cut))))
+    (identifier)
+    (parameters (identifier))
+    (sequential (identifier) (parallel (wire) (cut))))
   (function_definition
     (variants (double_precision) (quad_precision))
-    (id)
-    (parameters (parameter))
-    (prim1 (int_cast) (id))))
+    (identifier)
+    (parameters (identifier))
+    (prim1 (int_cast) (identifier))))
 
 ====
 Memory
@@ -119,9 +119,9 @@ process = var2';
 ---
 (program
   (comment)
-  (definition (id) (mem))
-  (definition (id) (partial (delay) (id)))
-  (definition (id) (modifier (id) (one_sample_delay))))
+  (definition (identifier) (mem))
+  (definition (identifier) (partial (delay) (identifier)))
+  (definition (identifier) (modifier (identifier) (one_sample_delay))))
 
 ===
 Explicit substitution
@@ -132,9 +132,9 @@ process = component("freeverb.dsp")[foo(x) = 1; bar = _;];
 ---
 (program
   (definition
-    name: (id)
+    name: (identifier)
     value: (substitution
       expression: (component filename: (string))
       (substitutions
-        (function_definition name: (id) (parameters (parameter)) value: (int))
-        (definition name: (id) value: (wire))))))
+        (function_definition name: (identifier) (parameters (identifier)) value: (int))
+        (definition name: (identifier) value: (wire))))))

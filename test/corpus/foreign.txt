@@ -7,7 +7,7 @@ asinh = ffunction(float asinhf|asinh|asinhl|asinfx(float), <math.h>, "");
 ---
 (program
   (definition
-    name: (id)
+    name: (identifier)
     value: (ffunction
       (signature
         type: (float)
@@ -30,7 +30,7 @@ BS = fvariable(int count, "math.h");
 ---
 (program
   (definition
-    name: (id)
+    name: (identifier)
     value: (prim2
       primitive: (min)
       (arguments
@@ -41,11 +41,11 @@ BS = fvariable(int count, "math.h");
             (real)
             (fconst
               type: (int)
-              name: (id)
+              name: (identifier)
               include_file: (fstring)))))))
   (definition
-    name: (id)
+    name: (identifier)
     value: (fvariable
       type: (int)
-      name: (id)
+      name: (identifier)
       include_file: (string))))

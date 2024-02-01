@@ -29,7 +29,7 @@ For example, [tree-sitter-cpp](https://github.com/tree-sitter/tree-sitter-cpp/bl
 
 ... (with no explicit operator), while this Faust grammar defines unique rules for each operation (a _primitive_ in Faust parlance), producing e.g. infix operations like:
 ```
-"1.0 < b" => (infix left: (real) operator: (lt) right: (id))
+"1.0 < b" => (infix left: (real) operator: (lt) right: (identifier))
 ```
 
 The extra detail is added because this grammar is intended for two purposes:
@@ -44,3 +44,8 @@ To serve the second goal, the ASTs produced by this grammar must provide enough 
 - [Faust syntax documentation](https://faustdoc.grame.fr/manual/syntax/)
 - Faust Bison [parser](https://github.com/grame-cncm/faust/blob/master-dev/compiler/parser/faustparser.y) and Flex [lexer](https://github.com/grame-cncm/faust/blob/master-dev/compiler/parser/faustlexer.l) source
 - [Faust box-tester](https://github.com/grame-cncm/faust/blob/master-dev/tools/benchmark/box-tester.cpp)
+
+## TODO
+
+- Add `playground` script for `tree-sitter build-wasm && tree-sitter web-ui`?
+  - Saw this [here](https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md#parser-configurations)

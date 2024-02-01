@@ -36,12 +36,13 @@ module.exports = grammar({
     _statement: $ => choice($.file_import, $._definition, $._metadata_definition, $.documentation),
 
     _definition: $ => seq(choice($.definition, $.function_definition), ';'),
-    definition: $ => seq(optional($.variants), field('name', $.id), '=', field('value', $._expression)),
-    function_definition: $ => seq(optional($.variants), field('name', $.id), '(', $.parameters, ')', '=', field('value', $._expression)),
+    definition: $ => seq(optional($.variants), field('name', $.identifier), '=', field('value', $._expression)),
+    function_definition: $ =>
+      seq(optional($.variants), field('name', $.identifier), '(', $.parameters, ')', '=', field('value', $._expression)),
 
     _metadata_definition: $ => seq(choice($.global_metadata, $.function_metadata), ';'),
-    global_metadata: $ => seq('declare', field('key', $.id), field('value', $.string)),
-    function_metadata: $ => seq('declare', field('function_name', $.id), field('key', $.id), field('value', $.string)),
+    global_metadata: $ => seq('declare', field('key', $.identifier), field('value', $.string)),
+    function_metadata: $ => seq('declare', field('function_name', $.identifier), field('key', $.identifier), field('value', $.string)),
 
     file_import: $ => seq(optional($.variants), 'import', '(', field('filename', $.string), ')', ';'),
 
@@ -88,7 +89,7 @@ module.exports = grammar({
     // Arbitrary non-primitive function call
     function_call: $ => prec(PREC.FUNCTION_CALL, seq(field('callee', $._infix_expression), '(', $.arguments, ')')),
     modifier: $ => prec(PREC.ACCESS, seq(field('operand', $._infix_expression), field('operator', $._modifier))),
-    access: $ => prec(PREC.ACCESS, seq(field('environment', $._infix_expression), '.', field('definition', $.id))),
+    access: $ => prec(PREC.ACCESS, seq(field('environment', $._infix_expression), '.', field('definition', $.identifier))),
 
     /*** Primitives ***/
 
@@ -105,7 +106,7 @@ module.exports = grammar({
         $._prim4,
         $._prim5,
         $.negate_id,
-        $.id,
+        $.identifier,
         seq('(', $._expression, ')'),
         seq('environment', $.environment),
         $.lambda,
@@ -135,7 +136,7 @@ module.exports = grammar({
     modulators: $ => sepBy(',', $.modulator),
     modulator: $ => choice(field('name', $.string), seq(field('name', $.string), ':', field('value', $._argument))),
 
-    parameters: $ => sepBy(',', alias($.id, $.parameter)),
+    parameters: $ => sepBy(',', $.identifier),
     arguments: $ => sepBy(',', $._argument),
     _args: $ => sepBy(',', $._argument),
     // Binary compositions _as arguments_ are restricted to non-parallel compositions,
@@ -163,7 +164,7 @@ module.exports = grammar({
       seq(
         field('type', choice($.par, $.seq, $.sum, $.prod)),
         '(',
-        field('current_iter', $.id),
+        field('current_iter', $.identifier),
         ',',
         field('num_iters', $._argument),
         ',',
@@ -180,22 +181,22 @@ module.exports = grammar({
 
     letrec_environment: $ => prec.left(seq(field('expression', $._expression), 'letrec', field('local_environment', $.rec_environment))),
     rec_environment: $ => seq('{', repeat($.recinition), optional(seq('where', repeat($._definition))), '}'),
-    recinition: $ => seq(seq("'", field('name', $.id)), '=', field('expression', $._expression), ';'),
+    recinition: $ => seq(seq("'", field('name', $.identifier)), '=', field('expression', $._expression), ';'),
 
     substitution: $ => seq(field('expression', $._infix_expression), $.substitutions),
     substitutions: $ => seq('[', repeat($._definition), ']'),
 
     /* Foreign functions/variables */
     ffunction: $ => seq('ffunction', '(', $.signature, ',', $._include_file, ',', field('library_file', $.string), ')'),
-    fconst: $ => seq('fconstant', '(', $._type, field('name', $.id), ',', $._include_file, ')'),
-    fvariable: $ => seq('fvariable', '(', $._type, field('name', $.id), ',', $._include_file, ')'),
+    fconst: $ => seq('fconstant', '(', $._type, field('name', $.identifier), ',', $._include_file, ')'),
+    fvariable: $ => seq('fvariable', '(', $._type, field('name', $.identifier), ',', $._include_file, ')'),
 
     signature: $ => seq($._type, $.function_names, '(', optional($.parameter_types), ')'),
     parameter_types: $ => sepBy(',', choice(alias($.int_cast, $.int), alias($.float_cast, $.float), alias($.any_cast, $.any))),
     _include_file: $ => field('include_file', choice($.fstring, $.string)),
     function_names: $ =>
       seq($._func_name, optional(seq('|', $._func_name)), optional(seq('|', $._func_name)), optional(seq('|', $._func_name))),
-    _func_name: $ => alias($.id, $.function_name),
+    _func_name: $ => alias($.identifier, $.function_name),
     _type: $ => field('type', choice(alias($.int_cast, $.int), alias($.float_cast, $.float))),
 
     waveform: $ => seq('waveform', '{', $.values, '}'),
@@ -455,8 +456,8 @@ module.exports = grammar({
     // todo Improve qualified identifiers, using a visible rule for 'qualified_identifier'
     //   See 'qualified_identifier' in https://github.com/tree-sitter/tree-sitter-cpp/blob/master/grammar.js,
     //   and the test: https://github.com/tree-sitter/tree-sitter-cpp/blob/master/test/corpus/statements.txt#L409-L425
-    id: $ => prec.right(seq(optional('::'), seq($._id, repeat(seq('::', $._id))))),
-    negate_id: $ => seq('-', $.id),
+    identifier: $ => prec.right(seq(optional('::'), seq($._id, repeat(seq('::', $._id))))),
+    negate_id: $ => seq('-', $.identifier),
     _id: _ => /_*[a-zA-Z][_a-zA-Z0-9]*/,
 
     _doc_char: _ => /[^<]+/,
