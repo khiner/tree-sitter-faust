@@ -36,7 +36,7 @@ module.exports = grammar({
     _statement: $ => choice($.file_import, $._definition, $._metadata_definition, $.documentation),
 
     _definition: $ => seq(choice($.definition, $.function_definition), ';'),
-    definition: $ => seq(optional($.variants), field('name', $.identifier), '=', field('value', $._expression)),
+    definition: $ => seq(optional($.variants), field('variable', $._variable), '=', field('value', $._expression)),
     function_definition: $ =>
       seq(optional($.variants), field('name', $.identifier), '(', $.parameters, ')', '=', field('value', $._expression)),
 
@@ -89,7 +89,7 @@ module.exports = grammar({
     // Arbitrary non-primitive function call
     function_call: $ => prec(PREC.FUNCTION_CALL, seq(field('callee', $._infix_expression), '(', $.arguments, ')')),
     modifier: $ => prec(PREC.ACCESS, seq(field('operand', $._infix_expression), field('operator', $._modifier))),
-    access: $ => prec(PREC.ACCESS, seq(field('environment', $._infix_expression), '.', field('definition', $.identifier))),
+    access: $ => prec(PREC.ACCESS, seq(field('environment', $._infix_expression), '.', field('definition', $._variable))),
 
     /*** Primitives ***/
 
@@ -106,7 +106,7 @@ module.exports = grammar({
         $._prim4,
         $._prim5,
         $.negate_id,
-        $.identifier,
+        $._variable,
         seq('(', $._expression, ')'),
         seq('environment', $.environment),
         $.lambda,
@@ -195,8 +195,13 @@ module.exports = grammar({
     parameter_types: $ => sepBy(',', choice(alias($.int_cast, $.int), alias($.float_cast, $.float), alias($.any_cast, $.any))),
     _include_file: $ => field('include_file', choice($.fstring, $.string)),
     function_names: $ =>
-      seq($._func_name, optional(seq('|', $._func_name)), optional(seq('|', $._func_name)), optional(seq('|', $._func_name))),
-    _func_name: $ => alias($.identifier, $.function_name),
+      seq(
+        $._function_name,
+        optional(seq('|', $._function_name)),
+        optional(seq('|', $._function_name)),
+        optional(seq('|', $._function_name))
+      ),
+    _function_name: $ => alias($.identifier, $.function_name),
     _type: $ => field('type', choice(alias($.int_cast, $.int), alias($.float_cast, $.float))),
 
     waveform: $ => seq('waveform', '{', $.values, '}'),
@@ -456,8 +461,11 @@ module.exports = grammar({
     // todo Improve qualified identifiers, using a visible rule for 'qualified_identifier'
     //   See 'qualified_identifier' in https://github.com/tree-sitter/tree-sitter-cpp/blob/master/grammar.js,
     //   and the test: https://github.com/tree-sitter/tree-sitter-cpp/blob/master/test/corpus/statements.txt#L409-L425
+    _variable: $ => choice($.identifier, $.process),
     identifier: $ => prec.right(seq(optional('::'), seq($._id, repeat(seq('::', $._id))))),
     negate_id: $ => seq('-', $.identifier),
+
+    process: _ => 'process',
     _id: _ => /_*[a-zA-Z][_a-zA-Z0-9]*/,
 
     _doc_char: _ => /[^<]+/,

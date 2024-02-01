@@ -7,9 +7,9 @@ process = par(i, nHarmonics, _) :> /(nHarmonics) * si.smoo;
 
 ---
 (program
-  (definition name: (identifier) value: (int))
+  (definition variable: (identifier) value: (int))
   (definition
-    name: (identifier)
+    variable: (process)
     value: (merge
       left: (iteration
         type: (par)
@@ -30,9 +30,9 @@ process = seq(i, nBands, oneBand(i));
 
 ---
 (program
-  (definition name: (identifier) value: (int))
+  (definition variable: (identifier) value: (int))
   (definition
-    name: (identifier)
+    variable: (process)
     value: (iteration
       type: (seq)
       current_iter: (identifier)
@@ -49,10 +49,10 @@ process = sum(i, nHarmonics, _)/(nHarmonics) * si.smoo;
 ---
 (program
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (int))
   (definition
-    name: (identifier)
+    variable: (process)
     value: (infix
       left: (infix
         left: (iteration
@@ -75,15 +75,15 @@ process = prod(i, nOscs, _) * si.smoo;
 ---
 (program
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (int))
-      (definition
-        name: (identifier)
-        value: (infix
-          left: (iteration
-            type: (prod)
-            current_iter: (identifier)
-            num_iters: (identifier)
-            expression: (wire))
-          operator: (mult)
-          right: (access environment: (identifier) definition: (identifier)))))
+  (definition
+    variable: (process)
+    value: (infix
+      left: (iteration
+        type: (prod)
+        current_iter: (identifier)
+        num_iters: (identifier)
+        expression: (wire))
+      operator: (mult)
+      right: (access environment: (identifier) definition: (identifier)))))

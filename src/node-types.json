@@ -10,6 +10,10 @@
           {
             "type": "identifier",
             "named": true
+          },
+          {
+            "type": "process",
+            "named": true
           }
         ]
       },
@@ -327,6 +331,10 @@
           },
           {
             "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "process",
             "named": true
           },
           {
@@ -731,6 +739,10 @@
         },
         {
           "type": "prim5",
+          "named": true
+        },
+        {
+          "type": "process",
           "named": true
         },
         {
@@ -1159,6 +1171,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -1569,6 +1585,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -1730,16 +1750,6 @@
     "type": "definition",
     "named": true,
     "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      },
       "value": {
         "multiple": true,
         "required": true,
@@ -2057,6 +2067,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -2146,6 +2160,20 @@
           },
           {
             "type": "xor",
+            "named": true
+          }
+        ]
+      },
+      "variable": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "process",
             "named": true
           }
         ]
@@ -2697,6 +2725,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -3130,6 +3162,10 @@
           },
           {
             "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "process",
             "named": true
           },
           {
@@ -3689,6 +3725,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -4138,6 +4178,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -4626,6 +4670,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -5039,6 +5087,10 @@
           },
           {
             "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "process",
             "named": true
           },
           {
@@ -5468,6 +5520,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -5875,6 +5931,10 @@
           },
           {
             "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "process",
             "named": true
           },
           {
@@ -6316,6 +6376,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -6739,6 +6803,10 @@
           },
           {
             "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "process",
             "named": true
           },
           {
@@ -7184,6 +7252,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -7591,6 +7663,10 @@
           },
           {
             "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "process",
             "named": true
           },
           {
@@ -8007,6 +8083,10 @@
           },
           {
             "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "process",
             "named": true
           },
           {
@@ -8433,6 +8513,10 @@
           },
           {
             "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "process",
             "named": true
           },
           {
@@ -8869,6 +8953,10 @@
           },
           {
             "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "process",
             "named": true
           },
           {
@@ -9318,6 +9406,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -9738,6 +9830,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -10148,6 +10244,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -10555,6 +10655,10 @@
           },
           {
             "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "process",
             "named": true
           },
           {
@@ -11002,6 +11106,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -11418,6 +11526,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -11825,6 +11937,10 @@
           },
           {
             "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "process",
             "named": true
           },
           {
@@ -12279,6 +12395,10 @@
           },
           {
             "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "process",
             "named": true
           },
           {
@@ -12791,6 +12911,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -13279,6 +13403,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -13692,6 +13820,10 @@
           },
           {
             "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "process",
             "named": true
           },
           {
@@ -14403,6 +14535,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -14829,6 +14965,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -15236,6 +15376,10 @@
           },
           {
             "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "process",
             "named": true
           },
           {
@@ -15655,6 +15799,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -16065,6 +16213,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -16472,6 +16624,10 @@
           },
           {
             "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "process",
             "named": true
           },
           {
@@ -16888,6 +17044,10 @@
           },
           {
             "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "process",
             "named": true
           },
           {
@@ -17332,6 +17492,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -17739,6 +17903,10 @@
           },
           {
             "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "process",
             "named": true
           },
           {
@@ -18202,6 +18370,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -18618,6 +18790,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -19025,6 +19201,10 @@
           },
           {
             "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "process",
             "named": true
           },
           {
@@ -19446,6 +19626,10 @@
           },
           {
             "type": "prim5",
+            "named": true
+          },
+          {
+            "type": "process",
             "named": true
           },
           {
@@ -19955,6 +20139,10 @@
             "named": true
           },
           {
+            "type": "process",
+            "named": true
+          },
+          {
             "type": "rdtable",
             "named": true
           },
@@ -20438,6 +20626,10 @@
   },
   {
     "type": "prefix_prim",
+    "named": true
+  },
+  {
+    "type": "process",
     "named": true
   },
   {

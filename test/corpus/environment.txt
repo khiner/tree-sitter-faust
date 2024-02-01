@@ -10,13 +10,13 @@ nonempty_env = environment {
 
 ---
 (program
-  (definition name: (identifier) value: (environment))
+  (definition variable: (identifier) value: (environment))
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (environment
-      (definition name: (identifier) value: (int))
+      (definition variable: (identifier) value: (int))
       (definition
-        name: (identifier)
+        variable: (identifier)
         value: (parallel left: (identifier) right: (wire))))))
 
 ====
@@ -29,13 +29,13 @@ process = pink;
 ---
 (program
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (with_environment
       expression: (sequential
         left: (identifier)
         right: (recursive left: (add) right: (identifier)))
       local_environment: (environment)))
-  (definition name: (identifier) value: (identifier)))
+  (definition variable: (process) value: (identifier)))
 
 ====
 With environment
@@ -50,7 +50,7 @@ process = pink;
 ---
 (program
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (with_environment
       expression: (sequential
         left: (identifier)
@@ -84,7 +84,7 @@ process = pink;
               left: (real)
               operator: (mult)
               right: (modifier operand: (identifier) operator: (one_sample_delay))))))))
-  (definition name: (identifier) value: (identifier)))
+  (definition variable: (process) value: (identifier)))
 
 ====
 letrec
@@ -133,7 +133,7 @@ ar(a,r,g) = v letrec {
             operator: (mult)
             right: (identifier)))
         (definition
-          name: (identifier)
+          variable: (identifier)
           value: (infix
             left: (identifier)
             operator: (le)

@@ -7,7 +7,7 @@ process = 1 + 1 * 2 << 4 | 6 >= _ @ 7 ^ 2;
 ---
 (program
   (definition
-    name: (identifier)
+    variable: (process)
     value: (infix
       left: (infix
         left: (infix
@@ -34,7 +34,7 @@ process = |(*(2,3), @(_', 2)) : mem;
 ---
 (program
   (definition
-    name: (identifier)
+    variable: (process)
     value: (sequential
       left: (prefix
         operator: (or)
@@ -54,7 +54,7 @@ process = |(*(2), @(_')) : mem;
 ---
 (program
   (definition
-    name: (identifier)
+    variable: (process)
     value: (sequential
       left: (prefix
         operator: (or)
@@ -73,7 +73,7 @@ linear2db = \(x).(20*log10(x));
 ---
 (program
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (lambda
       (parameters (identifier))
       value: (infix
@@ -93,7 +93,7 @@ process = case {
 ---
 (program
   (definition
-    name: (identifier)
+    variable: (process)
     value: (function_call
       callee: (pattern
         (rules
@@ -117,7 +117,7 @@ extra_modulators = ["Wet", "Damp", "RoomSize" -> freeverb];
 ---
 (program
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (sequential
       left: (parallel
         left: (function_call callee: (identifier) (arguments (int) (real)))
@@ -126,7 +126,7 @@ extra_modulators = ["Wet", "Damp", "RoomSize" -> freeverb];
         (modulators (modulator name: (string)))
         expression: (identifier))))
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (modulation
       (modulators
         (modulator
@@ -136,7 +136,7 @@ extra_modulators = ["Wet", "Damp", "RoomSize" -> freeverb];
             operand: (function_call callee: (identifier) (arguments (int) (real))))))
       expression: (identifier)))
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (modulation
       (modulators
         (modulator name: (string))
@@ -201,7 +201,7 @@ process = prefix(attach(enable(control(_, _), _), _), _);
 
 ---
 (program
-  (definition (identifier)
+  (definition (process)
     (prim2 (prefix_prim)
       (arguments
         (prim2 (attach)
@@ -265,7 +265,7 @@ process = component("karplus32.dsp") : component("freeverb.dsp");
 ---
 (program
   (definition
-    name: (identifier)
+    variable: (process)
     value: (sequential
       left: (component filename: (string))
       right: (component filename: (string)))))
@@ -280,10 +280,10 @@ process = fl.lowpass;
 ---
 (program
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (library filename: (string)))
   (definition
-    name: (identifier)
+    variable: (process)
     value: (access environment: (identifier) definition: (identifier))))
 
 ===
@@ -316,10 +316,10 @@ full_route = route(2,2,1,2,2,1);
 ---
 (program
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (route num_inputs: (int) num_outputs: (int)))
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (route
       num_inputs: (int)
       num_outputs: (int)
@@ -339,12 +339,12 @@ process = 0,reader:soundfile("son[url:{'foo.wav'}]",2);
 ---
 (program
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (recursive
       left: (wire)
       right: (partial operator: (add) operand: (int))))
   (definition
-    name: (identifier)
+    variable: (process)
     value: (sequential
       left: (parallel left: (int) right: (identifier))
       right: (soundfile filename: (string) num_channels: (int)))))
@@ -360,11 +360,11 @@ num_ints = inputs(expr);
 ---
 (program
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (parallel left: (wire) right: (wire)))
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (outputs expression: (identifier)))
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (inputs expression: (identifier))))

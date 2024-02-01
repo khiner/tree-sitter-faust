@@ -6,7 +6,7 @@ process = _~+(1);
 
 ---
 (program
-  (definition (identifier)
+  (definition (process)
     (recursive
       (wire)
       (partial (add) (int)))))
@@ -15,22 +15,22 @@ process = _~+(1);
 Sequential
 =====
 
-a=_:_;
+process = _:_;
 
 ---
 (program
-  (definition (identifier)
+  (definition (process)
     (sequential (wire) (wire))))
 
 =====
 Split two
 =====
 
-a=_<:_,_;
+process = _<:_,_;
 
 ---
 (program
-  (definition (identifier)
+  (definition (process)
     (split
       (wire)
       (parallel (wire) (wire)))))
@@ -39,11 +39,11 @@ a=_<:_,_;
 Split three
 =====
 
-a=_<:_,_,_;
+process = _ <: _,_,_;
 
 ---
 (program
-  (definition (identifier)
+  (definition (process)
     (split
       (wire)
       (parallel
@@ -54,11 +54,11 @@ a=_<:_,_,_;
 Merge two
 =====
 
-a=_,_:>_;
+process = _,_ :> _;
 
 ---
 (program
-  (definition (identifier)
+  (definition (process)
     (merge
       (parallel (wire) (wire))
       (wire))))
@@ -67,11 +67,11 @@ a=_,_:>_;
 Merge three
 =====
 
-a=_,_,_:>_;
+process = _,_,_ :> _;
 
 ---
 (program
-  (definition (identifier)
+  (definition (process)
     (merge
       (parallel
         (wire)

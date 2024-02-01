@@ -47,7 +47,7 @@ process = tgroup("grp 1", vbox, sliders, knobs, vmisc, hmisc);
 (program
   (global_metadata key: (identifier) value: (string))
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (group
       type: (vgroup_type)
       label: (string)
@@ -57,7 +57,7 @@ process = tgroup("grp 1", vbox, sliders, knobs, vmisc, hmisc);
           left: (checkbox label: (string))
           right: (numeric_widget type: (nentry_type) label: (string) init: (int) min: (int) max: (int) step: (real))))))
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (group
       type: (hgroup_type)
       label: (string)
@@ -67,7 +67,7 @@ process = tgroup("grp 1", vbox, sliders, knobs, vmisc, hmisc);
           left: (numeric_widget type: (vslider_type) label: (string) init: (int) min: (int) max: (int) step: (real))
           right: (numeric_widget type: (vslider_type) label: (string) init: (int) min: (int) max: (int) step: (real))))))
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (group
       type: (hgroup_type)
       label: (string)
@@ -77,7 +77,7 @@ process = tgroup("grp 1", vbox, sliders, knobs, vmisc, hmisc);
           left: (numeric_widget type: (vslider_type) label: (string) init: (int) min: (int) max: (int) step: (real))
           right: (numeric_widget type: (vslider_type) label: (string) init: (int) min: (int) max: (int) step: (real))))))
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (group
       type: (hgroup_type)
       label: (string)
@@ -91,7 +91,7 @@ process = tgroup("grp 1", vbox, sliders, knobs, vmisc, hmisc);
               left: (numeric_widget type: (nentry_type) label: (string) init: (int) min: (int) max: (int) step: (real))
               right: (bargraph type: (vbargraph_type) label: (string) min: (int) max: (int))))))))
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (group
       type: (vgroup_type)
       label: (string)
@@ -105,7 +105,7 @@ process = tgroup("grp 1", vbox, sliders, knobs, vmisc, hmisc);
               left: (identifier)
               right: (bargraph type: (hbargraph_type) label: (string) min: (int) max: (int))))))))
   (definition
-    name: (identifier)
+    variable: (identifier)
     value: (group
       type: (hgroup_type)
       label: (string)
@@ -121,7 +121,7 @@ process = tgroup("grp 1", vbox, sliders, knobs, vmisc, hmisc);
                 left: (bargraph type: (vbargraph_type) label: (string) min: (int) max: (int))
                 right: (bargraph type: (hbargraph_type) label: (string) min: (int) max: (int)))))))))
   (definition
-    name: (identifier)
+    variable: (process)
     value: (group
       type: (tgroup_type)
       label: (string)

@@ -77,10 +77,10 @@
         },
         {
           "type": "FIELD",
-          "name": "name",
+          "name": "variable",
           "content": {
             "type": "SYMBOL",
-            "name": "identifier"
+            "name": "_variable"
           }
         },
         {
@@ -949,7 +949,7 @@
             "name": "definition",
             "content": {
               "type": "SYMBOL",
-              "name": "identifier"
+              "name": "_variable"
             }
           }
         ]
@@ -1004,7 +1004,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "identifier"
+          "name": "_variable"
         },
         {
           "type": "SEQ",
@@ -2078,7 +2078,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "_func_name"
+          "name": "_function_name"
         },
         {
           "type": "CHOICE",
@@ -2092,7 +2092,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "_func_name"
+                  "name": "_function_name"
                 }
               ]
             },
@@ -2113,7 +2113,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "_func_name"
+                  "name": "_function_name"
                 }
               ]
             },
@@ -2134,7 +2134,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "_func_name"
+                  "name": "_function_name"
                 }
               ]
             },
@@ -2145,7 +2145,7 @@
         }
       ]
     },
-    "_func_name": {
+    "_function_name": {
       "type": "ALIAS",
       "content": {
         "type": "SYMBOL",
@@ -3820,6 +3820,19 @@
       "type": "PATTERN",
       "value": "<[a-zA-Z]*\\.?[a-zA-Z]*>"
     },
+    "_variable": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "process"
+        }
+      ]
+    },
     "identifier": {
       "type": "PREC_RIGHT",
       "value": 0,
@@ -3878,6 +3891,10 @@
           "name": "identifier"
         }
       ]
+    },
+    "process": {
+      "type": "STRING",
+      "value": "process"
     },
     "_id": {
       "type": "PATTERN",

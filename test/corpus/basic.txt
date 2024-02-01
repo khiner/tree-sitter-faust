@@ -28,7 +28,7 @@ process = var; /* Comment at the end of a line. */
   (comment)
   (definition (identifier) (int))
   (comment)
-  (definition (identifier) (identifier))
+  (definition (process) (identifier))
   (comment)
   (comment))
 
@@ -41,8 +41,8 @@ negated_var = -var;
 
 ---
 (program
-  (definition name: (identifier) value: (identifier))
-  (definition name: (identifier) value: (negate_id (identifier))))
+  (definition variable: (identifier) value: (identifier))
+  (definition variable: (identifier) value: (negate_id (identifier))))
 
 ====
 Function definition
@@ -71,7 +71,7 @@ add = +;
   (global_metadata key: (identifier) value: (string))
   (global_metadata key: (identifier) value: (string))
   (function_metadata function_name: (identifier) key: (identifier) value: (string))
-  (definition name: (identifier) value: (add)))
+  (definition variable: (identifier) value: (add)))
 
 ====
 Import
@@ -121,7 +121,7 @@ process = var2';
   (comment)
   (definition (identifier) (mem))
   (definition (identifier) (partial (delay) (identifier)))
-  (definition (identifier) (modifier (identifier) (one_sample_delay))))
+  (definition (process) (modifier (identifier) (one_sample_delay))))
 
 ===
 Explicit substitution
@@ -132,9 +132,9 @@ process = component("freeverb.dsp")[foo(x) = 1; bar = _;];
 ---
 (program
   (definition
-    name: (identifier)
+    variable: (process)
     value: (substitution
       expression: (component filename: (string))
       (substitutions
         (function_definition name: (identifier) (parameters (identifier)) value: (int))
-        (definition name: (identifier) value: (wire))))))
+        (definition variable: (identifier) value: (wire))))))
