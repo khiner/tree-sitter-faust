@@ -3436,52 +3436,143 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_special_doc_tag"
+          "name": "doc_metadata"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "doc_equation"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "doc_diagram"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "doc_listing"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "doc_notice"
         }
       ]
     },
-    "_doc_char": {
-      "type": "PATTERN",
-      "value": "[^<]+"
-    },
-    "_special_doc_tag": {
-      "type": "CHOICE",
+    "doc_metadata": {
+      "type": "SEQ",
       "members": [
-        {
-          "type": "STRING",
-          "value": "<notice/>"
-        },
-        {
-          "type": "STRING",
-          "value": "<notice />"
-        },
-        {
-          "type": "STRING",
-          "value": "<equation>"
-        },
-        {
-          "type": "STRING",
-          "value": "</equation>"
-        },
-        {
-          "type": "STRING",
-          "value": "<diagram>"
-        },
-        {
-          "type": "STRING",
-          "value": "</diagram>"
-        },
         {
           "type": "STRING",
           "value": "<metadata>"
         },
         {
-          "type": "STRING",
-          "value": "</metadata>"
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_doc_char"
+          }
         },
         {
           "type": "STRING",
+          "value": "</metadata>"
+        }
+      ]
+    },
+    "doc_equation": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "<equation>"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_doc_char"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "</equation>"
+        }
+      ]
+    },
+    "doc_diagram": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "<diagram>"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_doc_char"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "</diagram>"
+        }
+      ]
+    },
+    "doc_listing": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
           "value": "<listing"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "doc_attribute"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "/>"
+        }
+      ]
+    },
+    "doc_notice": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "<notice"
+        },
+        {
+          "type": "STRING",
+          "value": "/>"
+        }
+      ]
+    },
+    "doc_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_doc_attribute_key"
+          },
+          "named": true,
+          "value": "key"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_doc_attribute_value"
+          },
+          "named": true,
+          "value": "value"
         }
       ]
     },
@@ -3801,6 +3892,18 @@
     "_id": {
       "type": "PATTERN",
       "value": "_*[a-zA-Z][_a-zA-Z0-9]*"
+    },
+    "_doc_char": {
+      "type": "PATTERN",
+      "value": "[^<]+"
+    },
+    "_doc_attribute_key": {
+      "type": "PATTERN",
+      "value": "[^=\\s]+"
+    },
+    "_doc_attribute_value": {
+      "type": "PATTERN",
+      "value": "\"([^\"]*)\""
     },
     "comment": {
       "type": "TOKEN",

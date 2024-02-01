@@ -2,7 +2,11 @@
 
 This is a tree-sitter grammar for the [Faust audio programming language](https://faustdoc.grame.fr/manual/syntax/).
 
-## Design
+Every Faust syntax feature should be supported.
+If you encounter any errors parsing a valid Faust program, please file an issue and I'll fix it!
+Also, please file an issue or pull request if you have any suggestions for improving the grammar.
+
+## Design notes
 
 The rules of the grammar are somewhat more detailed than typical grammars.
 For example, [tree-sitter-cpp](https://github.com/tree-sitter/tree-sitter-cpp/blob/master/grammar.js) [defines the operators in binary operations](https://github.com/tree-sitter/tree-sitter-cpp/blob/4ca37be8e70e5a40ae95688bec56b886ba945888/grammar.js#L1143-L1151) anonymously with raw strings, producing infix binary operations [like](https://github.com/tree-sitter/tree-sitter-cpp/blob/4ca37be8e70e5a40ae95688bec56b886ba945888/test/corpus/expressions.txt#L827-L1238):
@@ -17,10 +21,9 @@ For example, [tree-sitter-cpp](https://github.com/tree-sitter/tree-sitter-cpp/bl
 
 The extra detail is added because this grammar is intended for two purposes:
 - Syntax highlighting and other syntactic code analysis applications (the typical tree-sitter use case)
-- Converting the AST into its corresponding [box expression](https://faustdoc.grame.fr/tutorials/box-api/)
+- Fully and accurately transforming the AST into downstream language intermediates (like its [box expression](https://faustdoc.grame.fr/tutorials/box-api/))
 
-To serve the second goal, the ASTs produced by this grammar must provide enough information to do everything the [Faust bixon parser](https://github.com/grame-cncm/faust/blob/master-dev/compiler/parser/faustparser.y) does.
-_Note: There are several language features that _do not_ affect the generated box expression, but providing enough information to reproduce **all** of Faust's Bison grammar actions doesn't take that much more work and would enable transformation to all downstream intermediate representations (e.g. Box/Signal/FIR MLIR dialects), so I consider it a stretch goal._
+To serve the second goal, the ASTs produced by this grammar must provide enough information to do everything the [Faust bison parser](https://github.com/grame-cncm/faust/blob/master-dev/compiler/parser/faustparser.y) does.
 
 ## Commands
 

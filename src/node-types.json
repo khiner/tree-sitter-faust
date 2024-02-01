@@ -2163,9 +2163,89 @@
     }
   },
   {
-    "type": "documentation",
+    "type": "doc_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "key",
+          "named": true
+        },
+        {
+          "type": "value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "doc_diagram",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "doc_equation",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "doc_listing",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "doc_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "doc_metadata",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "doc_notice",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "documentation",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "doc_diagram",
+          "named": true
+        },
+        {
+          "type": "doc_equation",
+          "named": true
+        },
+        {
+          "type": "doc_listing",
+          "named": true
+        },
+        {
+          "type": "doc_metadata",
+          "named": true
+        },
+        {
+          "type": "doc_notice",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "environment",
@@ -20014,6 +20094,10 @@
     "named": false
   },
   {
+    "type": "/>",
+    "named": false
+  },
+  {
     "type": ":",
     "named": false
   },
@@ -20070,11 +20154,7 @@
     "named": false
   },
   {
-    "type": "<notice />",
-    "named": false
-  },
-  {
-    "type": "<notice/>",
+    "type": "<notice",
     "named": false
   },
   {
@@ -20282,6 +20362,10 @@
     "named": true
   },
   {
+    "type": "key",
+    "named": true
+  },
+  {
     "type": "le",
     "named": true
   },
@@ -20443,6 +20527,10 @@
   },
   {
     "type": "tgroup_type",
+    "named": true
+  },
+  {
+    "type": "value",
     "named": true
   },
   {

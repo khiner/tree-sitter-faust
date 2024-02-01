@@ -9,13 +9,13 @@ Documentation
 \maketitle
 
 \begin{tabular}{ll}
-	\hline
-	\textbf{name}		& <metadata>name</metadata> \\
-	\textbf{version} 	& <metadata>version</metadata> \\
-	\textbf{author} 	& <metadata>author</metadata> \\
-	\textbf{license} 	& <metadata>license</metadata> \\
-	\textbf{copyright} 	& <metadata>copyright</metadata> \\
-	\hline
+  \hline
+  \textbf{name}		& <metadata>name</metadata> \\
+  \textbf{version} 	& <metadata>version</metadata> \\
+  \textbf{author} 	& <metadata>author</metadata> \\
+  \textbf{license} 	& <metadata>license</metadata> \\
+  \textbf{copyright} 	& <metadata>copyright</metadata> \\
+  \hline
 \end{tabular}
 \bigskip
 \section{The number one}
@@ -33,4 +33,19 @@ This process is illustrated on figure 1.
 
 ---
 (program
-  (documentation))
+  (documentation
+    (doc_metadata)
+    (doc_metadata)
+    (doc_metadata)
+    (doc_metadata)
+    (doc_metadata)
+    (doc_metadata)
+    (doc_metadata)
+    (doc_equation)
+    (doc_diagram)
+    (doc_listing 
+      (doc_attribute (key) (value))
+      (doc_attribute (key) (value))
+      (doc_attribute (key) (value)))
+    (doc_notice)
+    (doc_notice)))

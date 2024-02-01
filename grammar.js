@@ -416,10 +416,13 @@ module.exports = grammar({
     },
 
     documentation: $ => seq('<mdoc>', repeat($._doc_content), '</mdoc>'),
-    _doc_content: $ => choice($._doc_char, $._special_doc_tag),
-    _doc_char: _ => /[^<]+/,
-    _special_doc_tag: $ =>
-      choice('<notice/>', '<notice />', '<equation>', '</equation>', '<diagram>', '</diagram>', '<metadata>', '</metadata>', '<listing'),
+    _doc_content: $ => choice($._doc_char, $.doc_metadata, $.doc_equation, $.doc_diagram, $.doc_listing, $.doc_notice),
+    doc_metadata: $ => seq('<metadata>', repeat($._doc_char), '</metadata>'),
+    doc_equation: $ => seq('<equation>', repeat($._doc_char), '</equation>'),
+    doc_diagram: $ => seq('<diagram>', repeat($._doc_char), '</diagram>'),
+    doc_listing: $ => seq('<listing', repeat($.doc_attribute), '/>'),
+    doc_notice: _ => seq('<notice', '/>'),
+    doc_attribute: $ => seq(alias($._doc_attribute_key, $.key), '=', alias($._doc_attribute_value, $.value)),
 
     _binary_composition: $ => choice($.recursive, $.sequential, $.split, $.merge, $.parallel),
     recursive: define_binary_comp('~', PREC.RECURSIVE, 'left', $ => $._expression),
@@ -455,6 +458,10 @@ module.exports = grammar({
     id: $ => prec.right(seq(optional('::'), seq($._id, repeat(seq('::', $._id))))),
     negate_id: $ => seq('-', $.id),
     _id: _ => /_*[a-zA-Z][_a-zA-Z0-9]*/,
+
+    _doc_char: _ => /[^<]+/,
+    _doc_attribute_key: _ => /[^=\s]+/,
+    _doc_attribute_value: _ => /"([^"]*)"/,
 
     comment: _ => token(choice(seq('//', /(\\(.|\r?\n)|[^\\\n])*/), seq('/*', /[^*]*\*+([^/*][^*]*\*+)*/, '/'))),
   },
