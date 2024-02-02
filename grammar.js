@@ -30,6 +30,7 @@ const sign = optional(/[+-]/);
 
 module.exports = grammar({
   name: 'faust',
+  extras: $ => [$.comment, /\s/, /\\\r?\n/],
   rules: {
     program: $ => repeat(choice($.comment, $._statement)),
 

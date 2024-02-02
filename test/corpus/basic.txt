@@ -16,9 +16,16 @@ Everything in here should parse as a comment:
     declare complex_string "a\"\n\r!@#$%^&*(),<.>?/~`{}\|\';:";
     process = +(1);
 ```
+// ... including inner single-line comments
 */
 
-var = 1; // Comment at the end of a line.
+foo = 1; // Comment at the end of a line.
+// Inline comments ...
+bar = sin(
+  cos( 1.f // this is serious math stuff
+  ) // reeeeal serious stuff
+);
+
 process = var; /* Comment at the end of a line. */
 
 // Bye! /*still in line comment...*/ // still in line comment...
@@ -28,6 +35,13 @@ process = var; /* Comment at the end of a line. */
   (comment)
   (definition (identifier) (int))
   (comment)
+  (comment)
+  (definition
+    (identifier)
+    (prim1
+      (sin)
+      (prim1 (cos) (real) (comment))
+      (comment)))
   (definition (process) (identifier))
   (comment)
   (comment))
