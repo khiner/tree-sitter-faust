@@ -45,13 +45,12 @@
 
 (_ filename: (string)) @string.special.path
 
-(function_names) @string.special
-(documentation) @string.documentation
+(documentation) @string.documentation @spell
 
 [(string) (fstring)] @string
 
+(int) @number
 (real) @number.float
-[(int) (real)] @number
 
 ;; Types
 ; @type             ; type or class definitions and annotations
@@ -84,6 +83,8 @@
 (function_definition name: (identifier) @function)
 [(lambda) (prefix) (prim1) (prim2) (prim3) (prim4) (prim5) (function_call)] @function.call
 
+(function_names) @function
+
 [
   (exp) (log) (log10) (sqrt) (abs) (floor) (ceil) (rint) (round)
   (acos) (asin) (atan) (cos) (sin) (tan) (atan2)
@@ -111,7 +112,11 @@
   "=" "=>" "->"
 ] @operator
 
-[(recursive "~") (sequential ":") (split "<:") (merge ":>") (parallel ",")] @operator
+(recursive "~" @operator)
+(sequential ":" @operator)
+(split "<:" @operator)
+(merge ":>" @operator)
+(parallel "," @operator)
 
 ;; Keywords
 ; @keyword                   ; keywords not fitting into specific categories
@@ -133,7 +138,7 @@
 
 [(par) (seq) (sum) (prod)] @keyword.repeat
 
-(file_import "import") @keyword.import
+(file_import "import" @keyword.import)
 
 [
   (wire)
@@ -164,7 +169,7 @@
 ; @comment.todo          ; todo-type comments (e.g. `TODO:`, `WIP:`, `FIXME:`)
 ; @comment.note          ; note-type comments (e.g. `NOTE:`, `INFO:`, `XXX`)
 
-(comment) @comment
+(comment) @comment @spell
 
 ; @tag           ; XML-style tag names (and similar)
 ; @tag.attribute ; XML-style tag attributes
