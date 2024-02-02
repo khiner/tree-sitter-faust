@@ -131,11 +131,6 @@
 ; @keyword.directive         ; various preprocessor directives & shebangs
 ; @keyword.directive.define  ; preprocessor definition directives
 
-; Punctuation
-; @punctuation.delimiter ; delimiters (e.g. `;` / `.` / `,`)
-; @punctuation.bracket   ; brackets (e.g. `()` / `{}` / `[]`)
-; @punctuation.special   ; special symbols (e.g. `{}` in string interpolation)
-
 [(par) (seq) (sum) (prod)] @keyword.repeat
 
 (file_import "import") @keyword.import
@@ -151,6 +146,11 @@
 ] @keyword
 
 [(xor)] @keyword.operator
+
+;; Punctuation
+; @punctuation.delimiter ; delimiters (e.g. `;` / `.` / `,`)
+; @punctuation.bracket   ; brackets (e.g. `()` / `{}` / `[]`)
+; @punctuation.special   ; special symbols (e.g. `{}` in string interpolation)
 
 ["," ";" "."] @punctuation.delimiter
 ["(" ")" "[" "]" "{" "}"] @punctuation.bracket
