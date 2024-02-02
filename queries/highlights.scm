@@ -14,6 +14,9 @@
 (process) @variable.builtin
 (parameters (identifier)) @variable.parameter
 
+(global_metadata key: (identifier) @variable.member)
+(function_metadata function_name: (identifier) @variable.member)
+
 ; @constant          ; constant identifiers
 ; @constant.builtin  ; built-in constant values
 ; @constant.macro    ; constants defined by the preprocessor
@@ -60,9 +63,6 @@
 ; 
 ; @attribute        ; attribute annotations (e.g. Python decorators)
 ; @property         ; the key in key/value pairs
-
-(global_metadata key: (identifier)) @property
-(function_metadata key: (identifier)) @property
 
 (_ type: [(int) (float) (any)]) @type.builtin
 
@@ -175,5 +175,4 @@
 ; @tag.attribute ; XML-style tag attributes
 ; @tag.delimiter ; XML-style tag delimiters
 
-[(doc_metadata) (doc_equation) (doc_diagram) (doc_listing) (doc_notice)] @tag
-(doc_attribute) @tag.attribute
+; todo capture inner doc tags
