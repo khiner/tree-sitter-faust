@@ -1,4 +1,7 @@
 ;; Sections are based on nvim-treesitter highlights:
+;; See: https://tree-sitter.github.io/tree-sitter/syntax-highlighting#highlights
+;;
+;; Sections mirror nvim-treesitter's documentation:
 ;; https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md#highlights
 
 ;; Identifiers
@@ -7,9 +10,9 @@
 ; @variable.parameter  ; parameters of a function
 ; @variable.member     ; object and struct fields
 
-(process) @variable.builtin
-(parameters (identifier) @variable.parameter)
 (identifier) @variable
+(process) @variable.builtin
+(parameters (identifier)) @variable.parameter
 
 ; @constant          ; constant identifiers
 ; @constant.builtin  ; built-in constant values
@@ -40,10 +43,7 @@
 ; @number                 ; numeric literals
 ; @number.float           ; floating-point number literals
 
-(file_import filename: (string)) @string.special.path
-(soundfile filename: (string)) @string.special.path
-(component filename: (string)) @string.special.path
-(library filename: (string)) @string.special.path
+(_ filename: (string)) @string.special.path
 
 (function_names) @string.special
 (documentation) @string.documentation
@@ -65,10 +65,7 @@
 (global_metadata key: (identifier)) @property
 (function_metadata key: (identifier)) @property
 
-(fconst type: [(int) (float)]) @type.builtin
-(fvariable type: [(int) (float)]) @type.builtin
-(signature type: [(int) (float)]) @type.builtin
-(parameter_types [(int) (float) (any)]) @type.builtin
+(_ type: [(int) (float) (any)]) @type.builtin
 
 [(single_precision) (double_precision) (quad_precision) (fixed_point_precision)] @attribute
 
@@ -84,7 +81,7 @@
 ; @constructor          ; constructor calls and definitions
 ; @operator             ; symbolic operators (e.g. `+` / `*`)
 
-(function_definition) @function
+(function_definition name: (identifier) @function)
 [(lambda) (prefix) (prim1) (prim2) (prim3) (prim4) (prim5) (function_call)] @function.call
 
 [
@@ -105,9 +102,10 @@
   "route"
 ] @function.builtin
 
+; xor is a @keyword.operator
 [
   (add) (sub) (mult) (div) (mod) (pow)
-  (or) (and) (xor) (lshift) (rshift)
+  (or) (and) (lshift) (rshift)
   (lt) (le) (gt) (ge) (eq) (neq)
   (delay) (one_sample_delay)
   "=" "=>" "->"
@@ -151,6 +149,8 @@
   "case"
   "ffunction" "fconstant" "fvariable"
 ] @keyword
+
+[(xor)] @keyword.operator
 
 ["," ";" "."] @punctuation.delimiter
 ["(" ")" "[" "]" "{" "}"] @punctuation.bracket

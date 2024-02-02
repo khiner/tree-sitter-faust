@@ -2845,6 +2845,10 @@
           {
             "type": "identifier",
             "named": true
+          },
+          {
+            "type": "process",
+            "named": true
           }
         ]
       },

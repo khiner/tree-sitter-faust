@@ -39,7 +39,7 @@ module.exports = grammar({
     _definition: $ => seq(choice($.definition, $.function_definition), ';'),
     definition: $ => seq(optional($.variants), field('variable', $._variable), '=', field('value', $._expression)),
     function_definition: $ =>
-      seq(optional($.variants), field('name', $.identifier), '(', $.parameters, ')', '=', field('value', $._expression)),
+      seq(optional($.variants), field('name', $._variable), '(', $.parameters, ')', '=', field('value', $._expression)),
 
     _metadata_definition: $ => seq(choice($.global_metadata, $.function_metadata), ';'),
     global_metadata: $ => seq('declare', field('key', $.identifier), field('value', $.string)),
