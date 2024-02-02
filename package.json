@@ -9,6 +9,17 @@
     "test": "tree-sitter test",
     "parse": "tree-sitter parse"
   },
+  "tree-sitter": [
+    {
+      "scope": "source.faust",
+      "file-types": [
+        "dsp"
+      ],
+      "highlights": [
+        "queries/highlights.scm"
+      ]
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/khiner/tree-sitter-faust.git"

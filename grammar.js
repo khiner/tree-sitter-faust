@@ -123,8 +123,8 @@ module.exports = grammar({
         $.button,
         $.checkbox,
         $.numeric_widget, // vslider, hslider, nentry
-        $.group, // vgroup, hgroup, tgroup
         $.bargraph, // vbargraph, hbargraph
+        $.group, // vgroup, hgroup, tgroup
         $.soundfile,
         $.inputs,
         $.outputs
@@ -235,15 +235,6 @@ module.exports = grammar({
         field('step', $._argument),
         ')'
       ),
-    group: $ =>
-      seq(
-        field('type', choice($.vgroup_type, $.hgroup_type, $.tgroup_type)),
-        '(',
-        field('label', $.string),
-        ',',
-        field('expression', $._expression),
-        ')'
-      ),
     bargraph: $ =>
       seq(
         field('type', choice($.vbargraph_type, $.hbargraph_type)),
@@ -253,6 +244,15 @@ module.exports = grammar({
         field('min', $._argument),
         ',',
         field('max', $._argument),
+        ')'
+      ),
+    group: $ =>
+      seq(
+        field('type', choice($.vgroup_type, $.hgroup_type, $.tgroup_type)),
+        '(',
+        field('label', $.string),
+        ',',
+        field('expression', $._expression),
         ')'
       ),
     soundfile: $ => seq('soundfile', '(', field('filename', $.string), ',', field('num_channels', $._argument), ')'),
@@ -448,12 +448,12 @@ module.exports = grammar({
     hslider_type: _ => 'hslider',
     nentry_type: _ => 'nentry',
 
+    vbargraph_type: _ => 'vbargraph',
+    hbargraph_type: _ => 'hbargraph',
+
     vgroup_type: _ => 'vgroup',
     hgroup_type: _ => 'hgroup',
     tgroup_type: _ => 'tgroup',
-
-    vbargraph_type: _ => 'vbargraph',
-    hbargraph_type: _ => 'hbargraph',
 
     string: _ => /"([^"\\]|\\.)*"/,
     fstring: _ => /<[a-zA-Z]*\.?[a-zA-Z]*>/,

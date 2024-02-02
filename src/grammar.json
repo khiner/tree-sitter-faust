@@ -1094,11 +1094,11 @@
         },
         {
           "type": "SYMBOL",
-          "name": "group"
+          "name": "bargraph"
         },
         {
           "type": "SYMBOL",
-          "name": "bargraph"
+          "name": "group"
         },
         {
           "type": "SYMBOL",
@@ -2429,60 +2429,6 @@
         }
       ]
     },
-    "group": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "FIELD",
-          "name": "type",
-          "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "vgroup_type"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "hgroup_type"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "tgroup_type"
-              }
-            ]
-          }
-        },
-        {
-          "type": "STRING",
-          "value": "("
-        },
-        {
-          "type": "FIELD",
-          "name": "label",
-          "content": {
-            "type": "SYMBOL",
-            "name": "string"
-          }
-        },
-        {
-          "type": "STRING",
-          "value": ","
-        },
-        {
-          "type": "FIELD",
-          "name": "expression",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_expression"
-          }
-        },
-        {
-          "type": "STRING",
-          "value": ")"
-        }
-      ]
-    },
     "bargraph": {
       "type": "SEQ",
       "members": [
@@ -2537,6 +2483,60 @@
           "content": {
             "type": "SYMBOL",
             "name": "_argument"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "group": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "FIELD",
+          "name": "type",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "vgroup_type"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "hgroup_type"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "tgroup_type"
+              }
+            ]
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "FIELD",
+          "name": "label",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "FIELD",
+          "name": "expression",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_expression"
           }
         },
         {
@@ -3792,6 +3792,14 @@
       "type": "STRING",
       "value": "nentry"
     },
+    "vbargraph_type": {
+      "type": "STRING",
+      "value": "vbargraph"
+    },
+    "hbargraph_type": {
+      "type": "STRING",
+      "value": "hbargraph"
+    },
     "vgroup_type": {
       "type": "STRING",
       "value": "vgroup"
@@ -3803,14 +3811,6 @@
     "tgroup_type": {
       "type": "STRING",
       "value": "tgroup"
-    },
-    "vbargraph_type": {
-      "type": "STRING",
-      "value": "vbargraph"
-    },
-    "hbargraph_type": {
-      "type": "STRING",
-      "value": "hbargraph"
     },
     "string": {
       "type": "PATTERN",
