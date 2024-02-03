@@ -39,8 +39,7 @@ process = var; /* Comment at the end of a line. */
   (definition
     (identifier)
     (prim1
-      (sin)
-      (prim1 (cos) (real) (comment))
+      (prim1 (real) (comment))
       (comment)))
   (definition (process) (identifier))
   (comment)
@@ -119,7 +118,7 @@ doubleprecision quadprecision int_part(idv) = int(idv);
     (variants (double_precision) (quad_precision))
     (identifier)
     (parameters (identifier))
-    (prim1 (int_cast) (identifier))))
+    (prim1 (identifier))))
 
 ====
 Memory

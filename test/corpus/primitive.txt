@@ -79,7 +79,7 @@ linear2db = \(x).(20*log10(x));
       value: (infix
         left: (int)
         operator: (mult)
-        right: (prim1 primitive: (log10) argument: (identifier))))))
+        right: (prim1 argument: (identifier))))))
 
 ====
 Pattern
@@ -156,36 +156,36 @@ binary = pow(min(max(fmod(remainder(atan2(1.0, 2.0), 3.0), 4.0), 5.0), 6.0), _);
 ---
 (program
   (definition (identifier)
-    (prim1 (exp)
-      (prim1 (log)
-        (prim1 (log10)
-          (prim1 (sqrt)
-            (prim1 (abs)
-              (prim1 (floor)
-                (prim1 (ceil)
-                  (prim1 (rint)
-                    (prim1 (round)
-                      (prim1 (float_cast)
-                        (prim1 (int_cast) (real)))))))))))))
+    (prim1
+      (prim1
+        (prim1
+          (prim1
+            (prim1
+              (prim1
+                (prim1
+                  (prim1
+                    (prim1
+                      (prim1
+                        (prim1 (real)))))))))))))
   (definition (identifier)
-    (prim1 (acos)
-      (prim1 (asin)
-        (prim1 (atan)
-          (prim1 (cos)
-            (prim1 (sin)
-              (prim1 (tan) (real))))))))
+    (prim1
+      (prim1
+        (prim1
+          (prim1
+            (prim1
+              (prim1 (real))))))))
   (definition (identifier)
-    (prim2 (pow_fun)
+    (prim2
       (arguments
-        (prim2 (min)
+        (prim2
           (arguments
-            (prim2 (max)
+            (prim2
               (arguments
-                (prim2 (fmod)
+                (prim2
                   (arguments
-                    (prim2 (remainder)
+                    (prim2
                       (arguments
-                        (prim2 (atan2)
+                        (prim2
                           (arguments (real) (real)))
                         (real)))
                     (real)))
@@ -202,13 +202,13 @@ process = prefix(attach(enable(control(_, _), _), _), _);
 ---
 (program
   (definition (process)
-    (prim2 (prefix_prim)
+    (prim2
       (arguments
-        (prim2 (attach)
+        (prim2
           (arguments
-            (prim2 (enable)
+            (prim2
               (arguments
-                (prim2 (control)
+                (prim2
                   (arguments (wire) (wire)))
                 (wire)))
             (wire)))
@@ -225,13 +225,13 @@ bar = _ : rwtable(n,s,w,_,r) : _;
 (program
   (definition (identifier)
     (sequential
-      (prim3 (rdtable) (arguments (identifier) (identifier) (identifier)))
+      (prim3 (arguments (identifier) (identifier) (identifier)))
       (wire)))
   (definition (identifier)
     (sequential
       (wire)
       (sequential
-        (prim5 (rwtable) (arguments (identifier) (identifier) (identifier) (wire) (identifier)))
+        (prim5 (arguments (identifier) (identifier) (identifier) (wire) (identifier)))
         (wire)))))
 
 ====
@@ -247,13 +247,13 @@ bar = _,_,_ : select3(s) : _;
     (sequential
       (parallel (wire) (wire))
       (sequential
-        (prim3 (select2) (arguments (identifier)))
+        (prim3 (arguments (identifier)))
         (wire))))
   (definition (identifier)
     (sequential
       (parallel (wire) (parallel (wire) (wire)))
       (sequential
-        (prim4 (select3) (arguments (identifier)))
+        (prim4 (arguments (identifier)))
         (wire)))))
 
 ===

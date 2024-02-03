@@ -114,7 +114,7 @@ ar(a,r,g) = v letrec {
         (recinition
           name: (identifier)
           expression: (infix
-            left: (prim2 primitive: (max)
+            left: (prim2
               (arguments
                 (int)
                 (infix

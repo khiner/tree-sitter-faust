@@ -193,7 +193,7 @@ module.exports = grammar({
     fvariable: $ => seq('fvariable', '(', $._type, field('name', $.identifier), ',', $._include_file, ')'),
 
     signature: $ => seq($._type, $.function_names, '(', optional($.parameter_types), ')'),
-    parameter_types: $ => sepBy(',', choice(alias($.int_cast, $.int), alias($.float_cast, $.float), alias($.any_cast, $.any))),
+    parameter_types: $ => sepBy(',', choice($.int_type, $.float_type, $.any_type)),
     _include_file: $ => field('include_file', choice($.fstring, $.string)),
     function_names: $ =>
       seq(
@@ -203,7 +203,7 @@ module.exports = grammar({
         optional(seq('|', $._function_name))
       ),
     _function_name: $ => alias($.identifier, $.function_name),
-    _type: $ => field('type', choice(alias($.int_cast, $.int), alias($.float_cast, $.float))),
+    _type: $ => field('type', choice($.int_type, $.float_type)),
 
     waveform: $ => seq('waveform', '{', $.values, '}'),
     values: $ => sepBy(',', $._number),
@@ -292,33 +292,50 @@ module.exports = grammar({
     // Unary primitive
     _prim1: $ =>
       choice(
-        $.exp,
-        $.log,
-        $.log10,
-        $.sqrt,
-        $.abs,
-        $.floor,
-        $.ceil,
-        $.rint,
-        $.round,
-        $.acos,
-        $.asin,
-        $.atan,
-        $.cos,
-        $.sin,
-        $.tan,
+        // Math
+        'exp',
+        'log',
+        'log10',
+        'sqrt',
+        'abs',
+        'floor',
+        'ceil',
+        'rint',
+        'round',
+        // Trig
+        'cos',
+        'sin',
+        'tan',
+        'acos',
+        'asin',
+        'atan',
+        // Type casting
+        'int',
+        'float',
 
-        $.int_cast,
-        $.float_cast,
-
-        $.lowest,
-        $.highest
+        'lowest',
+        'highest'
       ),
     // (Non-infix) binary primitive
-    _prim2: $ => choice($.pow_fun, $.min, $.max, $.fmod, $.remainder, $.atan2, $.prefix_prim, $.attach, $.enable, $.control),
-    _prim3: $ => choice($.rdtable, $.select2, $.assertbounds),
-    _prim4: $ => choice($.select3),
-    _prim5: $ => choice($.rwtable),
+    _prim2: $ =>
+      choice(
+        // Math
+        'pow',
+        'min',
+        'max',
+        'fmod',
+        'remainder',
+        // Trig
+        'atan2',
+        // Special
+        'prefix',
+        'attach',
+        'enable',
+        'control'
+      ),
+    _prim3: $ => choice('rdtable', 'select2', 'assertbounds'),
+    _prim4: $ => choice('select3'),
+    _prim5: $ => choice('rwtable'),
 
     /** Modifiers **/
     _modifier: $ => choice($.one_sample_delay),
@@ -348,46 +365,6 @@ module.exports = grammar({
     // Special
     delay: _ => '@',
 
-    /** Non-infix primitives **/
-
-    /* Unary */
-    // Math
-    exp: _ => 'exp',
-    log: _ => 'log',
-    log10: _ => 'log10',
-    sqrt: _ => 'sqrt',
-    abs: _ => 'abs',
-    floor: _ => 'floor',
-    ceil: _ => 'ceil',
-    rint: _ => 'rint',
-    round: _ => 'round',
-    // Trig
-    acos: _ => 'acos',
-    asin: _ => 'asin',
-    atan: _ => 'atan',
-    cos: _ => 'cos',
-    sin: _ => 'sin',
-    tan: _ => 'tan',
-    // Type casting
-    int_cast: _ => 'int',
-    float_cast: _ => 'float',
-    any_cast: _ => 'any', // Only used in foreign function types.
-
-    /* Binary */
-    // Math
-    pow_fun: _ => 'pow',
-    min: _ => 'min',
-    max: _ => 'max',
-    fmod: _ => 'fmod',
-    remainder: _ => 'remainder',
-    // Trig
-    atan2: _ => 'atan2',
-    // Special
-    prefix_prim: _ => 'prefix',
-    attach: _ => 'attach',
-    enable: _ => 'enable',
-    control: _ => 'control',
-
     /* Other primitives */
     wire: _ => '_',
     cut: _ => '!',
@@ -395,17 +372,6 @@ module.exports = grammar({
 
     component: $ => seq('component', '(', field('filename', $.string), ')'),
     library: $ => seq('library', '(', field('filename', $.string), ')'),
-
-    rdtable: _ => 'rdtable',
-    rwtable: _ => 'rwtable',
-    select2: _ => 'select2',
-    select3: _ => 'select3',
-
-    // These primitives are not documented or used anywhere, but they are in the Faust Bison grammar.
-    // They come from the [Adding Feature guide](https://github.com/grame-cncm/faust/blob/master-dev/adding-feature.md).
-    lowest: _ => 'lowest', // prim1
-    highest: _ => 'highest', // prim1
-    assertbounds: _ => 'assertbounds', // prim3
 
     _number: $ => choice($.int, $.real),
     int: _ => token(seq(sign, repeat1(decimal))),
@@ -444,6 +410,10 @@ module.exports = grammar({
     double_precision: _ => 'doubleprecision',
     quad_precision: _ => 'quadprecision',
     fixed_point_precision: _ => 'fixedpointprecision',
+
+    int_type: _ => 'int',
+    float_type: _ => 'float',
+    any_type: _ => 'any',
 
     vslider_type: _ => 'vslider',
     hslider_type: _ => 'hslider',

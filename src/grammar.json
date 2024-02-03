@@ -1982,31 +1982,16 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "ALIAS",
-              "content": {
-                "type": "SYMBOL",
-                "name": "int_cast"
-              },
-              "named": true,
-              "value": "int"
+              "type": "SYMBOL",
+              "name": "int_type"
             },
             {
-              "type": "ALIAS",
-              "content": {
-                "type": "SYMBOL",
-                "name": "float_cast"
-              },
-              "named": true,
-              "value": "float"
+              "type": "SYMBOL",
+              "name": "float_type"
             },
             {
-              "type": "ALIAS",
-              "content": {
-                "type": "SYMBOL",
-                "name": "any_cast"
-              },
-              "named": true,
-              "value": "any"
+              "type": "SYMBOL",
+              "name": "any_type"
             }
           ]
         },
@@ -2023,31 +2008,16 @@
                 "type": "CHOICE",
                 "members": [
                   {
-                    "type": "ALIAS",
-                    "content": {
-                      "type": "SYMBOL",
-                      "name": "int_cast"
-                    },
-                    "named": true,
-                    "value": "int"
+                    "type": "SYMBOL",
+                    "name": "int_type"
                   },
                   {
-                    "type": "ALIAS",
-                    "content": {
-                      "type": "SYMBOL",
-                      "name": "float_cast"
-                    },
-                    "named": true,
-                    "value": "float"
+                    "type": "SYMBOL",
+                    "name": "float_type"
                   },
                   {
-                    "type": "ALIAS",
-                    "content": {
-                      "type": "SYMBOL",
-                      "name": "any_cast"
-                    },
-                    "named": true,
-                    "value": "any"
+                    "type": "SYMBOL",
+                    "name": "any_type"
                   }
                 ]
               }
@@ -2161,22 +2131,12 @@
         "type": "CHOICE",
         "members": [
           {
-            "type": "ALIAS",
-            "content": {
-              "type": "SYMBOL",
-              "name": "int_cast"
-            },
-            "named": true,
-            "value": "int"
+            "type": "SYMBOL",
+            "name": "int_type"
           },
           {
-            "type": "ALIAS",
-            "content": {
-              "type": "SYMBOL",
-              "name": "float_cast"
-            },
-            "named": true,
-            "value": "float"
+            "type": "SYMBOL",
+            "name": "float_type"
           }
         ]
       }
@@ -2713,80 +2673,80 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "exp"
+          "type": "STRING",
+          "value": "exp"
         },
         {
-          "type": "SYMBOL",
-          "name": "log"
+          "type": "STRING",
+          "value": "log"
         },
         {
-          "type": "SYMBOL",
-          "name": "log10"
+          "type": "STRING",
+          "value": "log10"
         },
         {
-          "type": "SYMBOL",
-          "name": "sqrt"
+          "type": "STRING",
+          "value": "sqrt"
         },
         {
-          "type": "SYMBOL",
-          "name": "abs"
+          "type": "STRING",
+          "value": "abs"
         },
         {
-          "type": "SYMBOL",
-          "name": "floor"
+          "type": "STRING",
+          "value": "floor"
         },
         {
-          "type": "SYMBOL",
-          "name": "ceil"
+          "type": "STRING",
+          "value": "ceil"
         },
         {
-          "type": "SYMBOL",
-          "name": "rint"
+          "type": "STRING",
+          "value": "rint"
         },
         {
-          "type": "SYMBOL",
-          "name": "round"
+          "type": "STRING",
+          "value": "round"
         },
         {
-          "type": "SYMBOL",
-          "name": "acos"
+          "type": "STRING",
+          "value": "cos"
         },
         {
-          "type": "SYMBOL",
-          "name": "asin"
+          "type": "STRING",
+          "value": "sin"
         },
         {
-          "type": "SYMBOL",
-          "name": "atan"
+          "type": "STRING",
+          "value": "tan"
         },
         {
-          "type": "SYMBOL",
-          "name": "cos"
+          "type": "STRING",
+          "value": "acos"
         },
         {
-          "type": "SYMBOL",
-          "name": "sin"
+          "type": "STRING",
+          "value": "asin"
         },
         {
-          "type": "SYMBOL",
-          "name": "tan"
+          "type": "STRING",
+          "value": "atan"
         },
         {
-          "type": "SYMBOL",
-          "name": "int_cast"
+          "type": "STRING",
+          "value": "int"
         },
         {
-          "type": "SYMBOL",
-          "name": "float_cast"
+          "type": "STRING",
+          "value": "float"
         },
         {
-          "type": "SYMBOL",
-          "name": "lowest"
+          "type": "STRING",
+          "value": "lowest"
         },
         {
-          "type": "SYMBOL",
-          "name": "highest"
+          "type": "STRING",
+          "value": "highest"
         }
       ]
     },
@@ -2794,44 +2754,44 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "pow_fun"
+          "type": "STRING",
+          "value": "pow"
         },
         {
-          "type": "SYMBOL",
-          "name": "min"
+          "type": "STRING",
+          "value": "min"
         },
         {
-          "type": "SYMBOL",
-          "name": "max"
+          "type": "STRING",
+          "value": "max"
         },
         {
-          "type": "SYMBOL",
-          "name": "fmod"
+          "type": "STRING",
+          "value": "fmod"
         },
         {
-          "type": "SYMBOL",
-          "name": "remainder"
+          "type": "STRING",
+          "value": "remainder"
         },
         {
-          "type": "SYMBOL",
-          "name": "atan2"
+          "type": "STRING",
+          "value": "atan2"
         },
         {
-          "type": "SYMBOL",
-          "name": "prefix_prim"
+          "type": "STRING",
+          "value": "prefix"
         },
         {
-          "type": "SYMBOL",
-          "name": "attach"
+          "type": "STRING",
+          "value": "attach"
         },
         {
-          "type": "SYMBOL",
-          "name": "enable"
+          "type": "STRING",
+          "value": "enable"
         },
         {
-          "type": "SYMBOL",
-          "name": "control"
+          "type": "STRING",
+          "value": "control"
         }
       ]
     },
@@ -2839,16 +2799,16 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "rdtable"
+          "type": "STRING",
+          "value": "rdtable"
         },
         {
-          "type": "SYMBOL",
-          "name": "select2"
+          "type": "STRING",
+          "value": "select2"
         },
         {
-          "type": "SYMBOL",
-          "name": "assertbounds"
+          "type": "STRING",
+          "value": "assertbounds"
         }
       ]
     },
@@ -2856,8 +2816,8 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "select3"
+          "type": "STRING",
+          "value": "select3"
         }
       ]
     },
@@ -2865,8 +2825,8 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "rwtable"
+          "type": "STRING",
+          "value": "rwtable"
         }
       ]
     },
@@ -2959,118 +2919,6 @@
       "type": "STRING",
       "value": "@"
     },
-    "exp": {
-      "type": "STRING",
-      "value": "exp"
-    },
-    "log": {
-      "type": "STRING",
-      "value": "log"
-    },
-    "log10": {
-      "type": "STRING",
-      "value": "log10"
-    },
-    "sqrt": {
-      "type": "STRING",
-      "value": "sqrt"
-    },
-    "abs": {
-      "type": "STRING",
-      "value": "abs"
-    },
-    "floor": {
-      "type": "STRING",
-      "value": "floor"
-    },
-    "ceil": {
-      "type": "STRING",
-      "value": "ceil"
-    },
-    "rint": {
-      "type": "STRING",
-      "value": "rint"
-    },
-    "round": {
-      "type": "STRING",
-      "value": "round"
-    },
-    "acos": {
-      "type": "STRING",
-      "value": "acos"
-    },
-    "asin": {
-      "type": "STRING",
-      "value": "asin"
-    },
-    "atan": {
-      "type": "STRING",
-      "value": "atan"
-    },
-    "cos": {
-      "type": "STRING",
-      "value": "cos"
-    },
-    "sin": {
-      "type": "STRING",
-      "value": "sin"
-    },
-    "tan": {
-      "type": "STRING",
-      "value": "tan"
-    },
-    "int_cast": {
-      "type": "STRING",
-      "value": "int"
-    },
-    "float_cast": {
-      "type": "STRING",
-      "value": "float"
-    },
-    "any_cast": {
-      "type": "STRING",
-      "value": "any"
-    },
-    "pow_fun": {
-      "type": "STRING",
-      "value": "pow"
-    },
-    "min": {
-      "type": "STRING",
-      "value": "min"
-    },
-    "max": {
-      "type": "STRING",
-      "value": "max"
-    },
-    "fmod": {
-      "type": "STRING",
-      "value": "fmod"
-    },
-    "remainder": {
-      "type": "STRING",
-      "value": "remainder"
-    },
-    "atan2": {
-      "type": "STRING",
-      "value": "atan2"
-    },
-    "prefix_prim": {
-      "type": "STRING",
-      "value": "prefix"
-    },
-    "attach": {
-      "type": "STRING",
-      "value": "attach"
-    },
-    "enable": {
-      "type": "STRING",
-      "value": "enable"
-    },
-    "control": {
-      "type": "STRING",
-      "value": "control"
-    },
     "wire": {
       "type": "STRING",
       "value": "_"
@@ -3132,34 +2980,6 @@
           "value": ")"
         }
       ]
-    },
-    "rdtable": {
-      "type": "STRING",
-      "value": "rdtable"
-    },
-    "rwtable": {
-      "type": "STRING",
-      "value": "rwtable"
-    },
-    "select2": {
-      "type": "STRING",
-      "value": "select2"
-    },
-    "select3": {
-      "type": "STRING",
-      "value": "select3"
-    },
-    "lowest": {
-      "type": "STRING",
-      "value": "lowest"
-    },
-    "highest": {
-      "type": "STRING",
-      "value": "highest"
-    },
-    "assertbounds": {
-      "type": "STRING",
-      "value": "assertbounds"
     },
     "_number": {
       "type": "CHOICE",
@@ -3779,6 +3599,18 @@
     "fixed_point_precision": {
       "type": "STRING",
       "value": "fixedpointprecision"
+    },
+    "int_type": {
+      "type": "STRING",
+      "value": "int"
+    },
+    "float_type": {
+      "type": "STRING",
+      "value": "float"
+    },
+    "any_type": {
+      "type": "STRING",
+      "value": "any"
     },
     "vslider_type": {
       "type": "STRING",
