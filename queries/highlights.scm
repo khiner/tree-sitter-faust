@@ -1,3 +1,5 @@
+; https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md#highlights
+
 ; Identifiers
 (identifier) @variable
 
@@ -201,3 +203,24 @@
 
 ; Comments
 (comment) @comment @spell
+
+; Tags
+(documentation
+  [
+    "<mdoc>"
+    "</mdoc>"
+  ] @tag)
+
+(documentation
+  (_
+    [
+      "<metadata>"
+      "</metadata>"
+      "<equation>"
+      "</equation>"
+      "<diagram>"
+      "</diagram>"
+      "<listing"
+      "<notice"
+      "/>"
+    ] @tag))
