@@ -58,11 +58,11 @@
 (function_names) @function
 
 (function_call
-   (identifier) @function.call)
+  (identifier) @function.call)
 
 (function_call
-   (access
-      definition: (identifier) @function.call))
+  (access
+    definition: (identifier) @function.call))
 
 [
   "exp"
@@ -213,16 +213,17 @@
     "</mdoc>"
   ] @tag)
 
-(documentation
-  (_
-    [
-      "<metadata>"
-      "</metadata>"
-      "<equation>"
-      "</equation>"
-      "<diagram>"
-      "</diagram>"
-      "<listing"
-      "<notice"
-      "/>"
-    ] @tag))
+; Tags
+[
+  "<mdoc>"
+  "</mdoc>"
+  "<metadata>"
+  "</metadata>"
+  "<equation>"
+  "</equation>"
+  "<diagram>"
+  "</diagram>"
+  "<listing"
+  "<notice"
+  "/>"
+] @tag
