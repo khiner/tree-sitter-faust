@@ -8,6 +8,15 @@ Also, please file an issue or pull request if you have any suggestions for impro
 
 The npm package is [here](https://www.npmjs.com/package/tree-sitter-faust).
 
+## Install `nvim-treesitter` language parser
+
+The parser and queries are available as an [nvim-treesitter language](https://github.com/nvim-treesitter/nvim-treesitter/?tab=readme-ov-file#supported-languages).
+
+Install with the `nvim` command:
+```nvim
+:TSInstall faust
+```
+
 ## Commands
 
 ```shell
