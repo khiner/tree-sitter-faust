@@ -35,7 +35,7 @@ process = pink;
         left: (identifier)
         right: (recursive left: (add) right: (identifier)))
       local_environment: (environment)))
-  (definition variable: (process) value: (identifier)))
+  (definition variable: (identifier) value: (identifier)))
 
 ====
 With environment
@@ -84,7 +84,7 @@ process = pink;
               left: (real)
               operator: (mult)
               right: (modifier operand: (identifier) operator: (one_sample_delay))))))))
-  (definition variable: (process) value: (identifier)))
+  (definition variable: (identifier) value: (identifier)))
 
 ====
 letrec

@@ -121,7 +121,7 @@ process = tgroup("grp 1", vbox, sliders, knobs, vmisc, hmisc);
                 left: (bargraph type: (vbargraph_type) label: (string) min: (int) max: (int))
                 right: (bargraph type: (hbargraph_type) label: (string) min: (int) max: (int)))))))))
   (definition
-    variable: (process)
+    variable: (identifier)
     value: (group
       type: (tgroup_type)
       label: (string)

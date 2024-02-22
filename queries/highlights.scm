@@ -3,7 +3,10 @@
 ; Identifiers
 (identifier) @variable
 
-(process) @variable.builtin
+[
+  "process"
+  "effect"
+] @variable.builtin
 
 (parameters
   (identifier)) @variable.parameter

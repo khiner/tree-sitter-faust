@@ -7,7 +7,7 @@ process = 1 + 1 * 2 << 4 | 6 >= _ @ 7 ^ 2;
 ---
 (program
   (definition
-    variable: (process)
+    variable: (identifier)
     value: (infix
       left: (infix
         left: (infix
@@ -34,7 +34,7 @@ process = |(*(2,3), @(_', 2)) : mem;
 ---
 (program
   (definition
-    variable: (process)
+    variable: (identifier)
     value: (sequential
       left: (prefix
         operator: (or)
@@ -54,7 +54,7 @@ process = |(*(2), @(_')) : mem;
 ---
 (program
   (definition
-    variable: (process)
+    variable: (identifier)
     value: (sequential
       left: (prefix
         operator: (or)
@@ -93,7 +93,7 @@ process = case {
 ---
 (program
   (definition
-    variable: (process)
+    variable: (identifier)
     value: (function_call
       callee: (pattern
         (rules
@@ -201,7 +201,7 @@ process = prefix(attach(enable(control(_, _), _), _), _);
 
 ---
 (program
-  (definition (process)
+  (definition (identifier)
     (prim2
       (arguments
         (prim2
@@ -265,7 +265,7 @@ process = component("karplus32.dsp") : component("freeverb.dsp");
 ---
 (program
   (definition
-    variable: (process)
+    variable: (identifier)
     value: (sequential
       left: (component filename: (string))
       right: (component filename: (string)))))
@@ -283,7 +283,7 @@ process = fl.lowpass;
     variable: (identifier)
     value: (library filename: (string)))
   (definition
-    variable: (process)
+    variable: (identifier)
     value: (access environment: (identifier) definition: (identifier))))
 
 ===
@@ -344,7 +344,7 @@ process = 0,reader:soundfile("son[url:{'foo.wav'}]",2);
       left: (wire)
       right: (partial operator: (add) operand: (int))))
   (definition
-    variable: (process)
+    variable: (identifier)
     value: (sequential
       left: (parallel left: (int) right: (identifier))
       right: (soundfile filename: (string) num_channels: (int)))))

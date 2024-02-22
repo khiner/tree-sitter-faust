@@ -41,7 +41,7 @@ process = var; /* Comment at the end of a line. */
     (prim1
       (prim1 (real) (comment))
       (comment)))
-  (definition (process) (identifier))
+  (definition (identifier) (identifier))
   (comment)
   (comment))
 
@@ -134,7 +134,7 @@ process = var2';
   (comment)
   (definition (identifier) (mem))
   (definition (identifier) (partial (delay) (identifier)))
-  (definition (process) (modifier (identifier) (one_sample_delay))))
+  (definition (identifier) (modifier (identifier) (one_sample_delay))))
 
 ===
 Explicit substitution
@@ -145,7 +145,7 @@ process = component("freeverb.dsp")[foo(x) = 1; bar = _;];
 ---
 (program
   (definition
-    variable: (process)
+    variable: (identifier)
     value: (substitution
       expression: (component filename: (string))
       (substitutions

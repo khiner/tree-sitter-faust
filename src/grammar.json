@@ -80,7 +80,7 @@
           "name": "variable",
           "content": {
             "type": "SYMBOL",
-            "name": "_variable"
+            "name": "identifier"
           }
         },
         {
@@ -117,7 +117,7 @@
           "name": "name",
           "content": {
             "type": "SYMBOL",
-            "name": "_variable"
+            "name": "identifier"
           }
         },
         {
@@ -949,7 +949,7 @@
             "name": "definition",
             "content": {
               "type": "SYMBOL",
-              "name": "_variable"
+              "name": "identifier"
             }
           }
         ]
@@ -1004,7 +1004,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_variable"
+          "name": "identifier"
         },
         {
           "type": "SEQ",
@@ -3652,20 +3652,24 @@
       "type": "PATTERN",
       "value": "<[a-zA-Z]*\\.?[a-zA-Z]*>"
     },
-    "_variable": {
+    "identifier": {
       "type": "CHOICE",
       "members": [
         {
           "type": "SYMBOL",
-          "name": "identifier"
+          "name": "_identifier"
         },
         {
-          "type": "SYMBOL",
-          "name": "process"
+          "type": "STRING",
+          "value": "process"
+        },
+        {
+          "type": "STRING",
+          "value": "effect"
         }
       ]
     },
-    "identifier": {
+    "_identifier": {
       "type": "PREC_RIGHT",
       "value": 0,
       "content": {
@@ -3723,10 +3727,6 @@
           "name": "identifier"
         }
       ]
-    },
-    "process": {
-      "type": "STRING",
-      "value": "process"
     },
     "_id": {
       "type": "PATTERN",
