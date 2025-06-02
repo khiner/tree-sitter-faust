@@ -1,0 +1,39 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "faust",
+      "camelcase": "Faust",
+      "title": "Faust",
+      "scope": "source.faust",
+      "file-types": [
+        "dsp",
+        "lib"
+      ],
+      "injection-regex": "^faust$",
+      "class-name": "TreeSitterFaust"
+    }
+  ],
+  "metadata": {
+    "version": "1.1.5",
+    "license": "MIT",
+    "description": "Tree-sitter grammar for the Faust audio programming language",
+    "authors": [
+      {
+        "name": "Karl Hiner"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/khiner/tree-sitter-faust"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": false,
+    "rust": true,
+    "swift": false,
+    "zig": false
+  }
+}
