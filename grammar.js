@@ -2,6 +2,7 @@ const PREC = {
   // Function
   ACCESS: 31,
   FUNCTION_CALL: 30,
+  UNARY: 29,
   // Infix
   DELAY: 24,
   EXPONENTIATION: 23,
@@ -39,7 +40,7 @@ module.exports = grammar({
     _definition: $ => seq(choice($.definition, $.function_definition), ';'),
     definition: $ => seq(optional($.variants), field('variable', $.identifier), '=', field('value', $._expression)),
     function_definition: $ =>
-      seq(optional($.variants), field('name', $.identifier), '(', $.parameters, ')', '=', field('value', $._expression)),
+      seq(optional($.variants), field('name', $.identifier), '(', $.arguments, ')', '=', field('value', $._expression)),
 
     _metadata_definition: $ => seq(choice($.global_metadata, $.function_metadata), ';'),
     global_metadata: $ => seq('declare', field('key', $.identifier), field('value', $.string)),
@@ -75,6 +76,13 @@ module.exports = grammar({
         define_infix($, $.or, PREC.BITWISE_OR),
         define_infix($, choice($.lt, $.le, $.gt, $.ge, $.eq, $.neq), PREC.COMPARISON)
       ),
+
+    // Unary numbers
+    unary_number: $ => prec(PREC.UNARY, seq(
+      field('operator', choice('-', '+')),
+      field('operand', $._number)
+    )),
+
     // Unary function call on an infix operator primitive
     partial: $ => prec(PREC.FUNCTION_CALL, seq(field('operator', $._infix), '(', field('operand', $._argument), ')')),
     // Binary function call on an infix operator primitive
@@ -97,6 +105,7 @@ module.exports = grammar({
     _primitive: $ =>
       choice(
         $._number,
+        $.unary_number,
         $.wire,
         $.cut,
         $.mem,
@@ -178,7 +187,7 @@ module.exports = grammar({
     prod: _ => 'prod',
 
     with_environment: $ => prec.left(seq(field('expression', $._expression), 'with', field('local_environment', $.environment))),
-    environment: $ => seq('{', repeat($._definition), '}'),
+    environment: $ => seq('{', repeat($._statement), '}'),
 
     letrec_environment: $ => prec.left(seq(field('expression', $._expression), 'letrec', field('local_environment', $.rec_environment))),
     rec_environment: $ => seq('{', repeat($.recinition), optional(seq('where', repeat($._definition))), '}'),
@@ -339,7 +348,7 @@ module.exports = grammar({
 
     /** Modifiers **/
     _modifier: $ => choice($.one_sample_delay),
-    one_sample_delay: _ => prec(PREC.FUNCTION_CALL, "'"),
+    one_sample_delay: _ => prec(PREC.UNARY, "'"),
 
     /** Infix (binary) primitives **/
     // Math
@@ -401,7 +410,7 @@ module.exports = grammar({
     recursive: define_binary_comp('~', PREC.RECURSIVE, 'left', $ => $._expression),
     sequential: define_binary_comp(':', PREC.SEQ, 'right', $ => $._expression),
     split: define_binary_comp('<:', PREC.SPLIT, 'right', $ => $._expression),
-    merge: define_binary_comp(':>', PREC.MERGE, 'right', $ => $._expression),
+    merge: define_binary_comp(choice(':>','+>'), PREC.MERGE, 'right', $ => $._expression),
     parallel: define_binary_comp(',', PREC.PAR, 'right', $ => $._expression),
 
     variants: $ => repeat1($._variant),

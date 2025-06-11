@@ -58,7 +58,7 @@ process = pink;
       local_environment: (environment
         (function_definition
           name: (identifier)
-          (parameters (identifier))
+          (arguments (identifier))
           value: (infix
             left: (infix
               left: (infix left: (real) operator: (mult) right: (identifier))
@@ -76,7 +76,7 @@ process = pink;
                 operator: (one_sample_delay)))))
         (function_definition
           name: (identifier)
-          (parameters (identifier))
+          (arguments (identifier))
           value: (infix
             left: (infix left: (real) operator: (mult) right: (identifier))
             operator: (sub)
@@ -101,7 +101,7 @@ ar(a,r,g) = v letrec {
 (program
   (function_definition
     name: (identifier)
-    (parameters (identifier) (identifier) (identifier))
+    (arguments (identifier) (identifier) (identifier))
     value: (letrec_environment
       expression: (identifier)
       local_environment: (rec_environment
