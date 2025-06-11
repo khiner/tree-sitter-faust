@@ -127,7 +127,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "parameters"
+          "name": "arguments"
         },
         {
           "type": "STRING",
@@ -646,6 +646,40 @@
         }
       ]
     },
+    "unary_number": {
+      "type": "PREC",
+      "value": 29,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "FIELD",
+            "name": "operator",
+            "content": {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "-"
+                },
+                {
+                  "type": "STRING",
+                  "value": "+"
+                }
+              ]
+            }
+          },
+          {
+            "type": "FIELD",
+            "name": "operand",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_number"
+            }
+          }
+        ]
+      }
+    },
     "partial": {
       "type": "PREC",
       "value": 30,
@@ -962,6 +996,10 @@
         {
           "type": "SYMBOL",
           "name": "_number"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "unary_number"
         },
         {
           "type": "SYMBOL",
@@ -1671,7 +1709,7 @@
           "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
-            "name": "_definition"
+            "name": "_statement"
           }
         },
         {
@@ -2842,7 +2880,7 @@
     },
     "one_sample_delay": {
       "type": "PREC",
-      "value": 30,
+      "value": 29,
       "content": {
         "type": "STRING",
         "value": "'"
@@ -3514,8 +3552,17 @@
             }
           },
           {
-            "type": "STRING",
-            "value": ":>"
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": ":>"
+              },
+              {
+                "type": "STRING",
+                "value": "+>"
+              }
+            ]
           },
           {
             "type": "FIELD",

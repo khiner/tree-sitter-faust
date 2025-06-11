@@ -406,6 +406,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -424,6 +428,11 @@
         ]
       }
     }
+  },
+  {
+    "type": "add",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "arguments",
@@ -671,6 +680,10 @@
         },
         {
           "type": "substitution",
+          "named": true
+        },
+        {
+          "type": "unary_number",
           "named": true
         },
         {
@@ -1099,6 +1112,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -1507,6 +1524,10 @@
           {
             "type": "tan",
             "named": false
+          },
+          {
+            "type": "unary_number",
+            "named": true
           },
           {
             "type": "waveform",
@@ -1987,6 +2008,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -2124,7 +2149,23 @@
           "named": true
         },
         {
+          "type": "documentation",
+          "named": true
+        },
+        {
+          "type": "file_import",
+          "named": true
+        },
+        {
           "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "function_metadata",
+          "named": true
+        },
+        {
+          "type": "global_metadata",
           "named": true
         }
       ]
@@ -2642,6 +2683,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -3078,6 +3123,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -3101,7 +3150,7 @@
       "required": true,
       "types": [
         {
-          "type": "parameters",
+          "type": "arguments",
           "named": true
         },
         {
@@ -3634,6 +3683,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -4083,6 +4136,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -4571,6 +4628,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -4985,6 +5046,10 @@
           {
             "type": "tan",
             "named": false
+          },
+          {
+            "type": "unary_number",
+            "named": true
           },
           {
             "type": "waveform",
@@ -5418,6 +5483,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -5826,6 +5895,10 @@
           {
             "type": "tan",
             "named": false
+          },
+          {
+            "type": "unary_number",
+            "named": true
           },
           {
             "type": "waveform",
@@ -6266,6 +6339,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -6690,6 +6767,10 @@
           {
             "type": "tan",
             "named": false
+          },
+          {
+            "type": "unary_number",
+            "named": true
           },
           {
             "type": "waveform",
@@ -7134,6 +7215,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -7542,6 +7627,10 @@
           {
             "type": "tan",
             "named": false
+          },
+          {
+            "type": "unary_number",
+            "named": true
           },
           {
             "type": "waveform",
@@ -7958,6 +8047,10 @@
           {
             "type": "tan",
             "named": false
+          },
+          {
+            "type": "unary_number",
+            "named": true
           },
           {
             "type": "waveform",
@@ -8384,6 +8477,10 @@
           {
             "type": "tan",
             "named": false
+          },
+          {
+            "type": "unary_number",
+            "named": true
           },
           {
             "type": "waveform",
@@ -8820,6 +8917,10 @@
           {
             "type": "tan",
             "named": false
+          },
+          {
+            "type": "unary_number",
+            "named": true
           },
           {
             "type": "waveform",
@@ -9268,6 +9369,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -9688,6 +9793,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -10098,6 +10207,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -10506,6 +10619,10 @@
           {
             "type": "tan",
             "named": false
+          },
+          {
+            "type": "unary_number",
+            "named": true
           },
           {
             "type": "waveform",
@@ -10952,6 +11069,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -11368,6 +11489,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -11776,6 +11901,10 @@
           {
             "type": "tan",
             "named": false
+          },
+          {
+            "type": "unary_number",
+            "named": true
           },
           {
             "type": "waveform",
@@ -12230,6 +12359,10 @@
           {
             "type": "tan",
             "named": false
+          },
+          {
+            "type": "unary_number",
+            "named": true
           },
           {
             "type": "waveform",
@@ -12741,6 +12874,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -13229,6 +13366,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -13643,6 +13784,10 @@
           {
             "type": "tan",
             "named": false
+          },
+          {
+            "type": "unary_number",
+            "named": true
           },
           {
             "type": "waveform",
@@ -14354,6 +14499,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -14780,6 +14929,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -15188,6 +15341,10 @@
           {
             "type": "tan",
             "named": false
+          },
+          {
+            "type": "unary_number",
+            "named": true
           },
           {
             "type": "waveform",
@@ -15606,6 +15763,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -16016,6 +16177,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -16424,6 +16589,10 @@
           {
             "type": "tan",
             "named": false
+          },
+          {
+            "type": "unary_number",
+            "named": true
           },
           {
             "type": "waveform",
@@ -16840,6 +17009,10 @@
           {
             "type": "tan",
             "named": false
+          },
+          {
+            "type": "unary_number",
+            "named": true
           },
           {
             "type": "waveform",
@@ -17283,6 +17456,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -17691,6 +17868,10 @@
           {
             "type": "tan",
             "named": false
+          },
+          {
+            "type": "unary_number",
+            "named": true
           },
           {
             "type": "waveform",
@@ -18153,6 +18334,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -18569,6 +18754,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -18977,6 +19166,10 @@
           {
             "type": "tan",
             "named": false
+          },
+          {
+            "type": "unary_number",
+            "named": true
           },
           {
             "type": "waveform",
@@ -19400,6 +19593,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -19446,6 +19643,40 @@
           "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "unary_number",
+    "named": true,
+    "fields": {
+      "operand": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "int",
+            "named": true
+          },
+          {
+            "type": "real",
+            "named": true
+          }
+        ]
+      },
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          }
+        ]
+      }
     }
   },
   {
@@ -19906,6 +20137,10 @@
             "named": false
           },
           {
+            "type": "unary_number",
+            "named": true
+          },
+          {
             "type": "waveform",
             "named": true
           },
@@ -19945,6 +20180,14 @@
   },
   {
     "type": ")",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": "+>",
     "named": false
   },
   {
@@ -20054,10 +20297,6 @@
   {
     "type": "acos",
     "named": false
-  },
-  {
-    "type": "add",
-    "named": true
   },
   {
     "type": "and",

@@ -66,8 +66,8 @@ identity ( var ) = var ;
 
 ---
 (program
-  (function_definition (identifier) (parameters (identifier)) (identifier))
-  (function_definition (identifier) (parameters (identifier)) (identifier)))
+  (function_definition (identifier) (arguments (identifier)) (identifier))
+  (function_definition (identifier) (arguments (identifier)) (identifier)))
 
 ====
 Metadata
@@ -112,12 +112,12 @@ doubleprecision quadprecision int_part(idv) = int(idv);
   (function_definition
     (variants (single_precision))
     (identifier)
-    (parameters (identifier))
+    (arguments (identifier))
     (sequential (identifier) (parallel (wire) (cut))))
   (function_definition
     (variants (double_precision) (quad_precision))
     (identifier)
-    (parameters (identifier))
+    (arguments (identifier))
     (prim1 (identifier))))
 
 ====
@@ -149,5 +149,5 @@ process = component("freeverb.dsp")[foo(x) = 1; bar = _;];
     value: (substitution
       expression: (component filename: (string))
       (substitutions
-        (function_definition name: (identifier) (parameters (identifier)) value: (int))
+        (function_definition name: (identifier) (arguments (identifier)) value: (int))
         (definition variable: (identifier) value: (wire))))))
