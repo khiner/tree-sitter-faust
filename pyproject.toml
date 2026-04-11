@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=62.4.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tree-sitter-faust"
+description = "Tree-sitter grammar for the Faust audio programming language"
+version = "1.1.5"
+keywords = ["incremental", "parsing", "tree-sitter", "faust"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Compilers",
+    "Topic :: Text Processing :: Linguistic",
+    "Typing :: Typed",
+]
+authors = [
+    {name = "Karl Hiner"},
+]
+requires-python = ">=3.9"
+license.text = "MIT"
+readme = "README.md"
+
+[project.urls]
+Homepage = "https://github.com/khiner/tree-sitter-faust"
+
+[project.optional-dependencies]
+core = ["tree-sitter~=0.24"]
+
+[tool.cibuildwheel]
+build = "cp39-*"
+build-frontend = "build"
