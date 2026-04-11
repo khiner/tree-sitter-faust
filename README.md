@@ -8,6 +8,24 @@ Also, please file an issue or pull request if you have any suggestions for impro
 
 The npm package is [here](https://www.npmjs.com/package/tree-sitter-faust).
 
+## Python
+
+```shell
+pip install tree-sitter-faust[core]
+```
+
+```python
+from tree_sitter import Language, Parser
+from tree_sitter_faust import language
+
+code = 'import("stdfaust.lib"); process = os.osc(440) * 0.5;'
+
+parser = Parser(Language(language()))
+tree = parser.parse(code.encode())
+```
+
+Bundled queries are also available as `HIGHLIGHTS_QUERY`, `INJECTIONS_QUERY`, and `LOCALS_QUERY`.
+
 ## Install `nvim-treesitter` language parser
 
 The parser and queries are available as an [nvim-treesitter language](https://github.com/nvim-treesitter/nvim-treesitter/?tab=readme-ov-file#supported-languages).
