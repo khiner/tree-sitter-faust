@@ -4,7 +4,7 @@ endif
 
 LANGUAGE_NAME := tree-sitter-faust
 HOMEPAGE_URL := https://github.com/khiner/tree-sitter-faust
-VERSION := 1.1.5
+VERSION := 1.2.0
 
 # repository
 SRC_DIR := src

@@ -5,3 +5,13 @@ build
 *.egg-info/
 __pycache__/
 dist/
+
+# Rust
+target/
+Cargo.lock
+
+# C build artifacts (Makefile)
+*.a
+*.dylib
+*.pc
+*.o
